@@ -1,0 +1,204 @@
+.button {
+  position: relative;
+  min-height: inherit;
+  min-width: 34px;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  padding: 10px 20px;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.button>div {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+.button.button_variant_crypto>div {
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+/* Variant default */
+
+.button_variant_default {
+  background: var(--blocks);
+  color: var(--white);
+  stroke: var(--white);
+}
+
+.button_variant_default:hover {
+  background: var(--menu);
+}
+
+.button_variant_default:active {
+  background: var(--white);
+  color: var(--black);
+  stroke: var(--black);
+}
+
+.button_variant_default.disabled {
+  background: var(--gray);
+}
+
+/* Variant blue */
+
+.button_variant_blue {
+  min-width: 185px;
+  background: var(--blue);
+  color: var(--white);
+}
+
+.button_variant_blue:hover {
+  background: var(--blue-light);
+}
+
+.button_variant_blue:active {
+  background: var(--blue-dark);
+}
+
+.button_variant_blue.disabled {
+  background: var(--gray);
+  color: var(--black);
+}
+
+/* Variant purchase */
+
+.button_variant_purchase {
+  min-width: 84px;
+  background: none;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.button_variant_purchase:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.button_variant_purchase:active {
+  background: var(--white);
+  color: var(--black);
+}
+
+.button_variant_purchase.disabled {
+  background: var(--gray);
+  color: var(--black);
+}
+
+/* Variant yellow */
+
+.button_variant_yellow {
+  min-width: 95px;
+  background: var(--yellow);
+  color: var(--black);
+  stroke: var(--black);
+}
+
+.button_variant_yellow:hover {
+  background: var(--yellow-light);
+}
+
+.button_variant_yellow:active {
+  background: var(--yellow-dark);
+}
+
+.button_variant_yellow.disabled {
+  background: var(--gray);
+}
+
+/* Variant crypto */
+
+.button_variant_crypto {
+  min-width: 210px;
+  background: var(--gradient-green-yellow);
+  color: var(--black);
+  stroke: var(--black);
+}
+
+.button_variant_crypto:hover {
+  background: var(--gradient-green-yellow-light);
+}
+
+.button_variant_crypto:active {
+  background: var(--gradient-green-yellow-dark);
+}
+
+.button_variant_crypto.disabled {
+  background: var(--gray);
+}
+
+/* Width button */
+
+.button_width_full {
+  width: 100%;
+}
+
+/* Variants size */
+
+.button_size_sm {
+  height: 34px;
+  border-radius: 30px;
+}
+
+.button_size_md {
+  height: 40px;
+  border-radius: 20px;
+}
+
+.button_size_lg {
+  height: 50px;
+  border-radius: 25px;
+}
+
+.button_size_xl {
+  height: 60px;
+  border-radius: 30px;
+}
+
+.button_size_xl.button.button_variant_crypto {
+  width: 295px;
+  border-radius: 30px;
+}
+
+/* Variant icon position */
+
+.button_icon_position_left>div {
+  flex-direction: row;
+}
+
+.button_icon_position_right>div {
+  flex-direction: row-reverse;
+}
+
+.light {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  opacity: 0.25;
+  filter: blur(20px);
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* Logout button */
+
+.button_logout path {
+  stroke: none !important;
+  fill: var(--white) !important;
+}
+
+.button_logout:active path {
+  stroke: none !important;
+  fill: var(--black) !important;
+}

@@ -1,0 +1,166 @@
+.socialeNetworks {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.socialeNetworks .text {
+  color: var(--white);
+}
+
+.socialeNetworks>div:first-child {
+  width: 42%;
+}
+
+.socialeNetworks>div:last-child {
+  width: 50%;
+}
+
+.sociale-card {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.sociale-card .dropDown .text {
+  font-weight: 400;
+  color: #D0DEE5;
+}
+
+.sociale-card hr {
+  margin: 0;
+  height: 1px;
+  width: 100%;
+  opacity: 25%;
+}
+
+.sociale-card.active hr {
+  opacity: 100%;
+}
+
+.sociale-card .for-img {
+  display: flex;
+  align-items: center;
+  height: 144px;
+  width: 100%;
+  opacity: 25%;
+}
+
+.sociale-card:hover .for-img {
+  opacity: 75%;
+}
+
+.sociale-card.active .for-img {
+  margin-top: -40px;
+  opacity: 100%;
+}
+
+.sociale-card .light {
+  border-radius: 50%;
+  top: 100px;
+  left: 60px;
+  width: 80%;
+  height: 120px;
+  filter: blur(40px);
+}
+
+.sociale-card:hover:not(.active) .light {
+  background: linear-gradient(46.15deg, #03D1A0 14.31%, rgba(121, 57, 216, 0) 89.33%), #1F4FD7;
+  opacity: 0.25;
+}
+
+.sociale-card .number {
+  margin-top: 10px;
+  align-self: flex-end;
+  background: radial-gradient(541.67% 541.67% at 50% 203.33%, #FFFFFF 0%, #85F7E2 47.4%, #FFB60E 100%),
+    linear-gradient(135deg, #FFFFFF -53.62%, #A8E1FE 48.72%, #6790EE 137.64%), #FFFFFF;
+}
+
+.sociale-card .number .text {
+  color: var(--black)
+}
+
+.sociale-card .dropDown {
+  padding: 0;
+  overflow: hidden;
+  backdrop-filter: none;
+
+}
+
+.sociale-card .dropDown.dropDown-active {
+  padding-bottom: 55px;
+}
+
+.socialeNetworks .quality>div:first-child {
+  margin-bottom: 40px;
+}
+
+.socialeNetworks .quality .description {
+  font-family: 'Circe Medium';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: 50px;
+
+  background: radial-gradient(179.05% 212% at -11.91% 139.4%, #FFFFFF 0%, #85F7E2 47.4%, #FFB60E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media (max-width: 1439px) {
+  .socialeNetworks .quality .description {
+    font-size: 51.5px;
+    line-height: 46.25px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .socialeNetworks .quality .description {
+    font-size: 45px;
+    line-height: 42.5px;
+  }
+}
+
+@media (max-width: 834px) {
+  .socialeNetworks {
+    flex-direction: column;
+  }
+
+  .socialeNetworks>div:first-child {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .socialeNetworks>div:last-child {
+    width: 100%;
+  }
+
+  .socialeNetworks .quality .description {
+    font-size: 38.5px;
+    line-height: 38.75px;
+  }
+
+  .sociale-card .for-img{
+    width: 45%;
+    height: 120px;
+  }
+}
+
+@media (max-width: 425px) {
+  .sociale-card .for-img{
+    width: 40%;
+    height: 100px;
+  }
+
+  .sociale-card .for-img img{
+    width: 100%;
+  }
+
+  .socialeNetworks .quality .description {
+    font-size: 32px;
+    line-height: 35px;
+  }
+}

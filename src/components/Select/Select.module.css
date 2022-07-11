@@ -1,0 +1,21 @@
+.select-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.select {
+  z-index: 1;
+  background: var(--blocks);
+  border-radius: 10px;
+}
+
+.select .select-info{
+  color: var(--white);
+  display: flex;
+  padding: 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+

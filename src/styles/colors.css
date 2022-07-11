@@ -1,0 +1,44 @@
+:root {
+  /* Pure Color */
+  --white: #FFFFFF;
+  --light-blue: #C5EBFF;
+  --light-blue-15: #C5EBFF26;
+  --gray-text: #9AA6B7;
+  --gray: #999999;
+  --footer-text: #686E73;
+  --elements: #2F2F2F;
+  --blocks: #252627;
+  --menu: #101314;
+  --background: #080707;
+  --black: #000000;
+  --blue-light: #1C76FF;
+  --blue: #005AE2;
+  --blue-dark: #0043A9;
+  --yellow-light: #FFD234;
+  --yellow: #FFB60E;
+  --yellow-dark: #FF9900;
+
+  /* Gradients */
+  --gradient-green-yellow-light: radial-gradient(167.52% 820.83% at -36.22% 213.33%, #FFFFFF 0%, #B4FFF1 47.4%, #FFD912 97.92%);
+  --gradient-green-yellow: radial-gradient(167.52% 820.83% at -36.22% 213.33%, #FFFFFF 0%, #85F7E2 47.4%, #FFB60E 100%);
+  --gradient-green-yellow-dark: radial-gradient(143.13% 701.68% at -36.22% 213.33%, #FFFFFF 0%, #64E3CC 47.4%, #FFBB0E 97.92%);
+  --gradient-blue: radial-gradient(695% 695% at 50% -485%, #005AE2 0%, rgba(58, 67, 81, 0) 100%);
+  --gradient-yellow: radial-gradient(221.67% 295.56% at 50% -178.89%, #FFB60E 0%, rgba(255, 182, 14, 0) 100%);
+  --gradient-account-card-hover: radial-gradient(174.8% 156.07% at 50.4% 148.93%, #03D1A0 0%, rgba(121, 57, 216, 0) 100%), radial-gradient(138.11% 122.86% at 100% -22.86%, #286B7F 0%, rgba(0, 0, 0, 0) 100%), rgba(217, 217, 217, 0.01);
+  --gradient-account-card: radial-gradient(129.6% 115.71% at 107.2% -23.57%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), rgba(217, 217, 217, 0.01);
+  --gradient-separator: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 51.04%, rgba(255, 255, 255, 0) 100%);
+
+  /* Status */
+  --status-gradient-red: linear-gradient(180deg, #CA0000 0%, rgba(255, 53, 53, 0.05) 100%);
+  --status-red: #CA0000;
+  --status-gradient-blue: linear-gradient(180deg, #007AEB 0%, rgba(30, 146, 255, 0.05) 100%);
+  --status-blue: #007AEB;
+  --status-gradient-violet: linear-gradient(180deg, #DD00F0 0%, rgba(244, 115, 255, 0.05) 100%);
+  --status-violet: #DD00F0;
+  --status-gradient-orange: linear-gradient(180deg, #EE8F00 0%, rgba(255, 174, 53, 0.05) 100%);
+  --status-orange: #EE8F00;
+  --status-gradient-yellow: linear-gradient(180deg, #FFF500 0%, rgba(255, 247, 53, 0.05) 100%);
+  --status-yellow: #FFF500;
+  --status-gradient-green: linear-gradient(180deg, #1DCF00 0%, rgba(106, 255, 53, 0.05) 100%);
+  --status-green: #1DCF00;
+}

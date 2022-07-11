@@ -1,0 +1,1 @@
+export { MainMenuComponent as MainMenu } from "./MainMenu/MainMenu.component";

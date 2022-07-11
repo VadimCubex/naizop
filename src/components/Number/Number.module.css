@@ -1,0 +1,78 @@
+.number {
+  border-radius: 50%;
+  background-color: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+
+.number_variant_large .text {
+  font-family: 'Space Grotesk Light';
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 50px;
+}
+
+.number_variant_large {
+  width: 60px;
+  height: 60px;
+}
+
+.number_variant_medium {
+  width: 40px;
+  height: 40px;
+}
+
+.number_variant_small {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 1439px) {
+  .number_variant_large .text {
+    font-size: 32.25px;
+    line-height: 43.5px;
+  }
+
+  .number_variant_large {
+    width: 52.5px;
+    height: 52.5px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .number_variant_large .text {
+    font-size: 27.5px;
+    line-height: 37px;
+  }
+
+  .number_variant_large {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 834px) {
+  .number_variant_large .text {
+    font-size: 22.75px;
+    line-height: 30.5px;
+  }
+
+  .number_variant_large {
+    width: 37.5px;
+    height: 37.5px;
+  }
+}
+
+@media (max-width: 425px) {
+  .number_variant_large .text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .number_variant_large {
+    width: 30px;
+    height: 30px;
+  }
+}

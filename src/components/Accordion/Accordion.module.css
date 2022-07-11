@@ -1,0 +1,30 @@
+.accordion-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.accordion {
+  z-index: 1;
+  background: var(--blocks);
+  border-radius: 10px;
+}
+
+.accordion .accordion-info {
+  color: var(--white);
+  display: flex;
+  padding: 10px 20px;
+  justify-content: space-between;
+}
+
+.accordion .accordion-title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.accordion .accordion-badges {
+  display: flex;
+  gap: 10px;
+}

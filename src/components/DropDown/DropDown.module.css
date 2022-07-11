@@ -1,0 +1,58 @@
+.dropDown {
+  position: relative;
+  left: 0;
+  top: 0;
+  backdrop-filter: blur(120px);
+  border-radius: 10px;
+  padding: 29px 20px;
+}
+
+.dropDown_variant_accordion {
+  background: rgba(30, 33, 36, 0.75);
+  margin-top: -60px;
+  overflow: hidden;
+  z-index: 0;
+  color: var(--white);
+  border: 1px solid;
+  border-image-source: radial-gradient(99.13% 198.27% at 31.38% -98.27%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.dropDown_variant_accordion.dropDown-active {
+  padding: 80px 20px 30px 20px !important;
+}
+
+.dropDown_variant_select {
+  background: var(--blocks);
+  margin-top: -60px;
+  overflow: hidden;
+  z-index: 0;
+  color: var(--white);
+}
+
+.dropDown_variant_select.dropDown-active {
+  padding: 60px 20px 0px 20px;
+}
+
+.children {
+  display: flex;
+  flex-direction: column;
+}
+
+.children_variant_accordion {
+  gap: 20px;
+}
+
+.dropDown-open-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--elements);
+}
+
+.dropDown-open-button-active {
+  background: radial-gradient(695% 695% at 50% -485%, #005AE2 0%, rgba(58, 67, 81, 0) 100%);
+  ;
+}

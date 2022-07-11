@@ -1,0 +1,84 @@
+.tools-card {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+}
+
+.tools-card .text {
+  color: var(--white);
+}
+
+.tools-card .title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-right: 35px;
+  gap: 15px;
+}
+
+.tools-card .dropDown .links {
+  display: block;
+}
+
+.tools-card .links .text:hover {
+  text-decoration: underline;
+}
+
+.tools-card hr.tools-hr {
+  border: 1px solid var(--light-blue-15) !important;
+}
+
+.tools-card:hover {
+  background: #191C21;
+}
+
+.tools-card .dropDown {
+  overflow: hidden;
+  padding: 0px;
+}
+
+@media (max-width: 1439px) {
+  .tools-card .title {
+    margin-right: 10px;
+  }
+
+  .tools-card .svgIcon {
+    width: 32px !important;
+    height: 32px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .tools-card {
+    width: 31%;
+    padding: 15px 10px;
+  }
+}
+
+@media (max-width: 834px) {
+  .tools-card .svgIcon {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .tools-card {
+    width: unset;
+    padding: 20px 15px;
+  }
+
+  .tools-card .title {
+    margin-bottom: 0px;
+    margin-right: 0px;
+  }
+
+  .tools-card .links {
+    display: none;
+  }
+
+  .tools-card .dropDown.dropDown-active {
+    padding-top: 18px;
+  }
+}
+
+@media (max-width: 425px) {}

@@ -1,0 +1,91 @@
+@import '../components/Text/Text.module.css';
+@import '../components/SvgIcon/SvgIcon.module.css';
+@import '../components/Button/Button.module.css';
+@import '../components/Avatar/Avatar.module.css';
+@import '../components/AvatarDashboard/AvatarDashboard.module.css';
+@import '../components/Radio/Radio.module.css';
+@import '../components/Number/Number.module.css';
+@import '../components/Cards/Cards.module.css';
+@import '../components/Tooltip/Tooltip.module.css';
+@import '../components/CircleProgress/CircleProgress.module.css';
+@import '../components/ProgressGradient/ProgressGradient.module.css';
+@import '../components/Accordion/Accordion.module.css';
+@import '../components/DropDown/DropDown.module.css';
+@import '../components/Select/Select.module.css';
+@import '../components/SelectOption/SelectOption.module.css';
+@import '../components/Menu/MainMenu/MainMenu.module.css';
+@import '../components/Tools/Tools.module.css';
+@import '../components/SocialeNetworks/SocialeNetworks.module.css';
+@import '../components/Slider/Slider.module.css';
+@import '../components/Footer/Footer.module.css';
+
+@import './App.css';
+
+@import '../pages/Home/Home.module.css';
+
+:root {
+  --transition-property: all;
+  --transition-time: 0.4s;
+  --transition-function: ease;
+}
+
+html{
+  min-width: 320px;
+}
+
+* {
+  box-sizing: border-box;
+  transition: var(--transition-property) var(--transition-time)
+    var(--transition-function);
+}
+
+body {
+  overflow-x: hidden;
+  background: var(--background);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: 'Space Grotesk Bold';
+  src: url(../fonts/SpaceGrotesk-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Space Grotesk Medium';
+  src: url(../fonts/SpaceGrotesk-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Space Grotesk Regular';
+  src: url(../fonts/SpaceGrotesk-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Space Grotesk Light';
+  src: url(../fonts/SpaceGrotesk-Light.ttf);
+}
+
+@font-face {
+  font-family: 'Circe ExtraBold';
+  src: url(../fonts/Circe-ExtraBold.otf);
+}
+
+@font-face {
+  font-family: 'Circe Bold';
+  src: url(../fonts/Circe-ExtraBold.otf);
+}
+
+@font-face {
+  font-family: 'Circe Medium';
+  src: url(../fonts/CRC55.otf);
+}

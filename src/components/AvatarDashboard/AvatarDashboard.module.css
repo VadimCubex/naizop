@@ -1,0 +1,37 @@
+.avatarDashboard {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatarDashboard .text:last-child{
+  color: var(--white);
+  opacity: 0.5;
+}
+
+.avatarDashboard .avatar {
+  position: absolute;
+  left: 18px ;
+  top: 18px ;
+}
+
+.avatar_shadow {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  left: 18px ;
+  top: 18px ;
+  width: 165px;
+  height: 165px;
+  border-radius: 50%;
+  background: linear-gradient(180.24deg, rgba(30, 33, 36, 0) 27.37%, #1E2124 99.79%);
+}
+
+.avatar_shadow .text {
+  opacity: 1 !important;
+  margin-bottom: 10px;
+}

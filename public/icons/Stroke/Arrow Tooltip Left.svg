@@ -1,0 +1,5 @@
+<svg height="40" width="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<polygon points="5,5 5,250 350,200" class="triangle-3" stroke-linejoin="round"/>
+<polygon points="5,5 5,250 350,200" class="triangle-2" stroke-linejoin="round"/>
+<polygon points="5,5 5.5,270 370,211" class="triangle" stroke-linejoin="round" />
+</svg>

@@ -1,0 +1,431 @@
+.topic {
+  background-image: url('../../../public/images/Backgrounds/Topic\ Background.png');
+  background-position-y: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+.topic .container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.topic .info {
+  width: 43%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  padding-bottom: 160px;
+  color: var(--white);
+  height: fit-content;
+}
+
+.topic .info .likes {
+  font-family: 'Circe ExtraBold';
+  font-weight: 800;
+  font-size: 106px;
+  line-height: 100px;
+  background: var(--gradient-green-yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 44px;
+}
+
+.topic .info .naizop {
+  font-family: 'Circe Bold';
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 0.04em;
+  margin-bottom: 9px;
+}
+
+.topic .info .description {
+  font-family: 'Space Grotesk Light';
+  font-weight: 300;
+  line-height: 35px;
+  margin-bottom: 37px;
+}
+
+.topic .info .description span:first-child {
+  font-family: 'Space Grotesk Bold';
+  font-weight: 400;
+}
+
+.topic .info .description span:last-child {
+  font-family: 'Space Grotesk Bold';
+  font-weight: 700;
+  color: var(--yellow);
+}
+
+.topic .images {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.topic .images .like-img {
+  width: 117%;
+}
+
+.topic .images .like-img img {
+  width: 100%;
+}
+
+.topic .info .button .text {
+  color: var(--black);
+}
+
+.light-img {
+  width: 100%;
+  background: #080707BF;
+  height: 140px;
+  backdrop-filter: blur(40px);
+  margin-top: -100px;
+}
+
+.sociale-network-background {
+  top: 230px;
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 1200px;
+  background-image: url('/public/images/Backgrounds/Sociale\ Networks.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: 25%;
+  filter: blur(40px);
+}
+
+.advantages-container {
+  user-select: none;
+  overflow-x: scroll;
+  margin-bottom: 170px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.advantages-container::-webkit-scrollbar{
+  display: none;
+}
+.advantages-container::-webkit-scrollbar-thumb{
+  display: none;
+}
+
+.experience-container {
+  overflow: hidden;
+  padding-top: 434px;
+  padding-bottom: 120px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-container>div:last-child {
+  color: var(--white);
+}
+
+.experience {
+  display: flex;
+}
+
+.experience .info {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+}
+
+.experience .info .naizop {
+  font-family: 'Circe Bold';
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 0.04em;
+}
+
+.experience .info .description {
+  font-family: 'Space Grotesk Light';
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 45px;
+  margin-bottom: 37px;
+}
+
+.experience .info .description span:first-child {
+  font-family: 'Space Grotesk Bold';
+  font-weight: 400;
+}
+
+.experience .info .description span:last-child {
+  font-family: 'Space Grotesk Bold';
+  font-weight: 700;
+  color: var(--yellow);
+}
+
+.experience-images {
+  width: 100%;
+  position: absolute;
+  top: 110px;
+}
+
+.experience-images img {
+  width: 90%;
+}
+
+.experience-images img:first-child {
+  margin-left: 310px;
+}
+
+.experience-images img:last-child {
+  position: absolute;
+  top: 265px;
+  margin-left: 910px;
+}
+
+.experience-background {
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 1200px;
+  background-image: url('/public/images/Backgrounds/Experience\ Background.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: 25%;
+  filter: blur(40px);
+}
+
+@media (max-width: 1439px) {
+  .topic .info {
+    padding-top: 80px;
+    padding-bottom: 130px;
+  }
+
+  .topic .images {
+    width: 100%;
+  }
+
+  .topic .info .likes {
+    font-size: 96px;
+    line-height: 92.5px;
+    margin-bottom: 40.5px;
+  }
+
+  .advantages-container {
+    justify-content: left;
+    padding-left: 7.75%;
+    padding-right: 7.75%;
+  }
+
+  .experience-container{
+    padding-top: 414.5px;
+  }
+
+  .experience .info .description {
+    font-size: 31.5px;
+    line-height: 41px;
+  }
+
+  .experience-images img{
+    width: 100%;
+  }
+
+  .experience-images img:first-child {
+    margin-left: 217.5px;
+  }
+  
+  .experience-images img:last-child {
+    margin-left: 700px;
+    top: 225px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .topic .container {
+    flex-direction: column;
+  }
+
+  .topic .images .like-img {
+    width: 100%;
+  }
+
+  .topic .images .like-img img {
+    margin-top: -130px;
+  }
+
+  .topic .info {
+    width: 100%;
+    padding-top: 65px;
+    padding-bottom: 100px;
+  }
+
+  .topic .info .likes {
+    font-size: 86px;
+    line-height: 85px;
+    margin-bottom: 37px;
+  }
+
+  .topic .info .naizop {
+    font-size: 38px;
+  }
+
+  .topic .info .description {
+    line-height: 32.5px;
+    margin-bottom: 31px;
+  }
+
+  .advantages-container {
+    margin-bottom: 145px;
+    padding-left: 6.5%;
+    padding-right: 6.5%;
+  }
+
+  .sociale-network-background {
+    background-repeat: repeat;
+    background-size: cover;
+  }
+
+  .experience-background {
+    background-size: inherit;
+    height: 1085px;
+    background-position-x: center;
+  }
+
+  .experience-images {
+    top: 100px;
+  }
+
+  .experience-container{
+    padding-top: 389px;
+  }
+
+  .experience .info .description {
+    font-size: 27px;
+    line-height: 37.5px;
+  }
+
+  .experience-images img:first-child {
+    margin-left: 155px;
+  }
+  
+  .experience-images img:last-child {
+    margin-left: 540px;
+    top: 190px;
+  }
+}
+
+@media (max-width: 834px) {
+  .topic .info {
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+
+  .topic .images .like-img img {
+    margin-top: -75px;
+  }
+
+  .topic .info .likes {
+    font-size: 76px;
+    line-height: 77.5px;
+    margin-bottom: 33.5px;
+  }
+
+  .light-img {
+    height: 130px;
+    margin-top: -75px;
+  }
+
+  .advantages-container {
+    padding-left: 5.25%;
+    padding-left: 5.25%;
+  }
+
+  .experience .info {
+    width: 100%;
+  }
+
+  .experience-container{
+    padding-top: 366.5px;
+  }
+
+  .experience .info .description {
+    font-size: 22.5px;
+    line-height: 34px;
+  }
+
+  .experience-images img:first-child {
+    margin-left: 92.50px;
+  }
+  
+  .experience-images img:last-child {
+    top: 135px;
+    margin-left: 380px;
+  }
+}
+
+@media (max-width: 425px) {
+  .topic .info {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  .topic .images .like-img img {
+    margin-top: -20px;
+  }
+
+  .topic .info .likes {
+    font-size: 66px;
+    line-height: 70px;
+    margin-bottom: 30px;
+  }
+
+  .topic .info .naizop {
+    font-size: 36px;
+  }
+
+  .topic .info .description {
+    line-height: 30px;
+    margin-bottom: 25px;
+  }
+
+  .light-img {
+    height: 120px;
+    margin-top: -50px;
+  }
+
+  .advantages-container {
+    margin-bottom: 120px;
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+
+  .experience-images {
+    top: 90px;
+  }
+
+  .experience-container{
+    padding-top: 310px;
+  }
+
+  .experience .info .description {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .experience-images img:first-child {
+    margin-left: 30px;
+  }
+  
+  .experience-images img:last-child {
+    top: 90px;
+    margin-left: 250px;
+  }
+}

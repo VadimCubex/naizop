@@ -1,0 +1,42 @@
+.accountCard {
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  height: 140px;
+  border-radius: 10px;
+  background: var(--gradient-account-card);
+  box-sizing: border-box;
+  backdrop-filter: blur(40px);
+  border: 1px solid;
+  border-image-source: radial-gradient(161.28% 137.14% at -23.2% -37.14%, rgba(255, 255, 255, 0.37) 0%, rgba(255, 255, 255, 0.02) 100%);
+  color: var(--white)
+}
+.accountCard .text{
+  opacity: 0.5;
+}
+
+.accountCard:hover {
+  background: var(--gradient-account-card-hover);
+}
+
+.accountCard:hover .text{
+  opacity: 1;
+}
+
+.accountCard_variant_large {
+  width: 23.5%;
+}
+
+.accountCard_variant_small {
+  width: 19.9%;
+}
+
+.question {
+  display: inline-block;
+  position: absolute;
+  right: 12.5px;
+  top: 12.5px;
+}

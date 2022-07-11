@@ -1,0 +1,104 @@
+.advantages-card {
+  border-radius: 20px;
+  background: #1F2329;
+  overflow: hidden;
+  min-width: 280px;
+  max-width: 280px;
+}
+
+.advantages-card:hover {
+  background: radial-gradient(300.91% 300.36% at 0% 100.59%, #FFFFFF 0%, #85F7E2 47.4%, #FFB60E 100%);
+}
+
+.advantages-card svg path {
+  fill: var(--white);
+}
+
+.advantages-card:hover svg path {
+  fill: #1F2329
+}
+
+.advantages-card .lines {
+  width: 100%;
+  height: 100%;
+}
+
+.advantages-card:hover .lines {
+  background-image: url('/public/images/Home/Line\ on\ hover.png');
+  background-size: cover;
+}
+
+.advantages-card .lines>div {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px 60px;
+}
+
+.advantages-card .text {
+  color: var(--white);
+}
+
+.advantages-card:hover .text {
+  color: #1F2329;
+}
+
+.advantages-card .description .text {
+  line-height: 20px;
+  color: #DAE9FF;
+}
+
+.advantages-card:hover .description .text {
+  color: #1F2329;
+}
+
+.advantages-card .title {
+  display: flex;
+  flex-direction: column;
+  margin-right: 100px;
+}
+
+.advantages-card .title span:last-child {
+  margin-top: 30px;
+}
+
+.advantages-card .title .text {
+  font-family: 'Circe Bold';
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.advantages-card hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid var(--white);
+}
+
+.advantages-card:hover hr {
+  border: 1px solid #1F2329;
+}
+
+@media (max-width: 1024px) {
+  .advantages-card{
+    min-width: 270px;
+    max-width: 270px;
+  }
+
+  .advantages-card .title .text{
+    font-size: 30px;
+    line-height: 37.5px;
+  }
+}
+
+@media (max-width: 425px) {
+  .advantages-card{
+    min-width: 260px;
+    max-width: 260px;
+  }
+
+  .advantages-card .title .text{
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
