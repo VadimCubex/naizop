@@ -6,7 +6,6 @@ import { AvatarVariants, TextVariants } from '../../constants/VariantsOfComponen
 import { Text } from '../Text';
 
 export const AvatarDashboardComponent = ({
-  text,
   progress,
   src,
   className,

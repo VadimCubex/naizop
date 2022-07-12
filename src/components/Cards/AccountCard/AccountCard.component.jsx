@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import classNames from 'classnames';
 import { Text } from '../../Text';
-import { ColorSvgVariants, IconsVariants, PortalVariants, TextVariants } from '../../../constants/VariantsOfComponents';
+import { ColorSvgVariants, IconsVariants, TextVariants } from '../../../constants/VariantsOfComponents';
 import { SvgIcon } from '../../SvgIcon';
 import { Tooltip } from '../../Tooltip';
 import { TooltipPortal } from '../../Portal';

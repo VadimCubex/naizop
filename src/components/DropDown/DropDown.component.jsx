@@ -13,7 +13,7 @@ export const DropDownComponent = ({
     'dropDown',
     {
       [`dropDown_variant_${variant}`]: variant,
-      ['dropDown-active']: isOpen
+      'dropDown-active': isOpen
     },
     className
   );

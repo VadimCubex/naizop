@@ -1,24 +1,15 @@
-import React from 'react';
-import classNames from 'classnames';
-import { ToolsInfo } from '../../constants/constants';
-import { ToolsCard } from '../Cards';
+import React from "react";
+import { ToolsInfo } from "../../constants/constants";
+import { ToolsCard } from "../Cards";
 
-export const ToolsComponent = ({
-  className,
-}) => {
-  const ToolsClass = classNames(
-    className
-  );
-
+export const ToolsComponent = () => {
   return (
     <>
-      {
-        ToolsInfo.map((item, index) =>
-          <ToolsCard key={index} item={item} />
-        )
-      }
+      {ToolsInfo.map((item, index) => (
+        <ToolsCard key={index} item={item} />
+      ))}
     </>
   );
 };
 
-ToolsComponent.displayName = 'Tools';
+ToolsComponent.displayName = "Tools";

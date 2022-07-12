@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import classNames from 'classnames';
 import { Text } from '../Text';
 import { Link } from 'react-router-dom';
@@ -63,7 +63,7 @@ export const SliderComponent = ({
                   <div className='img-background'>
                     <div className='lines' />
                   </div>
-                  <img src={item.img} />
+                  <img src={item.img} alt='' />
                 </div>
                 <hr />
               </div>

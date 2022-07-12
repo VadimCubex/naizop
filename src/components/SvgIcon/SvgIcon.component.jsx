@@ -1,12 +1,12 @@
-import React from 'react';
-import classNames from 'classnames';
-import { ReactSVG } from 'react-svg';
-import './SvgIcon.module.css';
+import React from "react";
+import classNames from "classnames";
+import { ReactSVG } from "react-svg";
+import "./SvgIcon.module.css";
 
 export const SvgIconComponent = ({
   src,
   size = 24,
-  color = 'inherit',
+  color = "inherit",
   rotate,
   className,
   style,
@@ -15,15 +15,15 @@ export const SvgIconComponent = ({
   defaultStroke,
 }) => {
   const svgIconClass = classNames(
-    'svgIcon',
+    "svgIcon",
     {
       [`svgIcon_rotate_${rotate}`]: rotate,
-      ['defaultStroke']: defaultStroke,
+      ["defaultStroke"]: defaultStroke,
     },
     className
   );
 
-  const stroke = defaultStroke ? {} : { stroke: `var(--${color})`, };
+  const stroke = defaultStroke ? {} : { stroke: `var(--${color})` };
 
   const customStyles = {
     width: `${size}px`,
@@ -43,4 +43,4 @@ export const SvgIconComponent = ({
   );
 };
 
-SvgIconComponent.displayName = 'SvgIcon';
+SvgIconComponent.displayName = "SvgIcon";

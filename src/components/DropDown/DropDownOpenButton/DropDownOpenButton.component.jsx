@@ -10,8 +10,8 @@ export const DropDownOpenButtonComponent = ({
   const DropDownOpenClass = classNames(
     'dropDown-open-button',
     {
-      ['dropDown-open-button-active']: isOpen,
-    },
+      'dropDown-open-button-active': isOpen,
+    }
   );
 
   return (
