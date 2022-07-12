@@ -28,3 +28,39 @@
   display: flex;
   gap: 10px;
 }
+
+@media (max-width: 1439px) {
+  .accordion .accordion-title .svgIcon, .accordion .accordion-title svg{
+    width: 22px !important;
+    height: 22px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .accordion .accordion-title{
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .accordion .accordion-title .svgIcon, .accordion .accordion-title svg{
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
+
+@media (max-width: 834px) {
+  .accordion .accordion-title .svgIcon, .accordion .accordion-title svg{
+    width: 18px !important;
+    height: 18px !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .accordion .accordion-title{
+    gap: 10px;
+  }
+  .accordion .accordion-title .svgIcon, .accordion .accordion-title svg{
+    width: 16px !important;
+    height: 16px !important;
+  }
+}

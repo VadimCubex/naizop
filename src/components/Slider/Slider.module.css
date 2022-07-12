@@ -248,12 +248,20 @@
     bottom: 0px;
     height: 84%;
   }
+
+  .slider-tools{
+    bottom: 550px;
+  }
   
   .slider-card {
     min-width: 410px;
     width: 100%;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: space-between;
+  }
+
+  .slider-card .reverse{
+    flex-direction: column-reverse;
   }
 
   .slider-card .info {
@@ -286,7 +294,7 @@
   }
 
   .slider-tools{
-    bottom: 40px;
+    bottom: 430px;
   }
 
   .slider-card .slider-img .img-background {

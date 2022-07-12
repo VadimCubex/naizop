@@ -1,9 +1,10 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import classNames from 'classnames';
 import { Text } from '../Text';
 import { Link } from 'react-router-dom';
 import { Button } from '../Button';
 import { ButtonSizeVariants, ButtonVariants, IconsVariants, TextVariants } from '../../constants/VariantsOfComponents';
+import { useLayoutEffect } from 'react';
 
 export const SliderComponent = ({
   description,
@@ -15,44 +16,34 @@ export const SliderComponent = ({
     className
   );
 
-  const sliderCard = useRef(null);
+  const parentCards = useRef(null);
+  const sliderCards = useRef([]);
   const [selected, setSelected] = useState(0);
-  const [left, setLeft] = useState(0);
 
-  const handleClick = (action, toElem) => {
-    switch (action) {
-      case 'left':
-        if (toElem >= 0) {
-          setLeft((sliderCard.current.clientWidth + 80) * (selected - 1))
-          setSelected(toElem);
-        }
-        break;
-
-      case 'right':
-        if (toElem <= slides.length - 1) {
-          setLeft((sliderCard.current.clientWidth + 80) * (selected + 1))
-          setSelected(toElem);
-        }
-        break;
-    }
+  const handleClick = (toItem) => {
+    setSelected(Math.max(0, Math.min(slides.length - 1, toItem)));
   }
+
+  useLayoutEffect(() => {
+    parentCards.current.style.left = `-${sliderCards.current[selected].offsetLeft}px`;
+  }, [selected])
 
   return (
     <div className='left-container'>
       <Text className='slider-description'>{description}</Text>
       <div className='slider-tools'>
-        <Button onClick={() => { handleClick('left', selected - 1) }} variant={ButtonVariants.purchase} size={ButtonSizeVariants.extra_large} icon={IconsVariants.Arrow_left} />
+        <Button onClick={() => { handleClick(selected - 1) }} variant={ButtonVariants.purchase} size={ButtonSizeVariants.extra_large} icon={IconsVariants.Arrow_left} />
         <div className='sticks-container'>
           {
             slides.map((item, index) => <hr key={index} className={`${index === selected ? ' active' : ''}`} />)
           }
         </div>
-        <Button onClick={() => { handleClick('right', selected + 1) }} variant={ButtonVariants.purchase} size={ButtonSizeVariants.extra_large} icon={IconsVariants.Arrow_right} />
+        <Button onClick={() => { handleClick(selected + 1) }} variant={ButtonVariants.purchase} size={ButtonSizeVariants.extra_large} icon={IconsVariants.Arrow_right} />
       </div>
-      <div style={{ left: -left }} className={SliderClass}>
+      <div ref={parentCards} className={SliderClass}>
         {
           slides.map((item, index) =>
-            <div ref={sliderCard} key={index} className={`slider-card${index === selected ? ' active' : ''}`}>
+            <div ref={(element) => sliderCards.current[index] = element} key={index} className={`slider-card${index === selected ? ' active' : ''}`}>
               <div className='info'>
                 <Text >{item.title}</Text>
                 <Text className='description' variant={TextVariants.h1_medium}>{item.description}</Text>

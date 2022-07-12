@@ -40,6 +40,12 @@
   padding-right: 9%;
 }
 
+.faq-background {
+  background: url('/public/images/Backgrounds/1920.png');
+  background-size: cover !important;
+  background-position: right !important;
+}
+
 .left-container {
   overflow: hidden;
   position: relative;
@@ -59,6 +65,10 @@
   .left-container {
     padding-left: 7.75%;
   }
+
+  .faq-background{
+    background: url('/public/images/Backgrounds/1440.png');
+  }
 }
 
 @media (max-width: 1024px) {
@@ -69,6 +79,10 @@
 
   .left-container {
     padding-left: 6.5%;
+  }
+
+  .faq-background{
+    background: url('/public/images/Backgrounds/1024.png');
   }
 }
 
@@ -81,6 +95,11 @@
   .left-container {
     padding-left: 5.25%;
   }
+
+  .faq-background{
+    background: url('/public/images/Backgrounds/834.png');
+    background-size: auto !important;
+  }
 }
 
 @media (max-width: 425px) {
@@ -92,6 +111,10 @@
   .left-container {
     padding-left: 4%;
   }
+
+  .faq-background{
+    background: url('/public/images/Backgrounds/375.png');
+  }
 }
 
 ::-webkit-scrollbar {
@@ -101,7 +124,7 @@
   margin: 0;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   border-radius: 2px;
   width: 4px;
   background-color: var(--gray);

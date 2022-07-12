@@ -52,7 +52,6 @@ const Home = () => {
       <div ref={advanteges}
         onMouseDown={(e) => { handleMouseDown(e) }}
         onMouseMove={(e) => { handleMouseMove(e) }} 
-        // style={{ left: left }}
         className='advantages-container'>
         {
           AdvantagesInfo.map((item, index) => <AdvantagesCard key={index} item={item} />)

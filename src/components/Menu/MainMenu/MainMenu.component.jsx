@@ -136,7 +136,7 @@ export const MainMenuComponent = ({ }) => {
                 <Button variant={ButtonVariants.default} text='Best quality services' />
                 <div className='auth-buttons'>
                   <Button variant={ButtonVariants.purchase} text="Login" />
-                  <Button variant={ButtonVariants.default} text='Register' />
+                  <Button className='register-button' variant={ButtonVariants.default} text='Register' />
                 </div>
               </div>
             </nav>

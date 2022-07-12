@@ -28,13 +28,22 @@ export const DropDownComponent = ({
   const [height, setHeight] = useState(0);
   const dropDown = useRef(null);
 
-  const updateSize = () => {
-    const add = addToHeight ? addToHeight : 190;
-    setHeight(isInnerHeight ? window.innerHeight - 82 : dropDown.current.offsetHeight + add);
-  }
-
   useEffect(() => {
+    const updateSize = () => {
+      const add = addToHeight ? addToHeight : 190;
+      setHeight(isInnerHeight ? window.innerHeight - 64 : dropDown.current.offsetHeight + add);
+    }
     updateSize();
+
+    window.addEventListener('resize', function () {
+      updateSize();
+    }, true);
+
+    return () => {
+      window.removeEventListener('resize', function () {
+        updateSize();
+      }, true);
+    }
   }, [])
 
   return (
