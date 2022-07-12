@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { NavLinks } from "../../../constants/constants";
 import {
   ButtonVariants,
@@ -12,10 +12,13 @@ import { Text } from "../../Text";
 import { Tools } from "../../Tools";
 import classNames from "classnames";
 import { DropDown } from "../../DropDown";
+import { useEffect } from "react";
 
 export const MainMenuComponent = () => {
   const [isShowTools, setIsShowTools] = useState(false);
   const [isShowBurger, setIsShowBurger] = useState(false);
+  const [active, setActive] = useState("");
+  const location = useLocation();
 
   const MainMenuClass = classNames("mainMenu");
   const NavBurgerClass = classNames("nav-burger", {
@@ -33,6 +36,10 @@ export const MainMenuComponent = () => {
       setIsShowTools(!isShowTools);
     }
   };
+
+  useEffect(() => {
+    setActive(location.pathname);
+  }, [location.pathname]);
 
   return (
     <header className={MainMenuClass}>
@@ -55,7 +62,7 @@ export const MainMenuComponent = () => {
               {NavLinks.map((item, index) => (
                 <li
                   className={`nav-list-item cursor-pointer ${
-                    window.location.pathname === item.link && "nav-item-active"
+                    active === item.link && "nav-item-active"
                   }`}
                   onClick={() => {
                     handleClickItem(item, index);
@@ -66,13 +73,13 @@ export const MainMenuComponent = () => {
                   {item.text !== "Tools" ? (
                     <Link to={item.link ? item.link : ""}>
                       <Text variant={TextVariants.h3}>{`${item.text} ${
-                        window.location.pathname === item.link ? "." : " "
+                        active === item.link ? "." : " "
                       }`}</Text>
                     </Link>
                   ) : (
                     <>
                       <Text variant={TextVariants.h3}>{`${item.text} ${
-                        window.location.pathname === item.link ? "." : " "
+                        active === item.link ? "." : " "
                       }`}</Text>
                     </>
                   )}
@@ -114,8 +121,7 @@ export const MainMenuComponent = () => {
                 {NavLinks.map((item, index) => (
                   <li
                     className={`nav-list-item cursor-pointer ${
-                      window.location.pathname === item.link &&
-                      "nav-item-active"
+                      active === item.link && "nav-item-active"
                     }`}
                     onClick={() => {
                       handleClickItem(item, index);
@@ -127,7 +133,7 @@ export const MainMenuComponent = () => {
                         <hr className="nav-hr" />
                         <Link to={item.link ? item.link : ""}>
                           <Text variant={TextVariants.h3}>{`${item.text} ${
-                            window.location.pathname === item.link ? "." : " "
+                            active === item.link ? "." : " "
                           }`}</Text>
                         </Link>
                       </>
@@ -137,7 +143,7 @@ export const MainMenuComponent = () => {
                           <div style={{ display: "flex" }}>
                             <hr className="nav-hr" />
                             <Text variant={TextVariants.h3}>{`${item.text} ${
-                              window.location.pathname === item.link ? "." : " "
+                              active === item.link ? "." : " "
                             }`}</Text>
                           </div>
                           <SvgIcon
