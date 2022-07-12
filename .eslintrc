@@ -10,7 +10,6 @@
       "experimentalObjectRestSpread": true
     }
   },
-
   "plugins": ["react-hooks"],
   "extends": [
     "eslint:recommended",
