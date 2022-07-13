@@ -40,8 +40,8 @@
   padding-right: 9%;
 }
 
-.faq-background {
-  background: url('/public/images/Backgrounds/1920.png');
+.background-img {
+  background: url("/public/images/Backgrounds/1920.png");
   background-size: cover !important;
   background-position: right !important;
 }
@@ -66,8 +66,8 @@
     padding-left: 7.75%;
   }
 
-  .faq-background{
-    background: url('/public/images/Backgrounds/1440.png');
+  .background-img {
+    background: url("/public/images/Backgrounds/1440.png");
   }
 }
 
@@ -81,8 +81,8 @@
     padding-left: 6.5%;
   }
 
-  .faq-background{
-    background: url('/public/images/Backgrounds/1024.png');
+  .background-img {
+    background: url("/public/images/Backgrounds/1024.png");
   }
 }
 
@@ -96,8 +96,8 @@
     padding-left: 5.25%;
   }
 
-  .faq-background{
-    background: url('/public/images/Backgrounds/834.png');
+  .background-img {
+    background: url("/public/images/Backgrounds/834.png");
     background-size: auto !important;
   }
 }
@@ -112,8 +112,8 @@
     padding-left: 4%;
   }
 
-  .faq-background{
-    background: url('/public/images/Backgrounds/375.png');
+  .background-img {
+    background: url("/public/images/Backgrounds/375.png");
   }
 }
 

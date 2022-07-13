@@ -31,8 +31,10 @@ export const MainMenuComponent = () => {
 
   const handleClickItem = (item) => {
     if (item.text !== "Tools") {
+      setActive(location.pathname);
       setIsShowTools(false);
     } else {
+      setActive("Tools");
       setIsShowTools(!isShowTools);
     }
   };
@@ -62,7 +64,8 @@ export const MainMenuComponent = () => {
               {NavLinks.map((item, index) => (
                 <li
                   className={`nav-list-item cursor-pointer ${
-                    active === item.link && "nav-item-active"
+                    (active === item.link || active === item.text) &&
+                    "nav-item-active"
                   }`}
                   onClick={() => {
                     handleClickItem(item, index);
@@ -79,7 +82,7 @@ export const MainMenuComponent = () => {
                   ) : (
                     <>
                       <Text variant={TextVariants.h3}>{`${item.text} ${
-                        active === item.link ? "." : " "
+                        active === item.text ? "." : " "
                       }`}</Text>
                     </>
                   )}
@@ -121,7 +124,8 @@ export const MainMenuComponent = () => {
                 {NavLinks.map((item, index) => (
                   <li
                     className={`nav-list-item cursor-pointer ${
-                      active === item.link && "nav-item-active"
+                      (active === item.link || active === item.text) &&
+                      "nav-item-active"
                     }`}
                     onClick={() => {
                       handleClickItem(item, index);
@@ -143,7 +147,7 @@ export const MainMenuComponent = () => {
                           <div style={{ display: "flex" }}>
                             <hr className="nav-hr" />
                             <Text variant={TextVariants.h3}>{`${item.text} ${
-                              active === item.link ? "." : " "
+                              active === item.text ? "." : " "
                             }`}</Text>
                           </div>
                           <SvgIcon

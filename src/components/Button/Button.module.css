@@ -12,14 +12,14 @@
   cursor: pointer;
 }
 
-.button>div {
+.button > div {
   justify-content: center;
   align-items: center;
   text-align: center;
   display: flex;
 }
 
-.button.button_variant_crypto>div {
+.button.button_variant_crypto > div {
   width: 100%;
   justify-content: space-around;
   align-items: center;
@@ -170,11 +170,11 @@
 
 /* Variant icon position */
 
-.button_icon_position_left>div {
+.button_icon_position_left > div {
   flex-direction: row;
 }
 
-.button_icon_position_right>div {
+.button_icon_position_right > div {
   flex-direction: row-reverse;
 }
 
@@ -201,4 +201,20 @@
 .button_logout:active path {
   stroke: none !important;
   fill: var(--black) !important;
+}
+
+@media (max-width: 834px) {
+  .button_size_xl {
+    height: 55px;
+    width: 55px;
+    border-radius: 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  .button_size_xl {
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+  }
 }

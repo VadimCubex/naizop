@@ -119,6 +119,7 @@ export const IconsVariants = {
 export const ImagesVariants = {
   Like_girl: '/images/Home/Like.png',
   Slider_girl: '/images/Home/Slider girl.png',
+  Team_man: '/images/About/Team1.png',
   Rating: '/images/Home/Rating.svg',
   Instagram: '/images/Home/Instagram.png',
   Twitter: '/images/Home/Twitter.png',
@@ -126,6 +127,13 @@ export const ImagesVariants = {
   Facebook: '/images/Home/Facebook.png',
   Experience: '/images/Home/Experience.png',
   profile: '/images/Profile/Profile.svg',
+
+  Workspace1: '/images/About/Workspace1.png',
+  Workspace2: '/images/About/Workspace2.png',
+  Workspace3: '/images/About/Workspace3.png',
+  Workspace4: '/images/About/Workspace4.png',
+  Workspace5: '/images/About/Workspace5.png',
+  Workspace6: '/images/About/Workspace6.png',
 }
 
 export const ColorSvgVariants = {
@@ -196,4 +204,9 @@ export const DropDownVariants = {
 export const SelectOptionVariants = {
   newOrderWithDetail: 'detail',
   newOrderWithoutDeteil: 'nodeteil',
+}
+
+export const SliderCardVariants = {
+  large: 'lg',
+  small: 'sm',
 }

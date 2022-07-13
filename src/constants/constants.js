@@ -253,3 +253,21 @@ export const FAQInfoSecondPart = [{
     'Sometimes we are unable to deliver a full order, so we refund you the remaining undelivered amount',
     "Example: You bought an order with a quantity of 1000 are charged $1, let's say we delivered 900 and the remaining 100 we couldn't deliver, we will then 'Partialy Refund' the order and reimburse you the remaining $100 [$0.10 in this example]. The funds will be added to your account balance account balance."],
 }]
+
+export const TeamSlidesInfo = [
+  {
+    title: 'Constantine Rozenshtraus-Makarov',
+    img: ImagesVariants.Team_man,
+    description: 'Chief Executive Officer of Naizop',
+  },
+  {
+    title: 'Diego Silva',
+    img: ImagesVariants.Team_man,
+    description: 'Head of Latin American office',
+  },  
+  {
+    title: 'Constantine Rozenshtraus-Makarov 1',
+    img: ImagesVariants.Team_man,
+    description: 'Chief Executive Officer of Naizop 1',
+  },
+]

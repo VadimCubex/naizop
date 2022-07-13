@@ -6,6 +6,7 @@ import {
   ButtonVariants,
   IconsVariants,
   ImagesVariants,
+  SliderCardVariants,
   TextVariants,
 } from "../../constants/VariantsOfComponents";
 import {
@@ -84,6 +85,7 @@ const Home = () => {
         <SocialeNetworks />
       </div>
       <Slider
+        variant={SliderCardVariants.large}
         slides={ExperienceSliderInfo}
         description="Experience The Naizop Difference"
       />

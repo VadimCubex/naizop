@@ -1,5 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
-import classNames from 'classnames';
+import React, { useEffect, useRef, useState } from "react";
+import classNames from "classnames";
+import { debounce } from "../../helpers/helpers";
 
 export const DropDownComponent = ({
   isOpen,
@@ -10,20 +11,17 @@ export const DropDownComponent = ({
   className,
 }) => {
   const DropDownClass = classNames(
-    'dropDown',
+    "dropDown",
     {
       [`dropDown_variant_${variant}`]: variant,
-      'dropDown-active': isOpen
+      "dropDown-active": isOpen,
     },
     className
   );
 
-  const DropDownChildrenClass = classNames(
-    'children',
-    {
-      [`children_variant_${variant}`]: variant,
-    }
-  );
+  const DropDownChildrenClass = classNames("children", {
+    [`children_variant_${variant}`]: variant,
+  });
 
   const [height, setHeight] = useState(0);
   const dropDown = useRef(null);
@@ -31,23 +29,38 @@ export const DropDownComponent = ({
   useEffect(() => {
     const updateSize = () => {
       const add = addToHeight ? addToHeight : 190;
-      setHeight(isInnerHeight ? window.innerHeight - 64 : dropDown.current.offsetHeight + add);
-    }
+      setHeight(
+        isInnerHeight
+          ? window.innerHeight - 64
+          : dropDown.current.offsetHeight + add
+      );
+    };
     updateSize();
 
-    window.addEventListener('resize', function () {
-      updateSize();
-    }, true);
+    window.addEventListener(
+      "resize",
+      function () {
+        debounce(updateSize());
+      },
+      true
+    );
 
     return () => {
-      window.removeEventListener('resize', function () {
-        updateSize();
-      }, true);
-    }
-  }, [])
+      window.removeEventListener(
+        "resize",
+        function () {
+          debounce(updateSize());
+        },
+        true
+      );
+    };
+  }, []);
 
   return (
-    <div style={{ maxHeight: isOpen ? `${height}px` : '0px' }} className={DropDownClass}>
+    <div
+      style={{ maxHeight: isOpen ? `${height}px` : "0px" }}
+      className={DropDownClass}
+    >
       <div ref={dropDown} className={DropDownChildrenClass}>
         {children}
       </div>
@@ -55,4 +68,4 @@ export const DropDownComponent = ({
   );
 };
 
-DropDownComponent.displayName = 'DropDown';
+DropDownComponent.displayName = "DropDown";
