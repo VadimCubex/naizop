@@ -64,7 +64,7 @@ const Home = () => {
         </div>
         <div className="light-img" />
       </div>
-      <div className="container main-content">
+      <div className="container">
         <div className="sociale-network-background" />
       </div>
       <div
@@ -81,7 +81,7 @@ const Home = () => {
           <AdvantagesCard key={index} item={item} />
         ))}
       </div>
-      <div className="container main-content">
+      <div className="container">
         <SocialeNetworks />
       </div>
       <Slider

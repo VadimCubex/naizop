@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { NavLinks } from "../../../constants/constants";
 import {
   ButtonVariants,
@@ -19,11 +19,16 @@ export const MainMenuComponent = () => {
   const [isShowBurger, setIsShowBurger] = useState(false);
   const [active, setActive] = useState("");
   const location = useLocation();
+  const navigation = useNavigate();
 
   const MainMenuClass = classNames("mainMenu");
   const NavBurgerClass = classNames("nav-burger", {
     active: isShowBurger,
   });
+
+  const handleClickLogin = () => {
+    navigation("/profile");
+  };
 
   const handleClickBurger = () => {
     setIsShowBurger(!isShowBurger);
@@ -33,6 +38,7 @@ export const MainMenuComponent = () => {
     if (item.text !== "Tools") {
       setActive(location.pathname);
       setIsShowTools(false);
+      setIsShowBurger(false);
     } else {
       setActive("Tools");
       setIsShowTools(!isShowTools);
@@ -95,7 +101,11 @@ export const MainMenuComponent = () => {
                 text="Best quality services"
               />
               <div className="auth-buttons">
-                <Button variant={ButtonVariants.purchase} text="Login" />
+                <Button
+                  variant={ButtonVariants.purchase}
+                  onClick={handleClickLogin}
+                  text="Login"
+                />
                 <Button
                   className="register-button"
                   variant={ButtonVariants.default}

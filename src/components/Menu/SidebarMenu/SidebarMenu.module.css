@@ -1,0 +1,91 @@
+.sidebarMenu {
+  margin-top: -90px;
+  position: fixed;
+  z-index: 10;
+  background: var(--menu);
+  width: 250px;
+  border-radius: 0px 0px 10px 10px;
+  background: radial-gradient(
+      240.8% 68.41% at -61% -16.08%,
+      rgba(135, 144, 153, 0.2) 0%,
+      rgba(135, 144, 153, 0) 100%
+    )
+    rgba(16, 19, 20, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarMenu .dropDown {
+  border-radius: 0px;
+  padding: 0;
+  backdrop-filter: none;
+  overflow-y: hidden;
+}
+
+.sidebarMenu .more {
+  color: var(--white);
+  stroke: var(--white);
+
+  padding: 0px 31px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebarMenu .crypto {
+  margin: 0px 20px 30px;
+}
+
+.sidebarMenu hr {
+  margin: 0;
+  width: 100%;
+  border: none;
+  height: 1px;
+  background: var(--white);
+  opacity: 8%;
+}
+
+.sidebarMenu .sidebar-logo {
+  padding: 18px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+}
+
+.sidebarMenu .sidebar-items {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 31px;
+  gap: 20px;
+}
+
+.sidebarMenu .dropDown .sidebar-items {
+  padding: 0px 31px 40px;
+}
+
+.sidebarMenu .sidebar-items .sidebar-item {
+  text-decoration: none;
+}
+
+.sidebarMenu .sidebar-items .sidebar-item > div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--white);
+  stroke: var(--white);
+}
+
+.sidebarMenu .sidebar-items .sidebar-item path {
+  fill: var(--white);
+}
+
+@media (max-width: 1439px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 834px) {
+}

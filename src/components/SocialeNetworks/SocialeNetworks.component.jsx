@@ -47,7 +47,9 @@ export const SocialeNetworksComponent = ({ className }) => {
       </div>
       <div className="quality">
         <div>
-          <Text variant={TextVariants.h1}>Quality Services</Text>
+          <Text className="services" variant={TextVariants.h1}>
+            Quality Services
+          </Text>
         </div>
         <div>
           <Text className="description">{selected.description}</Text>

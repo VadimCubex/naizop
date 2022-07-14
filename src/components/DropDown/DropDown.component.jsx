@@ -29,18 +29,19 @@ export const DropDownComponent = ({
   useEffect(() => {
     const updateSize = () => {
       const add = addToHeight ? addToHeight : 190;
-      setHeight(
-        isInnerHeight
-          ? window.innerHeight - 64
-          : dropDown.current.offsetHeight + add
-      );
+      dropDown.current?.offsetHeight &&
+        setHeight(
+          isInnerHeight
+            ? window.innerHeight - 64
+            : dropDown.current.offsetHeight + add
+        );
     };
     updateSize();
 
     window.addEventListener(
       "resize",
       function () {
-        debounce(updateSize());
+        debounce(updateSize(), 750);
       },
       true
     );
@@ -49,7 +50,7 @@ export const DropDownComponent = ({
       window.removeEventListener(
         "resize",
         function () {
-          debounce(updateSize());
+          debounce(updateSize(), 750);
         },
         true
       );

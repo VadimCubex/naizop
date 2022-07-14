@@ -9,11 +9,11 @@
   color: var(--white);
 }
 
-.socialeNetworks>div:first-child {
+.socialeNetworks > div:first-child {
   width: 42%;
 }
 
-.socialeNetworks>div:last-child {
+.socialeNetworks > div:last-child {
   width: 50%;
 }
 
@@ -26,7 +26,7 @@
 
 .sociale-card .dropDown .text {
   font-weight: 400;
-  color: #D0DEE5;
+  color: #d0dee5;
 }
 
 .sociale-card hr {
@@ -67,44 +67,64 @@
 }
 
 .sociale-card:hover:not(.active) .light {
-  background: linear-gradient(46.15deg, #03D1A0 14.31%, rgba(121, 57, 216, 0) 89.33%), #1F4FD7;
+  background: linear-gradient(
+      46.15deg,
+      #03d1a0 14.31%,
+      rgba(121, 57, 216, 0) 89.33%
+    ),
+    #1f4fd7;
   opacity: 0.25;
 }
 
 .sociale-card .number {
   margin-top: 10px;
   align-self: flex-end;
-  background: radial-gradient(541.67% 541.67% at 50% 203.33%, #FFFFFF 0%, #85F7E2 47.4%, #FFB60E 100%),
-    linear-gradient(135deg, #FFFFFF -53.62%, #A8E1FE 48.72%, #6790EE 137.64%), #FFFFFF;
+  background: radial-gradient(
+      541.67% 541.67% at 50% 203.33%,
+      #ffffff 0%,
+      #85f7e2 47.4%,
+      #ffb60e 100%
+    ),
+    linear-gradient(135deg, #ffffff -53.62%, #a8e1fe 48.72%, #6790ee 137.64%),
+    #ffffff;
 }
 
 .sociale-card .number .text {
-  color: var(--black)
+  color: var(--black);
 }
 
 .sociale-card .dropDown {
   padding: 0;
   overflow: hidden;
   backdrop-filter: none;
-
 }
 
 .sociale-card .dropDown.dropDown-active {
   padding-bottom: 55px;
 }
 
-.socialeNetworks .quality>div:first-child {
+.socialeNetworks .quality > div:first-child {
   margin-bottom: 40px;
 }
 
+.socialeNetworks .quality .services {
+  font-family: "Circe Light";
+  letter-spacing: 00.04em;
+}
+
 .socialeNetworks .quality .description {
-  font-family: 'Circe Medium';
+  font-family: "Circe Medium";
   font-style: normal;
   font-weight: 400;
   font-size: 58px;
   line-height: 50px;
 
-  background: radial-gradient(179.05% 212% at -11.91% 139.4%, #FFFFFF 0%, #85F7E2 47.4%, #FFB60E 100%);
+  background: radial-gradient(
+    179.05% 212% at -11.91% 139.4%,
+    #ffffff 0%,
+    #85f7e2 47.4%,
+    #ffb60e 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -129,12 +149,12 @@
     flex-direction: column;
   }
 
-  .socialeNetworks>div:first-child {
+  .socialeNetworks > div:first-child {
     width: 100%;
     margin-bottom: 60px;
   }
 
-  .socialeNetworks>div:last-child {
+  .socialeNetworks > div:last-child {
     width: 100%;
   }
 
@@ -143,19 +163,19 @@
     line-height: 38.75px;
   }
 
-  .sociale-card .for-img{
+  .sociale-card .for-img {
     width: 45%;
     height: 120px;
   }
 }
 
 @media (max-width: 425px) {
-  .sociale-card .for-img{
+  .sociale-card .for-img {
     width: 40%;
     height: 100px;
   }
 
-  .sociale-card .for-img img{
+  .sociale-card .for-img img {
     width: 100%;
   }
 

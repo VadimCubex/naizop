@@ -7,7 +7,7 @@ import { TextVariants } from "../../constants/VariantsOfComponents";
 const FAQ = ({ className }) => {
   return (
     <>
-      <div className={"container main-content " + className}>
+      <div className={"container " + className}>
         <Text className="faq-title">FAQ</Text>
         <div className="faq-info-container">
           <div className="faq-info">

@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   display: inline-flex;
-  padding: 10px 20px;
+  padding: 10px 13px;
   overflow: hidden;
   border: none;
   outline: none;
@@ -17,6 +17,7 @@
   align-items: center;
   text-align: center;
   display: flex;
+  gap: 8px;
 }
 
 .button.button_variant_crypto > div {

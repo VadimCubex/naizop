@@ -14,6 +14,8 @@
 @import "../components/Select/Select.module.css";
 @import "../components/SelectOption/SelectOption.module.css";
 @import "../components/Menu/MainMenu/MainMenu.module.css";
+@import "../components/Menu/ProfileMenu/ProfileMenu.module.css";
+@import "../components/Menu/SidebarMenu/SidebarMenu.module.css";
 @import "../components/Tools/Tools.module.css";
 @import "../components/SocialeNetworks/SocialeNetworks.module.css";
 @import "../components/Slider/Slider.module.css";
@@ -92,10 +94,15 @@ code {
 
 @font-face {
   font-family: "Circe Bold";
-  src: url(../fonts/Circe-ExtraBold.otf);
+  src: url(../fonts/Circe-Bold.otf);
 }
 
 @font-face {
   font-family: "Circe Medium";
-  src: url(../fonts/CRC55.otf);
+  src: url(../fonts/Circe-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Circe Light";
+  src: url(../fonts/Circe-Light.ttf);
 }

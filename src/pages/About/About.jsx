@@ -11,7 +11,7 @@ import { TeamSlidesInfo } from "../../constants/constants";
 const About = ({ className }) => {
   return (
     <>
-      <div className={"container main-content " + className}>
+      <div className={"container " + className}>
         <div className="about-container">
           <div className="about-title">
             <Text>ABOUT US</Text>
@@ -51,7 +51,7 @@ const About = ({ className }) => {
         </div>
       </div>
       <Slider variant={SliderCardVariants.small} slides={TeamSlidesInfo} />
-      <div className={"container main-content about " + className}>
+      <div className={"container about " + className}>
         <div className="about-container about-reverse">
           <div className="about-title">
             <Text>MISSION</Text>

@@ -1,0 +1,248 @@
+.profileMenu {
+  top: 0;
+  position: sticky;
+  z-index: 10;
+  max-height: 90px;
+  background: var(--menu);
+}
+
+.profileMenu .profile-links {
+  position: relative;
+  background: var(--menu);
+  left: 320px;
+  width: 210px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.profileMenu .profile-links .links {
+  padding: 10px 0px;
+  text-decoration: none;
+}
+.profileMenu .profile-links .links a {
+  text-decoration: none;
+}
+
+.profileMenu .profile-links .links-item > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 10px;
+  stroke: var(--white);
+  color: var(--white);
+}
+
+.profileMenu .profile-links .links-item.active > div {
+  background: var(--blocks);
+}
+
+.profileMenu .burger {
+  overflow-y: auto;
+}
+
+.profileMenu .dropDown {
+  padding: 0;
+  backdrop-filter: none;
+  overflow: hidden;
+}
+
+.profileMenu .nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profileMenu .nav-container .nav-balance {
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  padding: 25px 20px 20px;
+  background: var(--gradient-yellow);
+}
+
+.profileMenu .nav-container .nav-balance .text_variant_h3 {
+  color: var(--yellow);
+}
+
+.profileMenu .nav-container .nav-profile-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.profileMenu .nav-container .nav-profile-container .nav-profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 210px;
+  gap: 10px;
+  padding: 19px 10px;
+}
+
+.profileMenu .nav-container .nav-profile-container .nav-profile.active {
+  background: var(--gradient-blue);
+}
+
+.profileMenu .nav-container .nav-profile-container .nav-profile .nav-avatar {
+  border-radius: 50%;
+  padding: 3px;
+  border: 1px solid var(--white);
+}
+
+.profileMenu
+  .nav-container
+  .nav-profile-container
+  .nav-profile
+  .nav-profile-info {
+  color: var(--white);
+  stroke: var(--white);
+}
+
+.profileMenu
+  .nav-container
+  .nav-profile-container
+  .nav-profile
+  .nav-profile-info
+  .text {
+  opacity: 50%;
+}
+
+.profileMenu
+  .nav-container
+  .nav-profile-container
+  .nav-profile
+  .nav-profile-info
+  > div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.profileMenu
+  .nav-container
+  .nav-profile-container
+  .nav-profile
+  .nav-profile-info
+  > div
+  .text {
+  opacity: 100%;
+}
+
+.profileMenu .nav-container .nav-svg {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  justify-content: space-between;
+}
+
+.profileMenu .nav-container .nav-logo {
+  margin: 18px 0px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+}
+
+.profileMenu .nav-container .nav-logo > * {
+  opacity: 0;
+}
+
+.nav-burger {
+  flex-direction: column;
+  background: linear-gradient(
+      0deg,
+      rgba(22, 24, 25, 0.5),
+      rgba(22, 24, 25, 0.5)
+    ),
+    radial-gradient(
+      240.8% 68.41% at -61% -16.08%,
+      rgba(135, 144, 153, 0.2) 0%,
+      rgba(135, 144, 153, 0) 100%
+    );
+}
+
+.nav-burger .nav-tools-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.nav-burger .nav-tools-item path {
+  stroke: #707476 !important;
+}
+
+.nav-burger .nav-list-item.nav-item-active .nav-tools-item path {
+  stroke: var(--white) !important;
+}
+
+.nav-burger.active {
+  display: none;
+}
+
+.nav-burger-container {
+  width: 100%;
+}
+
+.nav-burger .nav-list {
+  margin-top: 12px;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.nav-burger .for-tools {
+  display: block;
+  overflow: hidden;
+  padding: 0;
+  background: none;
+}
+
+.nav-burger .dropDown.dropDown-active.for-tools {
+  max-height: 1700px !important;
+}
+
+.nav-burger .nav-list .for-tools .text {
+  margin-top: 0px;
+  font-size: 17px;
+  line-height: 20px;
+}
+
+.nav-burger .nav-list .text {
+  margin-top: 20px;
+}
+
+.nav-burger .nav-list .text_variant_h3 {
+  font-size: 22px;
+  line-height: 20px;
+}
+
+.nav-burger .nav-button-container .text_variant_h4 {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.nav-burger .nav-list-item hr.nav-hr {
+  background: transparent;
+  margin: 0px 15px 0px 0px;
+  height: 40px;
+}
+
+.nav-burger .nav-list-item.nav-item-active hr.nav-hr {
+  background: var(--white);
+}
+
+.nav-burger .nav-button-container {
+  flex-direction: column;
+}
+
+.nav-burger .nav-button-container .auth-buttons {
+  flex-direction: column;
+}
+
+@media (max-width: 1439px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 834px) {
+}
