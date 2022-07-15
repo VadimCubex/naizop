@@ -4,6 +4,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
+  overflow: hidden;
   flex-direction: column;
 }
 
@@ -92,6 +93,7 @@
 
 .sociale-network-background {
   top: 230px;
+  left: 0px;
   z-index: -1;
   position: absolute;
   width: 100%;
@@ -120,12 +122,19 @@
 }
 
 .experience-container {
-  overflow: hidden;
-  padding-top: 434px;
+  user-select: none;
+  padding-top: 145px;
   padding-bottom: 120px;
   position: relative;
   display: flex;
   flex-direction: column;
+}
+
+.experience-container::-webkit-scrollbar {
+  display: none;
+}
+.experience-container::-webkit-scrollbar-thumb {
+  display: none;
 }
 
 .experience-container > div:last-child {
@@ -133,11 +142,22 @@
 }
 
 .experience {
+  width: fit-content;
   display: flex;
+  left: 0px;
+  bottom: 85px;
+  position: absolute;
+  background: radial-gradient(
+    100% 100% at 40% 50%,
+    rgba(8, 7, 7, 1) 10%,
+    rgb(0 0 0 / 0%) 55%
+  );
 }
 
 .experience .info {
-  width: 55%;
+  width: 690px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   color: var(--white);
@@ -176,20 +196,26 @@
 
 .experience-images {
   width: 100%;
-  position: absolute;
   top: 110px;
 }
 
+.experience-images.active img {
+  animation: experience-animation 8s ease-in-out 0s 1 normal forwards;
+}
+
+.experience-images img {
+  width: 1380px;
+}
+
 .experience-images img:first-child {
-  margin-left: 310px;
-  width: 90%;
+  pointer-events: none;
+  margin-left: 280px;
 }
 
 .experience-images img:last-child {
-  width: 90%;
-  position: absolute;
-  top: 265px;
-  margin-left: 910px;
+  pointer-events: none;
+  margin-top: -85px;
+  margin-left: 860px;
 }
 
 .experience-background {
@@ -204,6 +230,12 @@
   background-repeat: no-repeat;
   background-position-x: 25%;
   filter: blur(40px);
+}
+
+@keyframes experience-animation {
+  to {
+    margin-left: -45px;
+  }
 }
 
 @media (max-width: 1439px) {
@@ -229,7 +261,11 @@
   }
 
   .experience-container {
-    padding-top: 414.5px;
+    padding-bottom: 180px;
+  }
+
+  .experience .info {
+    width: 610px;
   }
 
   .experience .info .description {
@@ -238,7 +274,7 @@
   }
 
   .experience-images img {
-    width: 100%;
+    width: 1140px;
   }
 
   .experience-images img:first-child {
@@ -247,7 +283,13 @@
 
   .experience-images img:last-child {
     margin-left: 700px;
-    top: 225px;
+    margin-top: -65px;
+  }
+
+  @keyframes experience-animation {
+    to {
+      margin-left: -35px;
+    }
   }
 }
 
@@ -296,6 +338,10 @@
     background-size: cover;
   }
 
+  .experience .info {
+    width: 580px;
+  }
+
   .experience-background {
     background-size: inherit;
     height: 1085px;
@@ -307,12 +353,20 @@
   }
 
   .experience-container {
-    padding-top: 389px;
+    padding-bottom: 240px;
+  }
+
+  .experience .info .naizop {
+    font-size: 38px;
   }
 
   .experience .info .description {
     font-size: 27px;
     line-height: 37.5px;
+  }
+
+  .experience-images img {
+    width: 900px;
   }
 
   .experience-images img:first-child {
@@ -321,7 +375,13 @@
 
   .experience-images img:last-child {
     margin-left: 540px;
-    top: 190px;
+    margin-top: -50px;
+  }
+
+  @keyframes experience-animation {
+    to {
+      margin-left: -25px;
+    }
   }
 }
 
@@ -351,12 +411,19 @@
     padding-left: 5.25%;
   }
 
-  .experience .info {
-    width: 100%;
+  .experience {
+    background: radial-gradient(
+      100% 100% at 20% 50%,
+      rgba(8, 7, 7, 1) 0%,
+      rgb(0 0 0 / 0%) 40%
+    );
+  }
+  .experience-container {
+    padding-bottom: 325px;
   }
 
-  .experience-container {
-    padding-top: 366.5px;
+  .experience .info {
+    width: 100%;
   }
 
   .experience .info .description {
@@ -364,13 +431,23 @@
     line-height: 34px;
   }
 
+  .experience-images img {
+    width: 100%;
+  }
+
   .experience-images img:first-child {
     margin-left: 92.5px;
   }
 
   .experience-images img:last-child {
-    top: 135px;
     margin-left: 380px;
+    margin-top: -35px;
+  }
+
+  @keyframes experience-animation {
+    to {
+      margin-left: -15px;
+    }
   }
 }
 
@@ -415,7 +492,12 @@
   }
 
   .experience-container {
-    padding-top: 310px;
+    padding-bottom: 360px;
+    padding-top: 120px;
+  }
+
+  .experience .info .naizop {
+    font-size: 36px;
   }
 
   .experience .info .description {
@@ -428,7 +510,13 @@
   }
 
   .experience-images img:last-child {
-    top: 90px;
-    margin-left: 250px;
+    margin-left: 220px;
+    margin-top: -20px;
+  }
+
+  @keyframes experience-animation {
+    to {
+      margin-left: -5px;
+    }
   }
 }

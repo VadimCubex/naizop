@@ -18,24 +18,48 @@ import { SocialeNetworks } from "../../components/SocialeNetworks";
 import { Slider } from "../../components/Slider";
 import { useState } from "react";
 import { useRef } from "react";
+import { useEffect } from "react";
+import useScrollPosition from "../../hooks/useScrollPosition";
+import { useMemo } from "react";
 
 const Home = () => {
-  const [scrollX, setScrollX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
+  const scrollPosition = useScrollPosition();
+  const [advantegesScrollX, setAdvantegesScrollX] = useState(0);
+  const [advantegesScrollLeft, setAdvantegesScrollLeft] = useState(0);
+  const [experienceIsEnter, setExperienceIsEnter] = useState(false);
+
   const advanteges = useRef(null);
 
-  const handleMouseMove = (e) => {
+  const handleAdvantegesMouseMove = (e) => {
     if (e.buttons === 1) {
       const element = e.pageX - advanteges.current.offsetLeft;
-      const scrolling = (element - scrollX) * 2;
-      advanteges.current.scrollLeft = scrollLeft - scrolling;
+      const scrolling = (element - advantegesScrollX) * 2;
+      advanteges.current.scrollLeft = advantegesScrollLeft - scrolling;
     }
   };
 
-  const handleMouseDown = (e) => {
-    setScrollX(e.pageX - advanteges.current.offsetLeft);
-    setScrollLeft(advanteges.current.scrollLeft);
+  const handleAdvantegesMouseDown = (e) => {
+    setAdvantegesScrollX(e.pageX - advanteges.current.offsetLeft);
+    setAdvantegesScrollLeft(advanteges.current.scrollLeft);
   };
+
+  const getHeightForStartAnimation = () => {
+    return Math.max(
+      2600,
+      Math.min(3244, 2600 * (1 + (1 - (window.innerWidth * 0.01) / 14.4)))
+    );
+  };
+
+  const heightForStartAnimation = useMemo(
+    () => getHeightForStartAnimation(),
+    [window.innerWidth]
+  );
+
+  useEffect(() => {
+    if (!experienceIsEnter) {
+      scrollPosition > heightForStartAnimation && setExperienceIsEnter(true);
+    }
+  }, [scrollPosition]);
 
   return (
     <>
@@ -70,10 +94,10 @@ const Home = () => {
       <div
         ref={advanteges}
         onMouseDown={(e) => {
-          handleMouseDown(e);
+          handleAdvantegesMouseDown(e);
         }}
         onMouseMove={(e) => {
-          handleMouseMove(e);
+          handleAdvantegesMouseMove(e);
         }}
         className="advantages-container"
       >
@@ -89,13 +113,20 @@ const Home = () => {
         slides={ExperienceSliderInfo}
         description="Experience The Naizop Difference"
       />
-      <div className="container experience-container">
-        <div className="experience-images">
-          <img src={ImagesVariants.Experience} alt="" />
-          <img src={ImagesVariants.Experience} alt="" />
+      <div
+        className="container"
+        style={{ position: "relative", overflow: "hidden" }}
+      >
+        <div className=" experience-container">
+          <div
+            className={`experience-images ${experienceIsEnter ? "active" : ""}`}
+          >
+            <img src={ImagesVariants.Experience} alt="Experience" />
+            <img src={ImagesVariants.Excellence} alt="Excellence" />
+          </div>
         </div>
         <div className="experience-background" />
-        <div className="experience">
+        <div className="container experience">
           <div className="info">
             <Text className="naizop">NAIZOP</Text>
             <Text className="description" variant={TextVariants.h1}>

@@ -34,7 +34,7 @@ export const SocialeNetworksComponent = ({ className }) => {
                 number={`0${index + 1}`}
               />
             )}
-            <div className="for-img">
+            <div className="for-img cursor-pointer">
               <img src={item.img} alt="Social networks" />
             </div>
             <DropDown isOpen={item === selected ? true : false}>

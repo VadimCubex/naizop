@@ -126,7 +126,7 @@ export const ImagesVariants = {
   Youtube: "/images/Home/Youtube.png",
   Facebook: "/images/Home/Facebook.png",
   Experience: "/images/Home/Experience.png",
-  Experience_Exl: "/images/Home/Experience Excellence.svg",
+  Excellence: "/images/Home/Excellence.png",
   profile: "/images/Profile/Profile.svg",
 
   Workspace1: "/images/About/Workspace1.png",
