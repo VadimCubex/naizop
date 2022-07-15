@@ -114,6 +114,11 @@
     background: url("/public/images/Backgrounds/834.png");
     background-size: auto !important;
   }
+
+  .profile-container {
+    padding-left: 5.25%;
+    padding-right: 5.25%;
+  }
 }
 
 @media (max-width: 425px) {
@@ -128,6 +133,11 @@
 
   .background-img {
     background: url("/public/images/Backgrounds/375.png");
+  }
+
+  .profile-container {
+    padding-left: 4%;
+    padding-right: 4%;
   }
 }
 

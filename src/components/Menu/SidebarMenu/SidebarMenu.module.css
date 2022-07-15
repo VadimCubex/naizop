@@ -26,7 +26,7 @@
   color: var(--white);
   stroke: var(--white);
 
-  padding: 0px 31px 20px;
+  padding: 0px 30px 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -34,7 +34,11 @@
 }
 
 .sidebarMenu .crypto {
-  margin: 0px 20px 30px;
+  padding: 0px 20px 30px;
+}
+
+.sidebarMenu .crypto .button_variant_crypto {
+  min-width: 180px;
 }
 
 .sidebarMenu hr {
@@ -57,12 +61,12 @@
 .sidebarMenu .sidebar-items {
   display: flex;
   flex-direction: column;
-  padding: 40px 31px;
+  padding: 40px 30px;
   gap: 20px;
 }
 
 .sidebarMenu .dropDown .sidebar-items {
-  padding: 0px 31px 40px;
+  padding: 0px 30px 40px;
 }
 
 .sidebarMenu .sidebar-items .sidebar-item {
@@ -82,10 +86,52 @@
 }
 
 @media (max-width: 1439px) {
+  .sidebarMenu {
+    width: 225px;
+  }
+  .sidebarMenu .sidebar-items {
+    padding: 30px 25px;
+    gap: 15px;
+  }
+  .sidebarMenu .dropDown .sidebar-items {
+    padding: 0px 25px 30px;
+  }
+  .sidebarMenu .more {
+    padding: 0px 25px 15px;
+  }
+  .sidebarMenu .crypto {
+    padding: 0px 15px 15px;
+  }
+
+  .sidebarMenu .crypto .button_variant_crypto .text {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 1024px) {
+  .sidebarMenu {
+    width: 200px;
+  }
+  .sidebarMenu .sidebar-items {
+    padding: 25px 20px;
+    gap: 10px;
+  }
+  .sidebarMenu .dropDown .sidebar-items {
+    padding: 0px 20px 25px;
+  }
+  .sidebarMenu .more {
+    padding: 0px 20px 10px;
+  }
+  .sidebarMenu .crypto {
+    padding: 0px 10px 10px;
+  }
+  .sidebarMenu .crypto .button_variant_crypto .text {
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 834px) {
+  .sidebarMenu {
+    display: none;
+  }
 }

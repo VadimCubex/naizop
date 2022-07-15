@@ -59,17 +59,17 @@
   gap: 10px;
 }
 
-.nav-button-container .auth-buttons .register-button{
+.nav-button-container .auth-buttons .register-button {
   background: var(--white);
   color: var(--black);
 }
 
-.nav-button-container .auth-buttons .register-button:hover{
+.nav-button-container .auth-buttons .register-button:hover {
   background: #bdbdbd;
   color: var(--black);
 }
 
-.nav-button-container .auth-buttons .register-button:active{
+.nav-button-container .auth-buttons .register-button:active {
   background: var(--blocks);
   color: var(--white);
 }
@@ -124,8 +124,16 @@
 
 .nav-burger {
   flex-direction: column;
-  background: linear-gradient(0deg, rgba(22, 24, 25, 0.5), rgba(22, 24, 25, 0.5)),
-    radial-gradient(240.8% 68.41% at -61% -16.08%, rgba(135, 144, 153, 0.2) 0%, rgba(135, 144, 153, 0) 100%);
+  background: linear-gradient(
+      0deg,
+      rgba(22, 24, 25, 0.5),
+      rgba(22, 24, 25, 0.5)
+    ),
+    radial-gradient(
+      240.8% 68.41% at -61% -16.08%,
+      rgba(135, 144, 153, 0.2) 0%,
+      rgba(135, 144, 153, 0) 100%
+    );
 }
 
 .nav-burger .nav-tools-item {
@@ -207,7 +215,6 @@
 }
 
 @media (max-width: 1439px) {
-
   .nav-list .text {
     margin-top: 31px;
   }

@@ -61,15 +61,17 @@ export const SidebarMenuComponent = () => {
           ))}
         </div>
       </DropDown>
-      <Button
-        className="crypto"
-        size={ButtonSizeVariants.large}
-        variant={ButtonVariants.crypto}
-        isLight={true}
-        text="Purchase Crypto"
-        iconPosition="right"
-        icon={IconsVariants.Arrow_crypto}
-      />
+      <div className="crypto">
+        <Button
+          width="full"
+          size={ButtonSizeVariants.large}
+          variant={ButtonVariants.crypto}
+          isLight={true}
+          text="Purchase Crypto"
+          iconPosition="right"
+          icon={IconsVariants.Arrow_crypto}
+        />
+      </div>
     </aside>
   );
 };
