@@ -83,6 +83,10 @@
   .background-img {
     background: url("/public/images/Backgrounds/1440.png");
   }
+
+  .profile-main-content {
+    margin-left: 255px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -98,12 +102,20 @@
   .background-img {
     background: url("/public/images/Backgrounds/1024.png");
   }
+
+  .profile-main-content {
+    margin-left: 220px;
+  }
 }
 
 @media (max-width: 834px) {
   .container {
     padding-left: 5.25%;
     padding-right: 5.25%;
+  }
+
+  .profile-main-content {
+    margin-left: 0px;
   }
 
   .left-container {
