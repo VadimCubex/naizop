@@ -98,7 +98,7 @@ export const SidebarLinksFirstPart = [
   {
     icon: IconsVariants.Support,
     text: "Support",
-    link: "/profile",
+    link: "/profile/support",
   },
   {
     icon: IconsVariants.Affiliates,
@@ -423,5 +423,194 @@ export const ProfileInfo = {
   img: ImagesVariants.profile,
   name: "Brian",
   surname: "Robinson",
-  balance: 300,
+  balance: 75,
+  rate: "$1.00/100 points",
+  rank: "BRONZE",
+  points: 0,
 };
+
+export const AccountStatusInfo = [
+  {
+    title: "24/7 Ticket Support",
+    tooltip:
+      "24/7 Ticket Support (customers who have spent $100 or more) will automatically unlock 24/7 ticket support. You will know you have achieved this status when the Gold coloured bar has been activated.",
+  },
+  {
+    title: "Early notification on new services",
+    tooltip:
+      "24/7 Ticket Support (customers who have spent $100 or more) will automatically unlock 24/7 ticket support. You will know you have achieved this status when the Gold coloured bar has been activated.",
+  },
+  {
+    title: "Priority ticket support",
+    tooltip:
+      "24/7 Ticket Support (customers who have spent $100 or more) will automatically unlock 24/7 ticket support. You will know you have achieved this status when the Gold coloured bar has been activated.",
+  },
+  {
+    title: "Support available via Instagram",
+    tooltip:
+      "24/7 Ticket Support (customers who have spent $100 or more) will automatically unlock 24/7 ticket support. You will know you have achieved this status when the Gold coloured bar has been activated.",
+  },
+  {
+    title: "Support available via Telegram",
+    tooltip:
+      "24/7 Ticket Support (customers who have spent $100 or more) will automatically unlock 24/7 ticket support. You will know you have achieved this status when the Gold coloured bar has been activated.",
+  },
+  {
+    title: "$250 Monthly lottery",
+    tooltip:
+      "24/7 Ticket Support (customers who have spent $100 or more) will automatically unlock 24/7 ticket support. You will know you have achieved this status when the Gold coloured bar has been activated.",
+  },
+  {
+    title: "Loyalty 2% payment bonus",
+    tooltip:
+      "24/7 Ticket Support (customers who have spent $100 or more) will automatically unlock 24/7 ticket support. You will know you have achieved this status when the Gold coloured bar has been activated.",
+  },
+  {
+    title: "Support handled by the admins",
+    tooltip:
+      "24/7 Ticket Support (customers who have spent $100 or more) will automatically unlock 24/7 ticket support. You will know you have achieved this status when the Gold coloured bar has been activated.",
+  },
+];
+
+export const AccountPointsInfo = [
+  "Available",
+  "Can redeem = 500 points",
+  "Can redeem = 250 points",
+  "Can redeem = 100 points",
+  "Less than 4 days conversion",
+];
+
+export const RanksInfo = [
+  {
+    row: {
+      rank: "VIP III",
+      count: "$50.000",
+    },
+  },
+  {
+    row: {
+      rank: "VIP",
+      count: "$15.000",
+    },
+  },
+  {
+    row: {
+      rank: "Diamond",
+      count: "$5.000",
+    },
+  },
+  {
+    row: {
+      rank: "Platinum",
+      count: "$2.500",
+    },
+  },
+  {
+    row: {
+      rank: "Silver",
+      count: "$1.000",
+    },
+  },
+  {
+    row: {
+      rank: "Bronze",
+      count: "$100",
+    },
+  },
+  {
+    row: {
+      rank: "New",
+      count: "$0",
+    },
+  },
+];
+export const RanksColumnInfo = ["Rank", "Amount spent"];
+
+export const RedeemInfo = [
+  {
+    row: {
+      id: "#1524",
+      points: "Crypto",
+      date: "2022-04-11   08:10:39",
+      amount: "$5.00",
+    },
+  },
+  {
+    row: {
+      id: "#1524",
+      points: "Bitcoin",
+      date: "2022-04-11   08:10:39",
+      amount: "$10.00",
+    },
+  },
+  {
+    row: {
+      id: "#1524",
+      points: "Crypto",
+      date: "2022-04-11   08:10:39",
+      amount: "$1.00",
+    },
+  },
+  {
+    row: {
+      id: "#1524",
+      points: "Bitcoin",
+      date: "2022-04-11   08:10:39",
+      amount: "$5.000.00",
+    },
+  },
+  {
+    row: {
+      id: "#1524",
+      points: "Crypto",
+      date: "2022-04-11   08:10:39",
+      amount: "$5.00",
+    },
+  },
+  {
+    row: {
+      id: "#1524",
+      points: "Bitcoin",
+      date: "2022-04-11   08:10:39",
+      amount: "$10.00",
+    },
+  },
+  {
+    row: {
+      id: "#1524",
+      points: "Crypto",
+      date: "2022-04-11   08:10:39",
+      amount: "$1.00",
+    },
+  },
+  {
+    row: {
+      id: "#1524",
+      points: "Bitcoin",
+      date: "2022-04-11   08:10:39",
+      amount: "$5.000.00",
+    },
+  },
+];
+export const RedeemColumnInfo = ["ID", "Redeem points", "Date", "Amount"];
+
+export const RedeemSelect = [
+  {
+    title: "Redeem points",
+  },
+  {
+    title: "Order",
+  },
+  {
+    title: "Payment",
+  },
+  {
+    title: "Request",
+  },
+  {
+    title: "Request service",
+  },
+  {
+    title: "Other",
+  },
+];

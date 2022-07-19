@@ -7,15 +7,15 @@
   align-items: center;
 }
 
-.avatarDashboard .text:last-child{
+.avatarDashboard .text:last-child {
   color: var(--white);
   opacity: 0.5;
 }
 
-.avatarDashboard .avatar {
+.avatarDashboard .avatar.avatar_variant_large {
   position: absolute;
-  left: 18px ;
-  top: 18px ;
+  width: 83%;
+  height: 83%;
 }
 
 .avatar_shadow {
@@ -23,12 +23,14 @@
   justify-content: center;
   align-items: flex-end;
   position: absolute;
-  left: 18px ;
-  top: 18px ;
-  width: 165px;
-  height: 165px;
+  width: 83%;
+  height: 83%;
   border-radius: 50%;
-  background: linear-gradient(180.24deg, rgba(30, 33, 36, 0) 27.37%, #1E2124 99.79%);
+  background: linear-gradient(
+    180.24deg,
+    rgba(30, 33, 36, 0) 27.37%,
+    #1e2124 99.79%
+  );
 }
 
 .avatar_shadow .text {

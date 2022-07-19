@@ -1,0 +1,25 @@
+.redeem-history {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 310px;
+}
+
+.redeem-history .text.text_variant_h4 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: var(--white);
+}
+
+.redeem-history .text.text_variant_h4 .text {
+  opacity: 0.5;
+  color: var(--white);
+}
+
+.redeem-history .text.text_variant_h1_medium {
+  color: var(--white);
+  margin-bottom: 30px;
+}
+
+.redeem-history .table .table-separators {
+  z-index: 0;
+}

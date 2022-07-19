@@ -12,7 +12,14 @@ export const SelectComponent = ({
   className,
 }) => {
   const [isShowDropDown, setIsShowDropDown] = useState(false);
-  const SelectClass = classNames("select", className);
+  const SelectClass = classNames(
+    "select",
+    {
+      active: isShowDropDown,
+      [`variant-${variant}`]: variant,
+    },
+    className
+  );
 
   const handleClick = (value) => {
     onClick(value);

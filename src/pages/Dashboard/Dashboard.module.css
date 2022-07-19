@@ -1,11 +1,213 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard .text.text_variant_h1_medium {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.dashboard .avatar-dashboard {
+  display: flex;
+  padding: 20px 65px 20px 30px;
+}
+
+.dashboard .info-container {
+  display: flex;
+}
+
+.dashboard .block.profile {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.dashboard .block.profile .info {
+  color: var(--white);
+  height: 250px;
+  display: flex;
+  padding: 20px 40px;
+  gap: 20px;
+  width: fit-content;
+}
+
+.dashboard .block.profile .redeem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  flex-direction: column;
+  padding: 30px 40px;
+  gap: 15px;
+}
+
+.dashboard .block.profile .redeem a {
+  color: var(--white);
+  opacity: 0.5;
+}
+
+.dashboard .block.profile .icons {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+}
+
+.dashboard .block.profile .icons .svgIcon:last-child path {
+  fill: var(--white) !important;
+}
+
+.dashboard .block.profile .redeem .button {
+  padding: 10px 30px;
+}
+
+.dashboard .block.profile .info .categories {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard .block.profile .info .categories > *,
+.dashboard .block.profile .info .category-info > * {
+  display: flex;
+  align-items: center;
+  height: 25%;
+}
+
+.dashboard .block.profile .info .category-info {
+  display: flex;
+  flex-direction: column;
+
+  color: var(--yellow);
+}
+
+.dashboard .block.profile .info .category-info .rank {
+  color: var(--white);
+  opacity: 0.5;
+}
+
+.dashboard .block.profile .info hr {
+  margin: 0px;
+  border: none;
+  width: 1px;
+  background: var(--light-blue-15);
+}
+
+.dashboard .cards-container {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard .cards-container:last-child {
+  margin-top: 30px;
+  margin-bottom: 120px;
+}
+
+.dashboard .cards-container .title {
+  color: var(--white);
+  margin-bottom: 15px;
+}
+
+.dashboard .cards-container .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  row-gap: 20px;
+}
+
+.dashboard .cards-container hr {
+  margin: 30px 0px 20px 0px;
+  border: none;
+  height: 1px;
+  width: 100%;
+  background: var(--light-blue-15);
+}
+
+.dashboard .cards-container .points-description {
+  color: var(--white);
+  display: flex;
+  gap: 15px;
+}
+
+.dashboard .cards-container .points-description .svgIcon path {
+  fill: var(--white) !important;
+}
+
+.dashboard .cards-container .points-description .description {
+  width: 88%;
+  margin-bottom: 15px;
+}
+
 @media (max-width: 1439px) {
+  .dashboard .avatar-dashboard {
+    padding: 20px 20px 20px 0px;
+  }
+  .dashboard .block.profile .info {
+    padding: 20px 30px;
+    gap: 10px;
+  }
+  .dashboard .block.profile .info .text.text_variant_h2_medium {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .dashboard .block.profile .redeem {
+    padding: 20px 10px 20px 0px;
+  }
+  .dashboard .cards-container .cards {
+    gap: 15px;
+    row-gap: 15px;
+  }
 }
 
 @media (max-width: 1024px) {
+  .dashboard .info-container {
+    flex-direction: column;
+  }
+  .dashboard .avatar-dashboard {
+    padding: 20px 0px;
+    justify-content: center;
+  }
+  .dashboard .cards-container .cards {
+    gap: 10px;
+    row-gap: 10px;
+  }
+}
+@media (max-width: 834px) {
+  .dashboard .avatar-dashboard {
+    padding: 0px 0px 30px 0px;
+    justify-content: center;
+  }
 }
 
-@media (max-width: 834px) {
+@media (max-width: 600px) {
+  .dashboard .block.profile {
+    flex-direction: column;
+  }
+  .dashboard .block.profile .info,
+  .dashboard .block.profile .redeem {
+    width: 100%;
+    justify-content: center;
+  }
+  .dashboard .block.profile .info {
+    padding: 50px 20px 20px 20px;
+    gap: 20px;
+  }
+  .dashboard .block.profile .redeem {
+    padding: 20px 0px 30px 0px;
+  }
 }
 
 @media (max-width: 425px) {
+  .dashboard .block.profile .info .text.text_variant_h5 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .dashboard .block.profile .info .text.text.text_variant_h2_medium {
+    font-size: 20px;
+    line-height: 25px;
+  }
 }

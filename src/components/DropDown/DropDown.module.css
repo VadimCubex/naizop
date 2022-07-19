@@ -14,7 +14,11 @@
   z-index: 0;
   color: var(--white);
   border: 1px solid;
-  border-image-source: radial-gradient(99.13% 198.27% at 31.38% -98.27%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  border-image-source: radial-gradient(
+    99.13% 198.27% at 31.38% -98.27%,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
 .dropDown_variant_accordion.dropDown-active {
@@ -23,9 +27,7 @@
 
 .dropDown_variant_select {
   background: var(--blocks);
-  margin-top: -60px;
-  overflow: hidden;
-  z-index: 0;
+  z-index: 1;
   color: var(--white);
 }
 
@@ -53,6 +55,9 @@
 }
 
 .dropDown-open-button-active {
-  background: radial-gradient(695% 695% at 50% -485%, #005AE2 0%, rgba(58, 67, 81, 0) 100%);
-  ;
+  background: radial-gradient(
+    695% 695% at 50% -485%,
+    #005ae2 0%,
+    rgba(58, 67, 81, 0) 100%
+  );
 }

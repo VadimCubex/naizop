@@ -1,7 +1,7 @@
-import React from 'react';
-import classNames from 'classnames';
-import { SelectOptionVariants } from '../../constants/VariantsOfComponents';
-import { OptionDetail, OptionWithoutDetail } from '.';
+import React from "react";
+import classNames from "classnames";
+import { SelectOptionVariants } from "../../constants/VariantsOfComponents";
+import { OptionDefault, OptionDetail, OptionWithoutDetail } from ".";
 
 export const SelectOptionComponent = ({
   value,
@@ -10,22 +10,36 @@ export const SelectOptionComponent = ({
   variant,
   className,
 }) => {
-  const SelectOptionClass = classNames(
-    'selectOption',
-    className
-  );
+  const SelectOptionClass = classNames("selectOption", className);
 
   const OptionVariantMap = {
-    [SelectOptionVariants.newOrderWithDetail]: <OptionDetail className={!selected && 'selectOption-padding-y-10'} value={value} selected={selected} />,
-    [SelectOptionVariants.newOrderWithoutDeteil]: <OptionWithoutDetail className={!selected && 'selectOption-padding-y-10'} value={value} />
-  }
+    [SelectOptionVariants.newOrderWithDetail]: (
+      <OptionDetail
+        className={!selected && "selectOption-padding-y-10"}
+        value={value}
+        selected={selected}
+      />
+    ),
+    [SelectOptionVariants.newOrderWithoutDeteil]: (
+      <OptionWithoutDetail
+        className={!selected && "selectOption-padding-y-10"}
+        value={value}
+      />
+    ),
+    [SelectOptionVariants.default]: (
+      <OptionDefault
+        className={!selected && "selectOption-padding-y-10"}
+        value={value}
+      />
+    ),
+  };
 
   return (
     <div onClick={onClick} className={SelectOptionClass}>
-      {!selected && <hr className='separator' />}
+      {!selected && <hr className="separator" />}
       {OptionVariantMap[variant]}
     </div>
   );
 };
 
-SelectOptionComponent.displayName = 'SelectOption';
+SelectOptionComponent.displayName = "SelectOption";

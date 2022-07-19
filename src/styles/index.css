@@ -20,21 +20,31 @@
 @import "../components/SocialeNetworks/SocialeNetworks.module.css";
 @import "../components/Slider/Slider.module.css";
 @import "../components/Footer/Footer.module.css";
+@import "../components/Modal/Modal.module.css";
+@import "../components/Table/Table.module.css";
+@import "../components/Input/Input.module.css";
 
 @import "./App.css";
 
 @import "../pages/Home/Home.module.css";
 @import "../pages/FAQ/FAQ.module.css";
 @import "../pages/About/About.module.css";
+@import "../pages/Dashboard/Dashboard.module.css";
+@import "../pages/RedeemHistory/RedeemHistory.module.css";
+@import "../pages/Support/Support.module.css";
 
 :root {
   --transition-property: all;
   --transition-time: 0.4s;
   --transition-function: ease;
 }
+#root {
+  height: 100%;
+}
 
 html {
   min-width: 320px;
+  height: 100%;
 }
 
 * {
@@ -44,6 +54,7 @@ html {
 }
 
 body {
+  height: 100%;
   overflow-x: hidden;
   background: var(--background);
   margin: 0;

@@ -6,6 +6,8 @@ import About from "../pages/About/About";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import FAQ from "../pages/FAQ/FAQ";
 import Home from "../pages/Home/Home";
+import RedeemHistory from "../pages/RedeemHistory/RedeemHistory";
+import Support from "../pages/Support/Support";
 import TestComponents from "../pages/TestComponents";
 
 const NaizopRoutes = () => {
@@ -22,6 +24,8 @@ const NaizopRoutes = () => {
       <Route path="/profile" element={<ProfileLayout />}>
         <Route index element={<Dashboard />} />
         <Route path="/profile/account" element={<Dashboard />} />
+        <Route path="/profile/redeem-history" element={<RedeemHistory />} />
+        <Route path="/profile/support" element={<Support />} />
       </Route>
     </Routes>
   );
