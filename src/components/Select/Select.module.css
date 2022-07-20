@@ -13,14 +13,9 @@
   padding: 60px 20px 0px 20px;
 }
 
-.select-container .dropDown .children {
-}
-
 .select-container .dropDown.dropDown-active {
   height: fit-content;
   z-index: 3;
-}
-.select-container .dropDown.dropDown-active .children {
 }
 
 .select {
@@ -53,4 +48,10 @@
 .select.variant-default + .dropDown {
   background: rgba(30, 33, 36, 0.75);
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 834px) {
+  .select-container .dropDown {
+    padding: 50px 20px 0px 20px;
+  }
 }

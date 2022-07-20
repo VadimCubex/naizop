@@ -98,7 +98,7 @@ export const SidebarLinksFirstPart = [
   {
     icon: IconsVariants.Support,
     text: "Support",
-    link: "/profile/support",
+    link: "/profile",
   },
   {
     icon: IconsVariants.Affiliates,
@@ -594,7 +594,7 @@ export const RedeemInfo = [
 ];
 export const RedeemColumnInfo = ["ID", "Redeem points", "Date", "Amount"];
 
-export const RedeemSelect = [
+export const RedeemSubjectSelect = [
   {
     title: "Redeem points",
   },
@@ -609,6 +609,24 @@ export const RedeemSelect = [
   },
   {
     title: "Request service",
+  },
+  {
+    title: "Other",
+  },
+];
+
+export const RedeemPlanSelect = [
+  {
+    title: "Refill",
+  },
+  {
+    title: "Speed Up",
+  },
+  {
+    title: "Restart",
+  },
+  {
+    title: "Cancel",
   },
   {
     title: "Other",

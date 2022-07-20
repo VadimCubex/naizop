@@ -51,7 +51,7 @@ export const TableComponent = ({ data, columnNames, variant, className }) => {
       <div className="table-content">
         {data.map((item, index) => (
           <div className="table-row" key={index}>
-            <div className="table-row-border" />
+            {index === 0 ? null : <div className="table-row-border" />}
             <div className="table-row-content">
               {Object.values(item.row).map((value, index_value) => (
                 <div
@@ -65,6 +65,34 @@ export const TableComponent = ({ data, columnNames, variant, className }) => {
                   <Text variant={TextVariants.h5}>{value}</Text>
                 </div>
               ))}
+            </div>
+            <div className="table-small-row-content">
+              <div className="table-small-header">
+                {columnNames.map((item, index) => (
+                  <div
+                    className={`table-column-cell${
+                      variant !== TableVariants.Ranks ? "-" + (index + 1) : ""
+                    }`}
+                    key={index}
+                  >
+                    <Text variant={TextVariants.subtitle_medium}>{item}</Text>
+                  </div>
+                ))}
+              </div>
+              <div className="table-small-row">
+                {Object.values(item.row).map((value, index_value) => (
+                  <div
+                    className={`table-row-cell${
+                      variant !== TableVariants.Ranks
+                        ? "-" + (index_value + 1)
+                        : ""
+                    }`}
+                    key={index_value}
+                  >
+                    <Text variant={TextVariants.h5}>{value}</Text>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         ))}

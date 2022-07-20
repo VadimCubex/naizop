@@ -201,6 +201,23 @@
 }
 
 @media (max-width: 425px) {
+  .dashboard .cards-container {
+    padding: 25px 20px 35px;
+  }
+  .dashboard .cards-container .cards {
+    gap: 15px;
+  }
+  .dashboard .block.profile .info {
+    padding: 50px 20px 20px 20px;
+    justify-content: space-between;
+  }
+  .dashboard .block.profile .redeem {
+    padding: 20px 20px 30px;
+  }
+  .dashboard .block.profile .redeem > div,
+  .dashboard .block.profile .redeem .button {
+    width: 100%;
+  }
   .dashboard .block.profile .info .text.text_variant_h5 {
     font-size: 14px;
     line-height: 20px;

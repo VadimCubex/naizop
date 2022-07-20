@@ -30,6 +30,7 @@ export const ProfileMenuComponent = () => {
   });
 
   const handleClickItem = (pathname) => {
+    setIsShowProfile(false);
     setActive(pathname);
   };
 

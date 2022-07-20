@@ -30,7 +30,7 @@ export const TooltipComponent = ({
     if (coords.top) {
       return arrowPosition === "left"
         ? { left: coords.left, top: coords.top + 40 }
-        : { left: coords.left - 340, top: coords.top + 40 };
+        : { left: coords.left - 400, top: coords.top + 40 };
     }
   };
 

@@ -1,18 +1,26 @@
 import React from "react";
 import { Text } from "../../components/Text";
 import {
+  ButtonVariants,
   InputVariants,
   SelectOptionVariants,
   TextVariants,
 } from "../../constants/VariantsOfComponents";
 import { AccountCard } from "../../components/Cards";
 import { Select } from "../../components/Select";
-import { RedeemSelect } from "../../constants/constants";
+import {
+  RedeemSubjectSelect,
+  RedeemPlanSelect,
+} from "../../constants/constants";
 import { useState } from "react";
 import { Input } from "../../components/Input";
+import { Button } from "../../components/Button";
 
 const Support = () => {
-  const [selectedSubject, setSelectedSubject] = useState(RedeemSelect[0]);
+  const [selectedSubject, setSelectedSubject] = useState(
+    RedeemSubjectSelect[0]
+  );
+  const [selectedPlan, setSelectedPlan] = useState(RedeemPlanSelect[0]);
   return (
     <>
       <div className="support">
@@ -33,16 +41,16 @@ const Support = () => {
                   onClick={setSelectedSubject}
                   selected={selectedSubject}
                   variant={SelectOptionVariants.default}
-                  options={RedeemSelect}
+                  options={RedeemSubjectSelect}
                 />
               </div>
               <div className="support-input">
                 <Text variant={TextVariants.h3}>Selected plan</Text>
                 <Select
-                  onClick={setSelectedSubject}
-                  selected={selectedSubject}
+                  onClick={setSelectedPlan}
+                  selected={selectedPlan}
                   variant={SelectOptionVariants.default}
-                  options={RedeemSelect}
+                  options={RedeemPlanSelect}
                 />
               </div>
               <div className="support-input">
@@ -54,7 +62,20 @@ const Support = () => {
                 <Input variant={InputVariants.lg} placeholder="Enter ID..." />
               </div>
             </div>
-            <div className="chunk"></div>
+            <div className="chunk">
+              <div className="support-input message">
+                <Text variant={TextVariants.h3}>Message</Text>
+                <Input multiline={true} placeholder="Enter message..." />
+              </div>
+              <div>
+                <Button
+                  variant={ButtonVariants.blue}
+                  isLight={true}
+                  width="full"
+                  text="Submit ticket"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

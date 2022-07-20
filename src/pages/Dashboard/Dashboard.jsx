@@ -17,7 +17,7 @@ import {
   RanksInfo,
 } from "../../constants/constants";
 import { Button } from "../../components/Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AccountCard } from "../../components/Cards";
 import { SvgIcon } from "../../components/SvgIcon";
 import { ModalRanks } from "../../components/Modal";
@@ -25,6 +25,12 @@ import { Table } from "../../components/Table";
 
 const Dashboard = () => {
   const [openModal, setOpenModal] = useState(false);
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/profile/support");
+  };
+
   return (
     <>
       <div className="dashboard">
@@ -68,6 +74,7 @@ const Dashboard = () => {
                 variant={ButtonVariants.blue}
                 isLight="true"
                 text="Redeem $0.00 in points"
+                onClick={handleClick}
               />
               <Link to="/profile/redeem-history">
                 <Text variant={TextVariants.h4}>Redeem history</Text>

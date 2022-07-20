@@ -11,6 +11,7 @@
   box-sizing: border-box;
   backdrop-filter: blur(40px);
   border: 1px solid;
+  padding: 5px;
   border-image-source: radial-gradient(
     161.28% 137.14% at -23.2% -37.14%,
     rgba(255, 255, 255, 0.37) 0%,
@@ -54,6 +55,17 @@
 }
 
 @media (max-width: 1024px) {
+  .accountCard {
+    height: 158px;
+  }
+  .accountCard .text {
+    font-size: 19px;
+    line-height: 28px;
+  }
+  .accountCard .question .svgIcon {
+    width: 25px !important;
+    height: 25px !important;
+  }
   .accountCard_variant_large {
     width: 32%;
   }
@@ -63,16 +75,33 @@
 }
 
 @media (max-width: 834px) {
+  .accountCard .question .svgIcon {
+    width: 30px !important;
+    height: 30px !important;
+  }
   .accountCard_variant_large {
     width: 48%;
   }
 }
 
 @media (max-width: 425px) {
+  .accountCard {
+    height: 176px;
+  }
+  .accountCard .text {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .accountCard .question .svgIcon {
+    width: 35px !important;
+    height: 35px !important;
+  }
   .accountCard_variant_large {
+    padding: 5px 52px;
     width: 100%;
   }
   .accountCard_variant_small {
+    padding: 5px 65px;
     width: 100%;
   }
 }

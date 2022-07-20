@@ -48,17 +48,21 @@ export const InputComponent = forwardRef(
     return (
       <div className={InputClass}>
         {children}
-        <input
-          ref={ref}
-          value={value}
-          type="text"
-          placeholder={placeholder && placeholder}
-          aria-multiline={multiline}
-          onClick={onClick}
-          onChange={onChange}
-          onFocus={handleFocus}
-          onBlur={handleBlur}
-        ></input>
+        {!multiline ? (
+          <input
+            ref={ref}
+            value={value}
+            type="text"
+            placeholder={placeholder && placeholder}
+            aria-multiline={multiline}
+            onClick={onClick}
+            onChange={onChange}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+          />
+        ) : (
+          <textarea placeholder={placeholder && placeholder} />
+        )}
         {rightSide || null}
       </div>
     );

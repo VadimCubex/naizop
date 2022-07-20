@@ -58,3 +58,11 @@
   background: var(--light-blue-15);
   margin: 0px;
 }
+
+@media (max-width: 425px) {
+  .modal-container {
+    width: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}

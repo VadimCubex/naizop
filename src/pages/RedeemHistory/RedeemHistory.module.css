@@ -19,7 +19,3 @@
   color: var(--white);
   margin-bottom: 30px;
 }
-
-.redeem-history .table .table-separators {
-  z-index: 0;
-}

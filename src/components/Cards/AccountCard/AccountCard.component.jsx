@@ -26,12 +26,16 @@ export const AccountCardComponent = ({ variant, text, tooltip, className }) => {
   let timeout;
 
   const CalcCoords = () => {
-    const rect = tooltipSvg.current.getBoundingClientRect();
-    setCoords({
-      left: rect.x + rect.width / 2,
-      top: rect.y + window.scrollY,
-    });
-    DetermineTooltipPosition(rect.x + rect.width / 2 + 340);
+    const rect =
+      tooltipSvg.current?.getBoundingClientRect() &&
+      tooltipSvg.current.getBoundingClientRect();
+    if (rect) {
+      setCoords({
+        left: rect.x + rect.width / 2,
+        top: rect.y + window.scrollY,
+      });
+      DetermineTooltipPosition(rect.x + rect.width / 2 + 400);
+    }
   };
 
   const DetermineTooltipPosition = (right) => {
@@ -57,22 +61,10 @@ export const AccountCardComponent = ({ variant, text, tooltip, className }) => {
     };
     updatePosition();
 
-    window.addEventListener(
-      "resize",
-      function () {
-        debounce(updatePosition(), 750);
-      },
-      true
-    );
+    window.addEventListener("resize", debounce(updatePosition, 500), true);
 
     return () => {
-      window.removeEventListener(
-        "resize",
-        function () {
-          debounce(updatePosition(), 750);
-        },
-        true
-      );
+      window.removeEventListener("resize", debounce(updatePosition, 500), true);
     };
   }, []);
 
@@ -95,7 +87,7 @@ export const AccountCardComponent = ({ variant, text, tooltip, className }) => {
             className="question"
           >
             <SvgIcon
-              size={15}
+              size={20}
               color={ColorSvgVariants.white}
               src={IconsVariants.Question}
             />

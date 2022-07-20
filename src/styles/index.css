@@ -38,11 +38,13 @@
   --transition-time: 0.4s;
   --transition-function: ease;
 }
+
 #root {
-  height: 100%;
+  min-height: 100%;
 }
 
 html {
+  transition: var(--transition-property) 0s var(--transition-function);
   min-width: 320px;
   height: 100%;
 }
