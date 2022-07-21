@@ -189,7 +189,7 @@
   .dashboard .block.profile .info,
   .dashboard .block.profile .redeem {
     width: 100%;
-    justify-content: center;
+    justify-content: space-evenly;
   }
   .dashboard .block.profile .info {
     padding: 50px 20px 20px 20px;
@@ -201,6 +201,12 @@
 }
 
 @media (max-width: 425px) {
+  .dashboard .info-container {
+    align-items: center;
+  }
+  .dashboard .avatar-dashboard {
+    width: 150px;
+  }
   .dashboard .cards-container {
     padding: 25px 20px 35px;
   }

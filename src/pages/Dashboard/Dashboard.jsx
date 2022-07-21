@@ -28,7 +28,7 @@ const Dashboard = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/profile/support");
+    navigate("/profile/redeem-support");
   };
 
   return (

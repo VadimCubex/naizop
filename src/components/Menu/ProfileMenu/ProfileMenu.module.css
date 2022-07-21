@@ -180,7 +180,7 @@
 @media (max-width: 1439px) {
   .profileMenu .profile-links {
     width: 200px;
-    left: 285px;
+    left: 295px;
   }
   .profileMenu .nav-container .nav-logo {
     width: 225px;
@@ -191,13 +191,14 @@
   .profileMenu .nav-container .nav-profile-container .nav-profile {
     gap: 7.5px;
     width: 200px;
+    margin-left: 10px;
   }
 }
 
 @media (max-width: 1024px) {
   .profileMenu .profile-links {
     width: 190px;
-    left: 250px;
+    left: 270px;
   }
   .profileMenu .nav-container .nav-logo {
     width: 200px;
@@ -208,6 +209,7 @@
   .profileMenu .nav-container .nav-profile-container .nav-profile {
     gap: 5px;
     width: 190px;
+    margin-left: 20px;
   }
 }
 
@@ -215,6 +217,7 @@
   .profileMenu .nav-container .nav-logo > * {
     opacity: 1;
   }
+  .profileMenu .profile-links,
   .profileMenu .nav-container .nav-button-container,
   .profileMenu .nav-container .nav-profile-container .nav-balance,
   .profileMenu .nav-container .nav-profile-container .nav-profile {

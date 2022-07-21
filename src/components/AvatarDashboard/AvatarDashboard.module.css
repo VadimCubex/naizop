@@ -12,14 +12,12 @@
   opacity: 0.5;
 }
 
-.avatarDashboard .avatar.avatar_variant_large {
+.avatarDashboard .avatar {
   position: absolute;
   top: 9%;
   left: 9%;
   bottom: 9%;
   right: 9%;
-  /* width: 83%;
-  height: 83%; */
 }
 
 .avatar_shadow {
@@ -31,8 +29,6 @@
   left: 9%;
   bottom: 9%;
   right: 9%;
-  /* width: 83%;
-  height: 83%; */
   border-radius: 50%;
   background: linear-gradient(
     180.24deg,

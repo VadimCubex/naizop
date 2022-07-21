@@ -11,7 +11,13 @@ import { Tooltip } from "../../Tooltip";
 import { TooltipPortal } from "../../Portal";
 import { debounce } from "../../../helpers/helpers";
 
-export const AccountCardComponent = ({ variant, text, tooltip, className }) => {
+export const AccountCardComponent = ({
+  variant,
+  onClick,
+  text,
+  tooltip,
+  className,
+}) => {
   const AccountCardClass = classNames(
     "accountCard",
     {
@@ -69,7 +75,7 @@ export const AccountCardComponent = ({ variant, text, tooltip, className }) => {
   }, []);
 
   return (
-    <div className={AccountCardClass}>
+    <div onClick={onClick} className={AccountCardClass}>
       {tooltip && (
         <>
           <TooltipPortal>

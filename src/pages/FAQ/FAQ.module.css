@@ -1,3 +1,13 @@
+.profile-container .faq-title.text {
+  font-family: "Space Grotesk Medium";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 30px;
+}
+
 .faq-title.text {
   font-family: "Circe Bold";
   font-size: 50px;
@@ -6,6 +16,11 @@
   letter-spacing: 0.04em;
   color: #ffffff;
   margin-top: 100px;
+}
+
+.profile-container .faq-info-container {
+  padding-bottom: 210px;
+  margin-top: 20px;
 }
 
 .faq-info-container {
@@ -45,6 +60,15 @@
     font-size: 35px;
     line-height: 45px;
     margin-top: 65px;
+  }
+  .profile-container .faq-info-container {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .profile-container .faq-info-container .faq-info {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
   }
   .faq-info-container {
     margin-top: 25px;

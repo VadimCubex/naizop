@@ -131,7 +131,7 @@ export const SidebarLinksSecondPart = [
   {
     icon: IconsVariants.FAQ,
     text: "FAQ",
-    link: "/profile",
+    link: "/profile/faq",
   },
   {
     icon: IconsVariants.Api,
@@ -631,4 +631,15 @@ export const RedeemPlanSelect = [
   {
     title: "Other",
   },
+];
+
+export const AvatarsForSelect = [
+  "/images/Profile/1.svg",
+  "/images/Profile/2.svg",
+  "/images/Profile/3.svg",
+  "/images/Profile/4.svg",
+  "/images/Profile/5.svg",
+  "/images/Profile/6.svg",
+  "/images/Profile/7.svg",
+  "/images/Profile/8.svg",
 ];

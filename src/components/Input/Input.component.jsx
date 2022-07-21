@@ -4,6 +4,7 @@ import classNames from "classnames";
 export const InputComponent = forwardRef(
   (
     {
+      type,
       value,
       variant,
       placeholder,
@@ -52,9 +53,8 @@ export const InputComponent = forwardRef(
           <input
             ref={ref}
             value={value}
-            type="text"
+            type={type ? type : "text"}
             placeholder={placeholder && placeholder}
-            aria-multiline={multiline}
             onClick={onClick}
             onChange={onChange}
             onFocus={handleFocus}

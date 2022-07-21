@@ -17,6 +17,7 @@ import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 
 const Support = () => {
+  const [activeTicket, setActiveTicket] = useState(0);
   const [selectedSubject, setSelectedSubject] = useState(
     RedeemSubjectSelect[0]
   );
@@ -30,8 +31,20 @@ const Support = () => {
         <div className="support-container">
           <Text variant={TextVariants.h1_medium}>Support</Text>
           <div className="support-tickets">
-            <AccountCard text="New Ticket" />
-            <AccountCard text="Your Ticket" />
+            <AccountCard
+              onClick={() => {
+                setActiveTicket(0);
+              }}
+              className={activeTicket === 0 && "active"}
+              text="New Ticket"
+            />
+            <AccountCard
+              onClick={() => {
+                setActiveTicket(1);
+              }}
+              className={activeTicket === 1 && "active"}
+              text="Your Ticket"
+            />
           </div>
           <div className="block support-content">
             <div className="chunk">
@@ -63,7 +76,7 @@ const Support = () => {
               </div>
             </div>
             <div className="chunk">
-              <div className="support-input message">
+              <div className="message">
                 <Text variant={TextVariants.h3}>Message</Text>
                 <Input multiline={true} placeholder="Enter message..." />
               </div>

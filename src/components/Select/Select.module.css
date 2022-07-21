@@ -6,26 +6,24 @@
 }
 
 .select-container .dropDown {
+  transition: z-index 0s var(--transition-function);
   overflow: hidden;
   position: absolute;
   width: 100%;
   bottom: 0px;
   padding: 60px 20px 0px 20px;
+  z-index: 0;
 }
 
 .select-container .dropDown.dropDown-active {
   height: fit-content;
-  z-index: 3;
 }
 
 .select {
-  z-index: 2;
+  transition: z-index 0s var(--transition-function);
+  z-index: 1;
   background: var(--blocks);
   border-radius: 10px;
-}
-
-.select.active {
-  z-index: 4;
 }
 
 .select .select-info {

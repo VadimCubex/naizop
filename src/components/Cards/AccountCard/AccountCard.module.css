@@ -23,10 +23,11 @@
   opacity: 0.5;
 }
 
+.accountCard.active,
 .accountCard:hover {
   background: var(--gradient-account-card-hover);
 }
-
+.accountCard.active .text,
 .accountCard:hover .text {
   opacity: 1;
 }

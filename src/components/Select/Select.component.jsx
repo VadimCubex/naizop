@@ -15,7 +15,6 @@ export const SelectComponent = ({
   const SelectClass = classNames(
     "select",
     {
-      active: isShowDropDown,
       [`variant-${variant}`]: variant,
     },
     className

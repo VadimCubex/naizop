@@ -35,12 +35,14 @@ export const AccordionComponent = ({
               </div>
             )}
           </div>
-          <DropDownOpenButton
-            isOpen={isShowDropDown}
-            onClick={() => {
-              setIsShowDropDown(!isShowDropDown);
-            }}
-          />
+          <div className="accordion-button-container">
+            <DropDownOpenButton
+              isOpen={isShowDropDown}
+              onClick={() => {
+                setIsShowDropDown(!isShowDropDown);
+              }}
+            />
+          </div>
         </div>
       </div>
       <DropDown variant={DropDownVariants.accordion} isOpen={isShowDropDown}>
