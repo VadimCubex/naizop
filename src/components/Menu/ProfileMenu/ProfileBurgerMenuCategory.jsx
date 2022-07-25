@@ -27,8 +27,8 @@ const ProfileBurgerMenuCategory = ({ name, links, onClick }) => {
           rotate={isShow ? 180 : 0}
         />
       </div>
-      <DropDown isOpen={isShow} onClick={onClick}>
-        <div className="burger-menu-items">
+      <DropDown isOpen={isShow}>
+        <div className="burger-menu-items" onClick={onClick}>
           {links.map((item, index) => (
             <Link className="burger-menu-item" key={index} to={item.link}>
               <div className="item-contant">

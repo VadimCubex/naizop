@@ -23,6 +23,7 @@
 @import "../components/Modal/Modal.module.css";
 @import "../components/Table/Table.module.css";
 @import "../components/Input/Input.module.css";
+@import "../components/Currency/Currency.module.css";
 
 @import "./App.css";
 

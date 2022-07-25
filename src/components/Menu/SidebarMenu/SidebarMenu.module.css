@@ -76,6 +76,7 @@
 
 .sidebarMenu .sidebar-items .sidebar-item .item-contant {
   text-decoration: none;
+  justify-content: space-between;
   display: flex;
   width: 100%;
   padding: 10px 12px;
@@ -83,6 +84,13 @@
   align-items: center;
   color: var(--white);
 }
+
+.sidebarMenu .sidebar-items .sidebar-item .number {
+  color: var(--black);
+  font-size: 14px;
+  line-height: 20px;
+}
+
 .sidebarMenu .sidebar-items .sidebar-item.active .item-contant {
   background: linear-gradient(0deg, #005ae2, #005ae2), #548cf5;
 }
@@ -95,6 +103,7 @@
 
 .sidebarMenu .sidebar-items .sidebar-item path {
   fill: var(--white);
+  stroke: var(--white);
 }
 
 @media (max-width: 1439px) {
@@ -132,11 +141,11 @@
   .sidebarMenu .more {
     padding: 0px 27px 10px;
   }
-  .sidebarMenu .crypto {
-    padding: 0px 10px 10px;
-  }
   .sidebarMenu .crypto .button_variant_crypto .text {
     font-size: 13px;
+  }
+  .sidebarMenu .crypto .button_variant_crypto {
+    min-width: 100px;
   }
 }
 

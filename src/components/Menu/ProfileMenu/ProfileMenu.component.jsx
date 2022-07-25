@@ -20,6 +20,7 @@ import {
 } from "../../../constants/VariantsOfComponents";
 import { Avatar } from "../../Avatar";
 import { Button } from "../../Button";
+import { Currency } from "../../Currency";
 import { DropDown } from "../../DropDown";
 import { SvgIcon } from "../../SvgIcon";
 import { Text } from "../../Text";
@@ -60,10 +61,6 @@ export const ProfileMenuComponent = () => {
 
   const handleClickBurger = () => {
     setIsShowBurger(!isShowBurger);
-  };
-
-  const handleClickBurgerItem = () => {
-    setIsShowBurger(false);
   };
 
   const handleLogoutClick = () => {
@@ -133,11 +130,7 @@ export const ProfileMenuComponent = () => {
           </div>
 
           <div className="nav-button-container">
-            <Button
-              size={ButtonSizeVariants.large}
-              variant={ButtonVariants.default}
-              text="USD"
-            />
+            <Currency />
             <Button
               variant={ButtonVariants.default}
               className="button_logout"
@@ -211,7 +204,7 @@ export const ProfileMenuComponent = () => {
                   key={index}
                   name={item.name}
                   links={item.links}
-                  onClick={handleClickBurgerItem}
+                  onClick={handleClickBurger}
                 />
               ))}
               <div className="nav-button-container">

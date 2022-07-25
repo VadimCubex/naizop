@@ -84,9 +84,10 @@ export const SidebarLinksFirstPart = [
     icon: IconsVariants.Complited_Orders,
     text: "Orders",
     link: "/profile/orders",
+    number: 8,
   },
   {
-    icon: IconsVariants.Subscriptions,
+    icon: IconsVariants.Subscriptions_new,
     text: "Subscriptions",
     link: "/profile/subscriptions",
   },
@@ -99,6 +100,7 @@ export const SidebarLinksFirstPart = [
     icon: IconsVariants.Support,
     text: "Support",
     link: "/profile/support",
+    number: 8,
   },
   {
     icon: IconsVariants.Affiliates,
@@ -157,7 +159,7 @@ export const ServicesLinks = [
     link: "/profile/place-new-order",
   },
   {
-    icon: IconsVariants.Heart,
+    icon: IconsVariants.Popular,
     text: "Popular Service",
     link: "/profile/popular-service",
   },
@@ -716,5 +718,36 @@ export const TimeZonesForSelect = [
   },
   {
     title: "(UTC +10:00) Australian Eastern Standard Time",
+  },
+];
+
+export const CurrencyInfo = [
+  {
+    title: "USD",
+    symbol: "$",
+  },
+  {
+    title: "EUR",
+    symbol: "€",
+  },
+  {
+    title: "INR",
+    symbol: "₹",
+  },
+  {
+    title: "TRY",
+    symbol: "₺",
+  },
+  {
+    title: "RUB",
+    symbol: "₽",
+  },
+  {
+    title: "BRL",
+    symbol: "R$",
+  },
+  {
+    title: "NGN",
+    symbol: "₦",
   },
 ];
