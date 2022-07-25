@@ -28,6 +28,7 @@ import { Text } from "../../Text";
 export const ProfileMenuComponent = () => {
   const [isShowBurger, setIsShowBurger] = useState(false);
   const [isShowProfile, setIsShowProfile] = useState(false);
+  const [isShowBurgerProfile, setIsShowBurgerProfile] = useState(false);
   const [active, setActive] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
@@ -50,12 +51,20 @@ export const ProfileMenuComponent = () => {
   const NavProfileClass = classNames("nav-profile", {
     active: isShowProfile,
   });
+  const NavProfileBurgerClass = classNames("nav-profile", {
+    active: isShowBurgerProfile,
+  });
   const NavBurgerClass = classNames("nav-burger", {
     active: isShowBurger,
   });
 
-  const handleClickItem = (pathname) => {
+  const handleClickProfileItem = (pathname) => {
     setIsShowProfile(false);
+    setActive(pathname);
+  };
+
+  const handleClickProfileBurgerItem = (pathname) => {
+    setIsShowBurgerProfile(false);
     setActive(pathname);
   };
 
@@ -153,7 +162,7 @@ export const ProfileMenuComponent = () => {
         <div className="links">
           {ProfileNavLinks.map((item, index) => (
             <Link
-              onClick={() => handleClickItem(item.link)}
+              onClick={() => handleClickProfileItem(item.link)}
               className={`links-item${active === item.link ? " active" : ""}`}
               key={index}
               to={item.link}
@@ -169,7 +178,7 @@ export const ProfileMenuComponent = () => {
       <DropDown className="burger" isInnerHeight={true} isOpen={isShowBurger}>
         <div className={NavBurgerClass}>
           <div className="nav-profile-container">
-            <div className={NavProfileClass}>
+            <div className={NavProfileBurgerClass}>
               <div className="nav-avatar">
                 <Avatar variant={AvatarVariants.sm} src={ProfileInfo.img} />
               </div>
@@ -181,11 +190,11 @@ export const ProfileMenuComponent = () => {
                   >{`${ProfileInfo.name} ${ProfileInfo.surname}`}</Text>
                   <SvgIcon
                     onClick={() => {
-                      setIsShowProfile(!isShowProfile);
+                      setIsShowBurgerProfile(!isShowBurgerProfile);
                     }}
                     src={IconsVariants.DropDown_arrow_stroke}
                     size={12}
-                    rotate={isShowProfile ? 180 : 0}
+                    rotate={isShowBurgerProfile ? 180 : 0}
                   />
                 </div>
               </div>
@@ -197,6 +206,25 @@ export const ProfileMenuComponent = () => {
               ).toFixed(2)}`}</Text>
             </div>
           </div>
+          <DropDown className="profile-links" isOpen={isShowBurgerProfile}>
+            <div className="links">
+              {ProfileNavLinks.map((item, index) => (
+                <Link
+                  onClick={() => handleClickProfileBurgerItem(item.link)}
+                  className={`links-item${
+                    active === item.link ? " active" : ""
+                  }`}
+                  key={index}
+                  to={item.link}
+                >
+                  <div>
+                    <SvgIcon size={20} src={item.icon} />
+                    <Text variant={TextVariants.h5}>{item.text}</Text>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </DropDown>
           <div className="container nav-burger-container">
             <nav>
               {BurgerCategories.map((item, index) => (

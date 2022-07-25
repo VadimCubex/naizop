@@ -357,6 +357,12 @@
   .profileMenu .nav-container .nav-profile-container .nav-profile {
     display: none;
   }
+  .profileMenu .burger .profile-links {
+    display: block;
+    width: 100%;
+    left: 0px;
+    border-radius: 0px;
+  }
   .profileMenu .nav-container .nav-profile-container,
   .profileMenu .nav-container .nav-profile-container .nav-svg {
     width: 100%;

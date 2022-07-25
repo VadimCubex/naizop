@@ -149,7 +149,7 @@
 
   .background-img {
     background: url("/public/images/Backgrounds/834.png");
-    background-size: auto !important;
+    background-size: contain !important;
   }
 
   .profile-container {
