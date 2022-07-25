@@ -50,7 +50,7 @@ export const ProfileNavLinks = [
   {
     icon: IconsVariants.Add_funds_stroke,
     text: "Add Funds",
-    link: "/profile/funds",
+    link: "/profile/add-funds",
   },
   {
     icon: IconsVariants.Child_panel,
@@ -68,42 +68,42 @@ export const SidebarLinksFirstPart = [
   {
     icon: IconsVariants.New_order,
     text: "Place New Order",
-    link: "/profile",
+    link: "/profile/place-new-order",
   },
   {
     icon: IconsVariants.Mass_order,
     text: "Mass order",
-    link: "/profile",
+    link: "/profile/mass-order",
   },
   {
     icon: IconsVariants.All_services,
     text: "All Services",
-    link: "/profile",
+    link: "/profile/service",
   },
   {
     icon: IconsVariants.Complited_Orders,
     text: "Orders",
-    link: "/profile",
+    link: "/profile/orders",
   },
   {
     icon: IconsVariants.Subscriptions,
     text: "Subscriptions",
-    link: "/profile",
+    link: "/profile/subscriptions",
   },
   {
     icon: IconsVariants.Add_funds,
     text: "Add funds",
-    link: "/profile",
+    link: "/profile/add-funds",
   },
   {
     icon: IconsVariants.Support,
     text: "Support",
-    link: "/profile",
+    link: "/profile/support",
   },
   {
     icon: IconsVariants.Affiliates,
     text: "Affiliates",
-    link: "/profile",
+    link: "/profile/affiliates",
   },
 ];
 
@@ -111,22 +111,22 @@ export const SidebarLinksSecondPart = [
   {
     icon: IconsVariants.Updates,
     text: "Updates",
-    link: "/profile",
+    link: "/profile/updates",
   },
   {
     icon: IconsVariants.Blog,
     text: "Blog",
-    link: "/profile",
+    link: "/profile/blog",
   },
   {
     icon: IconsVariants.Tools,
     text: "Tools",
-    link: "/profile",
+    link: "/profile/tools",
   },
   {
     icon: IconsVariants.Terms,
     text: "Terms",
-    link: "/profile",
+    link: "/profile/terms",
   },
   {
     icon: IconsVariants.FAQ,
@@ -136,12 +136,72 @@ export const SidebarLinksSecondPart = [
   {
     icon: IconsVariants.Api,
     text: "API",
-    link: "/profile",
+    link: "/profile/api",
   },
   {
     icon: IconsVariants.Favorites,
     text: "Ambassador program",
-    link: "/profile",
+    link: "/profile/ambassador-program",
+  },
+];
+
+export const ServicesLinks = [
+  {
+    icon: IconsVariants.All_services,
+    text: "All Services",
+    link: "/profile/service",
+  },
+  {
+    icon: IconsVariants.New_order,
+    text: "Place New Order",
+    link: "/profile/place-new-order",
+  },
+  {
+    icon: IconsVariants.Heart,
+    text: "Popular Service",
+    link: "/profile/popular-service",
+  },
+];
+
+export const ActivityLinks = [
+  {
+    icon: IconsVariants.Favorites,
+    text: "Favorites",
+    link: "/profile/favorites",
+  },
+  {
+    icon: IconsVariants.Subscriptions,
+    text: "Subscriptions",
+    link: "/profile/subscriptions",
+  },
+  {
+    icon: IconsVariants.Complited_Orders,
+    text: "Complited Orders",
+    link: "/profile/orders",
+    number: 8,
+  },
+];
+
+export const FeaturesLinks = [
+  {
+    icon: IconsVariants.Affiliates,
+    text: "Affiliates",
+    link: "/profile/affiliates",
+  },
+  {
+    icon: IconsVariants.FAQ,
+    text: "FAQ",
+    link: "/profile/faq",
+  },
+  {
+    icon: IconsVariants.Terms,
+    text: "Terms",
+    link: "/profile/terms",
+  },
+  {
+    icon: IconsVariants.Blog,
+    text: "Blog",
+    link: "/profile/blog",
   },
 ];
 
@@ -642,4 +702,19 @@ export const AvatarsForSelect = [
   "/images/Profile/6.svg",
   "/images/Profile/7.svg",
   "/images/Profile/8.svg",
+];
+
+export const TimeZonesForSelect = [
+  {
+    title: "(UTC +8:00) Australian Western Standard Time",
+  },
+  {
+    title: "(UTC +8:45) Australian Central Western Standard Time",
+  },
+  {
+    title: "(UTC +9:30) Australian Central Standard Time",
+  },
+  {
+    title: "(UTC +10:00) Australian Eastern Standard Time",
+  },
 ];

@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   TextVariants,
   ColorSvgVariants,
@@ -9,7 +10,7 @@ import { Text } from "../../Text";
 
 export const OptionWithDetailComponent = ({ selected, value }) => {
   return (
-    <div className={"selectOption_variant_detail"}>
+    <div className="selectOption_variant_detail">
       <div className="content">
         <div className="info">
           <SvgIcon size={20} src={value.icon} />

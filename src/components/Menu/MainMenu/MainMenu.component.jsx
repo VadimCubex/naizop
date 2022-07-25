@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
+import classNames from "classnames";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+
 import { NavLinks } from "../../../constants/constants";
 import {
   ButtonVariants,
@@ -7,12 +10,10 @@ import {
   TextVariants,
 } from "../../../constants/VariantsOfComponents";
 import { Button } from "../../Button";
+import { DropDown } from "../../DropDown";
 import { SvgIcon } from "../../SvgIcon";
 import { Text } from "../../Text";
 import { Tools } from "../../Tools";
-import classNames from "classnames";
-import { DropDown } from "../../DropDown";
-import { useEffect } from "react";
 
 export const MainMenuComponent = () => {
   const [isShowTools, setIsShowTools] = useState(false);
@@ -182,7 +183,11 @@ export const MainMenuComponent = () => {
                   text="Best quality services"
                 />
                 <div className="auth-buttons">
-                  <Button variant={ButtonVariants.purchase} text="Login" />
+                  <Button
+                    onClick={handleClickLogin}
+                    variant={ButtonVariants.purchase}
+                    text="Login"
+                  />
                   <Button
                     className="register-button"
                     variant={ButtonVariants.default}

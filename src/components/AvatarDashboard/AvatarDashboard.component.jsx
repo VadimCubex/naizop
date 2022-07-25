@@ -13,9 +13,9 @@ export const AvatarDashboardComponent = ({ progress, src, className }) => {
       <div style={{ position: "relative" }}>
         <CircleProgress value={progress} />
         <Avatar src={src} />
-        <di className="avatar_shadow">
+        <div className="avatar_shadow">
           <Text variant={TextVariants.h3}>NEW</Text>
-        </di>
+        </div>
       </div>
       <Text variant={TextVariants.h5_regular}>{`$${progress}/100`}</Text>
     </div>

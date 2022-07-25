@@ -1,10 +1,11 @@
 import React from "react";
 import classNames from "classnames";
-import { Text } from "../Text";
+
 import {
   TableVariants,
   TextVariants,
 } from "../../constants/VariantsOfComponents";
+import { Text } from "../Text";
 
 export const TableComponent = ({ data, columnNames, variant, className }) => {
   const TableClass = classNames(
@@ -29,7 +30,7 @@ export const TableComponent = ({ data, columnNames, variant, className }) => {
           </div>
         ))}
       </div>
-      {variant !== TableVariants.Ranks && <hr className="table-hr" />}
+      <hr className="table-hr" />
       <div className="table-separators">
         {columnNames.map((item, index) => (
           <div

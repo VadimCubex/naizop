@@ -115,8 +115,12 @@
 
 .account .avatars .avatar-container .avatar-border {
   border-radius: 50%;
-  border: 2px solid var(--yellow);
+  border: 2px solid transparent;
   padding: 2px;
+}
+
+.account .avatars .avatar-container .avatar-border.active {
+  border: 2px solid var(--yellow);
 }
 
 .account .gender .select-gender {
@@ -145,44 +149,62 @@
   justify-content: center;
 }
 
-.account .button-container {
+.account .btn-container {
   margin-top: 20px;
   align-self: center;
   width: 245px;
 }
 
+.account .select-container {
+  z-index: 2;
+}
+
 @media (max-width: 1439px) {
+  .account .account-container {
+    padding-bottom: 255px;
+  }
+
   .account .avatars .avatar-select-container .avatar-select .add-new-avatar {
-    width: 86px;
-    height: 86px;
+    width: 87px;
+    height: 87px;
   }
+
   .account .avatars .avatar-select-container {
-    margin: 0px 20px;
+    margin: 20px 0px 0px 0px;
   }
+
+  .account .avatars .avatar-current .avatar {
+    align-self: center;
+  }
+
   .account .avatars .avatar-select-container .avatar-imgs {
-    width: 75%;
-    gap: 1px;
-    row-gap: 12px;
-    justify-content: flex-start;
+    row-gap: 16px;
   }
-  .account .avatars .avatar-select-container .avatar-select {
-    width: 25%;
-    justify-content: flex-start;
-  }
-  .account .avatars .avatar-container {
-    width: 33%;
+
+  .account .avatars {
+    flex-direction: column;
+    padding: 25px 20px 35px;
   }
 }
 
 @media (max-width: 1024px) {
-  .account .avatars .avatar-container .avatar-border {
-    border: 2px solid var(--yellow);
-    padding: 1px;
+  .account .account-container {
+    padding-bottom: 210px;
   }
+
+  .account .gender {
+    padding: 20px 25px 35px;
+  }
+
+  .account .avatars .avatar-container .avatar-border.active {
+    border: 2px solid var(--yellow);
+  }
+
   .account .avatars .avatar-select-container .avatar-select .add-new-avatar {
     width: 74px;
     height: 74px;
   }
+
   .account
     .avatars
     .avatar-select-container
@@ -192,9 +214,30 @@
     width: 22.5px !important;
     height: 22.5px !important;
   }
+
+  .account .avatars .avatar-current,
+  .account .avatars,
+  .account .gender {
+    width: 100%;
+  }
+  .account .account-categories:first-child {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .account .btn-container {
+    margin-top: 20px;
+    align-self: center;
+    width: 200px;
+  }
 }
 
 @media (max-width: 834px) {
+  .account .time-zone-api-key .time-api-input .text.text_variant_h3,
+  .account .password .password-input .text.text_variant_h3 {
+    margin-bottom: 10px;
+  }
+
   .account .avatars .avatar-select-container .avatar-select {
     width: 20%;
   }
@@ -213,18 +256,13 @@
     width: 25%;
   }
 
-  /* .account .avatars .avatar-container .avatar-border {
-    width: 80%;
-    height: fit-content;
-  } */
-
   .account .avatars .avatar-select-container .avatar-select .add-new-avatar {
     width: 62px;
     height: 62px;
   }
 
   .account .account-container {
-    padding-bottom: 120px;
+    padding-bottom: 165px;
   }
 
   .account .account-categories {
@@ -232,39 +270,34 @@
     gap: 30px;
   }
 
-  .account .avatars .avatar-current,
-  .account .avatars,
-  .account .gender,
   .account .password,
   .account .time-zone-api-key {
     width: 100%;
-  }
-
-  .account .avatars {
-    flex-direction: column;
-    padding: 25px 20px 35px;
-  }
-
-  .account .avatars .avatar-select-container {
-    margin: 20px 0px 0px 0px;
-  }
-
-  .account .avatars .avatar-current .avatar {
-    align-self: center;
   }
 
   .account .time-zone-api-key .inputs-container {
     gap: 45px;
   }
 
-  .account .button-container {
+  .account .btn-container {
+    margin-top: 10px;
     width: 100%;
   }
 }
 
 @media (max-width: 425px) {
+  .account .account-container {
+    padding-bottom: 120px;
+  }
+
   .account .avatars .avatar-container .avatar-border {
+    border-width: 1px;
+    padding: 1px;
+  }
+
+  .account .avatars .avatar-container .avatar-border.active {
     border: 1px solid var(--yellow);
+    padding: 1px;
   }
 
   .account .avatars .avatar-select-container .avatar-select .add-new-avatar {

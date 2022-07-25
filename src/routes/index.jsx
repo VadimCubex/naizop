@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+
 import MainLayout from "../layouts/MainLayout";
 import ProfileLayout from "../layouts/ProfileLayout";
 import About from "../pages/About/About";
@@ -27,7 +28,26 @@ const NaizopRoutes = () => {
         <Route path="/profile/account" element={<Account />} />
         <Route path="/profile/redeem-history" element={<RedeemHistory />} />
         <Route path="/profile/redeem-support" element={<Support />} />
+
+        <Route path="/profile/place-new-order" element={<Dashboard />} />
+        <Route path="/profile/mass-order" element={<Dashboard />} />
+        <Route path="/profile/service" element={<Dashboard />} />
+        <Route path="/profile/popular-service" element={<Dashboard />} />
+        <Route path="/profile/orders" element={<Dashboard />} />
+        <Route path="/profile/subscriptions" element={<Dashboard />} />
+        <Route path="/profile/add-funds" element={<Dashboard />} />
+        <Route path="/profile/support" element={<Dashboard />} />
+        <Route path="/profile/affiliates" element={<Dashboard />} />
+        <Route path="/profile/favorites" element={<Dashboard />} />
+        <Route path="/profile/childpanel" element={<Dashboard />} />
+
+        <Route path="/profile/updates" element={<Dashboard />} />
+        <Route path="/profile/blog" element={<Dashboard />} />
+        <Route path="/profile/tools" element={<Dashboard />} />
+        <Route path="/profile/terms" element={<Dashboard />} />
         <Route path="/profile/faq" element={<FAQ container={false} />} />
+        <Route path="/profile/api" element={<Dashboard />} />
+        <Route path="/profile/ambassador-program" element={<Dashboard />} />
       </Route>
     </Routes>
   );

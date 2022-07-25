@@ -1,9 +1,20 @@
 import React from "react";
-import { Text } from "../../components/Text";
-import { Input } from "../../components/Input";
-import { Select } from "../../components/Select";
+import { useState } from "react";
+
 import { Avatar } from "../../components/Avatar";
+import { Button } from "../../components/Button";
+import { Input } from "../../components/Input";
+import { TooltipPortal } from "../../components/Portal";
 import { Radio } from "../../components/Radio";
+import { Select } from "../../components/Select";
+import { SvgIcon } from "../../components/SvgIcon";
+import { Text } from "../../components/Text";
+import { Tooltip } from "../../components/Tooltip";
+import {
+  AvatarsForSelect,
+  ProfileInfo,
+  TimeZonesForSelect,
+} from "../../constants/constants";
 import {
   AvatarVariants,
   ButtonVariants,
@@ -12,17 +23,22 @@ import {
   SelectOptionVariants,
   TextVariants,
 } from "../../constants/VariantsOfComponents";
-import {
-  AvatarsForSelect,
-  ProfileInfo,
-  RedeemPlanSelect,
-} from "../../constants/constants";
-import { SvgIcon } from "../../components/SvgIcon";
-import { useState } from "react";
-import { Button } from "../../components/Button";
+
+import useTooltip from "../../hooks/useTooltip";
 
 const Account = () => {
   const [gender, setGender] = useState("male");
+  const [avatar, setAvatar] = useState(ProfileInfo.img);
+  const [selected, setSelected] = useState(TimeZonesForSelect[0]);
+  const {
+    coords,
+    isShowTooltip,
+    tooltipPosition,
+    tooltipSvg,
+    setTooltipWidth,
+    handleMouseEnter,
+    handleMouseLeave,
+  } = useTooltip();
 
   return (
     <>
@@ -33,7 +49,7 @@ const Account = () => {
             <div className="block avatars">
               <div className="avatar-current">
                 <Text variant={TextVariants.h3}>Your avatar</Text>
-                <Avatar src={ProfileInfo.img} variant={AvatarVariants.lg} />
+                <Avatar src={avatar} variant={AvatarVariants.lg} />
               </div>
               <div className="avatar-select-container">
                 <div className="avatar-select">
@@ -46,8 +62,15 @@ const Account = () => {
                       />
                     </div>
                   </div>
-                  <div className="avatar-container">
-                    <div className="avatar-border">
+                  <div
+                    onClick={() => setAvatar(ProfileInfo.img)}
+                    className="avatar-container"
+                  >
+                    <div
+                      className={`avatar-border ${
+                        avatar === ProfileInfo.img ? "active" : ""
+                      }`}
+                    >
                       <Avatar
                         src={ProfileInfo.img}
                         variant={AvatarVariants.md}
@@ -57,8 +80,16 @@ const Account = () => {
                 </div>
                 <div className="avatar-imgs">
                   {AvatarsForSelect.map((item, index) => (
-                    <div key={index} className="avatar-container">
-                      <div className="avatar-border">
+                    <div
+                      key={index}
+                      onClick={() => setAvatar(item)}
+                      className="avatar-container"
+                    >
+                      <div
+                        className={`avatar-border ${
+                          avatar === item ? "active" : ""
+                        }`}
+                      >
                         <Avatar src={item} variant={AvatarVariants.md} />
                       </div>
                     </div>
@@ -120,14 +151,12 @@ const Account = () => {
                   placeholder="Enter confirm new password..."
                 />
               </div>
-              <div className="button-container">
-                <Button
-                  width="full"
-                  variant={ButtonVariants.blue}
-                  text="Save"
-                  isLight={true}
-                />
-              </div>
+              <Button
+                width="full"
+                variant={ButtonVariants.blue}
+                text="Save"
+                isLight={true}
+              />
             </div>
             <div className="block time-zone-api-key">
               <Text variant={TextVariants.h3}>Time zone & API Key</Text>
@@ -136,32 +165,54 @@ const Account = () => {
                   <div className="time-api-input">
                     <Text variant={TextVariants.h3}>Time zone</Text>
                     <Select
+                      selected={selected}
+                      onClick={setSelected}
                       variant={SelectOptionVariants.default}
-                      options={RedeemPlanSelect}
+                      options={TimeZonesForSelect}
                     />
                   </div>
-                  <div className="button-container">
-                    <Button
-                      width="full"
-                      variant={ButtonVariants.blue}
-                      text="Save"
-                      isLight={true}
-                    />
-                  </div>
+                  <Button
+                    width="full"
+                    variant={ButtonVariants.blue}
+                    text="Save"
+                    isLight={true}
+                  />
                 </div>
                 <div>
                   <div className="time-api-input">
                     <Text variant={TextVariants.h3}>API Key</Text>
-                    <Input type="password" />
-                  </div>
-                  <div className="button-container">
-                    <Button
-                      width="full"
-                      variant={ButtonVariants.blue}
-                      text="Generate new"
-                      isLight={true}
+                    <TooltipPortal>
+                      <Tooltip
+                        width={setTooltipWidth}
+                        coords={coords}
+                        arrowPosition={tooltipPosition}
+                        isShow={isShowTooltip}
+                        text="The key is hidden for security reasons"
+                      />
+                    </TooltipPortal>
+                    <Input
+                      type="password"
+                      rightSide={
+                        <div
+                          ref={tooltipSvg}
+                          onMouseEnter={handleMouseEnter}
+                          onMouseLeave={handleMouseLeave}
+                        >
+                          <SvgIcon
+                            src={IconsVariants.Question}
+                            size={24}
+                            color={ColorSvgVariants.white}
+                          />
+                        </div>
+                      }
                     />
                   </div>
+                  <Button
+                    width="full"
+                    variant={ButtonVariants.blue}
+                    text="Generate new"
+                    isLight={true}
+                  />
                 </div>
               </div>
             </div>

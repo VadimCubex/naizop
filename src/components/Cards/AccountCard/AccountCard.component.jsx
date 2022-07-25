@@ -1,15 +1,17 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import classNames from "classnames";
-import { Text } from "../../Text";
+
 import {
   ColorSvgVariants,
   IconsVariants,
   TextVariants,
 } from "../../../constants/VariantsOfComponents";
-import { SvgIcon } from "../../SvgIcon";
-import { Tooltip } from "../../Tooltip";
 import { TooltipPortal } from "../../Portal";
-import { debounce } from "../../../helpers/helpers";
+import { SvgIcon } from "../../SvgIcon";
+import { Text } from "../../Text";
+import { Tooltip } from "../../Tooltip";
+
+import useTooltip from "../../../hooks/useTooltip";
 
 export const AccountCardComponent = ({
   variant,
@@ -25,54 +27,15 @@ export const AccountCardComponent = ({
     },
     className
   );
-  const [isShowTooltip, setIsShowTooltip] = useState(false);
-  const [coords, setCoords] = useState({});
-  const [tooltipPosition, setTooltipPosition] = useState("left");
-  const tooltipSvg = useRef(null);
-  let timeout;
-
-  const CalcCoords = () => {
-    const rect =
-      tooltipSvg.current?.getBoundingClientRect() &&
-      tooltipSvg.current.getBoundingClientRect();
-    if (rect) {
-      setCoords({
-        left: rect.x + rect.width / 2,
-        top: rect.y + window.scrollY,
-      });
-      DetermineTooltipPosition(rect.x + rect.width / 2 + 400);
-    }
-  };
-
-  const DetermineTooltipPosition = (right) => {
-    if (right > window.innerWidth) {
-      setTooltipPosition("right");
-    }
-  };
-
-  const handleMouseEnter = () => {
-    timeout = setTimeout(() => {
-      setIsShowTooltip(true);
-    }, 500);
-  };
-
-  const handleMouseLeave = () => {
-    clearInterval(timeout);
-    setIsShowTooltip(false);
-  };
-
-  useEffect(() => {
-    const updatePosition = () => {
-      tooltip && CalcCoords();
-    };
-    updatePosition();
-
-    window.addEventListener("resize", debounce(updatePosition, 500), true);
-
-    return () => {
-      window.removeEventListener("resize", debounce(updatePosition, 500), true);
-    };
-  }, []);
+  const {
+    coords,
+    isShowTooltip,
+    tooltipPosition,
+    tooltipSvg,
+    setTooltipWidth,
+    handleMouseEnter,
+    handleMouseLeave,
+  } = useTooltip();
 
   return (
     <div onClick={onClick} className={AccountCardClass}>
@@ -80,6 +43,7 @@ export const AccountCardComponent = ({
         <>
           <TooltipPortal>
             <Tooltip
+              width={setTooltipWidth}
               coords={coords}
               arrowPosition={tooltipPosition}
               isShow={isShowTooltip}

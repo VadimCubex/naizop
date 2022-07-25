@@ -1,25 +1,35 @@
 import React from "react";
-import {
-  ButtonSizeVariants,
-  ButtonVariants,
-  IconsVariants,
-  TextVariants,
-} from "../../../constants/VariantsOfComponents";
-import { SvgIcon } from "../../SvgIcon";
-import { Text } from "../../Text";
+import { useState } from "react";
+import { useEffect } from "react";
 import classNames from "classnames";
+import { Link, useLocation } from "react-router-dom";
+
 import {
   SidebarLinksFirstPart,
   SidebarLinksSecondPart,
 } from "../../../constants/constants";
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import { DropDown } from "../../DropDown";
+import {
+  ButtonSizeVariants,
+  ButtonVariants,
+  IconsVariants,
+  NumberVariants,
+  TextVariants,
+} from "../../../constants/VariantsOfComponents";
 import { Button } from "../../Button";
+import { DropDown } from "../../DropDown";
+import { Number } from "../../Number";
+import { SvgIcon } from "../../SvgIcon";
+import { Text } from "../../Text";
 
 export const SidebarMenuComponent = () => {
   const [isShowMore, setIsShowMore] = useState(false);
   const SidebarMenuClass = classNames("sidebarMenu");
+  const location = useLocation();
+  const [active, setActive] = useState("");
+
+  useEffect(() => {
+    setActive(location.pathname);
+  }, [location.pathname]);
 
   return (
     <aside className={SidebarMenuClass}>
@@ -30,10 +40,19 @@ export const SidebarMenuComponent = () => {
       <hr />
       <div className="sidebar-items">
         {SidebarLinksFirstPart.map((item, index) => (
-          <Link className="sidebar-item" key={index} to={item.link}>
-            <div>
-              <SvgIcon size={16} src={item.icon} />
-              <Text variant={TextVariants.h5}>{item.text}</Text>
+          <Link
+            className={`sidebar-item${active === item.link ? " active" : ""}`}
+            key={index}
+            to={item.link}
+          >
+            <div className="item-contant">
+              <div>
+                <SvgIcon size={16} src={item.icon} />
+                <Text variant={TextVariants.h5}>{item.text}</Text>
+              </div>
+              {item.number && (
+                <Number variant={NumberVariants.sm} number={item.number} />
+              )}
             </div>
           </Link>
         ))}
@@ -52,10 +71,19 @@ export const SidebarMenuComponent = () => {
       <DropDown isOpen={isShowMore}>
         <div className="sidebar-items">
           {SidebarLinksSecondPart.map((item, index) => (
-            <Link className="sidebar-item" key={index} to={item.link}>
-              <div>
-                <SvgIcon size={16} src={item.icon} />
-                <Text variant={TextVariants.h5}>{item.text}</Text>
+            <Link
+              className={`sidebar-item${active === item.link ? " active" : ""}`}
+              key={index}
+              to={item.link}
+            >
+              <div className="item-contant">
+                <div>
+                  <SvgIcon size={16} src={item.icon} />
+                  <Text variant={TextVariants.h5}>{item.text}</Text>
+                </div>
+                {item.number && (
+                  <Number variant={NumberVariants.sm} number={item.number} />
+                )}
               </div>
             </Link>
           ))}

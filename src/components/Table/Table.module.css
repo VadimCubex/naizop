@@ -161,7 +161,7 @@
 }
 
 @media (max-width: 425px) {
-  .table {
+  .table:not(.table-variant-ranks) {
     padding-top: 25px;
     padding-bottom: 25px;
     flex-direction: row;
@@ -169,30 +169,37 @@
   .table.table-variant-redeem {
     margin: 0px;
   }
-  .table .table-content {
+  .table:not(.table-variant-ranks) .table-content {
     width: 100%;
   }
 
-  .table .table-content .table-row .table-row-content,
-  .table .table-header,
-  .table .table-separators {
+  .table:not(.table-variant-ranks) .table-content .table-row .table-row-content,
+  .table:not(.table-variant-ranks) .table-header,
+  .table:not(.table-variant-ranks) .table-separators {
     display: none;
   }
 
-  .table .table-content .table-row .table-small-row-content {
+  .table:not(.table-variant-ranks)
+    .table-content
+    .table-row
+    .table-small-row-content {
     display: flex;
     height: 200px;
   }
 
-  .table .table-content .table-row .table-small-row-content > div {
+  .table:not(.table-variant-ranks)
+    .table-content
+    .table-row
+    .table-small-row-content
+    > div {
     display: flex;
     flex-direction: column;
   }
 
-  .table .table-small-header {
+  .table:not(.table-variant-ranks) .table-small-header {
     padding: 0px 5px 0px 30px;
   }
-  .table .table-small-row {
+  .table:not(.table-variant-ranks) .table-small-row {
     padding: 0px 5px 0px 20px;
   }
 
@@ -214,7 +221,7 @@
     line-height: 20px;
   }
 
-  .table .table-hr {
+  .table:not(.table-variant-ranks) .table-hr {
     position: absolute;
     width: 1px;
     height: 99%;
@@ -228,7 +235,7 @@
     );
     left: 44.2%;
   }
-  .table .table-row [class*="table-row-cell"] .text {
+  .table:not(.table-variant-ranks) .table-row [class*="table-row-cell"] .text {
     padding: 0px;
   }
 }

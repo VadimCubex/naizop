@@ -1,17 +1,19 @@
 import React from "react";
 import classNames from "classnames";
-import { Text } from "../Text";
+
 import {
   IconsVariants,
   TextVariants,
 } from "../../constants/VariantsOfComponents";
 import { SvgIcon } from "../SvgIcon";
+import { Text } from "../Text";
 
 export const TooltipComponent = ({
   text,
   isShow,
   arrowPosition = "left",
   coords,
+  width,
   className,
 }) => {
   const TooltipClass = classNames(
@@ -30,12 +32,12 @@ export const TooltipComponent = ({
     if (coords.top) {
       return arrowPosition === "left"
         ? { left: coords.left, top: coords.top + 40 }
-        : { left: coords.left - 400, top: coords.top + 40 };
+        : { left: coords.left - width, top: coords.top + 40 };
     }
   };
 
   return (
-    <div style={{ ...EditCoors() }} className={TooltipClass}>
+    <div style={{ ...EditCoors(), width: width }} className={TooltipClass}>
       <SvgIcon
         className={ArrowClass}
         size={40}
@@ -44,6 +46,7 @@ export const TooltipComponent = ({
             ? IconsVariants.Arrow_tooltip_left
             : IconsVariants.Arrow_tooltip_right
         }
+        style={arrowPosition === "right" ? { left: width - 39 } : { left: -3 }}
       />
       <Text variant={TextVariants.h5_regular}>{text}</Text>
     </div>

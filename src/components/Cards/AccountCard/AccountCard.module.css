@@ -85,6 +85,13 @@
   }
 }
 
+@media (max-width: 670px) {
+  .accountCard_variant_large {
+    padding: 5px 52px;
+    width: 100%;
+  }
+}
+
 @media (max-width: 425px) {
   .accountCard {
     height: 176px;
@@ -96,10 +103,6 @@
   .accountCard .question .svgIcon {
     width: 35px !important;
     height: 35px !important;
-  }
-  .accountCard_variant_large {
-    padding: 5px 52px;
-    width: 100%;
   }
   .accountCard_variant_small {
     padding: 5px 65px;
