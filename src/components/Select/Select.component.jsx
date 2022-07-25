@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import classNames from "classnames";
+
 import { DropDownVariants } from "../../constants/VariantsOfComponents";
 import { DropDown, DropDownOpenButton } from "../DropDown";
 import { SelectOption } from "../SelectOption";
@@ -12,7 +13,13 @@ export const SelectComponent = ({
   className,
 }) => {
   const [isShowDropDown, setIsShowDropDown] = useState(false);
-  const SelectClass = classNames("select", className);
+  const SelectClass = classNames(
+    "select",
+    {
+      [`variant-${variant}`]: variant,
+    },
+    className
+  );
 
   const handleClick = (value) => {
     onClick(value);
@@ -24,12 +31,14 @@ export const SelectComponent = ({
       <div className={SelectClass}>
         <div className="select-info">
           <SelectOption value={selected} variant={variant} selected={true} />
-          <DropDownOpenButton
-            isOpen={isShowDropDown}
-            onClick={() => {
-              setIsShowDropDown(!isShowDropDown);
-            }}
-          />
+          <div>
+            <DropDownOpenButton
+              isOpen={isShowDropDown}
+              onClick={() => {
+                setIsShowDropDown(!isShowDropDown);
+              }}
+            />
+          </div>
         </div>
       </div>
       <DropDown variant={DropDownVariants.select} isOpen={isShowDropDown}>

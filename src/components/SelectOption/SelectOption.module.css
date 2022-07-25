@@ -1,8 +1,20 @@
-.selectOption {}
+.selectOption .separator {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 51.04%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  margin: 0px;
+}
 
 .selectOption-padding-y-10 {
   padding: 10px 0px;
 }
+
+/* selectOption_variant_detail */
 
 .selectOption_variant_detail {
   display: flex;
@@ -10,12 +22,12 @@
   justify-content: space-between;
 }
 
-.selectOption_variant_detail .badge{
+.selectOption_variant_detail .badge {
   width: 150px;
   height: 50px;
 }
 
-.selectOption_variant_detail .content{
+.selectOption_variant_detail .content {
   display: flex;
   align-items: center;
   gap: 90px;
@@ -34,6 +46,8 @@
   width: 170px;
 }
 
+/* selectOption_variant_nodetail */
+
 .selectOption_variant_nodetail {
   display: flex;
   gap: 20px;
@@ -45,9 +59,8 @@
   gap: 10px;
 }
 
-.selectOption .separator {
-  border: 0;
-  height: 1px;
-  background-image: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 51.04%, rgba(255, 255, 255, 0) 100%);
-  margin: 0px;
+/* selectOption_variant_default */
+
+.selectOption_variant_default {
+  padding: 15px 0px;
 }

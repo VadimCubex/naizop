@@ -38,22 +38,10 @@ export const DropDownComponent = ({
     };
     updateSize();
 
-    window.addEventListener(
-      "resize",
-      function () {
-        debounce(updateSize(), 750);
-      },
-      true
-    );
+    window.addEventListener("resize", debounce(updateSize, 500), true);
 
     return () => {
-      window.removeEventListener(
-        "resize",
-        function () {
-          debounce(updateSize(), 750);
-        },
-        true
-      );
+      window.removeEventListener("resize", debounce(updateSize, 500), true);
     };
   }, []);
 

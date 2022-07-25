@@ -1,12 +1,13 @@
 import React from "react";
 import classNames from "classnames";
-import { SvgIcon } from "../SvgIcon";
-import { Text } from "../Text";
+
 import {
   ButtonSizeVariants,
   ButtonVariants,
   TextVariants,
 } from "../../constants/VariantsOfComponents";
+import { SvgIcon } from "../SvgIcon";
+import { Text } from "../Text";
 
 export const ButtonComponent = ({
   text,
@@ -43,7 +44,7 @@ export const ButtonComponent = ({
   };
 
   return (
-    <div style={{ position: "relative" }}>
+    <div className="btn-container">
       {isLight && <div className={buttonClass + " light"}></div>}
       <button
         className={buttonClass}

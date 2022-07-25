@@ -64,6 +64,7 @@ export const IconsVariants = {
   Other: "/icons/Stroke/Other.svg",
   Photo_dw: "/icons/Stroke/Photo dw.svg",
   Plus: "/icons/Stroke/Plus.svg",
+  Plus_stroke: "/icons/Stroke/Plus stroke.svg",
   Profile_tools: "/icons/Stroke/Profile tools.svg",
   Profile: "/icons/Stroke/Profile.svg",
   Question: "/icons/Stroke/Question.svg",
@@ -114,6 +115,7 @@ export const IconsVariants = {
 
   Logo: "/logo.svg",
   Logo_2: "/logo 2.svg",
+  Arc: "/icons/Color/arc.svg",
 };
 
 export const ImagesVariants = {
@@ -205,9 +207,20 @@ export const DropDownVariants = {
 export const SelectOptionVariants = {
   newOrderWithDetail: "detail",
   newOrderWithoutDeteil: "nodeteil",
+  default: "default",
 };
 
 export const SliderCardVariants = {
   large: "lg",
   small: "sm",
+};
+
+export const TableVariants = {
+  Ranks: "ranks",
+  Redeem: "redeem",
+};
+
+export const InputVariants = {
+  lg: "large",
+  md: "medium",
 };

@@ -1,0 +1,317 @@
+.account {
+  display: flex;
+  flex-direction: column;
+}
+
+.account .text {
+  color: var(--white);
+}
+
+.account .account-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 300px;
+  gap: 30px;
+}
+
+.account .account-categories {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.account .text.text_variant_h1_medium {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.account .gender {
+  padding: 20px 25px;
+  display: flex;
+}
+
+.account .password,
+.account .time-zone-api-key {
+  display: flex;
+  gap: 20px;
+  padding: 25px 25px 40px;
+}
+
+.account .gender,
+.account .password,
+.account .time-zone-api-key {
+  flex-direction: column;
+}
+
+.account .gender {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 23%;
+}
+
+.account .password,
+.account .time-zone-api-key {
+  width: 49%;
+}
+
+.account .avatars {
+  padding: 20px 5px 20px 25px;
+  display: flex;
+  width: 75%;
+}
+
+.account .avatars .avatar-select-container {
+  margin: 0px 40px;
+  width: 100%;
+  display: flex;
+}
+
+.account .avatars .avatar-select-container .avatar-select {
+  width: 20%;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.account .avatars .avatar-select-container .avatar-select .avatar-container {
+  width: 100%;
+}
+
+.account .avatars .avatar-select-container .avatar-select .add-new-avatar {
+  border-radius: 50%;
+  width: 98px;
+  height: 98px;
+  background: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.account .avatars .avatar-select-container .avatar-imgs {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 12px;
+  justify-content: space-between;
+}
+
+.account .avatars .avatar-current {
+  display: flex;
+  flex-direction: column;
+}
+
+.account .avatars .avatar-current .avatar {
+  margin-top: 10px;
+}
+
+.account .avatars .avatar-container {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+}
+
+.account .avatars .avatar-container .avatar-border {
+  border-radius: 50%;
+  border: 2px solid transparent;
+  padding: 2px;
+}
+
+.account .avatars .avatar-container .avatar-border.active {
+  border: 2px solid var(--yellow);
+}
+
+.account .gender .select-gender {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.account .time-zone-api-key .time-api-input .text.text_variant_h3,
+.account .password .password-input .text.text_variant_h3 {
+  opacity: 0.75;
+  margin-bottom: 5px;
+}
+
+.account .time-zone-api-key .inputs-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.account .time-zone-api-key .inputs-container > div {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.account .btn-container {
+  margin-top: 20px;
+  align-self: center;
+  width: 245px;
+}
+
+.account .select-container {
+  z-index: 2;
+}
+
+@media (max-width: 1439px) {
+  .account .account-container {
+    padding-bottom: 255px;
+  }
+
+  .account .avatars .avatar-select-container .avatar-select .add-new-avatar {
+    width: 87px;
+    height: 87px;
+  }
+
+  .account .avatars .avatar-select-container {
+    margin: 20px 0px 0px 0px;
+  }
+
+  .account .avatars .avatar-current .avatar {
+    align-self: center;
+  }
+
+  .account .avatars .avatar-select-container .avatar-imgs {
+    row-gap: 16px;
+  }
+
+  .account .avatars {
+    flex-direction: column;
+    padding: 25px 20px 35px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .account .account-container {
+    padding-bottom: 210px;
+  }
+
+  .account .gender {
+    padding: 20px 25px 35px;
+  }
+
+  .account .avatars .avatar-container .avatar-border.active {
+    border: 2px solid var(--yellow);
+  }
+
+  .account .avatars .avatar-select-container .avatar-select .add-new-avatar {
+    width: 74px;
+    height: 74px;
+  }
+
+  .account
+    .avatars
+    .avatar-select-container
+    .avatar-select
+    .add-new-avatar
+    .svgIcon {
+    width: 22.5px !important;
+    height: 22.5px !important;
+  }
+
+  .account .avatars .avatar-current,
+  .account .avatars,
+  .account .gender {
+    width: 100%;
+  }
+  .account .account-categories:first-child {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .account .btn-container {
+    margin-top: 20px;
+    align-self: center;
+    width: 200px;
+  }
+}
+
+@media (max-width: 834px) {
+  .account .time-zone-api-key .time-api-input .text.text_variant_h3,
+  .account .password .password-input .text.text_variant_h3 {
+    margin-bottom: 10px;
+  }
+
+  .account .avatars .avatar-select-container .avatar-select {
+    width: 20%;
+  }
+
+  .account .avatars .avatar-select-container .avatar-select .avatar-container {
+    width: 100%;
+  }
+
+  .account .avatars .avatar-select-container .avatar-imgs {
+    width: 80%;
+    gap: 0px;
+    row-gap: 12px;
+  }
+
+  .account .avatars .avatar-container {
+    width: 25%;
+  }
+
+  .account .avatars .avatar-select-container .avatar-select .add-new-avatar {
+    width: 62px;
+    height: 62px;
+  }
+
+  .account .account-container {
+    padding-bottom: 165px;
+  }
+
+  .account .account-categories {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .account .password,
+  .account .time-zone-api-key {
+    width: 100%;
+  }
+
+  .account .time-zone-api-key .inputs-container {
+    gap: 45px;
+  }
+
+  .account .btn-container {
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .account .account-container {
+    padding-bottom: 120px;
+  }
+
+  .account .avatars .avatar-container .avatar-border {
+    border-width: 1px;
+    padding: 1px;
+  }
+
+  .account .avatars .avatar-container .avatar-border.active {
+    border: 1px solid var(--yellow);
+    padding: 1px;
+  }
+
+  .account .avatars .avatar-select-container .avatar-select .add-new-avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .account
+    .avatars
+    .avatar-select-container
+    .avatar-select
+    .add-new-avatar
+    .svgIcon {
+    width: 15px !important;
+    height: 15px !important;
+  }
+}

@@ -1,4 +1,16 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
+import classNames from "classnames";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+
+import ProfileBurgerMenuCategory from "./ProfileBurgerMenuCategory";
+import {
+  ActivityLinks,
+  FeaturesLinks,
+  ProfileInfo,
+  ProfileNavLinks,
+  ServicesLinks,
+} from "../../../constants/constants";
 import {
   AvatarVariants,
   ButtonSizeVariants,
@@ -6,20 +18,33 @@ import {
   IconsVariants,
   TextVariants,
 } from "../../../constants/VariantsOfComponents";
+import { Avatar } from "../../Avatar";
 import { Button } from "../../Button";
+import { Currency } from "../../Currency";
+import { DropDown } from "../../DropDown";
 import { SvgIcon } from "../../SvgIcon";
 import { Text } from "../../Text";
-import classNames from "classnames";
-import { DropDown } from "../../DropDown";
-import { Avatar } from "../../Avatar";
-import { ProfileInfo, ProfileNavLinks } from "../../../constants/constants";
-import { Link } from "react-router-dom";
-import { useEffect } from "react";
 
 export const ProfileMenuComponent = () => {
   const [isShowBurger, setIsShowBurger] = useState(false);
   const [isShowProfile, setIsShowProfile] = useState(false);
   const [active, setActive] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [BurgerCategories] = useState([
+    {
+      name: "Services",
+      links: ServicesLinks,
+    },
+    {
+      name: "Activity",
+      links: ActivityLinks,
+    },
+    {
+      name: "Features",
+      links: FeaturesLinks,
+    },
+  ]);
 
   const ProfileMenuClass = classNames("profileMenu");
   const NavProfileClass = classNames("nav-profile", {
@@ -30,11 +55,16 @@ export const ProfileMenuComponent = () => {
   });
 
   const handleClickItem = (pathname) => {
+    setIsShowProfile(false);
     setActive(pathname);
   };
 
   const handleClickBurger = () => {
     setIsShowBurger(!isShowBurger);
+  };
+
+  const handleLogoutClick = () => {
+    navigate("/");
   };
 
   useEffect(() => {
@@ -51,12 +81,24 @@ export const ProfileMenuComponent = () => {
                 <SvgIcon size={54} src={IconsVariants.Logo} />
                 <Text variant={TextVariants.h1_medium}>Naizop</Text>
               </div>
-              <SvgIcon
-                className="nav-burger-button"
-                size={isShowBurger ? 28 : 44}
-                src={isShowBurger ? IconsVariants.Close : IconsVariants.Burger}
-                onClick={handleClickBurger}
-              />
+              <div className="burger-controls">
+                {isShowBurger && (
+                  <Button
+                    variant={ButtonVariants.default}
+                    className="button_logout"
+                    size={ButtonSizeVariants.large}
+                    icon={IconsVariants.Notification}
+                  />
+                )}
+                <SvgIcon
+                  className="nav-burger-button"
+                  size={isShowBurger ? 28 : 44}
+                  src={
+                    isShowBurger ? IconsVariants.Close : IconsVariants.Burger
+                  }
+                  onClick={handleClickBurger}
+                />
+              </div>
             </div>
             <div className={NavProfileClass}>
               <div className="nav-avatar">
@@ -88,11 +130,7 @@ export const ProfileMenuComponent = () => {
           </div>
 
           <div className="nav-button-container">
-            <Button
-              size={ButtonSizeVariants.large}
-              variant={ButtonVariants.default}
-              text="USD"
-            />
+            <Currency />
             <Button
               variant={ButtonVariants.default}
               className="button_logout"
@@ -100,6 +138,7 @@ export const ProfileMenuComponent = () => {
               icon={IconsVariants.Notification}
             />
             <Button
+              onClick={handleLogoutClick}
               variant={ButtonVariants.default}
               className="button_logout"
               size={ButtonSizeVariants.large}
@@ -128,27 +167,59 @@ export const ProfileMenuComponent = () => {
         </div>
       </DropDown>
       <DropDown className="burger" isInnerHeight={true} isOpen={isShowBurger}>
-        <div
-          onScroll={(e) => {
-            e.stopPropagation();
-          }}
-          className={NavBurgerClass}
-        >
+        <div className={NavBurgerClass}>
+          <div className="nav-profile-container">
+            <div className={NavProfileClass}>
+              <div className="nav-avatar">
+                <Avatar variant={AvatarVariants.sm} src={ProfileInfo.img} />
+              </div>
+              <div className="nav-profile-info">
+                <Text variant={TextVariants.h5}>Welcome,</Text>
+                <div>
+                  <Text
+                    variant={TextVariants.h5}
+                  >{`${ProfileInfo.name} ${ProfileInfo.surname}`}</Text>
+                  <SvgIcon
+                    onClick={() => {
+                      setIsShowProfile(!isShowProfile);
+                    }}
+                    src={IconsVariants.DropDown_arrow_stroke}
+                    size={12}
+                    rotate={isShowProfile ? 180 : 0}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="nav-balance">
+              <Text variant={TextVariants.subtitle_small}>BALANCE</Text>
+              <Text variant={TextVariants.h3}>{`$ ${parseFloat(
+                ProfileInfo.balance
+              ).toFixed(2)}`}</Text>
+            </div>
+          </div>
           <div className="container nav-burger-container">
             <nav>
+              {BurgerCategories.map((item, index) => (
+                <ProfileBurgerMenuCategory
+                  key={index}
+                  name={item.name}
+                  links={item.links}
+                  onClick={handleClickBurger}
+                />
+              ))}
               <div className="nav-button-container">
+                <div style={{ width: "fit-content" }}>
+                  <Button
+                    size={ButtonSizeVariants.large}
+                    variant={ButtonVariants.crypto}
+                    isLight={true}
+                    text="Purchase Crypto"
+                    iconPosition="right"
+                    icon={IconsVariants.Arrow_crypto}
+                  />
+                </div>
                 <Button
-                  size={ButtonSizeVariants.large}
-                  variant={ButtonVariants.default}
-                  text="USD"
-                />
-                <Button
-                  variant={ButtonVariants.default}
-                  className="button_logout"
-                  size={ButtonSizeVariants.large}
-                  icon={IconsVariants.Notification}
-                />
-                <Button
+                  onClick={handleLogoutClick}
                   variant={ButtonVariants.default}
                   className="button_logout"
                   size={ButtonSizeVariants.large}

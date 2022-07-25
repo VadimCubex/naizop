@@ -1,3 +1,7 @@
+.btn-container {
+  position: relative;
+}
+
 .button {
   position: relative;
   min-height: inherit;
@@ -180,6 +184,7 @@
 }
 
 .light {
+  width: 100%;
   position: absolute;
   left: 0;
   top: 5px;

@@ -1,0 +1,110 @@
+.support {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 200px;
+}
+
+.support > .text.text_variant_h4 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: var(--white);
+}
+
+.support > .text.text_variant_h4 .text {
+  opacity: 0.5;
+  color: var(--white);
+}
+
+.support .text.text_variant_h1_medium {
+  color: var(--white);
+  margin-bottom: 30px;
+}
+
+.support .support-tickets {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.support .support-tickets .accountCard:hover:not(.active) {
+  background: var(--gradient-account-card);
+}
+
+.support .support-tickets > * {
+  width: 49%;
+  height: 50px;
+}
+
+.support .support-content {
+  padding: 20px 25px 40px;
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+}
+
+.support .support-content .chunk {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.support .support-content .chunk:last-child {
+  gap: 45px;
+}
+
+.support .support-content .chunk .support-input {
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+}
+
+.support .support-content .chunk .support-input:nth-child(0n + 1) {
+  z-index: 3;
+}
+
+.support .support-content .chunk .support-input:nth-child(2) {
+  z-index: 2;
+}
+
+.support .support-content .chunk .message {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.support .support-content .text.text_variant_h3 {
+  opacity: 0.75;
+  margin-bottom: 10px;
+}
+
+.support .support-content .text.text_variant_h5_regular {
+  opacity: 0.5;
+  margin-left: 15px;
+}
+
+@media (max-width: 834px) {
+  .support .block {
+    border-radius: 18px;
+  }
+  .support .support-tickets {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  .support .support-tickets > * {
+    width: 100%;
+  }
+  .support .support-content {
+    flex-direction: column;
+    padding: 20px 20px 50px;
+    gap: 30px;
+  }
+  .support .support-content .chunk {
+    width: 100%;
+  }
+  .support .support-content .chunk .message {
+    height: 305px;
+  }
+}

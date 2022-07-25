@@ -21,6 +21,7 @@ export const RadioComponent = ({
   return (
     <div className={RadioClass}>
       <input
+        id={value}
         ref={radio}
         type="radio"
         onChange={() => {}}
@@ -28,10 +29,10 @@ export const RadioComponent = ({
         value={value}
         checked={toChecked === value ? true : false}
       />
-      <label onClick={handleClick}>
+      <label htmlFor={value} onClick={handleClick}>
         <span className="dot"></span>
-        {text && <Text variant={TextVariants.h5}>{text}</Text>}
       </label>
+      {text && <Text variant={TextVariants.h5}>{text}</Text>}
     </div>
   );
 };
