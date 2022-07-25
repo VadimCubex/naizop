@@ -58,7 +58,7 @@
 }
 
 .background-img {
-  background: url("/public/images/Backgrounds/1920.png");
+  background: url("/public/images/Backgrounds/1440.png");
   background-size: cover !important;
   background-position: right !important;
 }
@@ -107,10 +107,6 @@
 
   .left-container {
     padding-left: 7.75%;
-  }
-
-  .background-img {
-    background: url("/public/images/Backgrounds/1440.png");
   }
 
   .profile-main-content {
