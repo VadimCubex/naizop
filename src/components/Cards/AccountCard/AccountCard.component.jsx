@@ -35,6 +35,7 @@ export const AccountCardComponent = ({
     setTooltipWidth,
     handleMouseEnter,
     handleMouseLeave,
+    handleClick,
   } = useTooltip();
 
   return (
@@ -52,6 +53,7 @@ export const AccountCardComponent = ({
           </TooltipPortal>
           <div
             ref={tooltipSvg}
+            onTouchEnd={handleClick}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             className="question"

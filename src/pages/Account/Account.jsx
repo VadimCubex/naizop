@@ -38,6 +38,7 @@ const Account = () => {
     setTooltipWidth,
     handleMouseEnter,
     handleMouseLeave,
+    handleClick,
   } = useTooltip();
 
   return (
@@ -195,6 +196,7 @@ const Account = () => {
                       rightSide={
                         <div
                           ref={tooltipSvg}
+                          onTouchEnd={handleClick}
                           onMouseEnter={handleMouseEnter}
                           onMouseLeave={handleMouseLeave}
                         >

@@ -74,6 +74,10 @@
   height: 100%;
 }
 
+.support .support-content .chunk .message .input {
+  height: 100%;
+}
+
 .support .support-content .text.text_variant_h3 {
   opacity: 0.75;
   margin-bottom: 10px;

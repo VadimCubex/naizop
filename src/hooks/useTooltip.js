@@ -60,6 +60,10 @@ const useTooltip = (tooltip = true) => {
     setIsShowTooltip(false);
   };
 
+  const handleClick = () => {
+    setIsShowTooltip(!isShowTooltip);
+  };
+
   useEffect(() => {
     const updatePosition = () => {
       tooltip && CalcCoords();
@@ -81,6 +85,7 @@ const useTooltip = (tooltip = true) => {
     setTooltipWidth,
     handleMouseEnter,
     handleMouseLeave,
+    handleClick,
   };
 };
 
