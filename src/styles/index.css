@@ -32,7 +32,7 @@
 @import "../pages/About/About.module.css";
 @import "../pages/Dashboard/Dashboard.module.css";
 @import "../pages/RedeemHistory/RedeemHistory.module.css";
-@import "../pages/Support/Support.module.css";
+@import "../pages/RedeemSupport/RedeemSupport.module.css";
 @import "../pages/Account/Account.module.css";
 
 :root {

@@ -1,19 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+import { Table } from "../../components/Table";
 import { Text } from "../../components/Text";
+import { RedeemColumnInfo, RedeemInfo } from "../../constants/constants";
 import {
   TextVariants,
   TableVariants,
 } from "../../constants/VariantsOfComponents";
-import { RedeemColumnInfo, RedeemInfo } from "../../constants/constants";
-
-import { Table } from "../../components/Table";
 
 const RedeemHistory = () => {
   return (
     <>
       <div className="redeem-history">
         <Text variant={TextVariants.h4}>
-          <Text>Dashboard -</Text> Redeem history
+          <Link to="/profile">
+            <Text>Dashboard -</Text>
+          </Link>{" "}
+          Redeem history
         </Text>
         <div className="redeem-content">
           <Text variant={TextVariants.h1_medium}>Redeem history</Text>
