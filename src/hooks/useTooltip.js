@@ -50,14 +50,18 @@ const useTooltip = (tooltip = true) => {
   };
 
   const handleMouseEnter = () => {
-    timeout = setTimeout(() => {
-      setIsShowTooltip(true);
-    }, 500);
+    if (window.innerWidth > 835) {
+      timeout = setTimeout(() => {
+        setIsShowTooltip(true);
+      }, 500);
+    }
   };
 
   const handleMouseLeave = () => {
-    clearInterval(timeout);
-    setIsShowTooltip(false);
+    if (window.innerWidth > 835) {
+      clearInterval(timeout);
+      setIsShowTooltip(false);
+    }
   };
 
   const handleClick = () => {
