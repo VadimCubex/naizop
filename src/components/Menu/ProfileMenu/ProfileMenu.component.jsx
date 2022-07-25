@@ -122,10 +122,10 @@ export const ProfileMenuComponent = () => {
               </div>
             </div>
             <div className="nav-balance">
-              <Text variant={TextVariants.subtitle_small}>Balance</Text>
+              <Text variant={TextVariants.subtitle_small}>BALANCE</Text>
               <Text variant={TextVariants.h3}>{`$ ${parseFloat(
                 ProfileInfo.balance
-              )}`}</Text>
+              ).toFixed(2)}`}</Text>
             </div>
           </div>
 

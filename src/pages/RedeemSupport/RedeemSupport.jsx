@@ -1,22 +1,24 @@
 import React from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
+import { Button } from "../../components/Button";
+import { AccountCard } from "../../components/Cards";
+import { Input } from "../../components/Input";
+import { Select } from "../../components/Select";
 import { Text } from "../../components/Text";
+import {
+  RedeemSubjectSelect,
+  RedeemPlanSelect,
+} from "../../constants/constants";
 import {
   ButtonVariants,
   InputVariants,
   SelectOptionVariants,
   TextVariants,
 } from "../../constants/VariantsOfComponents";
-import { AccountCard } from "../../components/Cards";
-import { Select } from "../../components/Select";
-import {
-  RedeemSubjectSelect,
-  RedeemPlanSelect,
-} from "../../constants/constants";
-import { useState } from "react";
-import { Input } from "../../components/Input";
-import { Button } from "../../components/Button";
 
-const Support = () => {
+const RedeemSupport = () => {
   const [activeTicket, setActiveTicket] = useState(0);
   const [selectedSubject, setSelectedSubject] = useState(
     RedeemSubjectSelect[0]
@@ -26,7 +28,10 @@ const Support = () => {
     <>
       <div className="support">
         <Text variant={TextVariants.h4}>
-          <Text>Dashboard -</Text> Support
+          <Link to="/profile">
+            <Text>Dashboard -</Text>
+          </Link>{" "}
+          Support
         </Text>
         <div className="support-container">
           <Text variant={TextVariants.h1_medium}>Support</Text>
@@ -96,4 +101,4 @@ const Support = () => {
   );
 };
 
-export default Support;
+export default RedeemSupport;
