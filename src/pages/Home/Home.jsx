@@ -1,6 +1,16 @@
 import React from "react";
-import { Text } from "../../components/Text";
+import { useState } from "react";
+import { useRef } from "react";
+
 import { Button } from "../../components/Button";
+import { AdvantagesCard } from "../../components/Cards";
+import { Slider } from "../../components/Slider";
+import { SocialeNetworks } from "../../components/SocialeNetworks";
+import { Text } from "../../components/Text";
+import {
+  AdvantagesInfo,
+  ExperienceSliderInfo,
+} from "../../constants/constants";
 import {
   ButtonSizeVariants,
   ButtonVariants,
@@ -9,24 +19,17 @@ import {
   SliderCardVariants,
   TextVariants,
 } from "../../constants/VariantsOfComponents";
-import {
-  AdvantagesInfo,
-  ExperienceSliderInfo,
-} from "../../constants/constants";
-import { AdvantagesCard } from "../../components/Cards";
-import { SocialeNetworks } from "../../components/SocialeNetworks";
-import { Slider } from "../../components/Slider";
-import { useState } from "react";
-import { useRef } from "react";
-import { useEffect } from "react";
-import useScrollPosition from "../../hooks/useScrollPosition";
-import { useMemo } from "react";
+
+import useElementOnScreen from "../../hooks/useElementOnScreen";
 
 const Home = () => {
-  const scrollPosition = useScrollPosition();
+  const { element, isView } = useElementOnScreen({
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5,
+  });
   const [advantegesScrollX, setAdvantegesScrollX] = useState(0);
   const [advantegesScrollLeft, setAdvantegesScrollLeft] = useState(0);
-  const [experienceIsEnter, setExperienceIsEnter] = useState(false);
 
   const advanteges = useRef(null);
 
@@ -42,24 +45,6 @@ const Home = () => {
     setAdvantegesScrollX(e.pageX - advanteges.current.offsetLeft);
     setAdvantegesScrollLeft(advanteges.current.scrollLeft);
   };
-
-  const getHeightForStartAnimation = () => {
-    return Math.max(
-      2600,
-      Math.min(3244, 2600 * (1 + (1 - (window.innerWidth * 0.01) / 14.4)))
-    );
-  };
-
-  const heightForStartAnimation = useMemo(
-    () => getHeightForStartAnimation(),
-    [window.innerWidth]
-  );
-
-  useEffect(() => {
-    if (!experienceIsEnter) {
-      scrollPosition > heightForStartAnimation && setExperienceIsEnter(true);
-    }
-  }, [scrollPosition]);
 
   return (
     <>
@@ -118,10 +103,12 @@ const Home = () => {
         style={{ position: "relative", overflow: "hidden" }}
       >
         <div className=" experience-container">
-          <div
-            className={`experience-images ${experienceIsEnter ? "active" : ""}`}
-          >
-            <img src={ImagesVariants.Experience} alt="Experience" />
+          <div className={`experience-images ${isView ? "active" : ""}`}>
+            <img
+              ref={element}
+              src={ImagesVariants.Experience}
+              alt="Experience"
+            />
             <img src={ImagesVariants.Excellence} alt="Excellence" />
           </div>
         </div>
