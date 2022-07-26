@@ -1,12 +1,19 @@
 import React from "react";
+import { useEffect } from "react";
+import classNames from "classnames";
+
 import { Accordion } from "../../components/Accordion";
 import { Text } from "../../components/Text";
 import { FAQInfoFirstPart, FAQInfoSecondPart } from "../../constants/constants";
 import { TextVariants } from "../../constants/VariantsOfComponents";
-import classNames from "classnames";
 
 const FAQ = ({ container = true, className }) => {
   const FAQClass = classNames({ container: container }, className);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <div className={FAQClass}>

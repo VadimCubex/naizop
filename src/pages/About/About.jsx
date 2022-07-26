@@ -1,14 +1,20 @@
 import React from "react";
+import { useEffect } from "react";
+
 import { Slider } from "../../components/Slider";
 import { Text } from "../../components/Text";
+import { TeamSlidesInfo } from "../../constants/constants";
 import {
   ImagesVariants,
   SliderCardVariants,
   TextVariants,
 } from "../../constants/VariantsOfComponents";
-import { TeamSlidesInfo } from "../../constants/constants";
 
 const About = ({ className }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <div className={"container " + className}>

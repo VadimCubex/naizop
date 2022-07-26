@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 
 import { Avatar } from "../../components/Avatar";
@@ -35,11 +36,15 @@ const Account = () => {
     isShowTooltip,
     tooltipPosition,
     tooltipSvg,
-    setTooltipWidth,
+    TooltipWidth,
     handleMouseEnter,
     handleMouseLeave,
     handleClick,
   } = useTooltip();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
@@ -184,7 +189,7 @@ const Account = () => {
                     <Text variant={TextVariants.h3}>API Key</Text>
                     <TooltipPortal>
                       <Tooltip
-                        width={setTooltipWidth}
+                        width={TooltipWidth}
                         coords={coords}
                         arrowPosition={tooltipPosition}
                         isShow={isShowTooltip}

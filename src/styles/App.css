@@ -32,7 +32,7 @@
 }
 
 .profile-main-content {
-  margin-left: 290px;
+  flex-grow: 1;
 }
 
 .container {
@@ -51,6 +51,8 @@
   margin-right: auto;
   padding-left: 40px;
   padding-right: 40px;
+  display: flex;
+  gap: 40px;
 }
 
 .background-img.profile-container {
@@ -108,10 +110,6 @@
   .left-container {
     padding-left: 7.75%;
   }
-
-  .profile-main-content {
-    margin-left: 265px;
-  }
 }
 
 @media (max-width: 1024px) {
@@ -126,10 +124,6 @@
 
   .background-img {
     background: url("/public/images/Backgrounds/1024.png");
-  }
-
-  .profile-main-content {
-    margin-left: 240px;
   }
 }
 

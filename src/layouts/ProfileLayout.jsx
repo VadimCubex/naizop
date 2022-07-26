@@ -1,5 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
+
 import { Footer } from "../components/Footer";
 import { ProfileMenu, SidebarMenu } from "../components/Menu";
 import { ProgressGradient } from "../components/ProgressGradient";

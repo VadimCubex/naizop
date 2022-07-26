@@ -1,7 +1,22 @@
+.sidebar-container {
+  height: 100%;
+  top: 90px;
+  position: sticky;
+}
+
+.sidebar-overflow {
+  overflow: auto;
+}
+
+.sidebar-overflow::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar-overflow::-webkit-scrollbar-thumb {
+  display: none;
+}
+
 .sidebarMenu {
-  margin-top: -90px;
-  position: fixed;
-  z-index: 10;
   background: var(--menu);
   width: 250px;
   border-radius: 0px 0px 10px 10px;
@@ -13,6 +28,7 @@
     rgba(16, 19, 20, 0.5);
   display: flex;
   flex-direction: column;
+  margin-bottom: 90px;
 }
 
 .sidebarMenu .dropDown {
@@ -49,22 +65,14 @@
   opacity: 8%;
 }
 
-.sidebarMenu .sidebar-logo {
-  padding: 18px 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--white);
-}
-
 .sidebarMenu .sidebar-items {
   display: flex;
   flex-direction: column;
-  padding: 40px 20px;
+  padding: 30px 20px;
 }
 
 .sidebarMenu .dropDown .sidebar-items {
-  padding: 0px 20px 40px;
+  padding: 0px 20px 30px;
 }
 
 .sidebarMenu .sidebar-items .sidebar-item {
@@ -110,12 +118,6 @@
   .sidebarMenu {
     width: 225px;
   }
-  .sidebarMenu .sidebar-items {
-    padding: 30px 20px;
-  }
-  .sidebarMenu .dropDown .sidebar-items {
-    padding: 0px 20px 30px;
-  }
   .sidebarMenu .more {
     padding: 0px 32px 15px;
   }
@@ -150,7 +152,7 @@
 }
 
 @media (max-width: 834px) {
-  .sidebarMenu {
+  .sidebar-container {
     display: none;
   }
 }

@@ -51,6 +51,7 @@
 }
 
 .profileMenu .nav-container {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -222,7 +223,7 @@
   .nav-profile-info
   .text,
 .burger .nav-profile-container .nav-profile .nav-profile-info .text {
-  opacity: 50%;
+  opacity: 0.5;
 }
 
 .profileMenu
@@ -245,7 +246,7 @@
   > div
   .text,
 .burger .nav-profile-container .nav-profile .nav-profile-info > div .text {
-  opacity: 100%;
+  opacity: 1;
 }
 
 .profileMenu .nav-container .nav-svg {
@@ -266,15 +267,23 @@
 }
 
 .profileMenu .nav-container .nav-logo {
-  margin: 18px 0px;
+  padding: 18px 0px;
   width: 250px;
   display: flex;
   align-items: center;
   color: var(--white);
+  justify-content: center;
+
+  background: radial-gradient(
+      240.8% 68.41% at -61% -16.08%,
+      rgba(135, 144, 153, 0.2) 0%,
+      rgba(135, 144, 153, 0) 224%
+    )
+    rgba(16, 19, 20, 0.5);
 }
 
-.profileMenu .nav-container .nav-logo > * {
-  opacity: 0;
+.profileMenu .nav-container .nav-logo .text_variant_h1_medium {
+  display: inline-block;
 }
 
 .profileMenu .nav-burger {
@@ -348,8 +357,9 @@
 }
 
 @media (max-width: 834px) {
-  .profileMenu .nav-container .nav-logo > * {
-    opacity: 1;
+  .profileMenu .nav-container .nav-logo {
+    background: none;
+    justify-content: flex-start;
   }
   .profileMenu .profile-links,
   .profileMenu .nav-container .nav-button-container,

@@ -112,6 +112,7 @@ export const IconsVariants = {
   Twitch_color: "/icons/Color/Twitch.svg",
   Twitter_color: "/icons/Color/Twitter.svg",
   Youtube_color: "/icons/Color/Youtube.svg",
+  Trustpilot: "/icons/Color/Trustpilot.svg",
 
   Logo: "/logo.svg",
   Logo_2: "/logo 2.svg",
@@ -218,9 +219,4 @@ export const SliderCardVariants = {
 export const TableVariants = {
   Ranks: "ranks",
   Redeem: "redeem",
-};
-
-export const InputVariants = {
-  lg: "large",
-  md: "medium",
 };

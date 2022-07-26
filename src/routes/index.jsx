@@ -5,6 +5,7 @@ import MainLayout from "../layouts/MainLayout";
 import ProfileLayout from "../layouts/ProfileLayout";
 import About from "../pages/About/About";
 import Account from "../pages/Account/Account";
+import Api from "../pages/Api/Api";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import FAQ from "../pages/FAQ/FAQ";
 import Home from "../pages/Home/Home";
@@ -46,7 +47,7 @@ const NaizopRoutes = () => {
         <Route path="/profile/tools" element={<Dashboard />} />
         <Route path="/profile/terms" element={<Dashboard />} />
         <Route path="/profile/faq" element={<FAQ container={false} />} />
-        <Route path="/profile/api" element={<Dashboard />} />
+        <Route path="/profile/api" element={<Api />} />
         <Route path="/profile/ambassador-program" element={<Dashboard />} />
       </Route>
     </Routes>

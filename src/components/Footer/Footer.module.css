@@ -30,36 +30,73 @@
   height: fit-content;
 }
 
-.footer-card-subscribe,
 .footer-card {
   margin-top: 11px;
   flex-direction: column;
 }
 
-.footer .footer-card-subscribe hr {
-  background: var(--white);
-  margin-top: 20px;
-  width: 380px;
+.footer .footer-card-trustpilot {
+  position: relative;
+  margin-top: 11px;
+  flex-direction: column;
+  gap: 7px;
 }
 
-.footer-card-subscribe > div {
+.footer-card-trustpilot > div:first-child {
   position: relative;
-  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 40px;
 }
 
-.footer-card-subscribe .svgIcon {
-  margin-right: 30px;
+.footer-card-trustpilot .trustpilot-reviews {
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }
 
-.footer-card-subscribe .light-svg {
+.footer-card-trustpilot .trustpilot-reviews .text.text_variant_h3_regular {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.footer-card-trustpilot
+  .trustpilot-reviews
+  .text.text_variant_h3_regular
+  > .text {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-card-trustpilot .trustpilot-reviews > div .text {
+  font-family: "Roboto Bold";
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.footer-card-trustpilot .trustpilot-reviews > div {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.footer-card-trustpilot .trustpilot-stars {
+  display: flex;
+  gap: 5px;
+}
+
+.footer-card-trustpilot .svgIcon path {
+  stroke: transparent !important;
+}
+
+.footer-card-trustpilot .trustpilot-light {
   position: absolute;
-  width: 90px;
-  height: 90px;
-  right: 0px;
+  width: 120%;
+  height: 90%;
+  right: -30px;
   top: -30px;
+  z-index: -1;
   border-radius: 50%;
   background: radial-gradient(
       120% 899.14% at -19.01% 280%,
@@ -69,12 +106,8 @@
     ),
     linear-gradient(46.15deg, #03d1a0 14.31%, rgba(121, 57, 216, 0) 89.33%),
     #1f4fd7;
-  opacity: 0.5;
-  filter: blur(30px);
-}
-
-.footer-card-subscribe path {
-  stroke: var(--white) !important;
+  opacity: 0.3;
+  filter: blur(60px);
 }
 
 .footer-card > div:not(.dropDown, .title) {
@@ -131,7 +164,7 @@
     gap: 63px;
   }
 
-  .footer .footer-card-subscribe hr {
+  .footer .footer-card-trustpilot hr {
     width: 340px;
   }
 }
@@ -155,11 +188,22 @@
     width: 30%;
   }
 
-  .footer-card-subscribe {
-    width: 100%;
+  .footer-card-trustpilot {
+    margin-top: 25px !important;
+    width: fit-content;
   }
 
-  .footer .footer-card-subscribe hr {
+  .footer-card-trustpilot > div:first-child {
+    justify-content: flex-start;
+  }
+
+  .footer-card-trustpilot .trustpilot-light {
+    top: -10px;
+    height: 120%;
+    filter: blur(40px);
+  }
+
+  .footer .footer-card-trustpilot hr {
     width: 100%;
   }
 }

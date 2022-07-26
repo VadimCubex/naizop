@@ -751,3 +751,9 @@ export const CurrencyInfo = [
     symbol: "₦",
   },
 ];
+
+export const ApiSelect = [
+  {
+    title: "Default",
+  },
+];

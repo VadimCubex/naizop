@@ -34,6 +34,7 @@
 @import "../pages/RedeemHistory/RedeemHistory.module.css";
 @import "../pages/RedeemSupport/RedeemSupport.module.css";
 @import "../pages/Account/Account.module.css";
+@import "../pages/Api/Api.module.css";
 
 :root {
   --transition-property: all;
@@ -120,4 +121,9 @@ code {
 @font-face {
   font-family: "Circe Light";
   src: url(../fonts/Circe-Light.ttf);
+}
+
+@font-face {
+  font-family: "Roboto Bold";
+  src: url(../fonts/Roboto-Bold.ttf);
 }

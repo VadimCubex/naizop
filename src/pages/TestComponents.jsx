@@ -1,5 +1,19 @@
 import React from "react";
 import { useState } from "react";
+
+import { Accordion } from "../components/Accordion";
+import { Avatar } from "../components/Avatar";
+import { AvatarDashboard } from "../components/AvatarDashboard";
+import { Button } from "../components/Button";
+import { AccountCard } from "../components/Cards";
+import { CircleProgress } from "../components/CircleProgress";
+import { Input } from "../components/Input";
+import { Number } from "../components/Number";
+import { ProgressGradient } from "../components/ProgressGradient";
+import { Radio } from "../components/Radio";
+import { Select } from "../components/Select";
+import { SvgIcon } from "../components/SvgIcon";
+import { Text } from "../components/Text";
 import {
   AccountCardVariants,
   AvatarVariants,
@@ -10,21 +24,7 @@ import {
   NumberVariants,
   SelectOptionVariants,
   TextVariants,
-  InputVariants,
 } from "../constants/VariantsOfComponents";
-import { Text } from "../components/Text";
-import { SvgIcon } from "../components/SvgIcon";
-import { Button } from "../components/Button";
-import { Avatar } from "../components/Avatar";
-import { Radio } from "../components/Radio";
-import { Number } from "../components/Number";
-import { AccountCard } from "../components/Cards";
-import { CircleProgress } from "../components/CircleProgress";
-import { ProgressGradient } from "../components/ProgressGradient";
-import { AvatarDashboard } from "../components/AvatarDashboard";
-import { Accordion } from "../components/Accordion";
-import { Select } from "../components/Select";
-import { Input } from "../components/Input";
 
 const TestComponents = () => {
   const [gender, setGender] = useState("male");
@@ -308,7 +308,7 @@ const TestComponents = () => {
           selected={selected1}
         />
 
-        <Input variant={InputVariants.lg} placeholder="Enter ID..." />
+        <Input placeholder="Enter ID..." />
       </div>
     </div>
   );

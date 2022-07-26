@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { Table } from "../../components/Table";
@@ -10,6 +11,10 @@ import {
 } from "../../constants/VariantsOfComponents";
 
 const RedeemHistory = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <div className="redeem-history">

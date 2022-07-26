@@ -1,5 +1,21 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
+import { AvatarDashboard } from "../../components/AvatarDashboard";
+import { Button } from "../../components/Button";
+import { AccountCard } from "../../components/Cards";
+import { ModalRanks } from "../../components/Modal";
+import { SvgIcon } from "../../components/SvgIcon";
+import { Table } from "../../components/Table";
 import { Text } from "../../components/Text";
+import {
+  AccountPointsInfo,
+  AccountStatusInfo,
+  ProfileInfo,
+  RanksColumnInfo,
+  RanksInfo,
+} from "../../constants/constants";
 import {
   TextVariants,
   ImagesVariants,
@@ -8,20 +24,6 @@ import {
   IconsVariants,
   TableVariants,
 } from "../../constants/VariantsOfComponents";
-import { AvatarDashboard } from "../../components/AvatarDashboard";
-import {
-  AccountPointsInfo,
-  AccountStatusInfo,
-  ProfileInfo,
-  RanksColumnInfo,
-  RanksInfo,
-} from "../../constants/constants";
-import { Button } from "../../components/Button";
-import { Link, useNavigate } from "react-router-dom";
-import { AccountCard } from "../../components/Cards";
-import { SvgIcon } from "../../components/SvgIcon";
-import { ModalRanks } from "../../components/Modal";
-import { Table } from "../../components/Table";
 
 const Dashboard = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -30,6 +32,10 @@ const Dashboard = () => {
   const handleClick = () => {
     navigate("/profile/redeem-support");
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -13,7 +13,6 @@ import {
 } from "../../constants/constants";
 import {
   ButtonVariants,
-  InputVariants,
   SelectOptionVariants,
   TextVariants,
 } from "../../constants/VariantsOfComponents";
@@ -24,6 +23,11 @@ const RedeemSupport = () => {
     RedeemSubjectSelect[0]
   );
   const [selectedPlan, setSelectedPlan] = useState(RedeemPlanSelect[0]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <div className="support">
@@ -77,7 +81,7 @@ const RedeemSupport = () => {
                   {`For multiple orders, please separate them using comma.
                   (example: 12345, 431122, 8934743)`}
                 </Text>
-                <Input variant={InputVariants.lg} placeholder="Enter ID..." />
+                <Input placeholder="Enter ID..." />
               </div>
             </div>
             <div className="chunk">

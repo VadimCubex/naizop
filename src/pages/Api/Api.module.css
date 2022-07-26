@@ -1,0 +1,79 @@
+.api {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 30px;
+  padding-bottom: 65px;
+}
+
+.api .text {
+  color: var(--white);
+}
+
+.api .block {
+  padding: 25px 25px 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.api .api-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 20px;
+}
+
+.api .api-inputs .api-input {
+  width: 49%;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.api .api-inputs .api-input .input input {
+  padding: 20px 20px 10px;
+  font-size: 18px;
+  line-height: 30px;
+}
+.api .api-textarea .input textarea {
+  padding: 20px 20px 30px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.api .api-input .text,
+.api .api-textarea .text {
+  opacity: 0.75;
+}
+
+.api .api-select {
+  width: 49%;
+  position: relative;
+}
+
+.api .api-select .dropDown {
+  backdrop-filter: none;
+}
+
+.api .api-select .select-container {
+  z-index: 3;
+}
+
+@media (max-width: 834px) {
+  .api .api-inputs {
+    flex-direction: column;
+  }
+
+  .api .api-select,
+  .api .api-inputs .api-input {
+    width: 100%;
+  }
+
+  .api .api-textarea .input textarea,
+  .api .api-inputs .api-input .input input {
+    padding: 15px 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

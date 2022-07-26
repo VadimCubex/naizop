@@ -32,7 +32,7 @@ export const AccountCardComponent = ({
     isShowTooltip,
     tooltipPosition,
     tooltipSvg,
-    setTooltipWidth,
+    TooltipWidth,
     handleMouseEnter,
     handleMouseLeave,
     handleClick,
@@ -44,7 +44,7 @@ export const AccountCardComponent = ({
         <>
           <TooltipPortal>
             <Tooltip
-              width={setTooltipWidth}
+              width={TooltipWidth}
               coords={coords}
               arrowPosition={tooltipPosition}
               isShow={isShowTooltip}

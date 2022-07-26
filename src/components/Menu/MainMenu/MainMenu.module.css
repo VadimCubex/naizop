@@ -37,7 +37,7 @@
 }
 
 .nav-container .nav-logo {
-  margin: 14px 0px;
+  padding: 14px 0px;
   display: flex;
   align-items: center;
   color: var(--white);

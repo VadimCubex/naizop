@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { useEffect } from "react";
 import { useRef } from "react";
 
 import { Button } from "../../components/Button";
@@ -45,6 +46,10 @@ const Home = () => {
     setAdvantegesScrollX(e.pageX - advanteges.current.offsetLeft);
     setAdvantegesScrollLeft(advanteges.current.scrollLeft);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

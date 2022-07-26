@@ -9,8 +9,8 @@ const useTooltip = (tooltip = true) => {
   const tooltipSvg = useRef(null);
   let timeout;
 
-  const setTooltipWidth = useMemo(() => {
-    if (window.innerWidth > 1440) {
+  const TooltipWidth = useMemo(() => {
+    if (window.innerWidth >= 1440) {
       return 400;
     }
     if (window.innerWidth < 1440 && window.innerWidth >= 1025) {
@@ -39,7 +39,7 @@ const useTooltip = (tooltip = true) => {
         left: rect.x + rect.width / 2,
         top: rect.y + window.scrollY + rect.height / 2,
       });
-      DetermineTooltipPosition(rect.x + rect.width / 2 + setTooltipWidth);
+      DetermineTooltipPosition(rect.x + rect.width / 2 + TooltipWidth);
     }
   };
 
@@ -50,18 +50,14 @@ const useTooltip = (tooltip = true) => {
   };
 
   const handleMouseEnter = () => {
-    if (window.innerWidth > 835) {
-      timeout = setTimeout(() => {
-        setIsShowTooltip(true);
-      }, 500);
-    }
+    timeout = setTimeout(() => {
+      setIsShowTooltip(true);
+    }, 500);
   };
 
   const handleMouseLeave = () => {
-    if (window.innerWidth > 835) {
-      clearInterval(timeout);
-      setIsShowTooltip(false);
-    }
+    clearInterval(timeout);
+    setIsShowTooltip(false);
   };
 
   const handleClick = () => {
@@ -86,7 +82,7 @@ const useTooltip = (tooltip = true) => {
     isShowTooltip,
     tooltipPosition,
     tooltipSvg,
-    setTooltipWidth,
+    TooltipWidth,
     handleMouseEnter,
     handleMouseLeave,
     handleClick,
