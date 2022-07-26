@@ -93,7 +93,6 @@
 .footer-card-trustpilot .trustpilot-light {
   position: absolute;
   width: 120%;
-  height: 90%;
   right: -30px;
   top: -30px;
   z-index: -1;
@@ -106,8 +105,9 @@
     ),
     linear-gradient(46.15deg, #03d1a0 14.31%, rgba(121, 57, 216, 0) 89.33%),
     #1f4fd7;
-  opacity: 0.3;
-  filter: blur(60px);
+  filter: blur(30px);
+  height: 90%;
+  opacity: 0.2;
 }
 
 .footer-card > div:not(.dropDown, .title) {
