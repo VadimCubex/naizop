@@ -11,6 +11,7 @@ import FAQ from "../pages/FAQ/FAQ";
 import Home from "../pages/Home/Home";
 import RedeemHistory from "../pages/RedeemHistory/RedeemHistory";
 import RedeemSupport from "../pages/RedeemSupport/RedeemSupport";
+import Subscriptions from "../pages/Subscriptions/Subscriptions";
 import TestComponents from "../pages/TestComponents";
 
 const NaizopRoutes = () => {
@@ -35,7 +36,7 @@ const NaizopRoutes = () => {
         <Route path="/profile/service" element={<Dashboard />} />
         <Route path="/profile/popular-service" element={<Dashboard />} />
         <Route path="/profile/orders" element={<Dashboard />} />
-        <Route path="/profile/subscriptions" element={<Dashboard />} />
+        <Route path="/profile/subscriptions" element={<Subscriptions />} />
         <Route path="/profile/add-funds" element={<Dashboard />} />
         <Route path="/profile/support" element={<Dashboard />} />
         <Route path="/profile/affiliates" element={<Dashboard />} />

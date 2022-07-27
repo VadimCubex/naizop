@@ -41,13 +41,13 @@ const Api = () => {
   const [getRefillStatusOrder, setGetRefillStatusOrder] = useState("Refill ID");
   const [balanceStatusAction, setBalanceStatusAction] = useState("balance");
 
-  const [serviceExample, setServiceExample] = useState("services");
-  const [addOrderExample, setAddOrderExample] = useState("services");
-  const [orderStatusExample, setOrderStatusExample] = useState("services");
-  const [multipleOrderExample, setMultipleOrderExample] = useState("services");
-  const [refillExample, setRefillExample] = useState("services");
-  const [getRefillExample, setGetRefillExample] = useState("services");
-  const [balanceExample, setBalanceExample] = useState("services");
+  const [serviceExample, setServiceExample] = useState("Example");
+  const [addOrderExample, setAddOrderExample] = useState("Example");
+  const [orderStatusExample, setOrderStatusExample] = useState("Example");
+  const [multipleOrderExample, setMultipleOrderExample] = useState("Example");
+  const [refillExample, setRefillExample] = useState("Example");
+  const [getRefillExample, setGetRefillExample] = useState("Example");
+  const [balanceExample, setBalanceExample] = useState("Example");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -119,7 +119,7 @@ const Api = () => {
               />
             </div>
           </div>
-          <div className="api-textarea">
+          <div className="api-textarea service">
             <Text variant={TextVariants.h3}>Example Response</Text>
             <Input
               value={serviceExample}
@@ -206,7 +206,7 @@ const Api = () => {
               />
             </div>
           </div>
-          <div className="api-textarea">
+          <div className="api-textarea add-order">
             <Text variant={TextVariants.h3}>Example Response</Text>
             <Input
               value={addOrderExample}
@@ -249,7 +249,7 @@ const Api = () => {
               />
             </div>
           </div>
-          <div className="api-textarea">
+          <div className="api-textarea order-status">
             <Text variant={TextVariants.h3}>Example Response</Text>
             <Input
               value={orderStatusExample}
@@ -292,7 +292,7 @@ const Api = () => {
               />
             </div>
           </div>
-          <div className="api-textarea">
+          <div className="api-textarea multiple-orders">
             <Text variant={TextVariants.h3}>Example Response</Text>
             <Input
               value={multipleOrderExample}
@@ -335,7 +335,7 @@ const Api = () => {
               />
             </div>
           </div>
-          <div className="api-textarea">
+          <div className="api-textarea refill">
             <Text variant={TextVariants.h3}>Example Response</Text>
             <Input
               value={refillExample}
@@ -378,7 +378,7 @@ const Api = () => {
               />
             </div>
           </div>
-          <div className="api-textarea">
+          <div className="api-textarea get-refill">
             <Text variant={TextVariants.h3}>Example Response</Text>
             <Input
               value={getRefillExample}
@@ -412,7 +412,7 @@ const Api = () => {
               />
             </div>
           </div>
-          <div className="api-textarea">
+          <div className="api-textarea balance">
             <Text variant={TextVariants.h3}>Example Response</Text>
             <Input
               value={balanceExample}

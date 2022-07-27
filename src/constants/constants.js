@@ -485,6 +485,7 @@ export const ProfileInfo = {
   img: ImagesVariants.profile,
   name: "Brian",
   surname: "Robinson",
+  usename: "charlypricehelou",
   balance: 75,
   rate: "$1.00/100 points",
   rank: "BRONZE",
@@ -756,4 +757,13 @@ export const ApiSelect = [
   {
     title: "Default",
   },
+];
+
+export const FilterSubscriptions = [
+  "All",
+  "Active",
+  "Paused",
+  "Completed",
+  "Expired",
+  "Canceled",
 ];

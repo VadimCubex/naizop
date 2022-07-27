@@ -1,0 +1,51 @@
+.filter {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+}
+
+.filter {
+  display: flex;
+  gap: 10px;
+}
+
+.filter .input {
+  background: var(--blocks);
+  border: none;
+  width: 88%;
+  border-radius: 20px;
+}
+
+.filter .input input {
+  padding: 10px;
+}
+
+.filter .input .svgIcon {
+  margin: 10px 0px 10px 20px;
+  stroke: var(--white) !important;
+}
+
+.filter-variants-container {
+  width: 100%;
+  overflow: auto;
+}
+
+.filter-variants-container::-webkit-scrollbar {
+  display: none;
+}
+.filter-variants-container::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.filter-variants-container .filter-variants {
+  gap: 15px;
+  display: flex;
+}
+
+.filter-variants-container .filter-variants .button {
+  width: 140px;
+}
+
+.filter-variants-container .filter-variants .button.active {
+  background: var(--gradient-blue);
+}

@@ -6,6 +6,7 @@
   height: fit-content;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
+  background: rgba(30, 33, 36, 0.25);
 }
 
 .input [class*="svgIcon"] {
@@ -15,7 +16,7 @@
 .input input,
 .input textarea {
   border: none;
-  background: rgba(30, 33, 36, 0.25);
+  background: none;
   display: inline-block;
   font-family: "Space Grotesk Bold";
   font-size: 14px;

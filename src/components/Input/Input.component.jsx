@@ -10,7 +10,7 @@ export const InputComponent = forwardRef(
       placeholder,
       disabled,
       rightSide,
-      children,
+      leftSide,
       hidden,
       multiline = false,
       onChange,
@@ -48,7 +48,7 @@ export const InputComponent = forwardRef(
 
     return (
       <div className={InputClass}>
-        {children}
+        {leftSide || null}
         {!multiline ? (
           <input
             ref={ref}

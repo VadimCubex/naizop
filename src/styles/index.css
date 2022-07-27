@@ -24,6 +24,7 @@
 @import "../components/Table/Table.module.css";
 @import "../components/Input/Input.module.css";
 @import "../components/Currency/Currency.module.css";
+@import "../components/Filter/Filter.module.css";
 
 @import "./App.css";
 
@@ -35,6 +36,7 @@
 @import "../pages/RedeemSupport/RedeemSupport.module.css";
 @import "../pages/Account/Account.module.css";
 @import "../pages/Api/Api.module.css";
+@import "../pages/Subscriptions/Subscriptions.module.css";
 
 :root {
   --transition-property: all;

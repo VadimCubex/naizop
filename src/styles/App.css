@@ -32,6 +32,7 @@
 }
 
 .profile-main-content {
+  width: 74%;
   flex-grow: 1;
 }
 
