@@ -3,11 +3,11 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
 
-import { Button } from "../../components/Button";
-import { AdvantagesCard } from "../../components/Cards";
-import { Slider } from "../../components/Slider";
-import { SocialeNetworks } from "../../components/SocialeNetworks";
-import { Text } from "../../components/Text";
+import { Button } from "components/Button";
+import { AdvantagesCard } from "components/Cards";
+import { Slider } from "components/Slider";
+import { SocialeNetworks } from "components/SocialeNetworks";
+import { Text } from "components/Text";
 import {
   AdvantagesInfo,
   ExperienceSliderInfo,

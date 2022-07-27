@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { Button } from "../../components/Button";
-import { AccountCard } from "../../components/Cards";
-import { Input } from "../../components/Input";
-import { Select } from "../../components/Select";
-import { Text } from "../../components/Text";
+import { Button } from "components/Button";
+import { AccountCard } from "components/Cards";
+import { Input } from "components/Input";
+import { Select } from "components/Select";
+import { Text } from "components/Text";
 import {
   RedeemSubjectSelect,
   RedeemPlanSelect,

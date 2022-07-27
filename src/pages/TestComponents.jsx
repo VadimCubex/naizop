@@ -1,19 +1,19 @@
 import React from "react";
 import { useState } from "react";
 
-import { Accordion } from "../components/Accordion";
-import { Avatar } from "../components/Avatar";
-import { AvatarDashboard } from "../components/AvatarDashboard";
-import { Button } from "../components/Button";
-import { AccountCard } from "../components/Cards";
-import { CircleProgress } from "../components/CircleProgress";
-import { Input } from "../components/Input";
-import { Number } from "../components/Number";
-import { ProgressGradient } from "../components/ProgressGradient";
-import { Radio } from "../components/Radio";
-import { Select } from "../components/Select";
-import { SvgIcon } from "../components/SvgIcon";
-import { Text } from "../components/Text";
+import { Accordion } from "components/Accordion";
+import { Avatar } from "components/Avatar";
+import { AvatarDashboard } from "components/AvatarDashboard";
+import { Button } from "components/Button";
+import { AccountCard } from "components/Cards";
+import { CircleProgress } from "components/CircleProgress";
+import { Input } from "components/Input";
+import { Number } from "components/Number";
+import { ProgressGradient } from "components/ProgressGradient";
+import { Radio } from "components/Radio";
+import { Select } from "components/Select";
+import { SvgIcon } from "components/SvgIcon";
+import { Text } from "components/Text";
 import {
   AccountCardVariants,
   AvatarVariants,

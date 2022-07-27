@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
+import { Input } from "components/Input";
+import { Select } from "components/Select";
+import { Text } from "components/Text";
 
-import { Input } from "../../components/Input";
-import { Select } from "../../components/Select";
-import { Text } from "../../components/Text";
 import { ApiSelect } from "../../constants/constants";
 import {
   SelectOptionVariants,
@@ -12,6 +12,13 @@ import {
 
 const Api = () => {
   const [selected, setSelected] = useState(ApiSelect[0]);
+  const [apiKey, setApiKey] = useState(
+    "************************************************"
+  );
+
+  const [method, setMethod] = useState("POST");
+  const [url, setUrl] = useState("https://naizop.com/api/v2");
+  const [resFormat, setResFormat] = useState("JSON");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,19 +31,39 @@ const Api = () => {
           <div className="api-inputs">
             <div className="api-input">
               <Text variant={TextVariants.h3}>HTTP Method</Text>
-              <Input />
+              <Input
+                value={method}
+                onChange={(e) => {
+                  setMethod(e.target.value);
+                }}
+              />
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>API URL</Text>
-              <Input />
+              <Input
+                value={url}
+                onChange={(e) => {
+                  setUrl(e.target.value);
+                }}
+              />
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>API Key</Text>
-              <Input />
+              <Input
+                value={apiKey}
+                onChange={(e) => {
+                  setApiKey(e.target.value);
+                }}
+              />
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>Response format</Text>
-              <Input />
+              <Input
+                value={resFormat}
+                onChange={(e) => {
+                  setResFormat(e.target.value);
+                }}
+              />
             </div>
           </div>
         </div>
@@ -46,7 +73,12 @@ const Api = () => {
           <div className="api-inputs">
             <div className="api-input">
               <Text variant={TextVariants.h3}>Key</Text>
-              <Input />
+              <Input
+                value={apiKey}
+                onChange={(e) => {
+                  setApiKey(e.target.value);
+                }}
+              />
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>Action</Text>
@@ -72,7 +104,12 @@ const Api = () => {
           <div className="api-inputs">
             <div className="api-input">
               <Text variant={TextVariants.h3}>Key</Text>
-              <Input />
+              <Input
+                value={apiKey}
+                onChange={(e) => {
+                  setApiKey(e.target.value);
+                }}
+              />
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>Action</Text>
@@ -110,7 +147,12 @@ const Api = () => {
           <div className="api-inputs">
             <div className="api-input">
               <Text variant={TextVariants.h3}>Key</Text>
-              <Input />
+              <Input
+                value={apiKey}
+                onChange={(e) => {
+                  setApiKey(e.target.value);
+                }}
+              />
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>Action</Text>
@@ -132,7 +174,12 @@ const Api = () => {
           <div className="api-inputs">
             <div className="api-input">
               <Text variant={TextVariants.h3}>Key</Text>
-              <Input />
+              <Input
+                value={apiKey}
+                onChange={(e) => {
+                  setApiKey(e.target.value);
+                }}
+              />
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>Action</Text>
@@ -154,7 +201,12 @@ const Api = () => {
           <div className="api-inputs">
             <div className="api-input">
               <Text variant={TextVariants.h3}>Key</Text>
-              <Input />
+              <Input
+                value={apiKey}
+                onChange={(e) => {
+                  setApiKey(e.target.value);
+                }}
+              />
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>Action</Text>
@@ -176,7 +228,12 @@ const Api = () => {
           <div className="api-inputs">
             <div className="api-input">
               <Text variant={TextVariants.h3}>Key</Text>
-              <Input />
+              <Input
+                value={apiKey}
+                onChange={(e) => {
+                  setApiKey(e.target.value);
+                }}
+              />
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>Action</Text>
@@ -198,7 +255,12 @@ const Api = () => {
           <div className="api-inputs">
             <div className="api-input">
               <Text variant={TextVariants.h3}>Key</Text>
-              <Input />
+              <Input
+                value={apiKey}
+                onChange={(e) => {
+                  setApiKey(e.target.value);
+                }}
+              />
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>Action</Text>

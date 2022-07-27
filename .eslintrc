@@ -13,7 +13,7 @@
   "plugins": ["react-hooks"],
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended", // Uses the recommended rules from @eslint-plugin-react
+    "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended"
   ],
@@ -26,6 +26,15 @@
   "settings": {
     "react": {
       "version": "detect"
+    },
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@components", "./src/components"],
+          ["@pages", "./src/pages"]
+        ],
+        "extensions": [".ts", ".js", ".jsx", ".json"]
+      }
     }
   },
   "rules": {

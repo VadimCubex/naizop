@@ -2,8 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
-import { useLayoutEffect } from "react";
 import classNames from "classnames";
+import { debounce } from "helpers/helpers";
 import { Link, useLocation } from "react-router-dom";
 
 import {
@@ -30,14 +30,22 @@ export const SidebarMenuComponent = () => {
   const [active, setActive] = useState("");
   const container = useRef(null);
 
-  useLayoutEffect(() => {
-    container.current.style.height = `${window.innerHeight}px`;
-  }, []);
-
   useEffect(() => {
     setActive(location.pathname);
   }, [location.pathname]);
 
+  useEffect(() => {
+    const changeHeight = () => {
+      container.current.style.height = `${window.innerHeight - 90}px`;
+    };
+    changeHeight();
+
+    window.addEventListener("resize", debounce(changeHeight, 500), true);
+
+    return () => {
+      window.removeEventListener("resize", debounce(changeHeight, 500), true);
+    };
+  }, []);
   return (
     <aside className="sidebar-container">
       <div ref={container} className="sidebar-overflow">

@@ -2,15 +2,15 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 
-import { Avatar } from "../../components/Avatar";
-import { Button } from "../../components/Button";
-import { Input } from "../../components/Input";
-import { TooltipPortal } from "../../components/Portal";
-import { Radio } from "../../components/Radio";
-import { Select } from "../../components/Select";
-import { SvgIcon } from "../../components/SvgIcon";
-import { Text } from "../../components/Text";
-import { Tooltip } from "../../components/Tooltip";
+import { Avatar } from "components/Avatar";
+import { Button } from "components/Button";
+import { Input } from "components/Input";
+import { TooltipPortal } from "components/Portal";
+import { Radio } from "components/Radio";
+import { Select } from "components/Select";
+import { SvgIcon } from "components/SvgIcon";
+import { Text } from "components/Text";
+import { Tooltip } from "components/Tooltip";
 import {
   AvatarsForSelect,
   ProfileInfo,

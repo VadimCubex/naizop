@@ -2,8 +2,8 @@ import React from "react";
 import { useEffect } from "react";
 import classNames from "classnames";
 
-import { Accordion } from "../../components/Accordion";
-import { Text } from "../../components/Text";
+import { Accordion } from "components/Accordion";
+import { Text } from "components/Text";
 import { FAQInfoFirstPart, FAQInfoSecondPart } from "../../constants/constants";
 import { TextVariants } from "../../constants/VariantsOfComponents";
 

@@ -5,6 +5,7 @@
 }
 
 .sidebar-overflow {
+  height: fit-content;
   overflow: auto;
 }
 
