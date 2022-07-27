@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
 import classNames from "classnames";
-import { debounce } from "helpers/helpers";
 import { Link, useLocation } from "react-router-dom";
 
 import {
@@ -17,6 +16,7 @@ import {
   NumberVariants,
   TextVariants,
 } from "../../../constants/VariantsOfComponents";
+import { debounce } from "../../../helpers/helpers";
 import { Button } from "../../Button";
 import { DropDown } from "../../DropDown";
 import { Number } from "../../Number";

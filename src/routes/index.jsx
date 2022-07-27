@@ -1,17 +1,17 @@
 import React from "react";
-import About from "pages/About/About";
-import Account from "pages/Account/Account";
-import Api from "pages/Api/Api";
-import Dashboard from "pages/Dashboard/Dashboard";
-import FAQ from "pages/FAQ/FAQ";
-import Home from "pages/Home/Home";
-import RedeemHistory from "pages/RedeemHistory/RedeemHistory";
-import RedeemSupport from "pages/RedeemSupport/RedeemSupport";
-import TestComponents from "pages/TestComponents";
 import { Route, Routes } from "react-router-dom";
 
 import MainLayout from "../layouts/MainLayout";
 import ProfileLayout from "../layouts/ProfileLayout";
+import About from "../pages/About/About";
+import Account from "../pages/Account/Account";
+import Api from "../pages/Api/Api";
+import Dashboard from "../pages/Dashboard/Dashboard";
+import FAQ from "../pages/FAQ/FAQ";
+import Home from "../pages/Home/Home";
+import RedeemHistory from "../pages/RedeemHistory/RedeemHistory";
+import RedeemSupport from "../pages/RedeemSupport/RedeemSupport";
+import TestComponents from "../pages/TestComponents";
 
 const NaizopRoutes = () => {
   return (

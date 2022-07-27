@@ -2,8 +2,8 @@ import React from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import { Table } from "components/Table";
-import { Text } from "components/Text";
+import { Table } from "../../components/Table";
+import { Text } from "../../components/Text";
 import { RedeemColumnInfo, RedeemInfo } from "../../constants/constants";
 import {
   TextVariants,

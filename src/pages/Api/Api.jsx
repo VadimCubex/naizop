@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { Input } from "components/Input";
-import { Select } from "components/Select";
-import { Text } from "components/Text";
 
+import { Input } from "../../components/Input";
+import { Select } from "../../components/Select";
+import { Text } from "../../components/Text";
 import { ApiSelect } from "../../constants/constants";
 import {
   SelectOptionVariants,
@@ -15,10 +15,39 @@ const Api = () => {
   const [apiKey, setApiKey] = useState(
     "************************************************"
   );
-
   const [method, setMethod] = useState("POST");
   const [url, setUrl] = useState("https://naizop.com/api/v2");
   const [resFormat, setResFormat] = useState("JSON");
+  const [serviceAction, setServiceAction] = useState("services");
+  const [addOrderAction, setAddOrderAction] = useState("add");
+  const [addOrderService, setAddOrderService] = useState("Service ID");
+  const [addOrderLink, setAddOrderLink] = useState("Link to page");
+  const [addOrderQuantity, setAddOrderQuantity] = useState("Needed quantity");
+  const [addOrderRuns, setAddOrderRuns] = useState("Runs to deliver");
+  const [addOrderInterval, setAddOrderInterval] = useState(
+    "Interval in minutes"
+  );
+  const [orderStatusAction, setOrderStatusAction] = useState("status");
+  const [orderStatusOrder, setOrderStatusOrder] = useState("Order ID");
+  const [multipleOrderStatusAction, setMultipleOrderStatusAction] =
+    useState("status");
+  const [multipleOrderStatusOrder, setMultipleOrderStatusOrder] = useState(
+    "Order IDs separated by comma"
+  );
+  const [refillStatusAction, setRefillStatusAction] = useState("refill");
+  const [refillStatusOrder, setRefillStatusOrder] = useState("Order ID");
+  const [getRefillStatusAction, setGetRefillStatusAction] =
+    useState("refill_status");
+  const [getRefillStatusOrder, setGetRefillStatusOrder] = useState("Refill ID");
+  const [balanceStatusAction, setBalanceStatusAction] = useState("balance");
+
+  const [serviceExample, setServiceExample] = useState("services");
+  const [addOrderExample, setAddOrderExample] = useState("services");
+  const [orderStatusExample, setOrderStatusExample] = useState("services");
+  const [multipleOrderExample, setMultipleOrderExample] = useState("services");
+  const [refillExample, setRefillExample] = useState("services");
+  const [getRefillExample, setGetRefillExample] = useState("services");
+  const [balanceExample, setBalanceExample] = useState("services");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -82,12 +111,23 @@ const Api = () => {
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>Action</Text>
-              <Input />
+              <Input
+                value={serviceAction}
+                onChange={(e) => {
+                  setServiceAction(e.target.value);
+                }}
+              />
             </div>
           </div>
           <div className="api-textarea">
             <Text variant={TextVariants.h3}>Example Response</Text>
-            <Input multiline={true} />
+            <Input
+              value={serviceExample}
+              onChange={(e) => {
+                setServiceExample(e.target.value);
+              }}
+              multiline={true}
+            />
           </div>
         </div>
 
@@ -113,32 +153,68 @@ const Api = () => {
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>Action</Text>
-              <Input />
+              <Input
+                value={addOrderAction}
+                onChange={(e) => {
+                  setAddOrderAction(e.target.value);
+                }}
+              />
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>Service</Text>
-              <Input />
+              <Input
+                value={addOrderService}
+                onChange={(e) => {
+                  setAddOrderService(e.target.value);
+                }}
+              />
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>Link</Text>
-              <Input />
+              <Input
+                value={addOrderLink}
+                onChange={(e) => {
+                  setAddOrderLink(e.target.value);
+                }}
+              />
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>Quantity</Text>
-              <Input />
+              <Input
+                value={addOrderQuantity}
+                onChange={(e) => {
+                  setAddOrderQuantity(e.target.value);
+                }}
+              />
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>Runs (optional)</Text>
-              <Input />
+              <Input
+                value={addOrderRuns}
+                onChange={(e) => {
+                  setAddOrderRuns(e.target.value);
+                }}
+              />
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>Interval (optional)</Text>
-              <Input />
+              <Input
+                value={addOrderInterval}
+                onChange={(e) => {
+                  setAddOrderInterval(e.target.value);
+                }}
+              />
             </div>
           </div>
           <div className="api-textarea">
             <Text variant={TextVariants.h3}>Example Response</Text>
-            <Input multiline={true} />
+            <Input
+              value={addOrderExample}
+              onChange={(e) => {
+                setAddOrderExample(e.target.value);
+              }}
+              multiline={true}
+            />
           </div>
         </div>
 
@@ -156,16 +232,32 @@ const Api = () => {
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>Action</Text>
-              <Input />
+              <Input
+                value={orderStatusAction}
+                onChange={(e) => {
+                  setOrderStatusAction(e.target.value);
+                }}
+              />
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>Order</Text>
-              <Input />
+              <Input
+                value={orderStatusOrder}
+                onChange={(e) => {
+                  setOrderStatusOrder(e.target.value);
+                }}
+              />
             </div>
           </div>
           <div className="api-textarea">
             <Text variant={TextVariants.h3}>Example Response</Text>
-            <Input multiline={true} />
+            <Input
+              value={orderStatusExample}
+              onChange={(e) => {
+                setOrderStatusExample(e.target.value);
+              }}
+              multiline={true}
+            />
           </div>
         </div>
 
@@ -183,16 +275,32 @@ const Api = () => {
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>Action</Text>
-              <Input />
+              <Input
+                value={multipleOrderStatusAction}
+                onChange={(e) => {
+                  setMultipleOrderStatusAction(e.target.value);
+                }}
+              />
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>Orders</Text>
-              <Input />
+              <Input
+                value={multipleOrderStatusOrder}
+                onChange={(e) => {
+                  setMultipleOrderStatusOrder(e.target.value);
+                }}
+              />
             </div>
           </div>
           <div className="api-textarea">
             <Text variant={TextVariants.h3}>Example Response</Text>
-            <Input multiline={true} />
+            <Input
+              value={multipleOrderExample}
+              onChange={(e) => {
+                setMultipleOrderExample(e.target.value);
+              }}
+              multiline={true}
+            />
           </div>
         </div>
 
@@ -210,16 +318,32 @@ const Api = () => {
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>Action</Text>
-              <Input />
+              <Input
+                value={refillStatusAction}
+                onChange={(e) => {
+                  setRefillStatusAction(e.target.value);
+                }}
+              />
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>Order</Text>
-              <Input />
+              <Input
+                value={refillStatusOrder}
+                onChange={(e) => {
+                  setRefillStatusOrder(e.target.value);
+                }}
+              />
             </div>
           </div>
           <div className="api-textarea">
             <Text variant={TextVariants.h3}>Example Response</Text>
-            <Input multiline={true} />
+            <Input
+              value={refillExample}
+              onChange={(e) => {
+                setRefillExample(e.target.value);
+              }}
+              multiline={true}
+            />
           </div>
         </div>
 
@@ -237,16 +361,32 @@ const Api = () => {
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>Action</Text>
-              <Input />
+              <Input
+                value={getRefillStatusAction}
+                onChange={(e) => {
+                  setGetRefillStatusAction(e.target.value);
+                }}
+              />
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>Refill</Text>
-              <Input />
+              <Input
+                value={getRefillStatusOrder}
+                onChange={(e) => {
+                  setGetRefillStatusOrder(e.target.value);
+                }}
+              />
             </div>
           </div>
           <div className="api-textarea">
             <Text variant={TextVariants.h3}>Example Response</Text>
-            <Input multiline={true} />
+            <Input
+              value={getRefillExample}
+              onChange={(e) => {
+                setGetRefillExample(e.target.value);
+              }}
+              multiline={true}
+            />
           </div>
         </div>
 
@@ -264,12 +404,23 @@ const Api = () => {
             </div>
             <div className="api-input">
               <Text variant={TextVariants.h3}>Action</Text>
-              <Input />
+              <Input
+                value={balanceStatusAction}
+                onChange={(e) => {
+                  setBalanceStatusAction(e.target.value);
+                }}
+              />
             </div>
           </div>
           <div className="api-textarea">
             <Text variant={TextVariants.h3}>Example Response</Text>
-            <Input multiline={true} />
+            <Input
+              value={balanceExample}
+              onChange={(e) => {
+                setBalanceExample(e.target.value);
+              }}
+              multiline={true}
+            />
           </div>
         </div>
       </div>

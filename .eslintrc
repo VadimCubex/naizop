@@ -26,15 +26,6 @@
   "settings": {
     "react": {
       "version": "detect"
-    },
-    "import/resolver": {
-      "alias": {
-        "map": [
-          ["@components", "./src/components"],
-          ["@pages", "./src/pages"]
-        ],
-        "extensions": [".ts", ".js", ".jsx", ".json"]
-      }
     }
   },
   "rules": {

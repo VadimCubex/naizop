@@ -61,7 +61,11 @@ export const InputComponent = forwardRef(
             onBlur={handleBlur}
           />
         ) : (
-          <textarea placeholder={placeholder && placeholder} />
+          <textarea
+            value={value}
+            onChange={onChange}
+            placeholder={placeholder && placeholder}
+          />
         )}
         {rightSide || null}
       </div>
