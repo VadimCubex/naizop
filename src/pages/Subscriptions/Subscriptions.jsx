@@ -6,8 +6,8 @@ import { Table } from "../../components/Table";
 import { Text } from "../../components/Text";
 import {
   FilterSubscriptions,
-  RedeemColumnInfo,
-  RedeemInfo,
+  SubscriptionColumnInfo,
+  SubscriptionTable,
 } from "../../constants/constants";
 import {
   TextVariants,
@@ -26,9 +26,9 @@ const Subscriptions = () => {
         <Text variant={TextVariants.h1_medium}>Subscriptions</Text>
         <div className="block">
           <Table
-            variant={TableVariants.Redeem}
-            columnNames={RedeemColumnInfo}
-            data={RedeemInfo}
+            variant={TableVariants.Subscriptions}
+            columnNames={SubscriptionColumnInfo}
+            data={SubscriptionTable}
           />
         </div>
       </div>

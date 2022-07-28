@@ -32,8 +32,7 @@
 }
 
 .profile-main-content {
-  width: 74%;
-  flex-grow: 1;
+  width: calc(100% - 40px - 250px);
 }
 
 .container {
@@ -111,12 +110,20 @@
   .left-container {
     padding-left: 7.75%;
   }
+
+  .profile-main-content {
+    width: calc(100% - 40px - 225px);
+  }
 }
 
 @media (max-width: 1024px) {
   .container {
     padding-left: 6.5%;
     padding-right: 6.5%;
+  }
+
+  .profile-main-content {
+    width: calc(100% - 40px - 200px);
   }
 
   .left-container {
@@ -136,6 +143,7 @@
 
   .profile-main-content {
     margin-left: 0px;
+    width: 100%;
   }
 
   .left-container {

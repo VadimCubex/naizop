@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AvatarDashboard } from "../../components/AvatarDashboard";
 import { Button } from "../../components/Button";
 import { AccountCard } from "../../components/Cards";
-import { ModalRanks } from "../../components/Modal";
+import { Modal } from "../../components/Modal";
 import { SvgIcon } from "../../components/SvgIcon";
 import { Table } from "../../components/Table";
 import { Text } from "../../components/Text";
@@ -143,7 +143,8 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <ModalRanks
+      <Modal
+        title="Ranks"
         isOpen={openModal}
         onClick={() => {
           setOpenModal(false);
@@ -155,7 +156,7 @@ const Dashboard = () => {
           columnNames={RanksColumnInfo}
           data={RanksInfo}
         />
-      </ModalRanks>
+      </Modal>
     </>
   );
 };

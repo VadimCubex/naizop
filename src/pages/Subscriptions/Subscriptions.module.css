@@ -1,11 +1,37 @@
 .subscriptions {
   width: 100%;
   margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  margin-bottom: 210px;
 }
 
-.subscriptions .text {
+.subscriptions .text.text_variant_h1_medium {
+  margin-top: 30px;
+  margin-bottom: 30px;
   color: var(--white);
+}
+
+@media (max-width: 1439px) {
+}
+
+@media (max-width: 1024px) {
+  .subscriptions {
+    margin-bottom: 165px;
+  }
+  .subscriptions .text.text_variant_h1_medium {
+    margin-top: 35px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 834px) {
+}
+
+@media (max-width: 425px) {
+  .subscriptions {
+    margin-bottom: 120px;
+  }
+  .subscriptions .text.text_variant_h1_medium {
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
 }

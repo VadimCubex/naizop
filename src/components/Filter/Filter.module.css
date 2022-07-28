@@ -1,11 +1,6 @@
 .filter {
   width: 100%;
   display: flex;
-  gap: 15px;
-}
-
-.filter {
-  display: flex;
   gap: 10px;
 }
 
@@ -26,8 +21,11 @@
 }
 
 .filter-variants-container {
-  width: 100%;
-  overflow: auto;
+  margin-top: 15px;
+  overflow-x: scroll;
+  margin-right: -40px;
+  margin-left: -40px;
+  padding: 0px 40px;
 }
 
 .filter-variants-container::-webkit-scrollbar {
@@ -40,6 +38,7 @@
 .filter-variants-container .filter-variants {
   gap: 15px;
   display: flex;
+  width: fit-content;
 }
 
 .filter-variants-container .filter-variants .button {
@@ -48,4 +47,22 @@
 
 .filter-variants-container .filter-variants .button.active {
   background: var(--gradient-blue);
+}
+
+@media (max-width: 834px) {
+  .filter {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .filter .input {
+    width: 100%;
+  }
+
+  .filter .button {
+    width: 100%;
+  }
+  .filter-variants-container {
+    margin-top: 25px;
+  }
 }

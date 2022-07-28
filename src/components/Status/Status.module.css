@@ -1,0 +1,37 @@
+.status {
+  width: 80px;
+  height: 34px;
+  border-radius: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+}
+
+.status .text {
+  padding: 0px !important;
+}
+
+.status_variant_refunded {
+  background: var(--status-red);
+}
+
+.status_variant_partial {
+  background: var(--status-blue);
+}
+
+.status_variant_pending {
+  background: var(--status-violet);
+}
+
+.status_variant_processing {
+  background: var(--status-orange);
+}
+
+.status_variant_in-progress {
+  background: var(--status-yellow);
+}
+
+.status_variant_completed {
+  background: var(--status-green);
+}

@@ -219,4 +219,14 @@ export const SliderCardVariants = {
 export const TableVariants = {
   Ranks: "ranks",
   Redeem: "redeem",
+  Subscriptions: "subscriptions",
+};
+
+export const StatusVariants = {
+  refunded: "refunded",
+  partial: "partial",
+  pending: "pending",
+  processing: "processing",
+  ["in-progress"]: "in-progress",
+  completed: "completed",
 };
