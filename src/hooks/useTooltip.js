@@ -2,7 +2,7 @@ import { useEffect, useState, useRef, useMemo } from "react";
 
 import { debounce } from "../helpers/helpers";
 
-const useTooltip = (tooltip = true) => {
+const useTooltip = () => {
   const [isShowTooltip, setIsShowTooltip] = useState(false);
   const [coords, setCoords] = useState({});
   const [tooltipPosition, setTooltipPosition] = useState("left");
@@ -30,19 +30,6 @@ const useTooltip = (tooltip = true) => {
     }
   }, [window.innerWidth]);
 
-  const CalcCoords = () => {
-    const rect =
-      tooltipSvg.current?.getBoundingClientRect() &&
-      tooltipSvg.current.getBoundingClientRect();
-    if (rect) {
-      setCoords({
-        left: rect.x + rect.width / 2,
-        top: rect.y + window.scrollY + rect.height / 2,
-      });
-      DetermineTooltipPosition(rect.x + rect.width / 2 + TooltipWidth);
-    }
-  };
-
   const DetermineTooltipPosition = (right) => {
     if (right > window.innerWidth) {
       setTooltipPosition("right");
@@ -65,15 +52,26 @@ const useTooltip = (tooltip = true) => {
   };
 
   useEffect(() => {
-    const updatePosition = () => {
-      tooltip && CalcCoords();
+    const CalcCoords = () => {
+      const rect =
+        tooltipSvg.current?.getBoundingClientRect() &&
+        tooltipSvg.current.getBoundingClientRect();
+      if (rect) {
+        setCoords({
+          left: rect.x + rect.width / 2,
+          top: rect.y + window.scrollY + rect.height / 2,
+        });
+        DetermineTooltipPosition(rect.x + rect.width / 2 + TooltipWidth);
+      }
     };
-    updatePosition();
 
-    window.addEventListener("resize", debounce(updatePosition, 500), true);
+    CalcCoords();
+    const TooltipUpdatePosition = debounce(CalcCoords, 500);
+
+    window.addEventListener("resize", TooltipUpdatePosition, true);
 
     return () => {
-      window.removeEventListener("resize", debounce(updatePosition, 500), true);
+      window.removeEventListener("resize", TooltipUpdatePosition, true);
     };
   }, []);
 

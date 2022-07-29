@@ -82,6 +82,12 @@
   z-index: 3;
 }
 
+@media (max-width: 1024px) {
+  .api {
+    padding-bottom: 90px;
+  }
+}
+
 @media (max-width: 834px) {
   .api .api-inputs {
     flex-direction: column;
@@ -97,5 +103,11 @@
     padding: 15px 20px;
     font-size: 14px;
     line-height: 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  .api {
+    padding-bottom: 120px;
   }
 }

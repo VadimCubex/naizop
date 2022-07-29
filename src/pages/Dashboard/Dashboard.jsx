@@ -12,10 +12,10 @@ import { Text } from "../../components/Text";
 import {
   AccountPointsInfo,
   AccountStatusInfo,
-  ProfileInfo,
   RanksColumnInfo,
-  RanksInfo,
-} from "../../constants/constants";
+  RanksTable,
+} from "./constants";
+import { ProfileInfo } from "../../constants/constants";
 import {
   TextVariants,
   ImagesVariants,
@@ -154,7 +154,7 @@ const Dashboard = () => {
         <Table
           variant={TableVariants.Ranks}
           columnNames={RanksColumnInfo}
-          data={RanksInfo}
+          data={RanksTable}
         />
       </Modal>
     </>

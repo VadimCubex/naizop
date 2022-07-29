@@ -39,6 +39,8 @@
 @import "../pages/Account/Account.module.css";
 @import "../pages/Api/Api.module.css";
 @import "../pages/Subscriptions/Subscriptions.module.css";
+@import "../pages/Orders/Orders.module.css";
+@import "../pages/AllServices/AllServices.module.css";
 
 :root {
   --transition-property: all;
@@ -53,7 +55,7 @@
 html {
   min-height: 590px;
   transition: var(--transition-property) 0s var(--transition-function);
-  min-width: 320px;
+  min-width: 280px;
   height: 100%;
 }
 

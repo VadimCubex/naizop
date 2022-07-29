@@ -6,10 +6,7 @@ import { AdvantagesCard } from "../../components/Cards";
 import { Slider } from "../../components/Slider";
 import { SocialeNetworks } from "../../components/SocialeNetworks";
 import { Text } from "../../components/Text";
-import {
-  AdvantagesInfo,
-  ExperienceSliderInfo,
-} from "../../constants/constants";
+import { AdvantagesInfo, ExperienceSliderInfo } from "./constants";
 import {
   ButtonSizeVariants,
   ButtonVariants,

@@ -1,6 +1,7 @@
-@import "./TableVariantRanks.module.css";
-@import "./TableVariantRedeem.module.css";
-@import "./TableVariantSubscriptions.module.css";
+@import "./TableVariantsStyles/TableVariantRanks.module.css";
+@import "./TableVariantsStyles/TableVariantRedeem.module.css";
+@import "./TableVariantsStyles/TableVariantSubscriptions.module.css";
+@import "./TableVariantsStyles/TableVariantOrders.module.css";
 
 .table {
   display: flex;

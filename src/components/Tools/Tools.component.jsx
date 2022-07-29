@@ -1,5 +1,6 @@
 import React from "react";
-import { ToolsInfo } from "../../constants/constants";
+
+import { ToolsInfo } from "./constants";
 import { ToolsCard } from "../Cards";
 
 export const ToolsComponent = () => {

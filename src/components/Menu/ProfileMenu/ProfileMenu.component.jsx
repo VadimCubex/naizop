@@ -4,13 +4,7 @@ import classNames from "classnames";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import ProfileBurgerMenuCategory from "./ProfileBurgerMenuCategory";
-import {
-  ActivityLinks,
-  FeaturesLinks,
-  ProfileInfo,
-  ProfileNavLinks,
-  ServicesLinks,
-} from "../../../constants/constants";
+import { ProfileInfo } from "../../../constants/constants";
 import {
   AvatarVariants,
   ButtonSizeVariants,
@@ -24,6 +18,12 @@ import { Currency } from "../../Currency";
 import { DropDown } from "../../DropDown";
 import { SvgIcon } from "../../SvgIcon";
 import { Text } from "../../Text";
+import {
+  ActivityLinks,
+  FeaturesLinks,
+  ProfileNavLinks,
+  ServicesLinks,
+} from "../constants";
 
 export const ProfileMenuComponent = () => {
   const [isShowBurger, setIsShowBurger] = useState(false);

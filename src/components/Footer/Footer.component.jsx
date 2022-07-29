@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 
-import { FooterInfo } from "../../constants/constants";
+import { FooterInfo } from "./constants";
 import {
   IconsVariants,
   TextVariants,

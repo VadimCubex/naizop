@@ -220,6 +220,8 @@ export const TableVariants = {
   Ranks: "ranks",
   Redeem: "redeem",
   Subscriptions: "subscriptions",
+  Orders: "orders",
+  Service: "servicee",
 };
 
 export const StatusVariants = {

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import { Table } from "../../components/Table";
 import { Text } from "../../components/Text";
-import { RedeemColumnInfo, RedeemInfo } from "../../constants/constants";
+import { RedeemColumnInfo, RedeemTable } from "./constants";
 import {
   TextVariants,
   TableVariants,
@@ -30,7 +30,7 @@ const RedeemHistory = () => {
             <Table
               variant={TableVariants.Redeem}
               columnNames={RedeemColumnInfo}
-              data={RedeemInfo}
+              data={RedeemTable}
             />
           </div>
         </div>

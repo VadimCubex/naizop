@@ -6,10 +6,6 @@ import classNames from "classnames";
 import { Link, useLocation } from "react-router-dom";
 
 import {
-  SidebarLinksFirstPart,
-  SidebarLinksSecondPart,
-} from "../../../constants/constants";
-import {
   ButtonSizeVariants,
   ButtonVariants,
   IconsVariants,
@@ -22,6 +18,7 @@ import { DropDown } from "../../DropDown";
 import { Number } from "../../Number";
 import { SvgIcon } from "../../SvgIcon";
 import { Text } from "../../Text";
+import { SidebarLinksFirstPart, SidebarLinksSecondPart } from "../constants";
 
 export const SidebarMenuComponent = () => {
   const [isShowMore, setIsShowMore] = useState(false);
@@ -36,16 +33,19 @@ export const SidebarMenuComponent = () => {
 
   useEffect(() => {
     const changeHeight = () => {
-      container.current.style.height = `${window.innerHeight - 90}px`;
+      if (container.current.style)
+        container.current.style.height = `${window.innerHeight - 90}px`;
     };
     changeHeight();
+    const SidebarChangeHeight = debounce(changeHeight, 500);
 
-    window.addEventListener("resize", debounce(changeHeight, 500), true);
+    window.addEventListener("resize", SidebarChangeHeight, true);
 
     return () => {
-      window.removeEventListener("resize", debounce(changeHeight, 500), true);
+      window.removeEventListener("resize", SidebarChangeHeight, true);
     };
   }, []);
+
   return (
     <aside className="sidebar-container">
       <div ref={container} className="sidebar-overflow">

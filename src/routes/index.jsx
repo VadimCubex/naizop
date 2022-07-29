@@ -5,10 +5,12 @@ import MainLayout from "../layouts/MainLayout";
 import ProfileLayout from "../layouts/ProfileLayout";
 import About from "../pages/About/About";
 import Account from "../pages/Account/Account";
+import AllServices from "../pages/AllServices/AllServices";
 import Api from "../pages/Api/Api";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import FAQ from "../pages/FAQ/FAQ";
 import Home from "../pages/Home/Home";
+import Orders from "../pages/Orders/Orders";
 import RedeemHistory from "../pages/RedeemHistory/RedeemHistory";
 import RedeemSupport from "../pages/RedeemSupport/RedeemSupport";
 import Subscriptions from "../pages/Subscriptions/Subscriptions";
@@ -20,7 +22,10 @@ const NaizopRoutes = () => {
       <Route path="/test" element={<TestComponents />} />
       <Route path="" element={<MainLayout />}>
         <Route index element={<Home />} />
-        <Route path="/service" element={<Home />} />
+        <Route
+          path="/service"
+          element={<AllServices className="background-img" />}
+        />
         <Route path="/faq" element={<FAQ className="background-img" />} />
         <Route path="/blog" element={<Home />} />
         <Route path="/about" element={<About className="background-img" />} />
@@ -33,9 +38,12 @@ const NaizopRoutes = () => {
 
         <Route path="/profile/place-new-order" element={<Dashboard />} />
         <Route path="/profile/mass-order" element={<Dashboard />} />
-        <Route path="/profile/service" element={<Dashboard />} />
+        <Route
+          path="/profile/service"
+          element={<AllServices container={false} />}
+        />
         <Route path="/profile/popular-service" element={<Dashboard />} />
-        <Route path="/profile/orders" element={<Dashboard />} />
+        <Route path="/profile/orders" element={<Orders />} />
         <Route path="/profile/subscriptions" element={<Subscriptions />} />
         <Route path="/profile/add-funds" element={<Dashboard />} />
         <Route path="/profile/support" element={<Dashboard />} />

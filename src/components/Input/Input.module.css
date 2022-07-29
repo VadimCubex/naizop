@@ -19,7 +19,7 @@
   font-weight: 700;
   line-height: 20px;
   letter-spacing: 0em;
-  width: 100%;
+  flex-grow: 1;
   padding: 20px;
   color: var(--white);
 }
@@ -52,10 +52,6 @@
 .input .svgIcon {
   cursor: pointer;
   margin: 18px 20px;
-}
-
-.input [class*="svgIcon"][class*="_rotate_180"] {
-  padding: 20px 0px 20px 20px;
 }
 
 @media (max-width: 834px) {

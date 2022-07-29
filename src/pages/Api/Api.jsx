@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { Input } from "../../components/Input";
 import { Select } from "../../components/Select";
 import { Text } from "../../components/Text";
-import { ApiSelect } from "../../constants/constants";
+import { ApiSelect } from "./constants";
 import {
   SelectOptionVariants,
   TextVariants,

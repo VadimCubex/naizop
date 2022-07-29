@@ -4,31 +4,27 @@ import { useEffect } from "react";
 import { Filter } from "../../components/Filter";
 import { Table } from "../../components/Table";
 import { Text } from "../../components/Text";
-import {
-  FilterSubscriptions,
-  SubscriptionColumnInfo,
-  SubscriptionTable,
-} from "./constants";
+import { FilterOrders, OrdersColumnInfo, OrderTable } from "./constants";
 import {
   TextVariants,
   TableVariants,
 } from "../../constants/VariantsOfComponents";
 
-const Subscriptions = () => {
+const Orders = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <>
-      <div className="subscriptions">
-        <Filter options={FilterSubscriptions} />
-        <Text variant={TextVariants.h1_medium}>Subscriptions</Text>
+      <div className="orders">
+        <Filter options={FilterOrders} />
+        <Text variant={TextVariants.h1_medium}>Orders</Text>
         <div className="block">
           <Table
-            variant={TableVariants.Subscriptions}
-            columnNames={SubscriptionColumnInfo}
-            data={SubscriptionTable}
+            variant={TableVariants.Orders}
+            columnNames={OrdersColumnInfo}
+            data={OrderTable}
           />
         </div>
       </div>
@@ -36,4 +32,4 @@ const Subscriptions = () => {
   );
 };
 
-export default Subscriptions;
+export default Orders;

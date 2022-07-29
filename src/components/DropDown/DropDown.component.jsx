@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import classNames from "classnames";
+
 import { debounce } from "../../helpers/helpers";
 
 export const DropDownComponent = ({
@@ -29,19 +30,19 @@ export const DropDownComponent = ({
   useEffect(() => {
     const updateSize = () => {
       const add = addToHeight ? addToHeight : 190;
-      dropDown.current?.offsetHeight &&
-        setHeight(
-          isInnerHeight
-            ? window.innerHeight - 64
-            : dropDown.current.offsetHeight + add
-        );
+      setHeight(
+        isInnerHeight
+          ? window.innerHeight - 64
+          : dropDown.current.offsetHeight + add
+      );
     };
     updateSize();
+    const DropDownUpdateSize = debounce(updateSize, 500);
 
-    window.addEventListener("resize", debounce(updateSize, 500), true);
+    window.addEventListener("resize", DropDownUpdateSize, true);
 
     return () => {
-      window.removeEventListener("resize", debounce(updateSize, 500), true);
+      window.removeEventListener("resize", DropDownUpdateSize, true);
     };
   }, []);
 
