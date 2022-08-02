@@ -113,6 +113,9 @@
     display: flex;
     justify-content: space-between;
   }
+  .services-top .filter .filter-controls .btn-container {
+    width: 39%;
+  }
 }
 
 @media (max-width: 425px) {

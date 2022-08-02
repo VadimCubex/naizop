@@ -154,6 +154,12 @@
 }
 
 @media (max-width: 834px) {
+  .filter-variants-container {
+    margin-right: -5.25%;
+    margin-left: -5.25%;
+    padding: 0px 5.25%;
+  }
+
   .filter {
     flex-direction: column;
     gap: 20px;
@@ -184,11 +190,16 @@
   .filter .filter-controls .filter-dropdown {
     display: flex;
   }
-  .filter .filter-controls .btn-container {
-    width: 39%;
-  }
   .filter .filter-controls .button {
     min-width: 0px;
+  }
+}
+
+@media (max-width: 425px) {
+  .filter-variants-container {
+    margin-right: -4%;
+    margin-left: -4%;
+    padding: 0px 4%;
   }
 }
 
