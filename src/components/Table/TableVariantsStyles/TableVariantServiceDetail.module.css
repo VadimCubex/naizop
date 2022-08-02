@@ -5,7 +5,7 @@
 }
 
 .table.table-variant-serviceDetail .table-separators {
-  height: 96%;
+  top: 0px;
 }
 
 .table.table-variant-serviceDetail .table-row-content {

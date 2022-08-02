@@ -53,6 +53,7 @@
 }
 
 html {
+  background: var(--background);
   min-height: 590px;
   transition: var(--transition-property) 0s var(--transition-function);
   min-width: 280px;
