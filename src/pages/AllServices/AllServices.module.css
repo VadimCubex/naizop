@@ -53,7 +53,7 @@
   .services-info-container
   .accordion-container
   .dropDown.dropDown-active {
-  padding: 80px 0px 30px 0px !important;
+  padding: 80px 0px 0px 0px !important;
 }
 
 @media (max-width: 1439px) {
