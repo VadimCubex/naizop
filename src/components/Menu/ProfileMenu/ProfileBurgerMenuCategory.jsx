@@ -32,7 +32,9 @@ const ProfileBurgerMenuCategory = ({ name, links, onClick }) => {
           {links.map((item, index) => (
             <Link className="burger-menu-item" key={index} to={item.link}>
               <div className="item-contant">
-                <SvgIcon size={16} src={item.icon} />
+                <div>
+                  <SvgIcon size={16} src={item.icon} />
+                </div>
                 <Text variant={TextVariants.h5}>{item.text}</Text>
               </div>
               {item.number && (

@@ -1,0 +1,22 @@
+.table.table-variant-ranks .table-header .table-column-cell,
+.table.table-variant-ranks .table-separators .table-column-cell {
+  width: 50%;
+}
+
+.table.table-variant-ranks .table-row-content {
+  display: flex;
+}
+
+.table.table-variant-ranks .table-row .table-row-cell {
+  width: 50%;
+}
+
+@media (max-width: 425px) {
+  .table.table-variant-ranks .table-row [class*="table-row-cell"] {
+    padding: 15px 20px;
+  }
+  .table.table-variant-ranks .table-header [class*="table-column-cell"] {
+    padding-left: 20px;
+    padding-bottom: 10px;
+  }
+}

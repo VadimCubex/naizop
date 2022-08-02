@@ -1,0 +1,210 @@
+.filter {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.filter .input {
+  background: var(--blocks);
+  border: none;
+  width: 88%;
+  border-radius: 20px;
+}
+
+.filter .input input {
+  padding: 10px;
+}
+
+.filter .input .svgIcon {
+  margin: 10px 0px 10px 20px;
+  stroke: var(--white) !important;
+}
+
+.filter .input .filter-dropdown {
+  display: flex;
+  align-items: center;
+  width: 220px;
+  gap: 20px;
+}
+
+.filter .input .filter-dropdown > div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.filter .input .filter-dropdown > div .svgIcon {
+  margin: 0px;
+}
+
+.filter .input .filter-dropdown .separator {
+  width: 1px;
+  height: 60%;
+  background-color: var(--white);
+  opacity: 0.25;
+}
+
+.filter .input .filter-dropdown .text {
+  color: var(--white);
+}
+
+.filter .input .filter-dropdown .text:first-child {
+  opacity: 0.5;
+}
+
+.filter .filter-controls {
+  position: relative;
+  display: block;
+}
+
+.filter .filter-controls .button {
+  width: 100%;
+}
+
+.filter .filter-controls .filter-dropdown {
+  z-index: 1;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 59%;
+  background: var(--blocks);
+  color: var(--white);
+  stroke: var(--white) !important;
+  border-radius: 20px;
+}
+
+.filter .filter-dropdown > div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.filter .filter-dropdown .text:first-child {
+  opacity: 0.5;
+}
+
+.filter .dropDown {
+  transition: var(--transition-property) 0s var(--transition-function);
+  position: absolute;
+  z-index: -1;
+  left: calc(100% - 185px - 10px - 220px);
+  width: 220px;
+  border-radius: 20px;
+
+  background: var(--blocks);
+  padding: 40px 0px 0px 0px;
+  backdrop-filter: none;
+  overflow-y: hidden;
+}
+
+.filter .dropDown.dropDown-active {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.filter .dropDown .separator {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 51.04%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.filter .dropDown .filter-item {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+  color: var(--white);
+}
+
+.filter-variants-container {
+  margin-top: 15px;
+  overflow-x: scroll;
+  margin-right: -40px;
+  margin-left: -40px;
+  padding: 0px 40px;
+}
+
+.filter-variants-container::-webkit-scrollbar {
+  display: none;
+}
+.filter-variants-container::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.filter-variants-container .filter-variants {
+  gap: 15px;
+  display: flex;
+  width: fit-content;
+}
+
+.filter-variants-container .filter-variants .button {
+  width: 140px;
+}
+
+.filter-variants-container .filter-variants .button.active {
+  background: var(--gradient-blue);
+}
+
+@media (max-width: 834px) {
+  .filter {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .filter .input {
+    width: 100%;
+  }
+
+  .filter .button {
+    width: 100%;
+  }
+  .filter-variants-container {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .filter .dropDown {
+    z-index: 0;
+    left: 0px;
+    top: 60px;
+    width: 59%;
+  }
+  .filter .input .filter-dropdown {
+    display: none;
+  }
+  .filter .filter-controls .filter-dropdown {
+    display: flex;
+  }
+  .filter .filter-controls .btn-container {
+    width: 39%;
+  }
+  .filter .filter-controls .button {
+    min-width: 0px;
+  }
+}
+
+@media (max-width: 319px) {
+  .filter .dropDown {
+    width: 100%;
+  }
+  .filter .filter-controls {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .filter .filter-controls .btn-container {
+    width: 100%;
+  }
+  .filter .filter-controls .filter-dropdown {
+    height: 40px;
+    width: 100%;
+  }
+}

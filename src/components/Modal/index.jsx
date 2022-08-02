@@ -1,1 +1,1 @@
-export { ModalRanksComponent as ModalRanks } from "./ModalRanks/ModalRanks";
+export { ModalComponent as Modal } from "./Modal";

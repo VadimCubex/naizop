@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 
-import { FooterInfo } from "../../constants/constants";
+import { FooterInfo } from "./constants";
 import {
   IconsVariants,
   TextVariants,
@@ -44,9 +44,7 @@ export const FooterComponent = ({ className }) => {
                 </Text>
                 <div>
                   <SvgIcon size={21} src={IconsVariants.Trustpilot} />
-                  <Text className="" variant={TextVariants.h2}>
-                    Trustpilot
-                  </Text>
+                  <Text variant={TextVariants.h2}>Trustpilot</Text>
                 </div>
               </div>
               <div className="trustpilot-light"></div>

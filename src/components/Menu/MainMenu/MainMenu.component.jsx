@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import classNames from "classnames";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-import { NavLinks } from "../../../constants/constants";
 import {
   ButtonVariants,
   IconsVariants,
@@ -14,6 +13,7 @@ import { DropDown } from "../../DropDown";
 import { SvgIcon } from "../../SvgIcon";
 import { Text } from "../../Text";
 import { Tools } from "../../Tools";
+import { NavLinks } from "../constants";
 
 export const MainMenuComponent = () => {
   const [isShowTools, setIsShowTools] = useState(false);

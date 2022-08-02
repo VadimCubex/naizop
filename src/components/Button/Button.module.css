@@ -188,8 +188,8 @@
   position: absolute;
   left: 0;
   top: 5px;
-  opacity: 0.25;
-  filter: blur(20px);
+  opacity: 0.5;
+  filter: blur(15px);
 }
 
 .disabled {

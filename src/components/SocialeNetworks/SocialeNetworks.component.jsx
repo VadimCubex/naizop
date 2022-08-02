@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import classNames from "classnames";
-import { SocialeNetworksInfo } from "../../constants/constants";
-import { Number } from "../Number";
-import { Text } from "../Text";
+
+import { SocialeNetworksInfo } from "./constants";
 import {
   NumberVariants,
   TextVariants,
 } from "../../constants/VariantsOfComponents";
 import { DropDown } from "../DropDown";
+import { Number } from "../Number";
+import { Text } from "../Text";
 
 export const SocialeNetworksComponent = ({ className }) => {
   const [selected, setSelected] = useState(SocialeNetworksInfo[0]);

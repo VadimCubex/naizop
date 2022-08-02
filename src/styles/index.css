@@ -24,8 +24,11 @@
 @import "../components/Table/Table.module.css";
 @import "../components/Input/Input.module.css";
 @import "../components/Currency/Currency.module.css";
+@import "../components/Filter/Filter.module.css";
+@import "../components/Status/Status.module.css";
 
 @import "./App.css";
+@import "./normalize.css";
 
 @import "../pages/Home/Home.module.css";
 @import "../pages/FAQ/FAQ.module.css";
@@ -35,6 +38,9 @@
 @import "../pages/RedeemSupport/RedeemSupport.module.css";
 @import "../pages/Account/Account.module.css";
 @import "../pages/Api/Api.module.css";
+@import "../pages/Subscriptions/Subscriptions.module.css";
+@import "../pages/Orders/Orders.module.css";
+@import "../pages/AllServices/AllServices.module.css";
 
 :root {
   --transition-property: all;
@@ -49,7 +55,7 @@
 html {
   min-height: 590px;
   transition: var(--transition-property) 0s var(--transition-function);
-  min-width: 320px;
+  min-width: 280px;
   height: 100%;
 }
 

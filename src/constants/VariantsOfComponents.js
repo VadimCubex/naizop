@@ -54,6 +54,7 @@ export const IconsVariants = {
   Everything: "/icons/Stroke/Everything.svg",
   Facebook: "/icons/Facebook/Api.svg",
   Favorites_stroke: "/icons/Stroke/Favorites.svg",
+  Favorites_fill: "/icons/Stroke/Favorites.svg",
   Google: "/icons/Stroke/Google.svg",
   History: "/icons/Stroke/History.svg",
   Info: "/icons/Stroke/Info.svg",
@@ -219,4 +220,17 @@ export const SliderCardVariants = {
 export const TableVariants = {
   Ranks: "ranks",
   Redeem: "redeem",
+  Subscriptions: "subscriptions",
+  Orders: "orders",
+  Service: "service",
+  Service_detail: "serviceDetail",
+};
+
+export const StatusVariants = {
+  refunded: "refunded",
+  partial: "partial",
+  pending: "pending",
+  processing: "processing",
+  ["in-progress"]: "in-progress",
+  completed: "completed",
 };

@@ -1,9 +1,10 @@
 import React from "react";
 import { useEffect } from "react";
+import classNames from "classnames";
 
 import { Slider } from "../../components/Slider";
 import { Text } from "../../components/Text";
-import { TeamSlidesInfo } from "../../constants/constants";
+import { TeamSlidesInfo } from "./constants";
 import {
   ImagesVariants,
   SliderCardVariants,
@@ -11,13 +12,14 @@ import {
 } from "../../constants/VariantsOfComponents";
 
 const About = ({ className }) => {
+  const AboutClass = classNames("container", className);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <>
-      <div className={"container " + className}>
+      <div className={AboutClass}>
         <div className="about-container">
           <div className="about-title">
             <Text>ABOUT US</Text>

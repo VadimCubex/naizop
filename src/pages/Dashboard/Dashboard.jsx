@@ -5,17 +5,17 @@ import { Link, useNavigate } from "react-router-dom";
 import { AvatarDashboard } from "../../components/AvatarDashboard";
 import { Button } from "../../components/Button";
 import { AccountCard } from "../../components/Cards";
-import { ModalRanks } from "../../components/Modal";
+import { Modal } from "../../components/Modal";
 import { SvgIcon } from "../../components/SvgIcon";
 import { Table } from "../../components/Table";
 import { Text } from "../../components/Text";
 import {
   AccountPointsInfo,
   AccountStatusInfo,
-  ProfileInfo,
   RanksColumnInfo,
-  RanksInfo,
-} from "../../constants/constants";
+  RanksTable,
+} from "./constants";
+import { ProfileInfo } from "../../constants/constants";
 import {
   TextVariants,
   ImagesVariants,
@@ -143,7 +143,8 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <ModalRanks
+      <Modal
+        title="Ranks"
         isOpen={openModal}
         onClick={() => {
           setOpenModal(false);
@@ -153,9 +154,9 @@ const Dashboard = () => {
         <Table
           variant={TableVariants.Ranks}
           columnNames={RanksColumnInfo}
-          data={RanksInfo}
+          data={RanksTable}
         />
-      </ModalRanks>
+      </Modal>
     </>
   );
 };

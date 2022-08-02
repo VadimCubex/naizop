@@ -7,10 +7,7 @@ import { AccountCard } from "../../components/Cards";
 import { Input } from "../../components/Input";
 import { Select } from "../../components/Select";
 import { Text } from "../../components/Text";
-import {
-  RedeemSubjectSelect,
-  RedeemPlanSelect,
-} from "../../constants/constants";
+import { RedeemSubjectSelect, RedeemPlanSelect } from "./constants";
 import {
   ButtonVariants,
   SelectOptionVariants,

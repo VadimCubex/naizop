@@ -1,25 +1,35 @@
+import classNames from "classnames";
+
 import {
   IconsVariants,
   TextVariants,
-} from "../../../constants/VariantsOfComponents";
-import { ModalPortal } from "../../Portal";
-import { SvgIcon } from "../../SvgIcon";
-import { Text } from "../../Text";
+} from "../../constants/VariantsOfComponents";
+import { ModalPortal } from "../Portal";
+import { SvgIcon } from "../SvgIcon";
+import { Text } from "../Text";
 
-export const ModalRanksComponent = ({ isOpen, onClick, children }) => {
+export const ModalComponent = ({
+  title,
+  isOpen,
+  onClick,
+  children,
+  className,
+}) => {
+  const ModalClass = classNames("modal", className);
+
   return (
     <>
       {isOpen && (
         <ModalPortal>
           <div
-            className="modal"
+            className={ModalClass}
             onScroll={(e) => {
               e.stopPropagation();
             }}
           >
             <div className="modal-container">
               <div className="header-modal">
-                <Text variant={TextVariants.h1}>Ranks</Text>
+                <Text variant={TextVariants.h1}>{title}</Text>
                 <SvgIcon
                   src={IconsVariants.Close}
                   size={20}
@@ -36,4 +46,4 @@ export const ModalRanksComponent = ({ isOpen, onClick, children }) => {
   );
 };
 
-ModalRanksComponent.displayName = "ModalRanks";
+ModalComponent.displayName = "ModalRanks";

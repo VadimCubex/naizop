@@ -1,4 +1,9 @@
-/* default table and table-variant-ranks*/
+@import "./TableVariantsStyles/TableVariantRanks.module.css";
+@import "./TableVariantsStyles/TableVariantRedeem.module.css";
+@import "./TableVariantsStyles/TableVariantSubscriptions.module.css";
+@import "./TableVariantsStyles/TableVariantOrders.module.css";
+@import "./TableVariantsStyles/TableVariantService.module.css";
+@import "./TableVariantsStyles/TableVariantServiceDetail.module.css";
 
 .table {
   display: flex;
@@ -30,7 +35,7 @@
   opacity: 0.5;
 }
 
-.table .table-header [class*="table-column-cell"] .text {
+.table .table-header [class*="table-column-cell"] {
   padding-left: 20px;
   padding-bottom: 10px;
 }
@@ -53,11 +58,6 @@
   );
 }
 
-.table.table-variant-ranks .table-header .table-column-cell,
-.table.table-variant-ranks .table-separators .table-column-cell {
-  width: 50%;
-}
-
 .table .table-content,
 .table .table-header {
   position: relative;
@@ -69,7 +69,6 @@
   flex-direction: column;
 }
 
-.table.table-variant-ranks .table-row-content,
 .table .table-separators,
 .table .table-content .table-row,
 .table .table-header {
@@ -91,151 +90,113 @@
   );
 }
 
-.table.table-variant-ranks .table-row .table-row-cell {
-  width: 50%;
+.table .table-row [class*="table-row-cell"] {
+  padding: 15px 0px 15px 20px;
 }
 
 .table .table-row [class*="table-row-cell"] .text {
-  padding: 15px 0px 15px 20px;
   color: var(--white);
 }
 
-/* ---------------------------------------------------- */
-
-/* default table and table-variant-redeem */
-.table.table-variant-redeem {
-  margin: 0px 20px;
+.table-modal .modal-container {
+  width: 440px;
 }
 
-.table.table-variant-redeem .table-row-content {
+.table-modal .button-modal {
+  padding: 40px 20px 45px;
+}
+
+.table-modal .button-modal .button {
+  width: 100%;
+}
+.table-modal .modal-hr {
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 53.13%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  width: 100%;
+  height: 1px;
+}
+
+.table-modal .modal-trustpilot {
+  padding: 15px 20px 25px;
   display: flex;
+  gap: 14px;
 }
 
-.table.table-variant-redeem .table-header .table-column-cell-1,
-.table.table-variant-redeem .table-separators .table-column-cell-1,
-.table.table-variant-redeem .table-row-content .table-row-cell-1 {
-  width: 19.41%;
+.table-modal .modal-trustpilot .text {
+  color: var(--white);
 }
 
-.table.table-variant-redeem .table-header .table-column-cell-2,
-.table.table-variant-redeem .table-separators .table-column-cell-2,
-.table.table-variant-redeem .table-row-content .table-row-cell-2 {
-  width: 24.27%;
+.table-modal .modal-trustpilot > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.table.table-variant-redeem .table-header .table-column-cell-3,
-.table.table-variant-redeem .table-separators .table-column-cell-3,
-.table.table-variant-redeem .table-row-content .table-row-cell-3,
-.table.table-variant-redeem .table-header .table-column-cell-4,
-.table.table-variant-redeem .table-separators .table-column-cell-4,
-.table.table-variant-redeem .table-row-content .table-row-cell-4 {
-  width: 29.12%;
+.table-modal .modal-trustpilot .trustpilot-reviews {
+  display: flex;
+  gap: 7px;
+  align-items: center;
 }
 
-.table.table-variant-redeem .table-small-row-content .table-row-cell-4 .text,
-.table.table-variant-redeem .table-row-content .table-row-cell-4 .text {
-  color: var(--yellow) !important;
+.table-modal
+  .modal-trustpilot
+  .trustpilot-reviews
+  .text.text_variant_h4_regular {
+  font-size: 16px;
+  line-height: 26px;
 }
 
-@media (max-width: 1439px) {
+.table-modal
+  .modal-trustpilot
+  .trustpilot-reviews
+  .text.text_variant_h4_regular
+  > .text {
+  font-weight: 700;
 }
 
-@media (max-width: 1024px) {
-  .table .table-row [class*="table-row-cell"] .text {
-    padding: 15px;
-  }
-  .table .table-header [class*="table-column-cell"] .text {
-    padding-left: 15px;
-    padding-bottom: 10px;
-  }
+.table-modal .modal-trustpilot .trustpilot-reviews > div .text {
+  font-family: "Roboto Bold";
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.table-modal .modal-trustpilot .trustpilot-reviews > div {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.table-modal .modal-trustpilot .trustpilot-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.table-modal .modal-trustpilot .svgIcon path {
+  stroke: transparent !important;
 }
 
 @media (max-width: 834px) {
-  .table .table-row [class*="table-row-cell"] .text {
-    padding: 15px 10px;
+  .table-modal .modal-container {
+    width: 400px;
   }
-  .table .table-header [class*="table-column-cell"] .text {
-    padding-left: 10px;
-    padding-bottom: 10px;
+  .table-modal .modal-trustpilot {
+    padding: 15px 20px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .table-modal .modal-trustpilot > div {
+    justify-content: center;
   }
 }
 
 @media (max-width: 425px) {
-  .table:not(.table-variant-ranks) {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    flex-direction: row;
-  }
-  .table.table-variant-redeem {
-    margin: 0px;
-  }
-  .table:not(.table-variant-ranks) .table-content {
-    width: 100%;
-  }
-
-  .table:not(.table-variant-ranks) .table-content .table-row .table-row-content,
-  .table:not(.table-variant-ranks) .table-header,
-  .table:not(.table-variant-ranks) .table-separators {
+  .table-modal .modal-trustpilot,
+  .table-modal .modal-hr {
     display: none;
-  }
-
-  .table:not(.table-variant-ranks)
-    .table-content
-    .table-row
-    .table-small-row-content {
-    display: flex;
-    height: 200px;
-  }
-
-  .table:not(.table-variant-ranks)
-    .table-content
-    .table-row
-    .table-small-row-content
-    > div {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .table:not(.table-variant-ranks) .table-small-header {
-    padding: 0px 5px 0px 30px;
-  }
-  .table:not(.table-variant-ranks) .table-small-row {
-    padding: 0px 5px 0px 20px;
-  }
-
-  .table.table-variant-redeem .table-small-header {
-    width: 44.2%;
-  }
-  .table.table-variant-redeem .table-small-row {
-    width: 55.8%;
-  }
-  .table.table-variant-redeem .table-small-header > *,
-  .table.table-variant-redeem .table-small-row > * {
-    height: 25%;
-    display: flex;
-    align-items: center;
-  }
-
-  .table.table-variant-redeem .table-small-row-content .text {
-    font-size: 14px;
-    line-height: 20px;
-  }
-
-  .table:not(.table-variant-ranks) .table-hr {
-    position: absolute;
-    width: 1px;
-    height: 99%;
-  }
-
-  .table.table-variant-redeem .table-hr {
-    background: linear-gradient(
-      360deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.1) 100%
-    );
-    left: 44.2%;
-  }
-  .table:not(.table-variant-ranks) .table-row [class*="table-row-cell"] .text {
-    padding: 0px;
   }
 }

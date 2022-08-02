@@ -1,17 +1,12 @@
 import React from "react";
-import { useState } from "react";
 import { useEffect } from "react";
-import { useRef } from "react";
 
 import { Button } from "../../components/Button";
 import { AdvantagesCard } from "../../components/Cards";
 import { Slider } from "../../components/Slider";
 import { SocialeNetworks } from "../../components/SocialeNetworks";
 import { Text } from "../../components/Text";
-import {
-  AdvantagesInfo,
-  ExperienceSliderInfo,
-} from "../../constants/constants";
+import { AdvantagesInfo, ExperienceSliderInfo } from "./constants";
 import {
   ButtonSizeVariants,
   ButtonVariants,
@@ -29,23 +24,6 @@ const Home = () => {
     rootMargin: "0px",
     threshold: 0.5,
   });
-  const [advantegesScrollX, setAdvantegesScrollX] = useState(0);
-  const [advantegesScrollLeft, setAdvantegesScrollLeft] = useState(0);
-
-  const advanteges = useRef(null);
-
-  const handleAdvantegesMouseMove = (e) => {
-    if (e.buttons === 1) {
-      const element = e.pageX - advanteges.current.offsetLeft;
-      const scrolling = (element - advantegesScrollX) * 2;
-      advanteges.current.scrollLeft = advantegesScrollLeft - scrolling;
-    }
-  };
-
-  const handleAdvantegesMouseDown = (e) => {
-    setAdvantegesScrollX(e.pageX - advanteges.current.offsetLeft);
-    setAdvantegesScrollLeft(advanteges.current.scrollLeft);
-  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -81,16 +59,7 @@ const Home = () => {
       <div className="container">
         <div className="sociale-network-background" />
       </div>
-      <div
-        ref={advanteges}
-        onMouseDown={(e) => {
-          handleAdvantegesMouseDown(e);
-        }}
-        onMouseMove={(e) => {
-          handleAdvantegesMouseMove(e);
-        }}
-        className="advantages-container"
-      >
+      <div className="advantages-container">
         {AdvantagesInfo.map((item, index) => (
           <AdvantagesCard key={index} item={item} />
         ))}

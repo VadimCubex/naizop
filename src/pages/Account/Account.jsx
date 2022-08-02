@@ -11,11 +11,8 @@ import { Select } from "../../components/Select";
 import { SvgIcon } from "../../components/SvgIcon";
 import { Text } from "../../components/Text";
 import { Tooltip } from "../../components/Tooltip";
-import {
-  AvatarsForSelect,
-  ProfileInfo,
-  TimeZonesForSelect,
-} from "../../constants/constants";
+import { AvatarsForSelect, TimeZonesForSelect } from "./constants";
+import { ProfileInfo } from "../../constants/constants";
 import {
   AvatarVariants,
   ButtonVariants,

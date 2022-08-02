@@ -1,0 +1,131 @@
+.profile-container .services-title.text {
+  color: var(--white);
+  margin-top: 30px;
+}
+
+.container .services-title.text {
+  font-family: "Circe Bold";
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+.profile-container .services-top {
+  position: relative;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.container .services-top {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.profile-container .services-info-container {
+  padding-bottom: 25px;
+  margin-top: 20px;
+}
+
+.services-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-top: 40px;
+  padding-bottom: 150px;
+}
+
+.container .services-info-container .accordion-container .dropDown,
+.profile-container .services-info-container .accordion-container .dropDown {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.container
+  .services-info-container
+  .accordion-container
+  .dropDown.dropDown-active,
+.profile-container
+  .services-info-container
+  .accordion-container
+  .dropDown.dropDown-active {
+  padding: 80px 0px 30px 0px !important;
+}
+
+@media (max-width: 1439px) {
+  .container .services-title.text {
+    font-size: 42.5px;
+    line-height: 52.5px;
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .profile-container .services-title.text {
+    margin-top: 40px;
+  }
+
+  .profile-container .services-top .filter {
+    flex-direction: column;
+  }
+
+  .profile-container .services-top .filter .input {
+    width: 100%;
+  }
+
+  .container .services-title.text {
+    font-size: 35px;
+    line-height: 45px;
+    margin-top: 65px;
+    margin-bottom: 30px;
+  }
+
+  .profile-container .services-info-container {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .services-info-container {
+    margin-top: 25px;
+    padding-bottom: 135px;
+  }
+}
+
+@media (max-width: 834px) {
+  .container .services-title.text {
+    font-size: 27.5px;
+    line-height: 37.5px;
+    margin-top: 50px;
+  }
+
+  .services-info-container {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .services-top .filter .filter-controls {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 425px) {
+  .profile-container .services-title.text {
+    margin-top: 50px;
+  }
+
+  .container .services-title.text {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .services-info-container {
+    margin-top: 15px;
+    padding-bottom: 120px;
+  }
+}

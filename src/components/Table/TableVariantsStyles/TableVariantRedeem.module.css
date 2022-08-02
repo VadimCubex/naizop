@@ -1,0 +1,133 @@
+.table.table-variant-redeem {
+  margin: 0px 20px;
+}
+
+.table.table-variant-redeem .table-row-content {
+  display: flex;
+}
+
+.table.table-variant-redeem .table-header .table-column-cell-1,
+.table.table-variant-redeem .table-separators .table-column-cell-1,
+.table.table-variant-redeem .table-row-content .table-row-cell-1 {
+  width: 19.41%;
+}
+
+.table.table-variant-redeem .table-header .table-column-cell-2,
+.table.table-variant-redeem .table-separators .table-column-cell-2,
+.table.table-variant-redeem .table-row-content .table-row-cell-2 {
+  width: 24.27%;
+}
+
+.table.table-variant-redeem .table-header .table-column-cell-3,
+.table.table-variant-redeem .table-separators .table-column-cell-3,
+.table.table-variant-redeem .table-row-content .table-row-cell-3,
+.table.table-variant-redeem .table-header .table-column-cell-4,
+.table.table-variant-redeem .table-separators .table-column-cell-4,
+.table.table-variant-redeem .table-row-content .table-row-cell-4 {
+  width: 29.12%;
+}
+
+.table.table-variant-redeem .table-small-row-content .table-row-cell-4 .text,
+.table.table-variant-redeem .table-row-content .table-row-cell-4 .text {
+  color: var(--yellow) !important;
+}
+
+@media (max-width: 1024px) {
+  .table.table-variant-redeem .table-row [class*="table-row-cell"] {
+    padding: 15px;
+  }
+  .table.table-variant-redeem .table-header [class*="table-column-cell"] {
+    padding-left: 15px;
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 834px) {
+  .table.table-variant-redeem .table-row [class*="table-row-cell"] {
+    padding: 15px 10px;
+  }
+  .table.table-variant-redeem .table-header [class*="table-column-cell"] {
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .table.table-variant-redeem {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    flex-direction: row;
+  }
+
+  .table.table-variant-redeem {
+    margin: 0px;
+  }
+  .table.table-variant-redeem .table-content {
+    width: 100%;
+  }
+
+  .table.table-variant-redeem .table-content .table-row .table-row-content,
+  .table.table-variant-redeem .table-header,
+  .table.table-variant-redeem .table-separators {
+    display: none;
+  }
+
+  .table.table-variant-redeem
+    .table-content
+    .table-row
+    .table-small-row-content {
+    display: flex;
+    height: 200px;
+  }
+
+  .table.table-variant-redeem
+    .table-content
+    .table-row
+    .table-small-row-content
+    > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .table.table-variant-redeem .table-small-header {
+    padding: 0px 5px 0px 30px;
+  }
+  .table.table-variant-redeem .table-small-row {
+    padding: 0px 5px 0px 20px;
+  }
+
+  .table.table-variant-redeem .table-small-header {
+    width: 44.2%;
+  }
+  .table.table-variant-redeem .table-small-row {
+    width: 55.8%;
+  }
+  .table.table-variant-redeem .table-small-header > *,
+  .table.table-variant-redeem .table-small-row > * {
+    height: 25%;
+    display: flex;
+    align-items: center;
+  }
+
+  .table.table-variant-redeem .table-small-row-content .text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .table.table-variant-redeem .table-hr {
+    position: absolute;
+    width: 1px;
+    height: 99%;
+
+    background: linear-gradient(
+      360deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    left: 44.2%;
+  }
+
+  .table.table-variant-redeem .table-row [class*="table-row-cell"] {
+    padding: 0px;
+  }
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 
+import TableRow from "./TableRowVariants/TableRow";
 import {
   TableVariants,
   TextVariants,
@@ -54,18 +55,7 @@ export const TableComponent = ({ data, columnNames, variant, className }) => {
           <div className="table-row" key={index}>
             {index === 0 ? null : <div className="table-row-border" />}
             <div className="table-row-content">
-              {Object.values(item.row).map((value, index_value) => (
-                <div
-                  className={`table-row-cell${
-                    variant !== TableVariants.Ranks
-                      ? "-" + (index_value + 1)
-                      : ""
-                  }`}
-                  key={index_value}
-                >
-                  <Text variant={TextVariants.h5}>{value}</Text>
-                </div>
-              ))}
+              <TableRow key={index} variant={variant} item={item} />
             </div>
             <div className="table-small-row-content">
               <div className="table-small-header">
@@ -81,18 +71,7 @@ export const TableComponent = ({ data, columnNames, variant, className }) => {
                 ))}
               </div>
               <div className="table-small-row">
-                {Object.values(item.row).map((value, index_value) => (
-                  <div
-                    className={`table-row-cell${
-                      variant !== TableVariants.Ranks
-                        ? "-" + (index_value + 1)
-                        : ""
-                    }`}
-                    key={index_value}
-                  >
-                    <Text variant={TextVariants.h5}>{value}</Text>
-                  </div>
-                ))}
+                <TableRow key={index} variant={variant} item={item} />
               </div>
             </div>
           </div>

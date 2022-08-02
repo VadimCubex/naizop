@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import classNames from "classnames";
 
-import { CurrencyInfo } from "../../constants/constants";
+import { CurrencyInfo } from "./constants";
 import { TextVariants } from "../../constants/VariantsOfComponents";
 import { DropDown } from "../DropDown";
 import { Text } from "../Text";
