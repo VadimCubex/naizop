@@ -198,7 +198,6 @@
   }
 
   .table.table-variant-service {
-    padding-bottom: 25px;
     flex-direction: row;
   }
 
@@ -332,7 +331,6 @@
   }
   .table.table-variant-service {
     padding-top: 0px;
-    padding-bottom: 25px;
     flex-direction: row;
   }
 
