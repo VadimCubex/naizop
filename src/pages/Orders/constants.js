@@ -15,7 +15,7 @@ export const OrderTable = [
     row: {
       id: "#1524",
       service: "Instagram Followers [Permanent & Mixed]",
-      orders_date: "2022-04-11    08:10:39",
+      date: "2022-04-11    08:10:39",
       username: ProfileInfo.usename,
       charge: "0.9435",
       status: "refunded",
@@ -37,7 +37,7 @@ export const OrderTable = [
     row: {
       id: "#1524",
       service: "Instagram Followers [Cheapest - 3K Day]",
-      orders_date: "2022-04-11    08:10:39",
+      date: "2022-04-11    08:10:39",
       username: ProfileInfo.usename,
       charge: "0.9435",
       status: "partial",
@@ -59,7 +59,7 @@ export const OrderTable = [
     row: {
       id: "#1524",
       service: "Instagram Likes [Permanent & Mixed]",
-      orders_date: "2022-04-11    08:10:39",
+      date: "2022-04-11    08:10:39",
       username: ProfileInfo.usename,
       charge: "0.9435",
       status: "pending",
@@ -80,7 +80,7 @@ export const OrderTable = [
     row: {
       id: "#1524",
       service: "Instagram Followers [Permanent & Mixed]",
-      orders_date: "2022-04-11    08:10:39",
+      date: "2022-04-11    08:10:39",
       username: ProfileInfo.usename,
       charge: "0.9435",
       status: "processing",
@@ -102,7 +102,7 @@ export const OrderTable = [
     row: {
       id: "#1524",
       service: "Instagram Likes [Cheapest - 3K Day]",
-      orders_date: "2022-04-11    08:10:39",
+      date: "2022-04-11    08:10:39",
       username: ProfileInfo.usename,
       charge: "0.9435",
       status: "in-progress",
@@ -123,7 +123,7 @@ export const OrderTable = [
     row: {
       id: "#1524",
       service: "Instagram Followers [Cheapest - 3K Day]",
-      orders_date: "2022-04-11    08:10:39",
+      date: "2022-04-11    08:10:39",
       username: ProfileInfo.usename,
       charge: "0.9435",
       status: "completed",
@@ -145,7 +145,7 @@ export const OrderTable = [
     row: {
       id: "#1524",
       service: "Instagram Likes [Cheapest - 3K Day]",
-      orders_date: "2022-04-11    08:10:39",
+      date: "2022-04-11    08:10:39",
       username: ProfileInfo.usename,
       charge: "0.9435",
       status: "refunded",

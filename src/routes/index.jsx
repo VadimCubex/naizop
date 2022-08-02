@@ -23,7 +23,7 @@ const NaizopRoutes = () => {
       <Route path="" element={<MainLayout />}>
         <Route index element={<Home />} />
         <Route
-          path="/service"
+          path="/services"
           element={<AllServices className="background-img" />}
         />
         <Route path="/faq" element={<FAQ className="background-img" />} />
@@ -39,7 +39,7 @@ const NaizopRoutes = () => {
         <Route path="/profile/place-new-order" element={<Dashboard />} />
         <Route path="/profile/mass-order" element={<Dashboard />} />
         <Route
-          path="/profile/service"
+          path="/profile/services"
           element={<AllServices container={false} />}
         />
         <Route path="/profile/popular-service" element={<Dashboard />} />

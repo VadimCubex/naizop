@@ -6,8 +6,8 @@ export const NavLinks = [
     link: "/",
   },
   {
-    text: "Service",
-    link: "/service",
+    text: "Services",
+    link: "/services",
   },
   {
     text: "Tools",
@@ -78,7 +78,7 @@ export const SidebarLinksFirstPart = [
   {
     icon: IconsVariants.All_services,
     text: "All Services",
-    link: "/profile/service",
+    link: "/profile/services",
   },
   {
     icon: IconsVariants.Complited_Orders,
@@ -151,7 +151,7 @@ export const ServicesLinks = [
   {
     icon: IconsVariants.All_services,
     text: "All Services",
-    link: "/profile/service",
+    link: "/profile/services",
   },
   {
     icon: IconsVariants.New_order,

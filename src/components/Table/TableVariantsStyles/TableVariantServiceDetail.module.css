@@ -1,0 +1,101 @@
+.table.table-variant-serviceDetail .table-header .table-column-cell-1,
+.table.table-variant-serviceDetail .table-separators .table-column-cell-1,
+.table.table-variant-serviceDetail .table-row .table-row-cell-1 {
+  width: 22%;
+}
+
+.table.table-variant-serviceDetail .table-separators {
+  height: 96%;
+}
+
+.table.table-variant-serviceDetail .table-row-content {
+  display: flex;
+}
+
+.table.table-variant-serviceDetail .table-header .table-column-cell-2,
+.table.table-variant-serviceDetail .table-separators .table-column-cell-2,
+.table.table-variant-serviceDetail .table-row .table-row-cell-2 {
+  width: 78%;
+}
+
+.table.table-variant-serviceDetail .table-row .table-row-cell-1 {
+  padding: 15px 5px 15px 20px;
+}
+
+.table.table-variant-serviceDetail .table-row .table-row-cell-2 {
+  padding: 15px 30px 15px 20px;
+}
+
+.table.table-variant-serviceDetail .table-row .table-row-cell-2 p {
+  margin: 0px;
+}
+
+.table.table-variant-serviceDetail .table-row .table-row-cell-2 p .text {
+  color: var(--gray);
+}
+
+.table-serviceDetail-modal .modal-container {
+  max-height: 900px;
+  width: 600px;
+}
+
+.table-serviceDetail-modal .modal-container .modal-content::-webkit-scrollbar {
+  display: none;
+}
+
+.table-serviceDetail-modal
+  .modal-container
+  .modal-content::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+@media (max-width: 834px) {
+  .table-serviceDetail-modal .modal-container {
+    width: 96%;
+  }
+
+  .table-serviceDetail-modal .modal-container .modal-content {
+    max-height: 900px;
+    overflow-y: scroll;
+  }
+}
+
+@media (max-width: 425px) {
+  .table.table-variant-serviceDetail .text {
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  .table.table-variant-serviceDetail {
+    padding-top: 0px;
+  }
+  .table-serviceDetail-modal .modal-container {
+    width: 100%;
+  }
+  .table.table-variant-serviceDetail .table-header .table-column-cell-1,
+  .table.table-variant-serviceDetail .table-separators .table-column-cell-1,
+  .table.table-variant-serviceDetail .table-row .table-row-cell-1 {
+    width: 39%;
+  }
+  .table.table-variant-serviceDetail .table-header .table-column-cell-2,
+  .table.table-variant-serviceDetail .table-separators .table-column-cell-2,
+  .table.table-variant-serviceDetail .table-row .table-row-cell-2 {
+    width: 61%;
+  }
+  .table.table-variant-serviceDetail .table-row [class*="table-row-cell"] {
+    padding: 15px 20px;
+  }
+  .table.table-variant-serviceDetail
+    .table-header
+    [class*="table-column-cell"] {
+    padding-left: 20px;
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 319px) {
+  .table.table-variant-serviceDetail .text {
+    font-size: 12px;
+    line-height: 30px;
+  }
+}

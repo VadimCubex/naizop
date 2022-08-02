@@ -16,7 +16,7 @@ export const FooterInfo = [
       },
       {
         text: "All Services ↗",
-        link: "/service",
+        link: "/services",
       },
     ],
   },

@@ -52,6 +52,9 @@
 }
 
 @media (max-width: 834px) {
+  .accordion .accordion-title {
+    flex-wrap: wrap;
+  }
   .accordion .accordion-title .svgIcon,
   .accordion .accordion-title svg {
     width: 18px !important;

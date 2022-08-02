@@ -54,7 +54,39 @@
   opacity: 0.5;
 }
 
+.filter .filter-controls {
+  position: relative;
+  display: block;
+}
+
+.filter .filter-controls .button {
+  width: 100%;
+}
+
+.filter .filter-controls .filter-dropdown {
+  z-index: 1;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 59%;
+  background: var(--blocks);
+  color: var(--white);
+  stroke: var(--white) !important;
+  border-radius: 20px;
+}
+
+.filter .filter-dropdown > div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.filter .filter-dropdown .text:first-child {
+  opacity: 0.5;
+}
+
 .filter .dropDown {
+  transition: var(--transition-property) 0s var(--transition-function);
   position: absolute;
   z-index: -1;
   left: calc(100% - 185px - 10px - 220px);
@@ -66,6 +98,7 @@
   backdrop-filter: none;
   overflow-y: hidden;
 }
+
 .filter .dropDown.dropDown-active {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -135,5 +168,43 @@
   }
   .filter-variants-container {
     margin-top: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .filter .dropDown {
+    z-index: 0;
+    left: 0px;
+    top: 60px;
+    width: 59%;
+  }
+  .filter .input .filter-dropdown {
+    display: none;
+  }
+  .filter .filter-controls .filter-dropdown {
+    display: flex;
+  }
+  .filter .filter-controls .btn-container {
+    width: 39%;
+  }
+  .filter .filter-controls .button {
+    min-width: 0px;
+  }
+}
+
+@media (max-width: 319px) {
+  .filter .dropDown {
+    width: 100%;
+  }
+  .filter .filter-controls {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .filter .filter-controls .btn-container {
+    width: 100%;
+  }
+  .filter .filter-controls .filter-dropdown {
+    height: 40px;
+    width: 100%;
   }
 }

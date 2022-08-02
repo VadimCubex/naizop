@@ -6,19 +6,42 @@ import { SubscriptionModalColumnInfo } from "../../../pages/Subscriptions/consta
 import {
   ButtonVariants,
   IconsVariants,
+  StatusVariants,
   TableVariants,
   TextVariants,
 } from "../../../constants/VariantsOfComponents";
 import { Button } from "../../Button";
 import { Modal } from "../../Modal";
+import { Status } from "../../Status";
 import { SvgIcon } from "../../SvgIcon";
 import { Text } from "../../Text";
 
-const CellsForSubscription = ({ item }) => {
+const RowSubscriptions = ({ item }) => {
   const [openModal, setOpenModal] = useState(false);
 
   return (
     <>
+      <div className="table-row-cell-1">
+        <Text variant={TextVariants.h5}>{item.row.id}</Text>
+      </div>
+      <div className="table-row-cell-2">
+        <Text variant={TextVariants.h5}>{item.row.service}</Text>
+      </div>
+      <div className="table-row-cell-3">
+        <Text variant={TextVariants.subtitle_medium}>{item.row.created}</Text>
+      </div>
+      <div className="table-row-cell-4">
+        <Text variant={TextVariants.subtitle_medium}>{item.row.username}</Text>
+      </div>
+      <div className="table-row-cell-5">
+        <Text variant={TextVariants.h5}>{item.row.newPosts}</Text>
+      </div>
+      <div className="table-row-cell-6">
+        <Status
+          variant={StatusVariants[item.row.status]}
+          status={item.row.status}
+        />
+      </div>
       <div className="table-row-cell-7">
         <Button
           onClick={() => {
@@ -72,4 +95,4 @@ const CellsForSubscription = ({ item }) => {
   );
 };
 
-export default CellsForSubscription;
+export default RowSubscriptions;

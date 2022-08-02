@@ -2,6 +2,8 @@
 @import "./TableVariantsStyles/TableVariantRedeem.module.css";
 @import "./TableVariantsStyles/TableVariantSubscriptions.module.css";
 @import "./TableVariantsStyles/TableVariantOrders.module.css";
+@import "./TableVariantsStyles/TableVariantService.module.css";
+@import "./TableVariantsStyles/TableVariantServiceDetail.module.css";
 
 .table {
   display: flex;

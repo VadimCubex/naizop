@@ -54,6 +54,7 @@ export const IconsVariants = {
   Everything: "/icons/Stroke/Everything.svg",
   Facebook: "/icons/Facebook/Api.svg",
   Favorites_stroke: "/icons/Stroke/Favorites.svg",
+  Favorites_fill: "/icons/Stroke/Favorites.svg",
   Google: "/icons/Stroke/Google.svg",
   History: "/icons/Stroke/History.svg",
   Info: "/icons/Stroke/Info.svg",
@@ -221,7 +222,8 @@ export const TableVariants = {
   Redeem: "redeem",
   Subscriptions: "subscriptions",
   Orders: "orders",
-  Service: "servicee",
+  Service: "service",
+  Service_detail: "serviceDetail",
 };
 
 export const StatusVariants = {

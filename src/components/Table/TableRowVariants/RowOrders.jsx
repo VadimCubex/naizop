@@ -6,19 +6,21 @@ import { OrdersModalColumnInfo } from "../../../pages/Orders/constants";
 import {
   ButtonVariants,
   IconsVariants,
+  StatusVariants,
   TableVariants,
   TextVariants,
 } from "../../../constants/VariantsOfComponents";
 import { Button } from "../../Button";
 import { Modal } from "../../Modal";
 import { TooltipPortal } from "../../Portal";
+import { Status } from "../../Status";
 import { SvgIcon } from "../../SvgIcon";
 import { Text } from "../../Text";
 import { Tooltip } from "../../Tooltip";
 
 import useTooltip from "../../../hooks/useTooltip";
 
-const CellsForOrders = ({ item }) => {
+const RowOrders = ({ item }) => {
   const [openModal, setOpenModal] = useState(false);
   const {
     coords,
@@ -32,6 +34,27 @@ const CellsForOrders = ({ item }) => {
 
   return (
     <>
+      <div className="table-row-cell-1">
+        <Text variant={TextVariants.h5}>{item.row.id}</Text>
+      </div>
+      <div className="table-row-cell-2">
+        <Text variant={TextVariants.h5}>{item.row.service}</Text>
+      </div>
+      <div className="table-row-cell-3">
+        <Text variant={TextVariants.subtitle_medium}>{item.row.date}</Text>
+      </div>
+      <div className="table-row-cell-4">
+        <Text variant={TextVariants.subtitle_medium}>{item.row.username}</Text>
+      </div>
+      <div className="table-row-cell-5">
+        <Text variant={TextVariants.h5}>{item.row.charge}</Text>
+      </div>
+      <div className="table-row-cell-6">
+        <Status
+          variant={StatusVariants[item.row.status]}
+          status={item.row.status}
+        />
+      </div>
       <div className="table-row-cell-7">
         <Button
           onClick={() => {
@@ -112,4 +135,4 @@ const CellsForOrders = ({ item }) => {
   );
 };
 
-export default CellsForOrders;
+export default RowOrders;

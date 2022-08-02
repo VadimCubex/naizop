@@ -59,25 +59,47 @@ export const FilterComponent = ({ className, withDropdown, options = [] }) => {
             )
           }
         />
-        <Button isLight={true} text="Search" variant={ButtonVariants.blue} />
-        <DropDown isOpen={isShowDropDown}>
-          {FilterSelect.map(
-            (item, index) =>
-              activeFilter !== item && (
-                <div
-                  key={index}
-                  onClick={() => {
-                    handleClickFilterVariant(item);
-                  }}
-                >
-                  <div className="separator" />
-                  <div className="filter-item cursor-pointer">
-                    <Text variant={TextVariants.h5}>{item}</Text>
-                  </div>
+        <div className="filter-controls">
+          {withDropdown && (
+            <div className="filter-dropdown">
+              <div>
+                <Text variant={TextVariants.h5}>Service Filter:</Text>
+                <Text variant={TextVariants.h5}>{activeFilter}</Text>
+                <div>
+                  <SvgIcon
+                    src={IconsVariants.DropDown_arrow_stroke}
+                    size={8}
+                    rotate={isShowDropDown ? "180" : "0"}
+                    onClick={() => {
+                      setIsShowDropDown(!isShowDropDown);
+                    }}
+                  />
                 </div>
-              )
+              </div>
+            </div>
           )}
-        </DropDown>
+          <Button isLight={true} text="Search" variant={ButtonVariants.blue} />
+        </div>
+        {withDropdown && (
+          <DropDown isOpen={isShowDropDown}>
+            {FilterSelect.map(
+              (item, index) =>
+                activeFilter !== item && (
+                  <div
+                    key={index}
+                    onClick={() => {
+                      handleClickFilterVariant(item);
+                    }}
+                  >
+                    <div className="separator" />
+                    <div className="filter-item cursor-pointer">
+                      <Text variant={TextVariants.h5}>{item}</Text>
+                    </div>
+                  </div>
+                )
+            )}
+          </DropDown>
+        )}
       </div>
       {options.length > 0 && (
         <div className="filter-variants-container">

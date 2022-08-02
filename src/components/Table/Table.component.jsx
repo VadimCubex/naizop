@@ -1,8 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 
-import TableRow from "./TableRow";
-import AdditinalCells from "./AdditionalCells/AdditinalCells";
+import TableRow from "./TableRowVariants/TableRow";
 import {
   TableVariants,
   TextVariants,
@@ -56,15 +55,7 @@ export const TableComponent = ({ data, columnNames, variant, className }) => {
           <div className="table-row" key={index}>
             {index === 0 ? null : <div className="table-row-border" />}
             <div className="table-row-content">
-              {Object.entries(item.row).map((value, index) => (
-                <TableRow
-                  key={index}
-                  variant={variant}
-                  value={value}
-                  index={index}
-                />
-              ))}
-              <AdditinalCells variant={variant} item={item} />
+              <TableRow key={index} variant={variant} item={item} />
             </div>
             <div className="table-small-row-content">
               <div className="table-small-header">
@@ -80,15 +71,7 @@ export const TableComponent = ({ data, columnNames, variant, className }) => {
                 ))}
               </div>
               <div className="table-small-row">
-                {Object.entries(item.row).map((value, index) => (
-                  <TableRow
-                    key={index}
-                    variant={variant}
-                    value={value}
-                    index={index}
-                  />
-                ))}
-                <AdditinalCells variant={variant} item={item} />
+                <TableRow key={index} variant={variant} item={item} />
               </div>
             </div>
           </div>
