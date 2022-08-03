@@ -41,11 +41,12 @@
 @import "../pages/Subscriptions/Subscriptions.module.css";
 @import "../pages/Orders/Orders.module.css";
 @import "../pages/AllServices/AllServices.module.css";
-
 :root {
   --transition-property: all;
   --transition-time: 0.4s;
   --transition-function: ease;
+
+  color-scheme: light only;
 }
 
 #root {

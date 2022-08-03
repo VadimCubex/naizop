@@ -135,6 +135,7 @@
 .filter-variants-container::-webkit-scrollbar {
   display: none;
 }
+
 .filter-variants-container::-webkit-scrollbar-thumb {
   display: none;
 }
