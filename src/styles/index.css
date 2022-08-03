@@ -26,6 +26,8 @@
 @import "../components/Currency/Currency.module.css";
 @import "../components/Filter/Filter.module.css";
 @import "../components/Status/Status.module.css";
+@import "../components/ServiceList/ServiceList.module.css";
+@import "../components/HowItWorks/HowItWorks.module.css";
 
 @import "./App.css";
 @import "./normalize.css";
@@ -41,6 +43,7 @@
 @import "../pages/Subscriptions/Subscriptions.module.css";
 @import "../pages/Orders/Orders.module.css";
 @import "../pages/AllServices/AllServices.module.css";
+@import "../pages/MassOrder/MassOrder.module.css";
 :root {
   --transition-property: all;
   --transition-time: 0.4s;

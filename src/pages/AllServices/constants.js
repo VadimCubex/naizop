@@ -19,7 +19,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -60,7 +60,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -101,7 +101,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -143,7 +143,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -184,7 +184,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -225,7 +225,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -266,7 +266,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -314,7 +314,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -355,7 +355,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -396,7 +396,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -438,7 +438,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -479,7 +479,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -520,7 +520,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -561,7 +561,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -609,7 +609,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -650,7 +650,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -691,7 +691,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -733,7 +733,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -774,7 +774,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -815,7 +815,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -856,7 +856,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -904,7 +904,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -945,7 +945,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -986,7 +986,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -1028,7 +1028,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -1069,7 +1069,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -1110,7 +1110,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -1151,7 +1151,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -1199,7 +1199,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -1240,7 +1240,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -1281,7 +1281,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -1323,7 +1323,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -1364,7 +1364,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -1405,7 +1405,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },
@@ -1446,7 +1446,7 @@ export const InstagramServicesTables = [
         row: {
           id: "#1524",
           service: "Instagram Followers [Cheapest - 3K Day]",
-          price: { value: 0.08, count: 1000 },
+          price: { value: 0.08, count: "1.000" },
           avarageTime: "32 Minutes",
           minMaxOrder: "10 - 10.000",
         },

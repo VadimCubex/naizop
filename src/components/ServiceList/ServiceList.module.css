@@ -1,0 +1,138 @@
+.service-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-list > .text {
+  margin: 20px 0px;
+}
+
+.service-list-modal .separator,
+.service-list .separator {
+  margin: 0px;
+  border: none;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.service-list .show-separator {
+  margin: 0px;
+  border: none;
+  width: 100%;
+  height: 1px;
+  background: var(--white);
+}
+
+.service-list .show-all {
+  backdrop-filter: blur(240px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0px;
+  background: radial-gradient(
+      129.75% 1017.65% at 50% -664.71%,
+      #d7d7d7 0%,
+      rgba(0, 0, 0, 0) 100%,
+      rgba(113, 113, 113, 0) 100%
+    ),
+    rgba(30, 33, 36, 0.25);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.service-list .show-all > .text {
+  margin-right: 5px;
+}
+
+.service-list-modal .service-item,
+.service-list .service-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-list-modal .service-item:hover,
+.service-list .service-item:hover {
+  background: var(--gradient-blue);
+}
+
+.service-list-modal .service-item > *,
+.service-list .service-item > * {
+  padding: 10px;
+}
+
+.service-list-modal .service-item > * .text,
+.service-list .service-item > * .text {
+  font-size: 14px;
+}
+
+.service-list-modal .service-item .service-info,
+.service-list .service-item .service-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.service-list-modal .service-item .service-info > .text:first-child,
+.service-list .service-item .service-info > .text:first-child {
+  opacity: 0.75;
+}
+
+.service-list-modal .service-item:hover .service-info > .text:first-child,
+.service-list .service-item:hover .service-info > .text:first-child {
+  opacity: 1;
+}
+
+.service-list-modal
+  .service-item
+  .service-info
+  > .text:last-child
+  > .text:first-child,
+.service-list
+  .service-item
+  .service-info
+  > .text:last-child
+  > .text:first-child {
+  color: var(--yellow);
+}
+
+.service-list-modal .modal-content {
+  color: var(--white);
+  padding: 0px 20px;
+  max-height: 630px;
+  overflow-y: scroll;
+}
+
+.service-list-modal .modal-content::-webkit-scrollbar {
+  display: none;
+}
+
+.service-list-modal .modal-content::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+@media (max-width: 834px) {
+  .service-list-modal .service-item .button.button_variant_purchase,
+  .service-list .service-item .button.button_variant_purchase {
+    width: 125px;
+    height: 44px;
+  }
+  .service-list-modal .service-item .service-info,
+  .service-list .service-item .service-info {
+    padding: 10px 22px 10px 10px;
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-list-modal .service-item .service-info,
+  .service-list .service-item .service-info {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 425px) {
+}
