@@ -28,6 +28,8 @@
 @import "../components/Status/Status.module.css";
 @import "../components/ServiceList/ServiceList.module.css";
 @import "../components/HowItWorks/HowItWorks.module.css";
+@import "../components/Tabs/Tabs.module.css";
+@import "../components/NewOrder/NewOrder.module.css";
 
 @import "./App.css";
 @import "./normalize.css";
@@ -44,6 +46,8 @@
 @import "../pages/Orders/Orders.module.css";
 @import "../pages/AllServices/AllServices.module.css";
 @import "../pages/MassOrder/MassOrder.module.css";
+@import "../pages/PlaceNewOrder/PlaceNewOrder.module.css";
+
 :root {
   --transition-property: all;
   --transition-time: 0.4s;

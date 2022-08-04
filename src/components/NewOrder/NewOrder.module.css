@@ -1,0 +1,55 @@
+.newOrder {
+  position: relative;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.newOrder > .filter-select {
+  z-index: 4;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.newOrder .chunk.category {
+  z-index: 3;
+}
+
+.newOrder .chunk.service {
+  z-index: 2;
+}
+
+.newOrder .chunk.service .select-container .dropDown {
+  padding: 80px 20px 0px 20px;
+}
+
+.newOrder .chunk > .text {
+  margin-bottom: 10px;
+  opacity: 0.75;
+}
+
+.newOrder .chunk textarea {
+  height: 430px;
+}
+
+@media (max-width: 1140px) {
+  .newOrder .chunk.category .select-container .dropDown {
+    padding: 90px 20px 0px 20px;
+  }
+}
+
+@media (max-width: 834px) {
+  .newOrder .chunk.category .select-container .dropDown {
+    padding: 50px 20px 0px 20px;
+  }
+
+  .newOrder:first-child {
+    margin-top: 0px;
+  }
+}
+@media (max-width: 537px) {
+  .newOrder .chunk.category .select-container .dropDown {
+    padding: 90px 20px 0px 20px;
+  }
+}

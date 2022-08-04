@@ -1,7 +1,8 @@
 import React from "react";
-import classNames from "classnames";
-import { SelectOptionVariants } from "../../constants/VariantsOfComponents";
 import { OptionDefault, OptionDetail, OptionWithoutDetail } from ".";
+import classNames from "classnames";
+
+import { SelectOptionVariants } from "../../constants/VariantsOfComponents";
 
 export const SelectOptionComponent = ({
   value,
@@ -10,7 +11,11 @@ export const SelectOptionComponent = ({
   variant,
   className,
 }) => {
-  const SelectOptionClass = classNames("selectOption", className);
+  const SelectOptionClass = classNames(
+    "selectOption",
+    "cursor-pointer",
+    className
+  );
 
   const OptionVariantMap = {
     [SelectOptionVariants.newOrderWithDetail]: (

@@ -25,7 +25,7 @@ export const OptionWithDetailComponent = ({ selected, value }) => {
       </div>
       <div
         className="badge"
-        style={{ opacity: value.recommended && !selected ? 1 : 0 }}
+        style={{ display: value.recommended && !selected ? "flex" : "none" }}
       >
         <Text variant={TextVariants.h5}>Naizop recommended</Text>
         <SvgIcon

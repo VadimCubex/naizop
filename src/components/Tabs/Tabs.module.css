@@ -1,0 +1,38 @@
+@import "./Tab/Tab.module.css";
+@import "./TabPanel/TabPanel.module.css";
+
+.tabs {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+
+  display: flex;
+}
+
+.tabs > li {
+  cursor: pointer;
+  flex: 1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.tabs > li .text {
+  opacity: 0.5;
+}
+
+.tabs > li.active {
+  background: linear-gradient(
+      0deg,
+      rgba(30, 33, 36, 0.75),
+      rgba(30, 33, 36, 0.75)
+    ),
+    radial-gradient(
+      137.13% 125.45% at 32.38% -58.62%,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.tabs > li.active .text {
+  opacity: 1;
+}
