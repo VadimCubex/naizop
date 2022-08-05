@@ -83,3 +83,11 @@ export const NewOrderService = [
     icon: IconsVariants.Instagram_color,
   },
 ];
+
+export const LinkHistory = [
+  "https://www.instagram.com/naizop",
+  "https://www.instagram.com/naizop",
+  "https://www.instagram.com/naizop",
+  "https://www.instagram.com/naizop",
+  "https://www.instagram.com/naizop",
+];

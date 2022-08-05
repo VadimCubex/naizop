@@ -11,6 +11,7 @@ import { Text } from "../Text";
 export const TooltipComponent = ({
   text,
   isShow,
+  isLeft = false,
   arrowPosition = "left",
   coords,
   width,
@@ -30,6 +31,9 @@ export const TooltipComponent = ({
 
   const EditCoors = () => {
     if (coords.top) {
+      if (isLeft) {
+        return { left: coords.left - 75, top: coords.top + 50 };
+      }
       return arrowPosition === "left"
         ? { left: coords.left, top: coords.top + 40 }
         : { left: coords.left - width, top: coords.top + 40 };

@@ -58,16 +58,18 @@ const PlaceNewOrder = () => {
                 />
                 <hr />
                 <div className="purchase">
-                  <div className="info">
-                    <Text variant={TextVariants.h3}>Service Cost</Text>
-                    <Text variant={TextVariants.h4}>
-                      <Text variant={TextVariants.h2}>$24.00</Text> for 25.000
-                      followers
-                    </Text>
-                  </div>
-                  <div className="info">
-                    <Text variant={TextVariants.h3}>Service Cost</Text>
-                    <Text variant={TextVariants.h4}>8 Minutes</Text>
+                  <div className="info-container">
+                    <div className="info">
+                      <Text variant={TextVariants.h3}>Service Cost</Text>
+                      <Text variant={TextVariants.h4}>
+                        <Text variant={TextVariants.h2}>$24.00</Text> for 25.000
+                        followers
+                      </Text>
+                    </div>
+                    <div className="info">
+                      <Text variant={TextVariants.h3}>Service Cost</Text>
+                      <Text variant={TextVariants.h4}>8 Minutes</Text>
+                    </div>
                   </div>
                   <Button
                     text="Purchase now"
@@ -81,6 +83,43 @@ const PlaceNewOrder = () => {
             <TabPanel active={activeTab} index={1}>
               <div className="block">
                 <HowItWorks />
+                {newOrders.map((item, index) => (
+                  <div key={index}>
+                    <NewOrder />
+                    {index !== newOrders.length - 1 && <hr />}
+                  </div>
+                ))}
+                <Button
+                  onClick={() => {
+                    setNewOrders([...newOrders, ""]);
+                  }}
+                  width="full"
+                  variant={ButtonVariants.blue}
+                  isLight={true}
+                  text="+ Add Order"
+                />
+                <hr />
+                <div className="purchase">
+                  <div className="info-container">
+                    <div className="info">
+                      <Text variant={TextVariants.h3}>Service Cost</Text>
+                      <Text variant={TextVariants.h4}>
+                        <Text variant={TextVariants.h2}>$24.00</Text> for 25.000
+                        followers
+                      </Text>
+                    </div>
+                    <div className="info">
+                      <Text variant={TextVariants.h3}>Service Cost</Text>
+                      <Text variant={TextVariants.h4}>8 Minutes</Text>
+                    </div>
+                  </div>
+                  <Button
+                    text="Purchase now"
+                    variant={ButtonVariants.yellow}
+                    isLight={true}
+                    size={ButtonSizeVariants.large}
+                  />
+                </div>
               </div>
             </TabPanel>
           </div>

@@ -18,6 +18,8 @@
 
 .selectOption_variant_detail {
   padding: 15px 0px;
+  gap: 15px;
+  flex-wrap: wrap;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -26,18 +28,28 @@
 .selectOption_variant_detail .badge {
   width: 150px;
   height: 50px;
+  background: var(--gradient-yellow);
+}
+
+.selectOption_variant_detail .badge .text {
+  opacity: 1;
 }
 
 .selectOption_variant_detail .content {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .selectOption_variant_detail .info {
   display: flex;
   gap: 10px;
-  margin-right: 90px;
+  margin-right: 80px;
+}
+
+.selectOption_variant_detail > div:not(.info):not(.badge) .text:first-child {
+  color: var(--yellow);
 }
 
 .selectOption_variant_detail .svgIcon {

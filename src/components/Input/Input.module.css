@@ -57,5 +57,11 @@
 @media (max-width: 834px) {
   .input input {
     max-height: 50px;
+    padding: 15px 20px;
+  }
+
+  .input .svgIcon {
+    cursor: pointer;
+    margin: 13px 13px;
   }
 }

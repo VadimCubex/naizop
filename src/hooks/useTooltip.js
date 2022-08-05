@@ -47,8 +47,9 @@ const useTooltip = () => {
     setIsShowTooltip(false);
   };
 
-  const handleClick = () => {
+  const handleClick = (event) => {
     setIsShowTooltip(!isShowTooltip);
+    event.stopPropagation();
   };
 
   useEffect(() => {

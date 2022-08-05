@@ -10,6 +10,7 @@ export const SelectComponent = ({
   onClick,
   options,
   variant,
+  maxHeight,
   className,
 }) => {
   const [isShowDropDown, setIsShowDropDown] = useState(false);
@@ -41,7 +42,11 @@ export const SelectComponent = ({
           </div>
         </div>
       </div>
-      <DropDown variant={DropDownVariants.select} isOpen={isShowDropDown}>
+      <DropDown
+        maxHeight={maxHeight}
+        variant={DropDownVariants.select}
+        isOpen={isShowDropDown}
+      >
         {options.map(
           (value, index) =>
             selected !== value && (

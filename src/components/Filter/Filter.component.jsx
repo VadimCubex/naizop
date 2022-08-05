@@ -127,6 +127,7 @@ export const FilterComponent = ({
       {withSelect && (
         <div className="filter-select">
           <Select
+            maxHeight={310}
             onClick={setSelectedFilter}
             selected={selectedFilter}
             variant={SelectOptionVariants.default}

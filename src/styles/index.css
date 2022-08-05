@@ -47,6 +47,7 @@
 @import "../pages/AllServices/AllServices.module.css";
 @import "../pages/MassOrder/MassOrder.module.css";
 @import "../pages/PlaceNewOrder/PlaceNewOrder.module.css";
+@import "../pages/Payment/Payment.module.css";
 
 :root {
   --transition-property: all;

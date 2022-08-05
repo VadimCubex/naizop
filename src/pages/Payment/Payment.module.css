@@ -1,0 +1,46 @@
+.payment {
+  margin-top: 30px;
+  margin-bottom: 100px;
+  color: var(--white);
+}
+
+.payment > .text {
+  margin-bottom: 30px;
+}
+
+.payment .payment-contant {
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment .payment-contant .block {
+  padding: 20px 20px 30px;
+  width: 49%;
+}
+
+.payment .payment-contant .block.select-payment .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.payment .payment-contant .block.select-payment .top .tips {
+  padding: 5px 21px;
+  background: var(--gradient-yellow);
+  border-radius: 10px;
+}
+
+.payment .payment-contant .block.select-payment hr {
+}
+
+@media (max-width: 1439px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 834px) {
+}
+
+@media (max-width: 425px) {
+}

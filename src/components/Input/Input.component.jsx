@@ -29,7 +29,7 @@ export const InputComponent = forwardRef(
 
     return (
       <div className={InputClass}>
-        <div>{leftSide || null}</div>
+        {leftSide && <div>{leftSide || null}</div>}
         {!multiline ? (
           <input
             ref={ref}
