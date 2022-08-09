@@ -14,8 +14,78 @@
 }
 
 .payment .payment-contant .block {
-  padding: 20px 20px 30px;
+  padding: 25px 25px 30px;
   width: 49%;
+  height: fit-content;
+}
+
+.payment .payment-contant .block.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.payment .payment-contant .block.steps [class*="step"] {
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(40px);
+  background: radial-gradient(
+      129.6% 94.68% at 107.2% -19.29%,
+      rgba(255, 255, 255, 0.2) 0%,
+
+      rgba(29, 33, 40, 1) 100%
+    ),
+    rgba(217, 217, 217, 0.01);
+}
+
+.payment .payment-contant .block.steps [class*="step"] img {
+  position: absolute;
+  bottom: -21px;
+  left: calc(50% - 49.5px);
+}
+
+.payment .payment-contant .block.steps [class*="step"] .number {
+  top: -20px;
+  left: calc(50% - 20px);
+  position: absolute;
+  color: var(--black);
+}
+
+.payment .payment-contant .block.steps .step-1 {
+  padding: 30px 10px 20px;
+}
+
+.payment .payment-contant .block.steps .step-2 {
+  padding: 30px 80px 20px;
+}
+
+.payment .payment-contant .block.steps .step-3 {
+  padding: 30px 50px 20px;
+}
+
+.payment .payment-contant .block.steps .step-1 .info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment .payment-contant .block.steps .step-1 .separator {
+  border: none;
+  width: 1px;
+  margin: 0px 7px;
+  background: var(--light-blue-15);
+}
+
+.payment .payment-contant .block.steps .step-1 .content {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+  gap: 30px;
+}
+
+.payment .payment-contant .block.select-payment {
+  position: relative;
 }
 
 .payment .payment-contant .block.select-payment .top {
@@ -31,16 +101,233 @@
 }
 
 .payment .payment-contant .block.select-payment hr {
+  border: none;
+  width: 100%;
+  height: 1px;
+  background: var(--light-blue-15);
+}
+
+.payment .payment-contant .block.select-payment .method {
+  margin-top: 30px;
+  z-index: 1;
+}
+
+.payment .payment-contant .block.select-payment .method .select {
+  z-index: 2;
+}
+
+.payment .payment-contant .block.select-payment .method .dropDown {
+  z-index: 1;
+}
+
+.payment .payment-contant .block.select-payment .amount {
+  margin-top: 20px;
+}
+
+.payment .payment-contant .block.select-payment .amount > .text {
+  margin-bottom: 5px;
+}
+
+.modal .modal-content .amount .input,
+.payment .payment-contant .block.select-payment .amount .input {
+  padding: 0px 15px;
+  align-items: center;
+}
+
+.modal .modal-content .amount .input .text,
+.payment .payment-contant .block.select-payment .amount .input .text {
+  opacity: 0.5;
+}
+
+.modal .modal-content .amount .input input,
+.payment .payment-contant .block.select-payment .amount .input input {
+  padding: 15px;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--yellow);
+}
+
+.payment .payment-contant .block.select-payment .proceed {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payment .payment-contant .block.select-payment .proceed .btn-container {
+  width: 100%;
+}
+
+.payment .payment-contant .block.select-payment .proceed > .text {
+  opacity: 0.5;
+}
+
+.payment .payment-contant .block.select-payment .proceed > .text:first-child {
+  margin-bottom: 10px;
+}
+
+.payment .payment-contant .block.select-payment .proceed > a {
+  margin-top: 35px;
+  opacity: 0.5;
+  color: var(--white);
+}
+
+.modal .modal-content .tip {
+  padding: 20px;
+}
+
+.modal .modal-content .tip > div {
+  margin-bottom: 20px;
+}
+
+.modal .modal-content .tip > div > .text {
+  margin-bottom: 10px;
+}
+
+.modal .modal-content .tip > div.btn-container {
+  margin-bottom: 35px;
+  margin-top: 70px;
+}
+
+.modal .modal-content .tip-sent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 45px;
+}
+
+.modal .modal-content .tip-sent .title {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.modal .modal-content .tip-sent .currency {
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  margin-right: 10px;
+  margin-left: 5px;
+  border-radius: 50%;
+  background: #2a462d;
 }
 
 @media (max-width: 1439px) {
+  .payment .payment-contant .block.steps .step-2 {
+    padding: 30px 60px 20px;
+  }
+
+  .payment .payment-contant .block.steps .step-3 {
+    padding: 30px 40px 20px;
+  }
 }
 
 @media (max-width: 1024px) {
+  .payment .payment-contant .block.steps .step-2 {
+    padding: 30px 20px 20px;
+  }
+
+  .payment .payment-contant .block.steps .step-3 {
+    padding: 30px 20px 20px;
+  }
+
+  .payment .payment-contant .block.steps .step-1 .info {
+    flex-direction: column;
+  }
+
+  .payment .payment-contant .block.steps .step-1 .separator {
+    width: 100%;
+    height: 1px;
+    margin: 10px 0px;
+  }
+
+  .payment .payment-contant .block.steps .step-1 .content {
+    width: 100%;
+  }
 }
 
 @media (max-width: 834px) {
-}
+  .payment .payment-contant {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
 
-@media (max-width: 425px) {
+  .payment .payment-contant .block {
+    padding: 20px 20px 30px;
+    width: 100%;
+  }
+
+  .payment .payment-contant .block.steps .step-1 .info {
+    flex-direction: row;
+  }
+
+  .payment .payment-contant .block.steps .step-1 .separator {
+    width: 1px;
+    height: unset;
+    margin: 0px 16px;
+  }
+
+  .payment .payment-contant .block.steps .step-1 .content {
+    width: 49%;
+    gap: 10px;
+  }
+
+  .payment .payment-contant .block.steps .step-1 .content .text_variant_h3 {
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  .payment
+    .payment-contant
+    .block.steps
+    .step-1
+    .content
+    .text_variant_h3_regular {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .payment .payment-contant .block.steps .step-2 .text_variant_h3_regular,
+  .payment .payment-contant .block.steps .step-3 .text_variant_h3_regular {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .payment .payment-contant .block.select-payment .proceed {
+    margin-top: 40px;
+  }
+
+  .payment
+    .payment-contant
+    .block.select-payment
+    .proceed
+    .btn-container
+    .text {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .payment .payment-contant .block.select-payment .proceed > a {
+    margin-top: 25px;
+    font-size: 18px;
+  }
+
+  .payment .payment-contant .block.select-payment .proceed > .text:first-child {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .payment .payment-contant .block.select-payment .proceed > a > .text {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .modal .modal-content .amount .input input,
+  .payment .payment-contant .block.select-payment .amount .input input {
+    font-size: 18px;
+    width: 140px;
+  }
 }

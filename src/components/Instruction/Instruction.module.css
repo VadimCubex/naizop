@@ -1,0 +1,13 @@
+@import "./InstructionVariants/InstructionPayeer.module.css";
+
+.instruction {
+  display: flex;
+}
+
+.instruction .svgIcon {
+  margin-top: 2px;
+}
+
+.instruction .svgIcon path {
+  fill: var(--white) !important;
+}

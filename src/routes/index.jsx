@@ -13,6 +13,8 @@ import Home from "../pages/Home/Home";
 import MassOrder from "../pages/MassOrder/MassOrder";
 import Orders from "../pages/Orders/Orders";
 import Payment from "../pages/Payment/Payment";
+import PaymentError from "../pages/PaymentError/PaymentError";
+import PaymentHistory from "../pages/PaymentHistory/PaymentHistory";
 import PlaceNewOrder from "../pages/PlaceNewOrder/PlaceNewOrder";
 import RedeemHistory from "../pages/RedeemHistory/RedeemHistory";
 import RedeemSupport from "../pages/RedeemSupport/RedeemSupport";
@@ -49,6 +51,11 @@ const NaizopRoutes = () => {
         <Route path="/profile/orders" element={<Orders />} />
         <Route path="/profile/subscriptions" element={<Subscriptions />} />
         <Route path="/profile/add-funds" element={<Payment />} />
+        <Route
+          path="/profile/add-funds/payment-history"
+          element={<PaymentHistory />}
+        />
+        <Route path="/profile/add-funds/error" element={<PaymentError />} />
         <Route path="/profile/support" element={<Dashboard />} />
         <Route path="/profile/affiliates" element={<Dashboard />} />
         <Route path="/profile/favorites" element={<Dashboard />} />

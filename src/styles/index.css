@@ -30,6 +30,7 @@
 @import "../components/HowItWorks/HowItWorks.module.css";
 @import "../components/Tabs/Tabs.module.css";
 @import "../components/NewOrder/NewOrder.module.css";
+@import "../components/Instruction/Instruction.module.css";
 
 @import "./App.css";
 @import "./normalize.css";
@@ -48,6 +49,8 @@
 @import "../pages/MassOrder/MassOrder.module.css";
 @import "../pages/PlaceNewOrder/PlaceNewOrder.module.css";
 @import "../pages/Payment/Payment.module.css";
+@import "../pages/PaymentError/PaymentError.module.css";
+@import "../pages/PaymentHistory/PaymentHistory.module.css";
 
 :root {
   --transition-property: all;

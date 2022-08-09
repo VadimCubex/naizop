@@ -56,9 +56,9 @@
   gap: 40px;
 }
 
-.background-img.profile-container {
+/* .background-img.profile-container {
   min-height: 860px;
-}
+} */
 
 .background-img {
   background: url("/public/images/Backgrounds/1440.png");

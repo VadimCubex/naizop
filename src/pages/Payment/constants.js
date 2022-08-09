@@ -1,4 +1,7 @@
-import { IconsVariants } from "../../constants/VariantsOfComponents";
+import {
+  IconsVariants,
+  InstructionVariants,
+} from "../../constants/VariantsOfComponents";
 
 export const Payments = [
   {
@@ -16,9 +19,10 @@ export const Payments = [
   {
     title: "Payeer - Skrill | Credit Card",
     icon: IconsVariants.Payeer,
+    instruction: InstructionVariants.Payeer,
   },
   {
-    title: "BiPerfect Moneytcoin",
+    title: "Perfect Money",
     icon: IconsVariants.Perfect_money,
   },
 ];

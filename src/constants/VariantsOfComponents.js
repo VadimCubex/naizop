@@ -114,6 +114,7 @@ export const IconsVariants = {
   Twitter_color: "/icons/Color/Twitter.svg",
   Youtube_color: "/icons/Color/Youtube.svg",
   Trustpilot: "/icons/Color/Trustpilot.svg",
+  Step_arrow: "/icons/Color/Step.svg",
 
   Logo: "/logo.svg",
   Logo_2: "/logo 2.svg",
@@ -132,6 +133,7 @@ export const ImagesVariants = {
   Experience: "/images/Home/Experience.png",
   Excellence: "/images/Home/Excellence.png",
   profile: "/images/Profile/Profile.svg",
+  Card: "/images/Payment/Card.png",
 
   Workspace1: "/images/About/Workspace1.png",
   Workspace2: "/images/About/Workspace2.png",
@@ -224,6 +226,7 @@ export const TableVariants = {
   Orders: "orders",
   Service: "service",
   Service_detail: "serviceDetail",
+  Payment: "payment",
 };
 
 export const StatusVariants = {
@@ -233,4 +236,8 @@ export const StatusVariants = {
   processing: "processing",
   ["in-progress"]: "in-progress",
   completed: "completed",
+};
+
+export const InstructionVariants = {
+  Payeer: "payeer",
 };
