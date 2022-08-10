@@ -92,6 +92,10 @@ export const IconsVariants = {
   Arrow_right: "/icons/Stroke/Arrow right.svg",
   Arrow_left: "/icons/Stroke/Arrow left.svg",
   Burger: "/icons/Stroke/Burger.svg",
+  Chat: "/icons/Stroke/Chat.svg",
+  Group: "/icons/Stroke/Group.svg",
+  Thunder: "/icons/Stroke/Thunder.svg",
+  Unlock: "/icons/Stroke/Unlock.svg",
   // Color
   Bitcoin: "/icons/Color/Bitcoin.svg",
   Crypto: "/icons/Color/Crypto.svg",
@@ -134,6 +138,10 @@ export const ImagesVariants = {
   Excellence: "/images/Home/Excellence.png",
   profile: "/images/Profile/Profile.svg",
   Card: "/images/Payment/Card.png",
+  Like: "/images/BestQualityService/Like.png",
+  Chat: "/images/BestQualityService/Chat.png",
+  Star: "/images/BestQualityService/Star.png",
+  BestQualityService_Slider: "/images/BestQualityService/Slider.png",
 
   Workspace1: "/images/About/Workspace1.png",
   Workspace2: "/images/About/Workspace2.png",

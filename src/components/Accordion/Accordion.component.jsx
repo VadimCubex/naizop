@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import classNames from "classnames";
-import { SvgIcon } from "../SvgIcon";
-import { Text } from "../Text";
+
 import {
   DropDownVariants,
   TextVariants,
 } from "../../constants/VariantsOfComponents";
 import { DropDown, DropDownOpenButton } from "../DropDown";
+import { SvgIcon } from "../SvgIcon";
+import { Text } from "../Text";
 
 export const AccordionComponent = ({
   icon,

@@ -60,10 +60,14 @@
   min-height: 860px;
 } */
 
+/* .background-img.container {
+  min-height: 860px;
+} */
+
 .background-img {
   background: url("/public/images/Backgrounds/1440.png");
   background-size: cover !important;
-  background-position: right !important;
+  background-position: center !important;
 }
 
 .profile-container.background-img {

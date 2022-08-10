@@ -1,0 +1,24 @@
+.slider-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.slider-container > .text {
+  align-self: center;
+  margin-bottom: 30px;
+}
+
+.slider-container .slides-container {
+  position: relative;
+  display: flex;
+}
+
+.slider-container .slides-container .card {
+  display: flex;
+}
+
+.slider-container .slides-container .card .info > .text {
+}

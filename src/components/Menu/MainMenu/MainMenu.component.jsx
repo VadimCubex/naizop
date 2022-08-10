@@ -20,7 +20,7 @@ export const MainMenuComponent = () => {
   const [isShowBurger, setIsShowBurger] = useState(false);
   const [active, setActive] = useState("");
   const location = useLocation();
-  const navigation = useNavigate();
+  const navigate = useNavigate();
 
   const MainMenuClass = classNames("mainMenu");
   const NavBurgerClass = classNames("nav-burger", {
@@ -28,7 +28,7 @@ export const MainMenuComponent = () => {
   });
 
   const handleClickLogin = () => {
-    navigation("/profile");
+    navigate("/profile");
   };
 
   const handleClickBurger = () => {
@@ -37,6 +37,7 @@ export const MainMenuComponent = () => {
 
   const handleClickItem = (item) => {
     if (item.text !== "Tools") {
+      navigate(item.link);
       setActive(location.pathname);
       setIsShowTools(false);
       setIsShowBurger(false);
@@ -71,11 +72,12 @@ export const MainMenuComponent = () => {
               {NavLinks.map((item, index) => (
                 <li
                   className={`nav-list-item cursor-pointer ${
-                    (active === item.link || active === item.text) &&
-                    "nav-item-active"
+                    active === item.link || active === item.text
+                      ? "nav-item-active"
+                      : ""
                   }`}
                   onClick={() => {
-                    handleClickItem(item, index);
+                    handleClickItem(item);
                   }}
                   key={index}
                 >
@@ -98,8 +100,12 @@ export const MainMenuComponent = () => {
             </ul>
             <div className="nav-button-container">
               <Button
+                className={`best-quality-button ${
+                  active === "/best-quality-service" ? "active" : ""
+                }`}
                 variant={ButtonVariants.default}
                 text="Best quality services"
+                onClick={() => navigate("/best-quality-service")}
               />
               <div className="auth-buttons">
                 <Button
@@ -139,18 +145,16 @@ export const MainMenuComponent = () => {
                       "nav-item-active"
                     }`}
                     onClick={() => {
-                      handleClickItem(item, index);
+                      handleClickItem(item);
                     }}
                     key={index}
                   >
                     {item.text !== "Tools" ? (
                       <>
                         <hr className="nav-hr" />
-                        <Link to={item.link ? item.link : ""}>
-                          <Text variant={TextVariants.h3}>{`${item.text} ${
-                            active === item.link ? "." : " "
-                          }`}</Text>
-                        </Link>
+                        <Text variant={TextVariants.h3}>{`${item.text} ${
+                          active === item.link ? "." : " "
+                        }`}</Text>
                       </>
                     ) : (
                       <div style={{ display: "flex", flexDirection: "column" }}>
@@ -179,8 +183,12 @@ export const MainMenuComponent = () => {
               </ul>
               <div className="nav-button-container">
                 <Button
+                  className={`best-quality-button ${
+                    active === "/best-quality-service" ? "active" : ""
+                  }`}
                   variant={ButtonVariants.default}
                   text="Best quality services"
+                  onClick={() => navigate("/best-quality-service")}
                 />
                 <div className="auth-buttons">
                   <Button

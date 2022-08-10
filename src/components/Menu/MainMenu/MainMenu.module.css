@@ -84,6 +84,7 @@
 .nav-list {
   align-self: flex-start;
   list-style: none;
+  text-decoration: none;
   margin: 0;
   padding: 0;
   color: var(--white);
@@ -157,6 +158,19 @@
 
 .nav-burger-container {
   width: 100%;
+}
+
+.best-quality-button.active .text {
+  background: radial-gradient(
+      138.8% 1270% at -24.32% 240%,
+      #ffffff 0%,
+      #85f7e2 47.4%,
+      #ffb60e 100%
+    ),
+    #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .nav-burger .nav-list {

@@ -31,6 +31,8 @@
 @import "../components/Tabs/Tabs.module.css";
 @import "../components/NewOrder/NewOrder.module.css";
 @import "../components/Instruction/Instruction.module.css";
+@import "../components/ReasonsToUse/ReasonsToUse.module.css";
+@import "../components/SliderReviews/SliderReviews.module.css";
 
 @import "./App.css";
 @import "./normalize.css";
@@ -51,6 +53,7 @@
 @import "../pages/Payment/Payment.module.css";
 @import "../pages/PaymentError/PaymentError.module.css";
 @import "../pages/PaymentHistory/PaymentHistory.module.css";
+@import "../pages/BestQualityService/BestQualityService.module.css";
 
 :root {
   --transition-property: all;
@@ -69,7 +72,6 @@ html {
   min-height: 590px;
   transition: var(--transition-property) 0s var(--transition-function);
   min-width: 280px;
-  height: 100%;
 }
 
 * {

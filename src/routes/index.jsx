@@ -7,6 +7,7 @@ import About from "../pages/About/About";
 import Account from "../pages/Account/Account";
 import AllServices from "../pages/AllServices/AllServices";
 import Api from "../pages/Api/Api";
+import BestQualityService from "../pages/BestQualityService/BestQualityService";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import FAQ from "../pages/FAQ/FAQ";
 import Home from "../pages/Home/Home";
@@ -34,6 +35,7 @@ const NaizopRoutes = () => {
         <Route path="/faq" element={<FAQ className="background-img" />} />
         <Route path="/blog" element={<Home />} />
         <Route path="/about" element={<About className="background-img" />} />
+        <Route path="/best-quality-service" element={<BestQualityService />} />
       </Route>
       <Route path="/profile" element={<ProfileLayout />}>
         <Route index element={<Dashboard />} />
