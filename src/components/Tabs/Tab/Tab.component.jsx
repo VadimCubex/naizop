@@ -4,14 +4,8 @@ import classNames from "classnames";
 import { TextVariants } from "../../../constants/VariantsOfComponents";
 import { Text } from "../../Text";
 
-export const TabComponent = ({ variant, title, titleComponent, className }) => {
-  const TabClass = classNames(
-    "tab",
-    {
-      [`tab_variant_${variant}`]: variant,
-    },
-    className
-  );
+export const TabComponent = ({ title, titleComponent, className }) => {
+  const TabClass = classNames("tab", className);
 
   return (
     <div className={TabClass}>

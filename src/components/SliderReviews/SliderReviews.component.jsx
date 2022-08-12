@@ -3,14 +3,12 @@ import { useEffect } from "react";
 import { useLayoutEffect } from "react";
 
 import {
-  ButtonSizeVariants,
-  ButtonVariants,
   IconsVariants,
   TextVariants,
 } from "../../constants/VariantsOfComponents";
 import { debounce } from "../../helpers/helpers";
 import { Avatar } from "../Avatar";
-import { Button } from "../Button";
+import { SvgIcon } from "../SvgIcon";
 import { Text } from "../Text";
 
 export const SliderReviewsComponent = ({ title, slides }) => {
@@ -52,31 +50,40 @@ export const SliderReviewsComponent = ({ title, slides }) => {
             key={index}
             className="card"
           >
-            <div className="person">
-              <Avatar src={item.avatar} />
-              <Text variant={TextVariants.h1}>{item.username}</Text>
-              <div className="stars">
-                {[...Array(item.stars)].map((item, index) => (
-                  <div key={index}></div>
-                ))}
+            <div className="card-contant">
+              <div className="person">
+                <Avatar src={item.avatar} isLight={true} />
+
+                <div className="person-info">
+                  <Text variant={TextVariants.h1}>{item.username}</Text>
+                  <div className="stars">
+                    {[...Array(item.stars)].map((item, index) => (
+                      <Text variant={TextVariants.h1} key={index}>
+                        ★
+                      </Text>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="separator"></div>
-            <div className="info">
-              <Text variant={TextVariants.h3_regular}>{item.description}</Text>
+              <div className="separator"></div>
+              <div className="info">
+                <Text variant={TextVariants.h3_regular}>
+                  {item.description}
+                </Text>
+              </div>
             </div>
           </div>
         ))}
       </div>
       <div className="slider-tools">
-        <Button
+        <div
           onClick={() => {
             handleClick(selected - 1);
           }}
-          variant={ButtonVariants.purchase}
-          size={ButtonSizeVariants.extra_large}
-          icon={IconsVariants.Arrow_left}
-        />
+          className="arrow"
+        >
+          <SvgIcon src={IconsVariants.Arrow_stroke_left} size={42} />
+        </div>
         <div className="sticks-container">
           {slides.map((item, index) => (
             <hr
@@ -85,14 +92,26 @@ export const SliderReviewsComponent = ({ title, slides }) => {
             />
           ))}
         </div>
-        <Button
+        <div
           onClick={() => {
             handleClick(selected + 1);
           }}
-          variant={ButtonVariants.purchase}
-          size={ButtonSizeVariants.extra_large}
-          icon={IconsVariants.Arrow_right}
-        />
+          className="arrow"
+        >
+          <SvgIcon
+            src={IconsVariants.Arrow_stroke_left}
+            size={42}
+            rotate="180"
+          />
+        </div>
+      </div>
+      <div className="sticks-container">
+        {slides.map((item, index) => (
+          <hr
+            key={index}
+            className={`${index === selected ? " active" : ""}`}
+          />
+        ))}
       </div>
     </div>
   );

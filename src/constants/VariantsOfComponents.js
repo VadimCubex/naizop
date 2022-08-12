@@ -59,6 +59,7 @@ export const IconsVariants = {
   History: "/icons/Stroke/History.svg",
   Info: "/icons/Stroke/Info.svg",
   Instagram: "/icons/Stroke/Instagram.svg",
+  Linkedin_stroke: "/icons/Stroke/Linkedin.svg",
   Live_DW: "/icons/Stroke/Live DW.svg",
   Live_followers_counter: "/icons/Stroke/Live followers counter.svg",
   Okay: "/icons/Stroke/Okay.svg",
@@ -96,6 +97,7 @@ export const IconsVariants = {
   Group: "/icons/Stroke/Group.svg",
   Thunder: "/icons/Stroke/Thunder.svg",
   Unlock: "/icons/Stroke/Unlock.svg",
+  Arrow_stroke_left: "/icons/Stroke/Arrow_stroke_left.svg",
   // Color
   Bitcoin: "/icons/Color/Bitcoin.svg",
   Crypto: "/icons/Color/Crypto.svg",
@@ -120,6 +122,11 @@ export const IconsVariants = {
   Trustpilot: "/icons/Color/Trustpilot.svg",
   Step_arrow: "/icons/Color/Step.svg",
 
+  Heart_2: "/icons/Best/Heart.svg",
+  Comments: "/icons/Best/Comments.svg",
+  Send: "/icons/Best/Send.svg",
+  User: "/icons/Best/User.svg",
+
   Logo: "/logo.svg",
   Logo_2: "/logo 2.svg",
   Arc: "/icons/Color/arc.svg",
@@ -141,7 +148,7 @@ export const ImagesVariants = {
   Like: "/images/BestQualityService/Like.png",
   Chat: "/images/BestQualityService/Chat.png",
   Star: "/images/BestQualityService/Star.png",
-  BestQualityService_Slider: "/images/BestQualityService/Slider.png",
+  BestQualityService_Slider: "/images/BestQualityService/Slider.svg",
 
   Workspace1: "/images/About/Workspace1.png",
   Workspace2: "/images/About/Workspace2.png",
@@ -248,4 +255,9 @@ export const StatusVariants = {
 
 export const InstructionVariants = {
   Payeer: "payeer",
+};
+
+export const TabsVariants = {
+  Default: "default",
+  Outline: "outline",
 };

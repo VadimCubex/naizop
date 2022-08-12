@@ -77,3 +77,94 @@ export const FAQInfoSecondPart = [
     ],
   },
 ];
+
+export const TabsName = [
+  {
+    title: "Instagram",
+    icon: IconsVariants.Instagram_color,
+    icon_stroke: IconsVariants.Instagram,
+  },
+  {
+    title: "YouTube",
+    icon: IconsVariants.Youtube_color,
+    icon_stroke: IconsVariants.Youtube,
+  },
+  {
+    title: "TikTok",
+    icon: IconsVariants.Tiktok_color,
+    icon_stroke: IconsVariants.Tiktok,
+  },
+  {
+    title: "Twitter",
+    icon: IconsVariants.Twitter_color,
+    icon_stroke: IconsVariants.Twitter,
+  },
+  {
+    title: "LinkedIn",
+    icon: IconsVariants.Linkedin,
+    icon_stroke: IconsVariants.Linkedin_stroke,
+  },
+  {
+    title: "Twitch",
+    icon: IconsVariants.Twitch_color,
+    icon_stroke: IconsVariants.Twitch,
+  },
+];
+
+export const CategoryToIncrease = [
+  {
+    icon: IconsVariants.Heart_2,
+    title: "Likes",
+    value: "likes",
+  },
+  {
+    icon: IconsVariants.Comments,
+    title: "Comments",
+    value: "comments",
+  },
+  {
+    icon: IconsVariants.User,
+    title: "Followers",
+    value: "followers",
+  },
+  {
+    icon: IconsVariants.Send,
+    title: "Shares",
+    value: "shares",
+  },
+];
+
+export const SaleForCategory = [
+  {
+    count: 50,
+    sale: 0,
+  },
+  {
+    count: 100,
+    sale: 20,
+  },
+  {
+    count: 250,
+    sale: 30,
+  },
+  {
+    count: 500,
+    sale: 40,
+  },
+  {
+    count: 1000,
+    sale: 50,
+  },
+  {
+    count: 2500,
+    sale: 60,
+  },
+  {
+    count: 5000,
+    sale: 70,
+  },
+  {
+    count: 10000,
+    sale: 80,
+  },
+];

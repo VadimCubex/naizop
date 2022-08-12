@@ -1,0 +1,8 @@
+.tabs.tabs_default .tabPanel {
+  background: rgba(30, 33, 36, 0.75);
+}
+
+.tabs.tabs_outline .tabPanel {
+  padding: 60px 20px 50px;
+  background: rgba(30, 33, 36, 0.74);
+}

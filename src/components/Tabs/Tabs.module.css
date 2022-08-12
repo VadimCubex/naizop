@@ -12,15 +12,18 @@
 .tabs > li {
   cursor: pointer;
   flex: 1;
+}
+
+.tabs.tabs_default > li {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-.tabs > li .text {
+.tabs.tabs_default > li .text {
   opacity: 0.5;
 }
 
-.tabs > li.active {
+.tabs.tabs_default > li.active {
   background: linear-gradient(
       0deg,
       rgba(30, 33, 36, 0.75),
@@ -33,6 +36,43 @@
     );
 }
 
-.tabs > li.active .text {
+.tabs.tabs_default > li.active .text {
   opacity: 1;
+}
+
+.tabs.tabs_outline {
+  position: relative;
+  background: rgba(30, 33, 36, 0.74);
+  padding: 0px 20px;
+}
+
+.tabs.tabs_outline > li {
+  color: #9aa6b7;
+}
+.tabs.tabs_outline > li .tab-line {
+  width: 100%;
+  height: 2px;
+  background: var(--white);
+  opacity: 0;
+}
+.tabs.tabs_outline > li path {
+  stroke: #9aa6b7;
+}
+.tabs.tabs_outline .tabs-line {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0px;
+  margin-left: -20px;
+  background: var(--light-blue-15);
+}
+
+.tabs.tabs_outline > li.active {
+  color: var(--white);
+}
+.tabs.tabs_outline > li.active .tab-line {
+  opacity: 1;
+}
+.tabs.tabs_outline > li.active path {
+  stroke: var(--white);
 }

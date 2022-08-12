@@ -19,6 +19,12 @@
   --yellow-dark: #ff9900;
 
   /* Gradients */
+  --gradient-border: radial-gradient(
+    152.28% 83.14% at 0 -0%,
+    #61686d 0%,
+    #243038 100%
+  );
+
   --gradient-green-yellow-light: radial-gradient(
     167.52% 820.83% at -36.22% 213.33%,
     #ffffff 0%,

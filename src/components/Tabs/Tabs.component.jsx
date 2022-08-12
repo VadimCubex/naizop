@@ -1,8 +1,20 @@
 import React from "react";
 import classNames from "classnames";
 
-export const TabsComponent = ({ children, active, onClick, className }) => {
-  const TabsClass = classNames("tabs", className);
+export const TabsComponent = ({
+  children,
+  variant,
+  active,
+  onClick,
+  className,
+}) => {
+  const TabsClass = classNames(
+    "tabs",
+    {
+      [`tabs_${variant}`]: variant,
+    },
+    className
+  );
 
   return (
     <ul className={TabsClass}>
@@ -15,8 +27,10 @@ export const TabsComponent = ({ children, active, onClick, className }) => {
           }}
         >
           {child}
+          {variant === "outline" && <div className="tab-line"></div>}
         </li>
       ))}
+      {variant === "outline" && <div className="tabs-line"></div>}
     </ul>
   );
 };

@@ -1,8 +1,28 @@
 .reasons-to-use {
   color: var(--white);
+  padding: 0px 20px 120px;
+  background: rgba(30, 33, 36, 0.74);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.reasons-to-use .advantages-container {
+  overflow: scroll;
+  display: flex;
+  margin: 0px -20px;
+  padding: 0px 20px;
+}
+
+.reasons-to-use .advantages-container::-webkit-scrollbar {
+  display: none;
+}
+
+.reasons-to-use .advantages-container::-webkit-scrollbar-thumb {
+  display: none;
 }
 
 .reasons-to-use .advantages {
+  width: 100%;
   margin-top: 100px;
   margin-bottom: 70px;
   display: flex;
@@ -34,18 +54,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 40px 20px;
+  padding: 0px 40px;
 }
 
-.reasons-to-use .advantages .advanteg-container .advanteg .icon {
+.reasons-to-use .advantages .advanteg-container .advanteg .for-svg {
   width: 50px;
   height: 50px;
-  background: var(--gradient-yellow);
+  padding: 1px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  background: var(--gradient-border);
+}
+
+.reasons-to-use .advantages .advanteg-container .advanteg .for-svg > div {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  margin-bottom: 20px;
+  background: radial-gradient(
+    104.67% 88.56% at 40% 0.11%,
+    #2e475e 0%,
+    #212a34 100%
+  );
 }
 
 .reasons-to-use .reasons,
@@ -54,6 +86,11 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 120px;
+}
+
+.reasons-to-use .reasons > .text,
+.reasons-to-use .ready > .text {
+  text-align: center;
 }
 
 .reasons-to-use .ready .text_variant_h4_regular {
@@ -101,7 +138,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
 }
 
 .reasons-to-use .reasons > .text {
@@ -129,4 +165,70 @@
   .dropDown_variant_accordion
   .text_variant_h5_regular {
   opacity: 0.7;
+}
+
+@media (max-width: 1439px) {
+  .reasons-to-use .advantages {
+    width: fit-content;
+  }
+  .reasons-to-use .advantages .advanteg-container {
+    width: 235px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .reasons-to-use .advantages .advanteg-container {
+    width: 211px;
+  }
+  .reasons-to-use .advantages .advanteg-container .advanteg {
+    padding: 0px 30px;
+  }
+  .reasons-to-use .advantages .advanteg-container .advanteg .for-svg {
+    margin-bottom: 15px;
+  }
+  .reasons-to-use .ready .ready-cards-container {
+    margin-top: 30px;
+  }
+  .reasons-to-use .reasons,
+  .reasons-to-use .ready {
+    margin-bottom: 85px;
+  }
+}
+
+@media (max-width: 834px) {
+  .reasons-to-use .advantages .advanteg-container {
+    width: 187px;
+  }
+  .reasons-to-use .ready .ready-cards-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .reasons-to-use .reasons .reasons-accordions-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .reasons-to-use .reasons,
+  .reasons-to-use .ready {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 425px) {
+  .reasons-to-use .advantages {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px 0px;
+  }
+  .reasons-to-use .advantages .advanteg-container {
+    width: 153px;
+  }
+  .reasons-to-use .advantages .advanteg-container .advanteg {
+    padding: 0px 20px;
+  }
+  .reasons-to-use .advantages .advanteg-container .advanteg .for-svg {
+    margin-bottom: 10px;
+  }
+  .reasons-to-use .ready .ready-cards-container {
+    margin-top: 20px;
+  }
 }

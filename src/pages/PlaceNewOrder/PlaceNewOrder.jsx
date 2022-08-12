@@ -11,6 +11,7 @@ import { Text } from "../../components/Text";
 import {
   ButtonSizeVariants,
   ButtonVariants,
+  TabsVariants,
   TextVariants,
 } from "../../constants/VariantsOfComponents";
 import { RecommendedService } from "../MassOrder/constants";
@@ -34,7 +35,11 @@ const PlaceNewOrder = () => {
 
         <div className="place-new-order-contant">
           <div className="tabs-container">
-            <Tabs active={activeTab} onClick={handleClick}>
+            <Tabs
+              variant={TabsVariants.Default}
+              active={activeTab}
+              onClick={handleClick}
+            >
               <Tab title="New" />
               <Tab title="Favourite" />
             </Tabs>

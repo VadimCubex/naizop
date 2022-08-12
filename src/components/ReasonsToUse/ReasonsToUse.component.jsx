@@ -22,22 +22,26 @@ export const ReasonsToUseComponent = ({ className }) => {
 
   return (
     <div className={ReasonsToUseClass}>
-      <div className="advantages">
-        {Advantages.map((item, index) => (
-          <div key={index} className="advanteg-container">
-            {index !== 0 && <div className="separator"></div>}
-            <div className="advanteg">
-              <div className="icon">
-                <SvgIcon
-                  src={item.icon}
-                  size={30}
-                  color={ColorSvgVariants.white}
-                />
+      <div className="advantages-container">
+        <div className="advantages">
+          {Advantages.map((item, index) => (
+            <div key={index} className="advanteg-container">
+              {index !== 0 && <div className="separator"></div>}
+              <div className="advanteg">
+                <div className="for-svg">
+                  <div>
+                    <SvgIcon
+                      src={item.icon}
+                      size={30}
+                      color={ColorSvgVariants.white}
+                    />
+                  </div>
+                </div>
+                <Text variant={TextVariants.h4_regular}>{item.text}</Text>
               </div>
-              <Text variant={TextVariants.h4_regular}>{item.text}</Text>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
       <div className="ready">
         <Text variant={TextVariants.h1}>Ready to buy Instagram followers?</Text>

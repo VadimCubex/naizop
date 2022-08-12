@@ -13,6 +13,10 @@
   gap: 20px;
 }
 
+.place-new-order .place-new-order-contant .tab {
+  padding: 20px;
+}
+
 .place-new-order .tabs-container {
   width: 59%;
 }
@@ -24,7 +28,7 @@
   height: fit-content;
   border-radius: 0px 0px 10px 10px;
   border: none;
-  background: rgba(30, 33, 36, 0.75);
+  background: unset;
 }
 
 .place-new-order .block > hr {

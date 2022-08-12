@@ -1,14 +1,42 @@
 import React from "react";
+import { useState } from "react";
 import { useEffect } from "react";
 
+import { SalesCard } from "../../components/Cards";
+import { Modal } from "../../components/Modal";
 import { ReasonsToUse } from "../../components/ReasonsToUse";
-
-// import { Accordion } from "../../components/Accordion";
-// import { Text } from "../../components/Text";
-// import { FAQInfoFirstPart, FAQInfoSecondPart } from "./constants";
-// import { TextVariants } from "../../constants/VariantsOfComponents";
+import { Select } from "../../components/Select";
+import { SvgIcon } from "../../components/SvgIcon";
+import { Tab, TabPanel, Tabs } from "../../components/Tabs";
+import { Text } from "../../components/Text";
+import { CategoryToIncrease, TabsName, SaleForCategory } from "./constants";
+import {
+  ColorSvgVariants,
+  IconsVariants,
+  SelectOptionVariants,
+  TabsVariants,
+  TextVariants,
+} from "../../constants/VariantsOfComponents";
 
 const BestQualityService = () => {
+  const [highModal, setHighModal] = useState(false);
+  const [premiumModal, setPremiumModal] = useState(false);
+  const [activeTab, setActiveTab] = useState(0);
+  const [activeSale, setActiveSale] = useState({});
+  const [activeSubTab, setActiveSubTab] = useState(0);
+  const [activeSocial, setActiveSocial] = useState(TabsName[0]);
+  const [selectedCategory, setSelectedCategory] = useState(
+    CategoryToIncrease[0]
+  );
+
+  const handleClickTab = (event, active) => {
+    setActiveTab(active);
+  };
+
+  const handleClickSubTab = (event, active) => {
+    setActiveSubTab(active);
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -16,7 +44,245 @@ const BestQualityService = () => {
   return (
     <>
       <div className="best-quality-service container background-img">
-        <ReasonsToUse />
+        <div className="best-quality-service-contant">
+          <Tabs
+            variant={TabsVariants.Default}
+            active={activeTab}
+            onClick={handleClickTab}
+          >
+            {TabsName.map((item, index) => (
+              <Tab
+                key={index}
+                titleComponent={
+                  <div
+                    onClick={() => {
+                      setActiveSocial(item);
+                    }}
+                    className="tab-title"
+                  >
+                    <SvgIcon src={item.icon} />
+                    <Text variant={TextVariants.h2_medium}>{item.title}</Text>
+                  </div>
+                }
+              />
+            ))}
+          </Tabs>
+          <div className="top">
+            <div className="category">
+              <Select
+                onClick={setSelectedCategory}
+                selected={selectedCategory}
+                variant={SelectOptionVariants.default}
+                options={CategoryToIncrease}
+              />
+            </div>
+            <div className="motivation">
+              <div>
+                <SvgIcon src={activeSocial.icon} size={32} />
+              </div>
+              <Text className="grotesk">
+                Buy {activeSocial.title} {selectedCategory.title} with NAIZOP
+              </Text>
+            </div>
+            <div className="motivation">
+              <div>
+                <SvgIcon
+                  src={activeSocial.icon_stroke}
+                  color={ColorSvgVariants.white}
+                  size={24}
+                />
+              </div>
+              <Text className="circe">
+                At NAIZOP, you can buy {activeSocial.title}{" "}
+                {selectedCategory.value} quickly, safely and easily with just a
+                few clicks. See our deals below!
+              </Text>
+            </div>
+          </div>
+          <div className="quality">
+            <Tabs
+              active={activeSubTab}
+              onClick={handleClickSubTab}
+              variant={TabsVariants.Outline}
+            >
+              <Tab
+                titleComponent={
+                  <div className="subtab-title">
+                    <div className="info">
+                      <SvgIcon
+                        src={activeSocial.icon_stroke}
+                        color={ColorSvgVariants.white}
+                      />
+                      <Text variant={TextVariants.h3}>
+                        High Quality {selectedCategory.title}
+                      </Text>
+                    </div>
+                    <SvgIcon
+                      onClick={(event) => {
+                        setHighModal(true);
+                        event.stopPropagation();
+                      }}
+                      src={IconsVariants.Question}
+                      color={ColorSvgVariants.white}
+                      size={20}
+                    />
+                  </div>
+                }
+              />
+              <Tab
+                titleComponent={
+                  <div className="subtab-title">
+                    <div className="info">
+                      <SvgIcon
+                        src={activeSocial.icon_stroke}
+                        color={ColorSvgVariants.white}
+                      />
+                      <Text variant={TextVariants.h3}>
+                        Premium Quality {selectedCategory.title}
+                      </Text>
+                    </div>
+                    <SvgIcon
+                      onClick={(event) => {
+                        setPremiumModal(true);
+                        event.stopPropagation();
+                      }}
+                      src={IconsVariants.Question}
+                      color={ColorSvgVariants.white}
+                      size={20}
+                    />
+                  </div>
+                }
+              />
+            </Tabs>
+            <TabPanel active={activeSubTab} index={0}>
+              <div className="sales-container">
+                <div className="cards">
+                  {SaleForCategory.map((item, index) => (
+                    <SalesCard
+                      onClick={() => setActiveSale(item)}
+                      key={index}
+                      item={item}
+                      category={selectedCategory.value}
+                      active={activeSale}
+                    />
+                  ))}
+                </div>
+              </div>
+            </TabPanel>
+            <TabPanel active={activeSubTab} index={1}></TabPanel>
+          </div>
+          <ReasonsToUse />
+        </div>
+        <Modal
+          className="high-quality"
+          onClick={() => setHighModal(false)}
+          title={`High Quality ${selectedCategory.title}`}
+          isOpen={highModal}
+        >
+          <ul>
+            <li>
+              <Text variant={TextVariants.h5_regular}>
+                <Text variant={TextVariants.h5}>REAL</Text>{" "}
+                {selectedCategory.value} from{" "}
+                <Text variant={TextVariants.h5}>REAL</Text> people{" "}
+              </Text>
+            </li>
+            <li>
+              <Text variant={TextVariants.h5_regular}>
+                Guaranteed{" "}
+                <Text variant={TextVariants.h5}>Instant Delivery</Text>
+              </Text>
+            </li>
+            <li>
+              <Text variant={TextVariants.h5_regular}>
+                Option to{" "}
+                <Text variant={TextVariants.h5}>
+                  SPLIT {selectedCategory.title}
+                </Text>{" "}
+                on multiple pictures
+              </Text>
+            </li>
+            <li>
+              <Text variant={TextVariants.h5_regular}>
+                Includes video views
+              </Text>
+            </li>
+            <li>
+              <Text variant={TextVariants.h5_regular}>
+                <Text variant={TextVariants.h5}>No password</Text> required
+              </Text>
+            </li>
+            <li>
+              <Text variant={TextVariants.h5_regular}>
+                Fast Delivery{" "}
+                <Text variant={TextVariants.h5}>(gradual or instant)</Text>
+              </Text>
+            </li>
+            <li>
+              <Text variant={TextVariants.h5_regular}>
+                <Text variant={TextVariants.h5}>24/7</Text> support
+              </Text>
+            </li>
+          </ul>
+        </Modal>
+        <Modal
+          className="premium-quality"
+          onClick={() => setPremiumModal(false)}
+          title={`Premium Quality ${selectedCategory.title}`}
+          isOpen={premiumModal}
+        >
+          <ul>
+            <li>
+              <Text variant={TextVariants.h5_regular}>
+                <Text variant={TextVariants.h5}>REAL</Text>{" "}
+                {selectedCategory.value} from{" "}
+                <Text variant={TextVariants.h5}>REAL</Text> people{" "}
+              </Text>
+            </li>
+            <li>
+              <Text variant={TextVariants.h5_regular}>
+                Increased chance to reach{" "}
+                <Text variant={TextVariants.h5}>explore page</Text>
+              </Text>
+            </li>
+            <li>
+              <Text variant={TextVariants.h5_regular}>
+                Guaranteed{" "}
+                <Text variant={TextVariants.h5}>Instant Delivery</Text>
+              </Text>
+            </li>
+            <li>
+              <Text variant={TextVariants.h5_regular}>
+                Option to{" "}
+                <Text variant={TextVariants.h5}>
+                  SPLIT {selectedCategory.title}
+                </Text>{" "}
+                on multiple pictures
+              </Text>
+            </li>
+            <li>
+              <Text variant={TextVariants.h5_regular}>
+                Includes video views
+              </Text>
+            </li>
+            <li>
+              <Text variant={TextVariants.h5_regular}>
+                <Text variant={TextVariants.h5}>No password</Text> required
+              </Text>
+            </li>
+            <li>
+              <Text variant={TextVariants.h5_regular}>
+                Fast Delivery{" "}
+                <Text variant={TextVariants.h5}>(gradual or instant)</Text>
+              </Text>
+            </li>
+            <li>
+              <Text variant={TextVariants.h5_regular}>
+                <Text variant={TextVariants.h5}>24/7</Text> support
+              </Text>
+            </li>
+          </ul>
+        </Modal>
       </div>
     </>
   );

@@ -1,3 +1,7 @@
-.tab {
-  padding: 20px;
+.tabs.tabs_default .tab {
+  height: 70px;
+}
+
+.tabs.tabs_outline .tab {
+  padding-bottom: 15px;
 }

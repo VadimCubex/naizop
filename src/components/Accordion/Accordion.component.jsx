@@ -24,8 +24,10 @@ export const AccordionComponent = ({
       <div className={AccordionClass}>
         <div className="accordion-info">
           <div className="accordion-title">
-            <SvgIcon src={icon} size={24} />
-            <Text variant={TextVariants.h4}>{title}</Text>
+            <div className="accordion-title-contant">
+              <SvgIcon src={icon} size={24} />
+              <Text variant={TextVariants.h4}>{title}</Text>
+            </div>
             {badges && (
               <div className="accordion-badges">
                 {badges.map((item, index) => (
