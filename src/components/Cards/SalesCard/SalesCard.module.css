@@ -57,20 +57,22 @@
     rgba(217, 217, 217, 0.01);
 }
 
+.salesCard > div .text:last-child {
+  margin-top: 10px;
+  color: var(--yellow);
+}
+
 .salesCard .text {
   line-height: 20px;
 }
 
 @media (max-width: 1439px) {
   .salesCard {
-    width: 15%;
+    width: 20%;
   }
 }
 
 @media (max-width: 1024px) {
-  .salesCard {
-    width: 20%;
-  }
 }
 
 @media (max-width: 834px) {

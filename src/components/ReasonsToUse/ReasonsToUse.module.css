@@ -177,6 +177,9 @@
 }
 
 @media (max-width: 1024px) {
+  .reasons-to-use {
+    padding: 0px 20px 60px;
+  }
   .reasons-to-use .advantages .advanteg-container {
     width: 211px;
   }
@@ -196,6 +199,9 @@
 }
 
 @media (max-width: 834px) {
+  .reasons-to-use {
+    padding: 0px 20px 0px;
+  }
   .reasons-to-use .advantages .advanteg-container {
     width: 187px;
   }

@@ -1,0 +1,44 @@
+.order-detail {
+  position: relative;
+  color: var(--white);
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.order-detail .order-detail-background {
+  position: absolute;
+  background-image: url(/public/images/Backgrounds/orderDetail.png);
+  width: 120%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.order-detail .order-detail-contant {
+  display: flex;
+}
+.order-detail .order-detail-contant > div {
+  width: 50%;
+}
+
+.order-detail .block {
+  padding: 30px 20px 40px;
+}
+
+.order-detail .info {
+  margin-bottom: 20px;
+}
+
+.order-detail .info .text {
+  opacity: 0.75;
+}
+
+.order-detail .info .username {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.order-detail .info .input {
+  margin-top: 10px;
+}

@@ -12,6 +12,7 @@ import Dashboard from "../pages/Dashboard/Dashboard";
 import FAQ from "../pages/FAQ/FAQ";
 import Home from "../pages/Home/Home";
 import MassOrder from "../pages/MassOrder/MassOrder";
+import OrderDetail from "../pages/OrderDetail/OrderDetail";
 import Orders from "../pages/Orders/Orders";
 import Payment from "../pages/Payment/Payment";
 import PaymentError from "../pages/PaymentError/PaymentError";
@@ -36,6 +37,7 @@ const NaizopRoutes = () => {
         <Route path="/blog" element={<Home />} />
         <Route path="/about" element={<About className="background-img" />} />
         <Route path="/best-quality-service" element={<BestQualityService />} />
+        <Route path="/order-detail" element={<OrderDetail />} />
       </Route>
       <Route path="/profile" element={<ProfileLayout />}>
         <Route index element={<Dashboard />} />

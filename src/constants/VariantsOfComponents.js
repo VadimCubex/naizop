@@ -11,6 +11,7 @@ export const TextVariants = {
   h3_regular: "h3_regular",
   h4_regular: "h4_regular",
   h5_regular: "h5_regular",
+  title: "title",
 };
 
 export const IconsVariants = {

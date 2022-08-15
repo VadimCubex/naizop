@@ -33,6 +33,7 @@
 @import "../components/Instruction/Instruction.module.css";
 @import "../components/ReasonsToUse/ReasonsToUse.module.css";
 @import "../components/SliderReviews/SliderReviews.module.css";
+@import "../components/Steper/Steper.module.css";
 
 @import "./App.css";
 @import "./normalize.css";
@@ -54,6 +55,7 @@
 @import "../pages/PaymentError/PaymentError.module.css";
 @import "../pages/PaymentHistory/PaymentHistory.module.css";
 @import "../pages/BestQualityService/BestQualityService.module.css";
+@import "../pages/OrderDetail/OrderDetail.module.css";
 
 :root {
   --transition-property: all;

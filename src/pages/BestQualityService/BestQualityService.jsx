@@ -1,8 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
+import { Button } from "../../components/Button";
 import { SalesCard } from "../../components/Cards";
+import { Input } from "../../components/Input";
 import { Modal } from "../../components/Modal";
 import { ReasonsToUse } from "../../components/ReasonsToUse";
 import { Select } from "../../components/Select";
@@ -11,6 +14,8 @@ import { Tab, TabPanel, Tabs } from "../../components/Tabs";
 import { Text } from "../../components/Text";
 import { CategoryToIncrease, TabsName, SaleForCategory } from "./constants";
 import {
+  ButtonSizeVariants,
+  ButtonVariants,
   ColorSvgVariants,
   IconsVariants,
   SelectOptionVariants,
@@ -21,6 +26,7 @@ import {
 const BestQualityService = () => {
   const [highModal, setHighModal] = useState(false);
   const [premiumModal, setPremiumModal] = useState(false);
+  const [countingSales, setCountingSales] = useState("");
   const [activeTab, setActiveTab] = useState(0);
   const [activeSale, setActiveSale] = useState({});
   const [activeSubTab, setActiveSubTab] = useState(0);
@@ -28,6 +34,13 @@ const BestQualityService = () => {
   const [selectedCategory, setSelectedCategory] = useState(
     CategoryToIncrease[0]
   );
+  const navigate = useNavigate();
+
+  const handleClickContinue = () => {
+    navigate("/order-detail");
+    localStorage.setItem("social", JSON.stringify(activeSocial));
+    localStorage.setItem("category", JSON.stringify(selectedCategory));
+  };
 
   const handleClickTab = (event, active) => {
     setActiveTab(active);
@@ -54,19 +67,33 @@ const BestQualityService = () => {
               <Tab
                 key={index}
                 titleComponent={
-                  <div
-                    onClick={() => {
-                      setActiveSocial(item);
-                    }}
-                    className="tab-title"
-                  >
-                    <SvgIcon src={item.icon} />
-                    <Text variant={TextVariants.h2_medium}>{item.title}</Text>
-                  </div>
+                  <>
+                    <div
+                      onClick={() => {
+                        setActiveSocial(item);
+                      }}
+                      className="tab-title"
+                    >
+                      <SvgIcon src={item.icon} />
+                      <Text variant={TextVariants.h2_medium}>{item.title}</Text>
+                    </div>
+                    {activeTab - 1 === index ||
+                      (activeTab !== index && index !== TabsName.length - 1 && (
+                        <div className="separator"></div>
+                      ))}
+                  </>
                 }
               />
             ))}
           </Tabs>
+          <div className="select-tab">
+            <Select
+              onClick={setActiveSocial}
+              selected={activeSocial}
+              variant={SelectOptionVariants.default}
+              options={TabsName}
+            />
+          </div>
           <div className="top">
             <div className="category">
               <Select
@@ -80,7 +107,7 @@ const BestQualityService = () => {
               <div>
                 <SvgIcon src={activeSocial.icon} size={32} />
               </div>
-              <Text className="grotesk">
+              <Text variant={TextVariants.title}>
                 Buy {activeSocial.title} {selectedCategory.title} with NAIZOP
               </Text>
             </div>
@@ -166,6 +193,31 @@ const BestQualityService = () => {
                       active={activeSale}
                     />
                   ))}
+                </div>
+                <Text variant={TextVariants.h3}>Or Enter another quantity</Text>
+                <div className="sales-counting">
+                  <div className="sales-input">
+                    <Input
+                      placeholder="Enter quantity..."
+                      value={countingSales}
+                      onChange={(e) => setCountingSales(e.target.value)}
+                    />
+                  </div>
+                  <div className="continue">
+                    <div className="info">
+                      <Text variant={TextVariants.h5_regular}>
+                        You Save ${activeSale.sale}
+                      </Text>
+                      <div className="separator"></div>
+                      <Text variant={TextVariants.h1_medium}>$99</Text>
+                    </div>
+                    <Button
+                      onClick={handleClickContinue}
+                      variant={ButtonVariants.crypto}
+                      size={ButtonSizeVariants.extra_large}
+                      text="Continue"
+                    />
+                  </div>
                 </div>
               </div>
             </TabPanel>
