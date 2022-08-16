@@ -34,6 +34,8 @@
 @import "../components/ReasonsToUse/ReasonsToUse.module.css";
 @import "../components/SliderReviews/SliderReviews.module.css";
 @import "../components/Steper/Steper.module.css";
+@import "../components/SliderOrder/SliderOrder.module.css";
+@import "../components/Checkbox/Checkbox.module.css";
 
 @import "./App.css";
 @import "./normalize.css";

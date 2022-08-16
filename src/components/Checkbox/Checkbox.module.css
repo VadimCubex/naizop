@@ -1,0 +1,34 @@
+.checkbox input {
+  display: none;
+}
+
+.checkbox input + label {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.checkbox input + label span.dot {
+  border-radius: 3px;
+  position: absolute;
+  left: 2px;
+  top: 4px;
+  width: 13px;
+  height: 12px;
+  background: var(--gradient-green-yellow);
+  opacity: 0;
+}
+
+.checkbox input + label span:first-child {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background: transparent;
+  border-radius: 6px;
+  border: 1px solid var(--white);
+}
+
+.checkbox input:checked + label span.dot {
+  opacity: 1;
+}

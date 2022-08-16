@@ -8,28 +8,31 @@
 .order-detail .order-detail-background {
   position: absolute;
   background-image: url(/public/images/Backgrounds/orderDetail.png);
-  width: 120%;
-  height: 100%;
-  top: 0px;
+  background-size: cover;
+  width: 100%;
+  height: calc(100% + 60px);
+  top: -60px;
   left: 0px;
 }
 
 .order-detail .order-detail-contant {
   display: flex;
 }
+
 .order-detail .order-detail-contant > div {
   width: 50%;
 }
 
 .order-detail .block {
   padding: 30px 20px 40px;
+  background: rgba(31, 35, 41, 0.75);
 }
 
 .order-detail .info {
   margin-bottom: 20px;
 }
 
-.order-detail .info .text {
+.order-detail .info > .text {
   opacity: 0.75;
 }
 
@@ -39,6 +42,18 @@
   gap: 10px;
 }
 
+.order-detail .info.plan .select-container,
 .order-detail .info .input {
   margin-top: 10px;
+}
+
+.order-detail .info.plan {
+  position: relative;
+  z-index: 2;
+}
+.order-detail .info.plan .select {
+  background: rgba(30, 33, 36, 0.125);
+}
+.order-detail .info.plan .dropDown {
+  background: rgba(30, 33, 36, 0.125);
 }

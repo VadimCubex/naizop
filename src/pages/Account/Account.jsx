@@ -56,7 +56,7 @@ const Account = () => {
               </div>
               <div className="avatar-select-container">
                 <div className="avatar-select">
-                  <div className="avatar-container">
+                  <div className="avatar-account">
                     <div className="add-new-avatar">
                       <SvgIcon
                         src={IconsVariants.Plus_stroke}
@@ -67,7 +67,7 @@ const Account = () => {
                   </div>
                   <div
                     onClick={() => setAvatar(ProfileInfo.img)}
-                    className="avatar-container"
+                    className="avatar-account"
                   >
                     <div
                       className={`avatar-border ${
@@ -86,7 +86,7 @@ const Account = () => {
                     <div
                       key={index}
                       onClick={() => setAvatar(item)}
-                      className="avatar-container"
+                      className="avatar-account"
                     >
                       <div
                         className={`avatar-border ${

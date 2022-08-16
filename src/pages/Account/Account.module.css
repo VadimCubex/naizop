@@ -71,7 +71,7 @@
   justify-content: space-between;
 }
 
-.account .avatars .avatar-select-container .avatar-select .avatar-container {
+.account .avatars .avatar-select-container .avatar-select .avatar-account {
   width: 100%;
 }
 
@@ -102,19 +102,19 @@
   margin-top: 10px;
 }
 
-.account .avatars .avatar-container {
+.account .avatars .avatar-account {
   display: flex;
   justify-content: center;
   width: 25%;
 }
 
-.account .avatars .avatar-container .avatar-border {
+.account .avatars .avatar-account .avatar-border {
   border-radius: 50%;
   border: 2px solid transparent;
   padding: 2px;
 }
 
-.account .avatars .avatar-container .avatar-border.active {
+.account .avatars .avatar-account .avatar-border.active {
   border: 2px solid var(--yellow);
 }
 
@@ -191,7 +191,7 @@
     padding: 20px 25px 35px;
   }
 
-  .account .avatars .avatar-container .avatar-border.active {
+  .account .avatars .avatar-account .avatar-border.active {
     border: 2px solid var(--yellow);
   }
 
@@ -237,7 +237,7 @@
     width: 20%;
   }
 
-  .account .avatars .avatar-select-container .avatar-select .avatar-container {
+  .account .avatars .avatar-select-container .avatar-select .avatar-account {
     width: 100%;
   }
 
@@ -247,7 +247,7 @@
     row-gap: 12px;
   }
 
-  .account .avatars .avatar-container {
+  .account .avatars .avatar-account {
     width: 25%;
   }
 
@@ -285,12 +285,12 @@
     padding-bottom: 120px;
   }
 
-  .account .avatars .avatar-container .avatar-border {
+  .account .avatars .avatar-account .avatar-border {
     border-width: 1px;
     padding: 1px;
   }
 
-  .account .avatars .avatar-container .avatar-border.active {
+  .account .avatars .avatar-account .avatar-border.active {
     border: 1px solid var(--yellow);
     padding: 1px;
   }

@@ -1,0 +1,247 @@
+.slider-order {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.slider-order .person-info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.slider-order .slides {
+  position: relative;
+  display: flex;
+}
+
+.slider-order .avatars {
+  height: 170px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.slider-order .avatar-container {
+  align-self: center;
+}
+
+.slider-order .avatar-container:nth-child(n + 1) {
+  margin-right: -10px;
+}
+
+.slider-order .avatar {
+  position: relative;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+}
+
+.slider-order .avatar-active {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0px -20px 0px -20px;
+  z-index: 2;
+}
+
+.slider-order .avatar-light {
+  top: 5px;
+  left: -20px;
+  z-index: 0;
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.75;
+  filter: blur(10px);
+}
+
+.slider-order .person-info .stars {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  gap: 2%;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: radial-gradient(
+      138.8% 1270% at -24.32% 240%,
+      #ffffff 0%,
+      #85f7e2 47.4%,
+      #ffb60e 100%
+    ),
+    #ffffff;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.slider-order .person-info .stars .text {
+  font-size: 33.5px;
+}
+
+.slider-order .separator {
+  margin: 30px 0px;
+  transform: none;
+  height: 2px;
+  width: 68%;
+  align-self: center;
+  background: radial-gradient(
+    68% 50% at 50% 0%,
+    rgba(197, 235, 255, 0) 0%,
+    rgba(197, 235, 255, 0.15) 50%,
+    rgba(197, 235, 255, 0) 100%
+  );
+}
+
+.slider-order .description {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.slider-order .description > .text {
+  width: 68%;
+}
+
+.slider-order .sticks-container {
+  margin: 30px 0px 0px 0px;
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  justify-content: center;
+}
+
+.slider-order .sticks-container hr {
+  margin: 0px;
+  width: 20px;
+  height: 2px;
+  border: none;
+  border-radius: 2px;
+  background: rgba(197, 235, 255, 0.5);
+}
+
+.slider-order .sticks-container hr.active {
+  width: 30px;
+  background: var(--gradient-green-yellow-light);
+}
+
+@media (max-width: 1439px) {
+  .slider-order {
+    gap: 35px;
+    padding: 30px 30px 45px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .slider-order {
+    gap: 15px;
+  }
+
+  .slider-order .info {
+    padding-left: 10px;
+  }
+
+  .slider-order .person .stars .text {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 834px) {
+  .slider-order {
+    gap: 100px;
+  }
+
+  .slider-order {
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+  }
+
+  .slider-order .person .avatar-container {
+    margin-bottom: 0px;
+  }
+
+  .slider-order .person .person-info {
+    justify-content: center;
+    flex-grow: 0.5;
+  }
+
+  .slider-order .person .stars {
+    margin-top: 10px;
+  }
+
+  .slider-order .person {
+    gap: 15px;
+  }
+
+  .slider-order .info {
+    padding: 0px;
+    width: 100%;
+  }
+
+  .slider-order .separator {
+    width: 100%;
+    height: 1px;
+  }
+
+  .slider-order > .sticks-container {
+    display: none;
+  }
+
+  .slider-order .slider-tools {
+    position: unset;
+    align-items: center;
+  }
+
+  .slider-order .slider-tools .arrow {
+    padding: 20px 0px;
+  }
+
+  .slider-order .slider-tools .arrow .svgIcon {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  .slider-order .slider-tools .sticks-container {
+    margin: 0px;
+    display: flex;
+  }
+
+  .slider-order .person .stars .text {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  .slider-order .person .person-info {
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  .slider-order .person {
+    flex-direction: row;
+  }
+
+  .slider-order .person .person-info > .text {
+    align-self: flex-start;
+  }
+
+  .slider-order .slider-tools .arrow .svgIcon {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .slider-order .person .stars {
+    justify-content: flex-start;
+  }
+
+  .slider-order .person .stars .text {
+    font-size: 21px;
+  }
+}

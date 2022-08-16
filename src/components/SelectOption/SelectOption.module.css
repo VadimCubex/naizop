@@ -81,6 +81,11 @@
 .selectOption_variant_default {
   padding: 15px 0px;
   display: flex;
+  justify-content: space-between;
+}
+
+.selectOption_variant_default > div {
+  display: flex;
 }
 
 .selectOption_variant_default .svgIcon {

@@ -150,6 +150,7 @@ export const ImagesVariants = {
   Chat: "/images/BestQualityService/Chat.png",
   Star: "/images/BestQualityService/Star.png",
   BestQualityService_Slider: "/images/BestQualityService/Slider.svg",
+  BestQualityService_Slider_2: "/images/BestQualityService/Slider_2.svg",
 
   Workspace1: "/images/About/Workspace1.png",
   Workspace2: "/images/About/Workspace2.png",
