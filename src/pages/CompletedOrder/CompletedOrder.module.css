@@ -1,0 +1,99 @@
+.completed-order {
+  position: relative;
+  padding-top: 180px;
+  padding-bottom: 350px;
+  display: flex;
+  justify-content: center;
+}
+
+.completed-order .completed-order-background {
+  position: absolute;
+  background-image: url(/public/images/Backgrounds/orderDetail.png);
+  background-size: cover;
+  width: 100%;
+  height: calc(100% + 60px);
+  top: -60px;
+  left: 0px;
+}
+
+.completed-order .block {
+  width: 68%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+.completed-order .block .close {
+  align-self: flex-end;
+  margin-right: 20px;
+}
+
+.completed-order .block .top {
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.completed-order .block .top .text {
+  font-size: 34px;
+  margin-top: 30px;
+}
+
+@media (max-width: 1439px) {
+  .completed-order {
+    padding-top: 140px;
+  }
+  .completed-order .block {
+    width: 75%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .completed-order .block .top .svgIcon {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .completed-order {
+    padding-top: 100px;
+  }
+  .completed-order .block {
+    width: 84%;
+  }
+  .completed-order .block .top {
+    margin-bottom: 25px;
+  }
+  .completed-order .block .top .text {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 834px) {
+  .completed-order {
+    padding-top: 70px;
+  }
+  .completed-order .block {
+    width: 92%;
+  }
+}
+
+@media (max-width: 425px) {
+  .completed-order .block .top .svgIcon {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  .completed-order {
+    padding-top: 30px;
+  }
+  .completed-order .block {
+    width: 100%;
+  }
+  .completed-order .block .top {
+    margin-bottom: 20px;
+  }
+  .completed-order .block .top .text {
+    margin-top: 20px;
+  }
+}

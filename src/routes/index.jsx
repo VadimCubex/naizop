@@ -8,6 +8,7 @@ import Account from "../pages/Account/Account";
 import AllServices from "../pages/AllServices/AllServices";
 import Api from "../pages/Api/Api";
 import BestQualityService from "../pages/BestQualityService/BestQualityService";
+import CompletedOrder from "../pages/CompletedOrder/CompletedOrder";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import FAQ from "../pages/FAQ/FAQ";
 import Home from "../pages/Home/Home";
@@ -38,6 +39,7 @@ const NaizopRoutes = () => {
         <Route path="/about" element={<About className="background-img" />} />
         <Route path="/best-quality-service" element={<BestQualityService />} />
         <Route path="/order-detail" element={<OrderDetail />} />
+        <Route path="/compleled-order" element={<CompletedOrder />} />
       </Route>
       <Route path="/profile" element={<ProfileLayout />}>
         <Route index element={<Dashboard />} />

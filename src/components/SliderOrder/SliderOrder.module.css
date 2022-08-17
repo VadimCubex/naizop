@@ -131,117 +131,12 @@
   background: var(--gradient-green-yellow-light);
 }
 
-@media (max-width: 1439px) {
-  .slider-order {
-    gap: 35px;
-    padding: 30px 30px 45px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .slider-order {
-    gap: 15px;
-  }
-
-  .slider-order .info {
-    padding-left: 10px;
-  }
-
-  .slider-order .person .stars .text {
-    font-size: 26px;
-  }
-}
-
 @media (max-width: 834px) {
-  .slider-order {
-    gap: 100px;
+  .slider-order .avatars {
+    padding-top: 80px;
+    height: 200px;
   }
-
-  .slider-order {
-    flex-direction: column;
-    width: 100%;
-    gap: 30px;
-  }
-
-  .slider-order .person .avatar-container {
-    margin-bottom: 0px;
-  }
-
-  .slider-order .person .person-info {
-    justify-content: center;
-    flex-grow: 0.5;
-  }
-
-  .slider-order .person .stars {
-    margin-top: 10px;
-  }
-
-  .slider-order .person {
-    gap: 15px;
-  }
-
-  .slider-order .info {
-    padding: 0px;
-    width: 100%;
-  }
-
   .slider-order .separator {
-    width: 100%;
-    height: 1px;
-  }
-
-  .slider-order > .sticks-container {
-    display: none;
-  }
-
-  .slider-order .slider-tools {
-    position: unset;
-    align-items: center;
-  }
-
-  .slider-order .slider-tools .arrow {
-    padding: 20px 0px;
-  }
-
-  .slider-order .slider-tools .arrow .svgIcon {
-    width: 35px !important;
-    height: 35px !important;
-  }
-
-  .slider-order .slider-tools .sticks-container {
-    margin: 0px;
-    display: flex;
-  }
-
-  .slider-order .person .stars .text {
-    font-size: 30px;
-  }
-}
-
-@media (max-width: 425px) {
-  .slider-order .person .person-info {
-    justify-content: center;
-    flex-grow: 1;
-  }
-
-  .slider-order .person {
-    flex-direction: row;
-  }
-
-  .slider-order .person .person-info > .text {
-    align-self: flex-start;
-  }
-
-  .slider-order .slider-tools .arrow .svgIcon {
-    width: 28px !important;
-    height: 28px !important;
-  }
-
-  .slider-order .person .stars {
-    justify-content: flex-start;
-  }
-
-  .slider-order .person .stars .text {
-    font-size: 21px;
+    margin: 30px 0px 15px;
   }
 }

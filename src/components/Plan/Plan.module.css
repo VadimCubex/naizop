@@ -1,0 +1,14 @@
+.plan {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 30px 20px 20px;
+  background: rgba(31, 35, 41, 0.75);
+  backdrop-filter: blur(40px);
+  border-radius: 10px;
+}
+
+.plan > div {
+  display: flex;
+  gap: 10px;
+}

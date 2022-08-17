@@ -11,8 +11,11 @@ export const CheckboxComponent = ({ text, onChange, value, className }) => {
     <div className={CheckboxClass}>
       <input type="checkbox" onChange={() => {}} checked={value} />
       <label onClick={onChange}>
-        <span></span>
-        <span className="dot"></span>
+        <div>
+          <span className="border">
+            <span className="dot"></span>
+          </span>
+        </div>
         {text && <Text variant={TextVariants.h5_regular}>{text}</Text>}
       </label>
     </div>

@@ -94,7 +94,7 @@
 .sociale-network-background {
   top: 230px;
   left: 0px;
-  z-index: -1;
+  z-index: 0;
   position: absolute;
   width: 100%;
   height: 1200px;
@@ -221,7 +221,7 @@
 .experience-background {
   top: 0px;
   left: 0px;
-  z-index: -1;
+  z-index: 0;
   position: absolute;
   width: 100%;
   height: 1200px;

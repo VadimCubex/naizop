@@ -66,3 +66,15 @@
 .steper .step.done .step-number {
   background: var(--gradient-green-yellow);
 }
+
+@media (max-width: 1024px) {
+  .steper {
+    margin: 25px 0px 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  .steper {
+    margin: 15px 0px 25px;
+  }
+}

@@ -23,11 +23,22 @@ export const TableComponent = ({ data, columnNames, variant, className }) => {
         {columnNames.map((item, index) => (
           <div
             className={`table-column-cell${
-              variant !== TableVariants.Ranks ? "-" + (index + 1) : ""
+              variant !== TableVariants.Ranks &&
+              variant !== TableVariants.Completed
+                ? "-" + (index + 1)
+                : ""
             }`}
             key={index}
           >
-            <Text variant={TextVariants.subtitle_medium}>{item}</Text>
+            <Text
+              variant={
+                variant !== TableVariants.Completed
+                  ? TextVariants.subtitle_medium
+                  : TextVariants.h2_medium
+              }
+            >
+              {item}
+            </Text>
           </div>
         ))}
       </div>
@@ -36,7 +47,10 @@ export const TableComponent = ({ data, columnNames, variant, className }) => {
         {columnNames.map((item, index) => (
           <div
             className={`table-column-cell${
-              variant !== TableVariants.Ranks ? "-" + (index + 1) : ""
+              variant !== TableVariants.Ranks &&
+              variant !== TableVariants.Completed
+                ? "-" + (index + 1)
+                : ""
             }`}
             key={index}
           >
@@ -62,7 +76,10 @@ export const TableComponent = ({ data, columnNames, variant, className }) => {
                 {columnNames.map((item, index) => (
                   <div
                     className={`table-column-cell${
-                      variant !== TableVariants.Ranks ? "-" + (index + 1) : ""
+                      variant !== TableVariants.Ranks &&
+                      variant !== TableVariants.Completed
+                        ? "-" + (index + 1)
+                        : ""
                     }`}
                     key={index}
                   >

@@ -1,0 +1,92 @@
+.table.table-variant-completed {
+  width: 100%;
+}
+
+.table.table-variant-completed .table-header .table-column-cell,
+.table.table-variant-completed .table-separators .table-column-cell {
+  width: 50%;
+}
+
+.table.table-variant-completed
+  .table-header
+  [class*="table-column-cell"]:first-child {
+  padding: 0px 0px 10px 40px;
+}
+
+.table.table-variant-completed .table-row-content {
+  display: flex;
+  padding: 0px 20px;
+}
+
+.table.table-variant-completed .table-row .table-row-cell-1,
+.table.table-variant-completed .table-row .table-row-cell-2 {
+  width: 50%;
+}
+
+.table.table-variant-completed .table-row .table-row-cell-2 .text {
+  color: var(--yellow);
+  word-wrap: break-word;
+  display: block;
+}
+
+@media (max-width: 1439px) {
+  .table.table-variant-completed
+    .table-header
+    [class*="table-column-cell"]:first-child {
+    padding: 0px 0px 10px 35px;
+  }
+  .table.table-variant-completed .table-row-content {
+    padding: 0px 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .table.table-variant-completed .table-row .table-row-cell-1 .text,
+  .table.table-variant-completed .table-row .table-row-cell-2 .text,
+  .table.table-variant-completed
+    .table-header
+    [class*="table-column-cell"]
+    .text {
+    font-size: 17px;
+  }
+  .table.table-variant-completed
+    .table-header
+    [class*="table-column-cell"]:first-child {
+    padding: 0px 0px 10px 30px;
+  }
+  .table.table-variant-completed .table-row-content {
+    padding: 0px 10px;
+  }
+}
+
+@media (max-width: 834px) {
+  .table.table-variant-completed .table-row .table-row-cell-1 .text,
+  .table.table-variant-completed .table-row .table-row-cell-2 .text,
+  .table.table-variant-completed
+    .table-header
+    [class*="table-column-cell"]
+    .text {
+    font-size: 14px;
+  }
+  .table.table-variant-completed
+    .table-header
+    [class*="table-column-cell"]:first-child {
+    padding: 0px 0px 10px 25px;
+  }
+  .table.table-variant-completed .table-row-content {
+    padding: 0px 5px;
+  }
+}
+
+@media (max-width: 425px) {
+  .table.table-variant-completed {
+    font-size: 14px;
+  }
+  .table.table-variant-completed .table-row [class*="table-row-cell"] {
+    padding: 15px 20px;
+  }
+  .table.table-variant-completed .table-header [class*="table-column-cell"] {
+    padding-left: 20px;
+    padding-bottom: 10px;
+  }
+}

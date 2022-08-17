@@ -206,7 +206,7 @@ const BestQualityService = () => {
                   <div className="continue">
                     <div className="info">
                       <Text variant={TextVariants.h5_regular}>
-                        You Save ${activeSale.sale}
+                        You Save ${activeSale.sale || 25}
                       </Text>
                       <div className="separator"></div>
                       <Text variant={TextVariants.h1_medium}>$99</Text>

@@ -8,6 +8,7 @@ import { SelectOption } from "../SelectOption";
 export const SelectComponent = ({
   selected,
   onClick,
+  additionalOnClick,
   options,
   variant,
   maxHeight,
@@ -24,6 +25,7 @@ export const SelectComponent = ({
 
   const handleClick = (value) => {
     onClick(value);
+    additionalOnClick && additionalOnClick(value.states[0]);
     setIsShowDropDown(!isShowDropDown);
   };
 

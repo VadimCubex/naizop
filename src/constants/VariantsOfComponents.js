@@ -90,6 +90,7 @@ export const IconsVariants = {
   Eye: "/icons/Stroke/Eye.svg",
   Mask: "/icons/Stroke/MaskHappy.svg",
   Heart: "/icons/Stroke/Heart.svg",
+  Heart_stroke: "/icons/Stroke/Heart_2.svg",
   Subtract: "/icons/Stroke/Subtract.svg",
   Arrow_right: "/icons/Stroke/Arrow right.svg",
   Arrow_left: "/icons/Stroke/Arrow left.svg",
@@ -133,6 +134,31 @@ export const IconsVariants = {
   Arc: "/icons/Color/arc.svg",
 };
 
+export const FlagsIcons = {
+  Australia: "/icons/Flags/Australia.svg",
+  United_States: "/icons/Flags/United States.svg",
+  Ukraine: "/icons/Flags/Ukraine.svg",
+  Sweden: "/icons/Flags/Sweden.svg",
+  United_Kingdom: "/icons/Flags/United Kingdom.svg",
+  Canada: "/icons/Flags/Canada.svg",
+};
+
+export const PaymentsIcons = {
+  Payment1: "/icons/Payments/Payment Icons-4.svg",
+  Payment2: "/icons/Payments/Payment Icons-3.svg",
+  Payment3: "/icons/Payments/Payment Icons-2.svg",
+  Payment4: "/icons/Payments/Payment Icons-1.svg",
+  Payment5: "/icons/Payments/Payment Icons.svg",
+};
+export const CryptoIcons = {
+  Crypto1: "/icons/Payments/Cryptocurrency.png",
+  Crypto2: "/icons/Payments/Cryptocurrency-1.png",
+  Crypto3: "/icons/Payments/Cryptocurrency-2.png",
+  Crypto4: "/icons/Payments/Cryptocurrency-3.png",
+  Crypto5: "/icons/Payments/Cryptocurrency-4.png",
+  Crypto6: "/icons/Payments/Cryptocurrency-5.png",
+};
+
 export const ImagesVariants = {
   Like_girl: "/images/Home/Like.png",
   Slider_girl: "/images/Home/Slider girl.png",
@@ -158,6 +184,13 @@ export const ImagesVariants = {
   Workspace4: "/images/About/Workspace4.png",
   Workspace5: "/images/About/Workspace5.png",
   Workspace6: "/images/About/Workspace6.png",
+
+  OrderDetail1: "/images/OrderDetail/first.png",
+  OrderDetail2: "/images/OrderDetail/second.png",
+  OrderDetail3: "/images/OrderDetail/third.png",
+  OrderDetail4: "/images/OrderDetail/fourth.png",
+  OrderDetail5: "/images/OrderDetail/fifth.png",
+  OrderDetail6: "/images/OrderDetail/sixth.png",
 };
 
 export const ColorSvgVariants = {
@@ -244,6 +277,7 @@ export const TableVariants = {
   Service: "service",
   Service_detail: "serviceDetail",
   Payment: "payment",
+  Completed: "completed",
 };
 
 export const StatusVariants = {
