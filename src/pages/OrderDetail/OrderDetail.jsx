@@ -93,7 +93,7 @@ const OrderDetail = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [activeStep]);
 
   return (
     <>
@@ -180,10 +180,6 @@ const OrderDetail = () => {
                     onClick={() => setSelectedPhotos([...selectedPhotos, item])}
                     className="photo-container cursor-pointer"
                   >
-                    {/* <div
-                      className="photo"
-                      style={{ backgroundImage: `url(${item.img})` }}
-                    ></div> */}
                     <img
                       className="photo"
                       src={item.img}
@@ -304,9 +300,10 @@ const OrderDetail = () => {
                 <div className="addons-container">
                   {Addons.map((item, index) => (
                     <AccountCard
-                      className={`column ${
+                      className={`column cursor-pointer ${
                         item === selectedAddons ? "active" : ""
                       }`}
+                      tooltip={item.tooltip}
                       key={index}
                       onClick={() => setSelectedAddons(item)}
                       variant={AccountCardVariants.lg}

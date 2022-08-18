@@ -31,7 +31,7 @@ export const NewOrderComponent = ({ className }) => {
   const [selectedCategory, setSelectedCategory] = useState(NewOrderCategory[0]);
   const [selectedService, setSelectedService] = useState(NewOrderService[0]);
 
-  const [description, setDescription] = useState("");
+  const [description, setDescription] = useState("Example");
   const [postLink, setPostLink] = useState("");
   const [quantity, setQuantity] = useState("");
 

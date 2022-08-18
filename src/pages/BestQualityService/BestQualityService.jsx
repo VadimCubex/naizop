@@ -12,6 +12,7 @@ import { Select } from "../../components/Select";
 import { SvgIcon } from "../../components/SvgIcon";
 import { Tab, TabPanel, Tabs } from "../../components/Tabs";
 import { Text } from "../../components/Text";
+import { Trustpilot } from "../../components/Trustpilot";
 import { CategoryToIncrease, TabsName, SaleForCategory } from "./constants";
 import {
   ButtonSizeVariants,
@@ -95,6 +96,7 @@ const BestQualityService = () => {
             />
           </div>
           <div className="top">
+            <Trustpilot />
             <div className="category">
               <Select
                 onClick={setSelectedCategory}

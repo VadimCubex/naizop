@@ -45,12 +45,15 @@
   gap: 10px;
 }
 
-.order-detail .info.select-plan .select-container,
+.order-detail .info .select-container,
 .order-detail .info .input {
   margin-top: 10px;
 }
 
-.order-detail .info.select-country,
+.order-detail .info.select-country {
+  position: relative;
+  z-index: 3;
+}
 .order-detail .info.select-state,
 .order-detail .info.select-plan {
   position: relative;
@@ -58,10 +61,7 @@
 }
 
 .order-detail .info-container .select,
-.order-detail .info.select-plan .select {
-  background: rgba(30, 33, 36, 0.125);
-}
-
+.order-detail .info.select-plan .select,
 .order-detail .info-container .dropDown,
 .order-detail .info.select-plan .dropDown {
   background: rgba(30, 33, 36, 0.125);
@@ -292,7 +292,7 @@
     padding: 9px 11px;
   }
   .order-detail .order-detail-contant-2 .addons .addons-container .accountCard {
-    padding: 20px;
+    padding: 25px 20px;
   }
 }
 

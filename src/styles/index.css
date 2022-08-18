@@ -37,6 +37,10 @@
 @import "../components/SliderOrder/SliderOrder.module.css";
 @import "../components/Checkbox/Checkbox.module.css";
 @import "../components/Plan/Plan.module.css";
+@import "../components/ProgressStatus/ProgressStatus.module.css";
+@import "../components/StatusSteper/StatusSteper.module.css";
+@import "../components/Trustpilot/Trustpilot.module.css";
+@import "../components/Notification/Notification.module.css";
 
 @import "./App.css";
 @import "./normalize.css";
@@ -60,6 +64,7 @@
 @import "../pages/BestQualityService/BestQualityService.module.css";
 @import "../pages/OrderDetail/OrderDetail.module.css";
 @import "../pages/CompletedOrder/CompletedOrder.module.css";
+@import "../pages/TrackOrder/TrackOrder.module.css";
 
 :root {
   --transition-property: all;
@@ -154,4 +159,9 @@ code {
 @font-face {
   font-family: "Roboto Bold";
   src: url(../fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Roboto Light";
+  src: url(../fonts/Roboto-Light.ttf);
 }

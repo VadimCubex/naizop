@@ -1,0 +1,107 @@
+.track-order {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 410px;
+  color: var(--white);
+}
+
+.track-order .track-order-background {
+  position: absolute;
+  background-image: url(/public/images/Backgrounds/orderDetail.png);
+  background-size: cover;
+  width: 100%;
+  height: calc(100% + 60px);
+  top: -60px;
+  left: 0px;
+}
+
+.track-order .block {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 60px 110px 40px;
+}
+
+.track-order .block .info {
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 52%;
+  justify-content: space-between;
+}
+
+.track-order .block .info .for-table {
+  padding: 10px 0px 20px;
+  background: var(--light-blue-15);
+  border-radius: 20px;
+  border: 1px solid var(--light-blue-15);
+}
+
+.track-order .block .info .timing {
+  padding: 35px 20px;
+  display: flex;
+  justify-content: center;
+  background: #c5ebff13;
+  border: 1px solid var(--light-blue-15);
+
+  border-radius: 20px;
+}
+
+.track-order .block .progress {
+  display: flex;
+  width: 45%;
+}
+
+.track-order .test {
+  display: flex;
+  gap: 20px;
+}
+.track-order .test > * {
+  width: 200px;
+}
+
+@media (max-width: 1439px) {
+  .track-order .block {
+    padding: 40px 40px 80px 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .track-order .block {
+    padding: 30px 30px 50px;
+  }
+  .track-order .block .info .timing .text {
+    font-size: 17px;
+  }
+  .track-order .block .info .timing {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 834px) {
+  .track-order .block {
+    flex-direction: column-reverse;
+    gap: 60px;
+    padding: 20px 20px 35px;
+  }
+  .track-order .block .progress,
+  .track-order .block .info {
+    width: 100%;
+  }
+  .track-order .block .info .for-table {
+    padding: 0px;
+  }
+  .track-order .block .info .timing {
+    padding: 15px;
+  }
+  .track-order .test {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 425px) {
+  .track-order .block .info .timing .text {
+    font-size: 14px;
+    text-align: center;
+  }
+}

@@ -160,7 +160,7 @@
   width: 100%;
 }
 
-.best-quality-button.active .text {
+.best-quality-button .text {
   background: radial-gradient(
       138.8% 1270% at -24.32% 240%,
       #ffffff 0%,

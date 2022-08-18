@@ -28,7 +28,7 @@
   height: fit-content;
   border-radius: 0px 0px 10px 10px;
   border: none;
-  background: unset;
+  background: rgba(30, 33, 36, 0.75);
 }
 
 .place-new-order .block > hr {

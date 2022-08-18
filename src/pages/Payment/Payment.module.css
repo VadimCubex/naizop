@@ -223,9 +223,29 @@
   .payment .payment-contant .block.steps .step-3 {
     padding: 30px 40px 20px;
   }
+
+  .payment .payment-contant .block.steps .howItWorks {
+    flex-direction: column;
+    padding-top: 10px;
+  }
 }
 
 @media (max-width: 1024px) {
+  .payment .payment-contant {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  .payment .payment-contant .block.steps .howItWorks {
+    flex-direction: row;
+    padding-top: 0px;
+  }
+
+  .payment .payment-contant .block {
+    padding: 20px 20px 30px;
+    width: 100%;
+  }
+
   .payment .payment-contant .block.steps .step-2 {
     padding: 30px 20px 20px;
   }
@@ -250,16 +270,6 @@
 }
 
 @media (max-width: 834px) {
-  .payment .payment-contant {
-    flex-direction: column-reverse;
-    gap: 30px;
-  }
-
-  .payment .payment-contant .block {
-    padding: 20px 20px 30px;
-    width: 100%;
-  }
-
   .payment .payment-contant .block.steps .step-1 .info {
     flex-direction: row;
   }

@@ -23,6 +23,7 @@ import RedeemHistory from "../pages/RedeemHistory/RedeemHistory";
 import RedeemSupport from "../pages/RedeemSupport/RedeemSupport";
 import Subscriptions from "../pages/Subscriptions/Subscriptions";
 import TestComponents from "../pages/TestComponents";
+import TrackOrder from "../pages/TrackOrder/TrackOrder";
 
 const NaizopRoutes = () => {
   return (
@@ -40,6 +41,7 @@ const NaizopRoutes = () => {
         <Route path="/best-quality-service" element={<BestQualityService />} />
         <Route path="/order-detail" element={<OrderDetail />} />
         <Route path="/compleled-order" element={<CompletedOrder />} />
+        <Route path="/track-order" element={<TrackOrder />} />
       </Route>
       <Route path="/profile" element={<ProfileLayout />}>
         <Route index element={<Dashboard />} />

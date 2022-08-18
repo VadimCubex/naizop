@@ -6,6 +6,7 @@ import { SubscriptionModalColumnInfo } from "../../../pages/Subscriptions/consta
 import {
   ButtonVariants,
   IconsVariants,
+  StatusSizeVariants,
   StatusVariants,
   TableVariants,
   TextVariants,
@@ -38,6 +39,7 @@ const RowSubscriptions = ({ item }) => {
       </div>
       <div className="table-row-cell-6">
         <Status
+          size={StatusSizeVariants.small}
           variant={StatusVariants[item.row.status]}
           status={item.row.status}
         />

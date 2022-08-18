@@ -9,6 +9,7 @@ import {
   AvatarVariants,
   ButtonSizeVariants,
   ButtonVariants,
+  ColorSvgVariants,
   IconsVariants,
   TextVariants,
 } from "../../../constants/VariantsOfComponents";
@@ -16,22 +17,36 @@ import { Avatar } from "../../Avatar";
 import { Button } from "../../Button";
 import { Currency } from "../../Currency";
 import { DropDown } from "../../DropDown";
+import { Notification } from "../../Notification";
+import { TooltipPortal } from "../../Portal";
 import { SvgIcon } from "../../SvgIcon";
 import { Text } from "../../Text";
 import {
   ActivityLinks,
   FeaturesLinks,
+  Notifications,
   ProfileNavLinks,
   ServicesLinks,
 } from "../constants";
 
+import useTooltip from "../../../hooks/useTooltip";
+
 export const ProfileMenuComponent = () => {
+  const {
+    coords,
+    isShowTooltip,
+    tooltipPosition,
+    tooltipSvg,
+    TooltipWidth,
+    handleClick,
+  } = useTooltip();
   const [isShowBurger, setIsShowBurger] = useState(false);
   const [isShowProfile, setIsShowProfile] = useState(false);
   const [isShowBurgerProfile, setIsShowBurgerProfile] = useState(false);
   const [active, setActive] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
+
   const [BurgerCategories] = useState([
     {
       name: "Services",
@@ -140,12 +155,35 @@ export const ProfileMenuComponent = () => {
 
           <div className="nav-button-container">
             <Currency />
-            <Button
-              variant={ButtonVariants.default}
-              className="button_logout"
-              size={ButtonSizeVariants.large}
-              icon={IconsVariants.Notification}
-            />
+            <TooltipPortal>
+              <Notification
+                width={TooltipWidth}
+                coords={coords}
+                arrowPosition={tooltipPosition}
+                isShow={isShowTooltip}
+              >
+                {Notifications.map((item, index) => (
+                  <div className="type" key={index}>
+                    <SvgIcon
+                      src={item.icon}
+                      size={24}
+                      color={ColorSvgVariants.white}
+                    />
+                    <Text variant={TextVariants.h5_regular}>{item.text}</Text>
+                  </div>
+                ))}
+              </Notification>
+            </TooltipPortal>
+            <div ref={tooltipSvg} onClick={handleClick}>
+              <Button
+                variant={ButtonVariants.default}
+                className={
+                  isShowTooltip ? "button_logout active" : "button_logout"
+                }
+                size={ButtonSizeVariants.large}
+                icon={IconsVariants.Notification}
+              />
+            </div>
             <Button
               onClick={handleLogoutClick}
               variant={ButtonVariants.default}
@@ -158,6 +196,7 @@ export const ProfileMenuComponent = () => {
           </div>
         </nav>
       </div>
+
       <DropDown className="profile-links" isOpen={isShowProfile}>
         <div className="links">
           {ProfileNavLinks.map((item, index) => (

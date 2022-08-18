@@ -1,0 +1,59 @@
+.trustpilot-logo {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 30px;
+  right: 30px;
+  width: 120px;
+  height: 120px;
+  background: var(--gradient-yellow);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.trustpilot-logo > .text,
+.trustpilot-logo .info {
+  display: flex;
+  align-items: center;
+}
+
+.trustpilot-logo > .text {
+  margin-top: -10px;
+  gap: 3px;
+  color: var(--yellow);
+}
+
+.trustpilot-logo > .text > .text {
+  letter-spacing: -0.04em;
+}
+
+.trustpilot-logo .info .text {
+  font-family: "Roboto Light";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+@media (max-width: 1439px) {
+  .trustpilot-logo {
+    top: 25px;
+    right: 25px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .trustpilot-logo {
+    top: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 834px) {
+  .trustpilot-logo {
+    display: none;
+  }
+}

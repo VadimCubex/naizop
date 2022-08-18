@@ -66,11 +66,13 @@
 }
 
 .best-quality-service .best-quality-service-contant .top {
+  position: relative;
   padding: 60px 20px 65px;
   background: rgba(30, 33, 36, 0.74);
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .best-quality-service .best-quality-service-contant .select-tab {
@@ -456,5 +458,8 @@
     .info
     > .text:last-child {
     font-size: 22px;
+  }
+  .best-quality-service .best-quality-service-contant .top .category {
+    width: 100%;
   }
 }

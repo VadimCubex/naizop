@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   TextVariants,
   ColorSvgVariants,
   IconsVariants,
 } from "../../../constants/VariantsOfComponents";
+import { Modal } from "../../Modal";
 import { TooltipPortal } from "../../Portal";
 import { SvgIcon } from "../../SvgIcon";
 import { Text } from "../../Text";
@@ -13,6 +14,8 @@ import { Tooltip } from "../../Tooltip";
 import useTooltip from "../../../hooks/useTooltip";
 
 export const OptionWithDetailComponent = ({ selected, value }) => {
+  const [openRecommended, setOpenRecommended] = useState(false);
+
   const {
     coords,
     isShowTooltip,
@@ -39,6 +42,10 @@ export const OptionWithDetailComponent = ({ selected, value }) => {
       </div>
       <div
         ref={tooltipSvg}
+        onClick={(e) => {
+          setOpenRecommended(true);
+          e.stopPropagation();
+        }}
         onTouchEnd={handleClick}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -66,6 +73,51 @@ export const OptionWithDetailComponent = ({ selected, value }) => {
           />
         </div>
       </div>
+      <Modal
+        className="high-quality"
+        onClick={() => setOpenRecommended(false)}
+        title="Naizop recommended"
+        isOpen={openRecommended}
+      >
+        <ul>
+          <li>
+            <Text variant={TextVariants.h5_regular}>
+              <Text variant={TextVariants.h5}>REAL</Text> likes from{" "}
+              <Text variant={TextVariants.h5}>REAL</Text> people{" "}
+            </Text>
+          </li>
+          <li>
+            <Text variant={TextVariants.h5_regular}>
+              Guaranteed <Text variant={TextVariants.h5}>Instant Delivery</Text>
+            </Text>
+          </li>
+          <li>
+            <Text variant={TextVariants.h5_regular}>
+              Option to <Text variant={TextVariants.h5}>SPLIT likes</Text> on
+              multiple pictures
+            </Text>
+          </li>
+          <li>
+            <Text variant={TextVariants.h5_regular}>Includes video views</Text>
+          </li>
+          <li>
+            <Text variant={TextVariants.h5_regular}>
+              <Text variant={TextVariants.h5}>No password</Text> required
+            </Text>
+          </li>
+          <li>
+            <Text variant={TextVariants.h5_regular}>
+              Fast Delivery{" "}
+              <Text variant={TextVariants.h5}>(gradual or instant)</Text>
+            </Text>
+          </li>
+          <li>
+            <Text variant={TextVariants.h5_regular}>
+              <Text variant={TextVariants.h5}>24/7</Text> support
+            </Text>
+          </li>
+        </ul>
+      </Modal>
     </div>
   );
 };

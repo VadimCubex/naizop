@@ -14,7 +14,7 @@ export const OptionDefaultComponent = ({ value }) => {
           </div>
         )}
         <Text className="title" variant={TextVariants.h4}>
-          {value?.title}s
+          {value?.title}
         </Text>
       </div>
       {value.price && <Text variant={TextVariants.h4}>{value.price}$</Text>}

@@ -177,6 +177,7 @@ export const ImagesVariants = {
   Star: "/images/BestQualityService/Star.png",
   BestQualityService_Slider: "/images/BestQualityService/Slider.svg",
   BestQualityService_Slider_2: "/images/BestQualityService/Slider_2.svg",
+  Stars: "/images/BestQualityService/stars.png",
 
   Workspace1: "/images/About/Workspace1.png",
   Workspace2: "/images/About/Workspace2.png",
@@ -287,6 +288,11 @@ export const StatusVariants = {
   processing: "processing",
   ["in-progress"]: "in-progress",
   completed: "completed",
+};
+
+export const StatusSizeVariants = {
+  small: "sm",
+  big: "bg",
 };
 
 export const InstructionVariants = {

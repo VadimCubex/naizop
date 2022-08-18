@@ -303,13 +303,19 @@ export const Addons = [
   {
     text: "(25% DISCOUNT)",
     subtitle: "Add 250 Instagram Likes for only $3.72",
+    tooltip:
+      "With that feature, you can buy real & quality Instagram Likes at discounted price. Also, you can distribute the likes to your last photos, its awesome!",
   },
   {
     text: "(20% DISCOUNT)",
     subtitle: "Add 250 Instagram Followers for only $4.49",
+    tooltip:
+      "With that feature, you can add Real & Quality Instagram Followers at discounted price as an extra to your shopping cart.",
   },
   {
     text: "(25% DISCOUNT)",
     subtitle: "Add 250 Instagram Story Views for only $3.95",
+    tooltip:
+      "With that feature, you can buy real & quality Instagram Story Views. Story views will be sent to your ALL Published Stories equally.",
   },
 ];

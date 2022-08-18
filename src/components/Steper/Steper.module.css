@@ -59,6 +59,10 @@
   background: var(--gradient-green-yellow);
 }
 
+.steper .step.next.none {
+  display: none;
+}
+
 .steper .step.next .line {
   background: rgba(197, 235, 255, 0.5);
 }

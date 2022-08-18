@@ -35,6 +35,11 @@ export const MainMenuComponent = () => {
     setIsShowBurger(!isShowBurger);
   };
 
+  const handleClickBest = () => {
+    navigate("/best-quality-service");
+    setIsShowBurger(false);
+  };
+
   const handleClickItem = (item) => {
     if (item.text !== "Tools") {
       navigate(item.link);
@@ -105,7 +110,7 @@ export const MainMenuComponent = () => {
                 }`}
                 variant={ButtonVariants.default}
                 text="Best quality services"
-                onClick={() => navigate("/best-quality-service")}
+                onClick={handleClickBest}
               />
               <div className="auth-buttons">
                 <Button
@@ -188,7 +193,7 @@ export const MainMenuComponent = () => {
                   }`}
                   variant={ButtonVariants.default}
                   text="Best quality services"
-                  onClick={() => navigate("/best-quality-service")}
+                  onClick={handleClickBest}
                 />
                 <div className="auth-buttons">
                   <Button
