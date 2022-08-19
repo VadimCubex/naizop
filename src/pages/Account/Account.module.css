@@ -168,7 +168,7 @@
     margin: 20px 0px 0px 0px;
   }
 
-  .account .avatars .avatar-current .avatar {
+  .account .avatars .avatar-current .avatar-container {
     align-self: center;
   }
 

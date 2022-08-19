@@ -161,12 +161,148 @@
   opacity: 0.7;
 }
 
+.reasons-to-use .reasons-steps {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 80px;
+  margin-top: 50px;
+  margin-bottom: 120px;
+}
+
+.reasons-to-use .reasons-steps > .text {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.reasons-to-use .reasons-steps .steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.reasons-to-use .reasons-steps .steps-container .step-item {
+  display: flex;
+}
+.reasons-to-use .reasons-steps .steps-container .step-item:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+.reasons-to-use
+  .reasons-steps
+  .steps-container
+  .step-item:nth-child(2n)
+  .image-container {
+  justify-content: flex-start;
+}
+
+.reasons-to-use
+  .reasons-steps
+  .steps-container
+  .step-item:nth-child(3n)
+  .image-container {
+  justify-content: center;
+}
+
+.reasons-to-use .reasons-steps .steps-container .step-item > div {
+  width: 50%;
+}
+
+.reasons-to-use .reasons-steps .steps-container .step-item .info-container {
+  display: flex;
+  gap: 20px;
+}
+
+.reasons-to-use
+  .reasons-steps
+  .steps-container
+  .step-item
+  .info-container
+  .text_variant_h1 {
+  background: var(--gradient-green-yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.reasons-to-use
+  .reasons-steps
+  .steps-container
+  .step-item
+  .info-container
+  > .text {
+  font-family: "Space Grotesk Light";
+  font-size: 150px;
+  line-height: 150px;
+}
+
+.reasons-to-use
+  .reasons-steps
+  .steps-container
+  .step-item
+  .info-container
+  > div {
+  padding-top: 10px;
+}
+
+.reasons-to-use
+  .reasons-steps
+  .steps-container
+  .step-item
+  .info-container
+  > div
+  > .text_variant_h1 {
+  margin-bottom: 10px;
+}
+
+.reasons-to-use .reasons-steps .steps-container .step-item .image-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.reasons-to-use
+  .reasons-steps
+  .steps-container
+  .step-item
+  .image-container
+  div {
+  width: 53%;
+}
+
+.reasons-to-use
+  .reasons-steps
+  .steps-container
+  .step-item
+  .image-container
+  img {
+  width: 100%;
+}
+
+.reasons-to-use .reasons-steps .line1 {
+  position: absolute;
+  top: 130px;
+  left: 51%;
+}
+.reasons-to-use .reasons-steps .line2 {
+  position: absolute;
+  top: 370px;
+  left: 39%;
+}
+
 @media (max-width: 1439px) {
   .reasons-to-use .advantages {
     width: fit-content;
   }
   .reasons-to-use .advantages .advanteg-container {
     width: 235px;
+  }
+  .reasons-to-use .reasons-steps {
+    padding: 0px 40px;
+  }
+  .reasons-to-use .reasons-steps .line2 {
+    left: 36%;
   }
 }
 
@@ -189,6 +325,23 @@
   .reasons-to-use .reasons,
   .reasons-to-use .ready {
     margin-bottom: 85px;
+  }
+  .reasons-to-use .reasons-steps {
+    padding: 0px 20px;
+    margin-top: 30px;
+    margin-bottom: 90px;
+  }
+  .reasons-to-use .reasons-steps .line2 {
+    top: 390px;
+    left: 33%;
+  }
+  .reasons-to-use
+    .reasons-steps
+    .steps-container
+    .step-item
+    .image-container
+    div {
+    width: 63%;
   }
 }
 
@@ -215,6 +368,67 @@
     margin-top: 50px;
     margin-bottom: 50px;
   }
+  .reasons-to-use .reasons-steps {
+    padding: 0px 0px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+  .reasons-to-use .reasons-steps > .text {
+    margin-bottom: 30px;
+  }
+  .reasons-to-use .reasons-steps .line1,
+  .reasons-to-use .reasons-steps .line2 {
+    display: none;
+  }
+
+  .reasons-to-use .reasons-steps .steps-container .step-item {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .reasons-to-use .reasons-steps .steps-container .step-item > div {
+    width: 100%;
+  }
+  .reasons-to-use .reasons-steps .steps-container .step-item:nth-child(2n) {
+    flex-direction: column;
+  }
+  .reasons-to-use
+    .reasons-steps
+    .steps-container
+    .step-item
+    .info-container
+    > .text {
+    font-size: 75px;
+    line-height: 75px;
+  }
+  .reasons-to-use .reasons-steps .steps-container .step-item .image-container {
+    justify-content: center;
+  }
+  .reasons-to-use
+    .reasons-steps
+    .steps-container
+    .step-item:nth-child(2n)
+    .image-container {
+    justify-content: center;
+  }
+  .reasons-to-use
+    .reasons-steps
+    .steps-container
+    .step-item
+    .image-container
+    div {
+    width: 40%;
+  }
+}
+
+@media (max-width: 600px) {
+  .reasons-to-use
+    .reasons-steps
+    .steps-container
+    .step-item
+    .image-container
+    div {
+    width: 60%;
+  }
 }
 
 @media (max-width: 425px) {
@@ -232,5 +446,13 @@
   }
   .reasons-to-use .ready .ready-cards-container {
     margin-top: 20px;
+  }
+  .reasons-to-use
+    .reasons-steps
+    .steps-container
+    .step-item
+    .image-container
+    div {
+    width: 80%;
   }
 }

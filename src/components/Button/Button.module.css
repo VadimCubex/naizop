@@ -198,6 +198,14 @@
 }
 
 /* Logout button */
+.button_logout.active {
+  background: var(--white);
+}
+
+.button_logout.active path {
+  stroke: none !important;
+  fill: var(--black) !important;
+}
 
 .button_logout path {
   stroke: none !important;

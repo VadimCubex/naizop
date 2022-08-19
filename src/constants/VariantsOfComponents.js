@@ -178,6 +178,12 @@ export const ImagesVariants = {
   BestQualityService_Slider: "/images/BestQualityService/Slider.svg",
   BestQualityService_Slider_2: "/images/BestQualityService/Slider_2.svg",
   Stars: "/images/BestQualityService/stars.png",
+  Step1: "/images/BestQualityService/step1.png",
+  Step2: "/images/BestQualityService/step2.png",
+  Step3: "/images/BestQualityService/step3.png",
+
+  Line1: "/images/BestQualityService/line1.png",
+  Line2: "/images/BestQualityService/line2.png",
 
   Workspace1: "/images/About/Workspace1.png",
   Workspace2: "/images/About/Workspace2.png",

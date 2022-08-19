@@ -121,3 +121,24 @@ export const SlidesForBestQualityService = [
       "My Instagram engagement increased gradually after I bought Instagram likes and followers from your website. It has also helped me to get featured on my favored account. Thanks for your great customer services and fast delivery as well. 5 stars!",
   },
 ];
+
+export const ReasonsSteps = [
+  {
+    number: 1,
+    image: ImagesVariants.Step1,
+    title: "Select package",
+    info: "We offer a variety of different packages to give you the best value for Instagram Likes and Followers. If you have a larger order or would like to discuss a customized plan to suit your needs, don’t hesitate to",
+  },
+  {
+    number: 2,
+    image: ImagesVariants.Step2,
+    title: "Enter details",
+    info: "We never require any sensitive information such as passwords or other secure info in order to deliver your Instagram Followers or Likes. Simply provide us with your Instagram username and your email and we’ll get started with your order right away.",
+  },
+  {
+    number: 3,
+    image: ImagesVariants.Step3,
+    title: "See the magic",
+    info: "After selecting your package and providing account details (your username only), you’re already done! Our process is expedited so that it is both fast and easy to provide you with the Likes and Followers tou need.",
+  },
+];

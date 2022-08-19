@@ -60,6 +60,10 @@
   flex-direction: column;
 }
 
+.flex-reverse {
+  flex-direction: row-reverse;
+}
+
 .background-img {
   background: url("/public/images/Backgrounds/1440.png");
   background-size: cover !important;

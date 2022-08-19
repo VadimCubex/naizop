@@ -6,10 +6,12 @@ import {
   ReadyCardInfo,
   ReasonsInfoPartFirst,
   ReasonsInfoPartSecond,
+  ReasonsSteps,
   SlidesForBestQualityService,
 } from "./constants";
 import {
   ColorSvgVariants,
+  ImagesVariants,
   TextVariants,
 } from "../../constants/VariantsOfComponents";
 import { Accordion } from "../Accordion";
@@ -41,6 +43,34 @@ export const ReasonsToUseComponent = ({ className }) => {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+      <div className="reasons-steps">
+        <Text variant={TextVariants.h1}>How it works?</Text>
+        <div className="steps-container">
+          {ReasonsSteps.map((item, index) => (
+            <div key={index} className="step-item">
+              <div className="info-container">
+                <Text variant={TextVariants.h1}>{item.number}</Text>
+                <div>
+                  {/* доделай тут текст для первого слайда */}
+                  <Text variant={TextVariants.h1}>{item.title}</Text>
+                  <Text variant={TextVariants.h4_regular}>{item.info}</Text>
+                </div>
+              </div>
+              <div className="image-container">
+                <div>
+                  <img src={item.image} alt="step" />
+                </div>
+              </div>
+            </div>
+          ))}
+          <div className="line1">
+            <img src={ImagesVariants.Line1} alt="line" />
+          </div>
+          <div className="line2">
+            <img src={ImagesVariants.Line2} alt="line" />
+          </div>
         </div>
       </div>
       <div className="ready">
