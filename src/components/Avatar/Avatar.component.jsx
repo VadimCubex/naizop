@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 
 export const AvatarComponent = React.forwardRef(
-  ({ variant, src, className }, ref) => {
+  ({ variant, isLight, src, className }, ref) => {
     const AvatarClass = classNames(
       "avatar",
       {
@@ -12,11 +12,19 @@ export const AvatarComponent = React.forwardRef(
     );
 
     return (
-      <div
-        ref={ref}
-        className={AvatarClass}
-        style={src ? { backgroundImage: `url(${src})` } : {}}
-      ></div>
+      <div className="avatar-container">
+        {isLight && (
+          <div
+            className="avatar-light"
+            style={src ? { backgroundImage: `url(${src})` } : {}}
+          ></div>
+        )}
+        <div
+          ref={ref}
+          className={AvatarClass}
+          style={src ? { backgroundImage: `url(${src})` } : {}}
+        ></div>
+      </div>
     );
   }
 );

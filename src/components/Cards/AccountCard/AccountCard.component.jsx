@@ -16,6 +16,7 @@ import useTooltip from "../../../hooks/useTooltip";
 export const AccountCardComponent = ({
   variant,
   onClick,
+  subtitle,
   text,
   tooltip,
   className,
@@ -66,6 +67,7 @@ export const AccountCardComponent = ({
           </div>
         </>
       )}
+      {subtitle && <Text variant={TextVariants.h3_regular}>{subtitle}</Text>}
       <Text variant={TextVariants.h3}>{text}</Text>
     </div>
   );

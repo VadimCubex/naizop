@@ -2,24 +2,32 @@ import React from "react";
 import { useState } from "react";
 import classNames from "classnames";
 
-import { FilterSelect } from "./constants";
+import { FilterSelect, FilterSelectWithIcon } from "./constants";
 import {
   ButtonVariants,
   IconsVariants,
+  SelectOptionVariants,
   TextVariants,
 } from "../../constants/VariantsOfComponents";
 import { Button } from "../Button";
 import { DropDown } from "../DropDown";
 import { Input } from "../Input";
+import { Select } from "../Select";
 import { SvgIcon } from "../SvgIcon";
 import { Text } from "../Text";
 
-export const FilterComponent = ({ className, withDropdown, options = [] }) => {
+export const FilterComponent = ({
+  className,
+  withDropdown,
+  withSelect,
+  options = [],
+}) => {
   const [value, setValue] = useState("");
   const [isShowDropDown, setIsShowDropDown] = useState(false);
   const [activeFilter, setActiveFilter] = useState(
     options[0] || FilterSelect[0]
   );
+  const [selectedFilter, setSelectedFilter] = useState(FilterSelectWithIcon[0]);
   const FilterClass = classNames("filter", className);
 
   const handleClickFilterVariant = (item) => {
@@ -114,6 +122,17 @@ export const FilterComponent = ({ className, withDropdown, options = [] }) => {
               />
             ))}
           </div>
+        </div>
+      )}
+      {withSelect && (
+        <div className="filter-select">
+          <Select
+            maxHeight={310}
+            onClick={setSelectedFilter}
+            selected={selectedFilter}
+            variant={SelectOptionVariants.default}
+            options={FilterSelectWithIcon}
+          />
         </div>
       )}
     </>

@@ -91,6 +91,7 @@
   margin: 0px;
   border: none;
   width: 1px;
+  height: 100%;
   background: var(--light-blue-15);
 }
 

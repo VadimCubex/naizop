@@ -1,6 +1,8 @@
 import React from "react";
 
+import RowCompleted from "./RowCompleted";
 import RowOrders from "./RowOrders";
+import RowPayment from "./RowPayment";
 import RowRanks from "./RowRanks";
 import RowRedeemHistory from "./RowRedeemHistory";
 import RowService from "./RowService";
@@ -16,6 +18,8 @@ const TableRow = ({ variant, item }) => {
     [TableVariants.Ranks]: <RowRanks item={item} />,
     [TableVariants.Service]: <RowService item={item} />,
     [TableVariants.Service_detail]: <RowServiceDetail item={item} />,
+    [TableVariants.Payment]: <RowPayment item={item} />,
+    [TableVariants.Completed]: <RowCompleted item={item} />,
   };
 
   return <>{RowVariantMap[variant]}</>;

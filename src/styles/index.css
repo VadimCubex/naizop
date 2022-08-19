@@ -26,6 +26,21 @@
 @import "../components/Currency/Currency.module.css";
 @import "../components/Filter/Filter.module.css";
 @import "../components/Status/Status.module.css";
+@import "../components/ServiceList/ServiceList.module.css";
+@import "../components/HowItWorks/HowItWorks.module.css";
+@import "../components/Tabs/Tabs.module.css";
+@import "../components/NewOrder/NewOrder.module.css";
+@import "../components/Instruction/Instruction.module.css";
+@import "../components/ReasonsToUse/ReasonsToUse.module.css";
+@import "../components/SliderReviews/SliderReviews.module.css";
+@import "../components/Steper/Steper.module.css";
+@import "../components/SliderOrder/SliderOrder.module.css";
+@import "../components/Checkbox/Checkbox.module.css";
+@import "../components/Plan/Plan.module.css";
+@import "../components/ProgressStatus/ProgressStatus.module.css";
+@import "../components/StatusSteper/StatusSteper.module.css";
+@import "../components/Trustpilot/Trustpilot.module.css";
+@import "../components/Notification/Notification.module.css";
 
 @import "./App.css";
 @import "./normalize.css";
@@ -41,6 +56,16 @@
 @import "../pages/Subscriptions/Subscriptions.module.css";
 @import "../pages/Orders/Orders.module.css";
 @import "../pages/AllServices/AllServices.module.css";
+@import "../pages/MassOrder/MassOrder.module.css";
+@import "../pages/PlaceNewOrder/PlaceNewOrder.module.css";
+@import "../pages/Payment/Payment.module.css";
+@import "../pages/PaymentError/PaymentError.module.css";
+@import "../pages/PaymentHistory/PaymentHistory.module.css";
+@import "../pages/BestQualityService/BestQualityService.module.css";
+@import "../pages/OrderDetail/OrderDetail.module.css";
+@import "../pages/CompletedOrder/CompletedOrder.module.css";
+@import "../pages/TrackOrder/TrackOrder.module.css";
+
 :root {
   --transition-property: all;
   --transition-time: 0.4s;
@@ -58,7 +83,6 @@ html {
   min-height: 590px;
   transition: var(--transition-property) 0s var(--transition-function);
   min-width: 280px;
-  height: 100%;
 }
 
 * {
@@ -135,4 +159,9 @@ code {
 @font-face {
   font-family: "Roboto Bold";
   src: url(../fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Roboto Light";
+  src: url(../fonts/Roboto-Light.ttf);
 }

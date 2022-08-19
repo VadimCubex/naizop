@@ -4,6 +4,8 @@
 @import "./TableVariantsStyles/TableVariantOrders.module.css";
 @import "./TableVariantsStyles/TableVariantService.module.css";
 @import "./TableVariantsStyles/TableVariantServiceDetail.module.css";
+@import "./TableVariantsStyles/TableVariantPayment.module.css";
+@import "./TableVariantsStyles/TableVariantComleted.module.css";
 
 .table {
   display: flex;

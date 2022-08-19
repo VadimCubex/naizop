@@ -28,6 +28,7 @@
 }
 
 .badge .text {
+  font-size: 14px;
   opacity: 0.7;
 }
 
@@ -55,14 +56,18 @@
   gap: 40px;
 }
 
-.background-img.profile-container {
-  min-height: 860px;
+.column {
+  flex-direction: column;
+}
+
+.flex-reverse {
+  flex-direction: row-reverse;
 }
 
 .background-img {
   background: url("/public/images/Backgrounds/1440.png");
   background-size: cover !important;
-  background-position: right !important;
+  background-position: center !important;
 }
 
 .profile-container.background-img {

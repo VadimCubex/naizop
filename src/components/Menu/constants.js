@@ -24,6 +24,10 @@ export const NavLinks = [
     text: "About us",
     link: "/about",
   },
+  {
+    text: "Track order",
+    link: "/track-order",
+  },
 ];
 
 export const ProfileNavLinks = [
@@ -204,5 +208,16 @@ export const FeaturesLinks = [
     icon: IconsVariants.Blog,
     text: "Blog",
     link: "/profile/blog",
+  },
+];
+
+export const Notifications = [
+  {
+    icon: IconsVariants.Done,
+    text: "The payment has been detected",
+  },
+  {
+    icon: IconsVariants.Done,
+    text: "Your payment has been added to your balance",
   },
 ];

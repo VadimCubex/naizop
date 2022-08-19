@@ -1,0 +1,85 @@
+.salesCard {
+  display: flex;
+  flex-grow: 1;
+
+  width: 10.9%;
+  height: 140px;
+  border-radius: 10px;
+  padding: 1px;
+
+  backdrop-filter: blur(40px);
+  background: var(--gradient-border);
+  color: var(--white);
+}
+
+.salesCard > div {
+  border-radius: 8px;
+  padding: 9px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    161.28% 137.14% at 122.8% -37.14%,
+    #414b51 0%,
+    #1d262c 100%
+  );
+}
+
+.salesCard.active {
+  padding: 2px;
+
+  background: radial-gradient(
+    183.2% 163.57% at -34.8% 136.07%,
+    #ffffff 0%,
+    #85f7e2 49.48%,
+    #ffb60e 100%
+  );
+}
+
+.salesCard.active > div {
+  padding: 8px;
+  background: radial-gradient(
+      150.8% 176.07% at 40.4% 154.93%,
+      #018f6e 10%,
+      #3e5e89 50%,
+      #564174 80%,
+      #41444c 100%
+    ),
+    radial-gradient(
+      129.6% 115.71% at 107.2% -23.57%,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    rgba(217, 217, 217, 0.01);
+}
+
+.salesCard > div .text:last-child {
+  margin-top: 10px;
+  color: var(--yellow);
+}
+
+.salesCard .text {
+  line-height: 20px;
+}
+
+@media (max-width: 1439px) {
+  .salesCard {
+    width: 20%;
+  }
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 834px) {
+  .salesCard {
+    width: 40%;
+  }
+}
+
+@media (max-width: 425px) {
+}

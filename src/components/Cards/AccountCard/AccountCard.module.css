@@ -45,8 +45,8 @@
 .question {
   display: inline-block;
   position: absolute;
-  right: 12.5px;
-  top: 12.5px;
+  right: 10px;
+  top: 10px;
 }
 
 @media (max-width: 1439px) {

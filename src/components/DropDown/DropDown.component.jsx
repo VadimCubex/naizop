@@ -9,6 +9,7 @@ export const DropDownComponent = ({
   children,
   addToHeight,
   isInnerHeight,
+  maxHeight,
   className,
 }) => {
   const DropDownClass = classNames(
@@ -26,6 +27,18 @@ export const DropDownComponent = ({
 
   const [height, setHeight] = useState(0);
   const dropDown = useRef(null);
+
+  const selectHeight = () => {
+    if (isOpen) {
+      if (maxHeight) {
+        return maxHeight;
+      } else {
+        return height;
+      }
+    } else {
+      return 0;
+    }
+  };
 
   useEffect(() => {
     const updateSize = () => {
@@ -47,10 +60,7 @@ export const DropDownComponent = ({
   }, []);
 
   return (
-    <div
-      style={{ maxHeight: isOpen ? `${height}px` : "0px" }}
-      className={DropDownClass}
-    >
+    <div style={{ maxHeight: `${selectHeight()}px` }} className={DropDownClass}>
       <div ref={dropDown} className={DropDownChildrenClass}>
         {children}
       </div>

@@ -1,0 +1,13 @@
+.tabs.tabs_default .tab {
+  height: 70px;
+}
+
+.tabs.tabs_outline .tab {
+  padding-bottom: 15px;
+}
+
+@media (max-width: 834px) {
+  .tabs.tabs_outline .tab {
+    padding-bottom: 5px;
+  }
+}

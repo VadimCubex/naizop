@@ -1,0 +1,19 @@
+.payment-history {
+  padding-bottom: 310px;
+}
+
+.payment-history .text.text_variant_h4 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: var(--white);
+}
+
+.payment-history .text.text_variant_h4 .text {
+  opacity: 0.5;
+  color: var(--white);
+}
+
+.payment-history .text.text_variant_h1_medium {
+  color: var(--white);
+  margin-bottom: 30px;
+}

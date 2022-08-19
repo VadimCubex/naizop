@@ -1,6 +1,5 @@
 .status {
-  width: 80px;
-  height: 34px;
+  position: relative;
   border-radius: 17px;
   display: flex;
   justify-content: center;
@@ -12,26 +11,107 @@
   padding: 0px !important;
 }
 
+.status_size_sm {
+  width: 80px;
+  height: 34px;
+}
+
+.status_size_bg {
+  width: 100%;
+  border-radius: 10px;
+  padding: 24px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.status_size_bg.none {
+  display: none;
+}
+
+.status_size_bg.active .text {
+  font-family: "Space Grotesk Bold";
+  font-size: 30px;
+}
+
 .status_variant_refunded {
   background: var(--status-red);
+}
+.status_variant_refunded.status_size_bg {
+  background: var(--status-gradient-red);
 }
 
 .status_variant_partial {
   background: var(--status-blue);
 }
+.status_variant_partial.status_size_bg {
+  background: var(--status-gradient-blue);
+}
 
 .status_variant_pending {
   background: var(--status-violet);
+}
+.status_variant_pending.status_size_bg {
+  background: var(--status-gradient-violet);
 }
 
 .status_variant_processing {
   background: var(--status-orange);
 }
+.status_variant_processing.status_size_bg {
+  background: var(--status-gradient-orange);
+}
 
 .status_variant_in-progress {
   background: var(--status-yellow);
 }
+.status_variant_in-progress.status_size_bg {
+  background: var(--status-gradient-yellow);
+}
 
 .status_variant_completed {
   background: var(--status-green);
+}
+.status_variant_completed.status_size_bg {
+  background: var(--status-gradient-green);
+}
+
+.status_variant_refunded.status_size_bg.next,
+.status_variant_partial.status_size_bg.next,
+.status_variant_pending.status_size_bg.next,
+.status_variant_processing.status_size_bg.next,
+.status_variant_in-progress.status_size_bg.next,
+.status_variant_completed.status_size_bg.next {
+  background: var(--gradient-account-card);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.status_variant_refunded.status_size_bg.done,
+.status_variant_partial.status_size_bg.done,
+.status_variant_pending.status_size_bg.done,
+.status_variant_processing.status_size_bg.done,
+.status_variant_in-progress.status_size_bg.done,
+.status_variant_completed.status_size_bg.done {
+  opacity: 0.3;
+}
+
+@media (max-width: 1439px) {
+  .status_size_bg.active .text {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .status_size_bg.active .text {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 834px) {
+  .status_size_bg.active .text {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 425px) {
+  .status_size_bg.active .text {
+    font-size: 24px;
+  }
 }

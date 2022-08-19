@@ -1,0 +1,45 @@
+.checkbox input {
+  display: none;
+}
+
+.checkbox input + label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.checkbox input + label .dot {
+  border-radius: 3px;
+  left: 2px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  background: var(--gradient-green-yellow);
+  opacity: 0;
+}
+
+.checkbox input + label .border {
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  background: transparent;
+  border-radius: 6px;
+  border: 1px solid var(--white);
+}
+
+.checkbox input:checked + label .dot {
+  opacity: 1;
+}
+
+@media (max-width: 834px) {
+  .checkbox input + label .border {
+    width: 30px;
+    height: 30px;
+  }
+  .checkbox input + label .dot {
+    width: 20px;
+    height: 20px;
+  }
+}

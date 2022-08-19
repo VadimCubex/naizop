@@ -8,8 +8,10 @@ import { SelectOption } from "../SelectOption";
 export const SelectComponent = ({
   selected,
   onClick,
+  additionalOnClick,
   options,
   variant,
+  maxHeight,
   className,
 }) => {
   const [isShowDropDown, setIsShowDropDown] = useState(false);
@@ -23,6 +25,7 @@ export const SelectComponent = ({
 
   const handleClick = (value) => {
     onClick(value);
+    additionalOnClick && additionalOnClick(value.states[0]);
     setIsShowDropDown(!isShowDropDown);
   };
 
@@ -41,17 +44,24 @@ export const SelectComponent = ({
           </div>
         </div>
       </div>
-      <DropDown variant={DropDownVariants.select} isOpen={isShowDropDown}>
-        {options.map((value, index) => (
-          <SelectOption
-            key={index}
-            variant={variant}
-            value={value}
-            onClick={() => {
-              handleClick(value);
-            }}
-          />
-        ))}
+      <DropDown
+        maxHeight={maxHeight}
+        variant={DropDownVariants.select}
+        isOpen={isShowDropDown}
+      >
+        {options.map(
+          (value, index) =>
+            selected !== value && (
+              <SelectOption
+                key={index}
+                variant={variant}
+                value={value}
+                onClick={() => {
+                  handleClick(value);
+                }}
+              />
+            )
+        )}
       </DropDown>
     </div>
   );

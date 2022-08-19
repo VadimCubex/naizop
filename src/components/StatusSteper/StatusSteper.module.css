@@ -1,0 +1,12 @@
+.statuses {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 50px;
+}
+
+@media (max-width: 834px) {
+  .statuses {
+    justify-content: space-between;
+  }
+}

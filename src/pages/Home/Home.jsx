@@ -59,7 +59,7 @@ const Home = () => {
       <div className="container">
         <div className="sociale-network-background" />
       </div>
-      <div className="advantages-container">
+      <div className="home advantages-container">
         {AdvantagesInfo.map((item, index) => (
           <AdvantagesCard key={index} item={item} />
         ))}

@@ -26,6 +26,12 @@
   padding-right: 5px;
 }
 
+.accordion .accordion-title .accordion-title-contant {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .accordion .accordion-badges {
   display: flex;
   gap: 10px;
@@ -42,6 +48,9 @@
 @media (max-width: 1024px) {
   .accordion .accordion-title {
     gap: 10px;
+  }
+  .accordion .accordion-title .accordion-title-contant {
+    gap: 15px;
   }
 
   .accordion .accordion-title .svgIcon,
@@ -66,6 +75,9 @@
   .accordion .accordion-title {
     width: 220px;
     flex-grow: 1;
+  }
+  .accordion .accordion-title .accordion-title-contant {
+    gap: 10px;
   }
   .accordion .accordion-title .svgIcon,
   .accordion .accordion-title svg {

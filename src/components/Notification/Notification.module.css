@@ -1,0 +1,86 @@
+.notification {
+  display: none;
+  z-index: 100;
+  position: fixed;
+  border-radius: 10px;
+  min-height: fit-content;
+  height: fit-content;
+  padding: 20px 20px;
+  border: 1px solid var(--light-blue-15);
+  background: #2b3337;
+  text-align: left;
+  color: var(--white);
+}
+
+.notification .triangle {
+  fill: #2b3337;
+  stroke: #2b3337;
+}
+
+.notification .triangle-2 {
+  fill: #49595f;
+  stroke: #49595f;
+}
+
+.arrow_left {
+  position: absolute;
+  top: -21px;
+}
+
+.arrow_right {
+  position: absolute;
+  top: -20px;
+}
+
+.notification .text {
+  opacity: 1;
+}
+
+.notification_show {
+  display: block;
+}
+
+.notification .notification-item .separator {
+  margin: 15px 0px;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 51.04%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.notification .notification-item .type path {
+  stroke-width: 1px;
+}
+
+.notification .notification-item .type {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* @media (max-width: 1439px) {
+  .notification {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .notification {
+    padding: 26px;
+  }
+}
+@media (max-width: 834px) {
+  .notification {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 425px) {
+  .notification {
+    padding: 22px;
+  }
+} */

@@ -11,6 +11,7 @@ export const TextVariants = {
   h3_regular: "h3_regular",
   h4_regular: "h4_regular",
   h5_regular: "h5_regular",
+  title: "title",
 };
 
 export const IconsVariants = {
@@ -59,6 +60,7 @@ export const IconsVariants = {
   History: "/icons/Stroke/History.svg",
   Info: "/icons/Stroke/Info.svg",
   Instagram: "/icons/Stroke/Instagram.svg",
+  Linkedin_stroke: "/icons/Stroke/Linkedin.svg",
   Live_DW: "/icons/Stroke/Live DW.svg",
   Live_followers_counter: "/icons/Stroke/Live followers counter.svg",
   Okay: "/icons/Stroke/Okay.svg",
@@ -88,10 +90,16 @@ export const IconsVariants = {
   Eye: "/icons/Stroke/Eye.svg",
   Mask: "/icons/Stroke/MaskHappy.svg",
   Heart: "/icons/Stroke/Heart.svg",
+  Heart_stroke: "/icons/Stroke/Heart_2.svg",
   Subtract: "/icons/Stroke/Subtract.svg",
   Arrow_right: "/icons/Stroke/Arrow right.svg",
   Arrow_left: "/icons/Stroke/Arrow left.svg",
   Burger: "/icons/Stroke/Burger.svg",
+  Chat: "/icons/Stroke/Chat.svg",
+  Group: "/icons/Stroke/Group.svg",
+  Thunder: "/icons/Stroke/Thunder.svg",
+  Unlock: "/icons/Stroke/Unlock.svg",
+  Arrow_stroke_left: "/icons/Stroke/Arrow_stroke_left.svg",
   // Color
   Bitcoin: "/icons/Color/Bitcoin.svg",
   Crypto: "/icons/Color/Crypto.svg",
@@ -114,10 +122,41 @@ export const IconsVariants = {
   Twitter_color: "/icons/Color/Twitter.svg",
   Youtube_color: "/icons/Color/Youtube.svg",
   Trustpilot: "/icons/Color/Trustpilot.svg",
+  Step_arrow: "/icons/Color/Step.svg",
+
+  Heart_2: "/icons/Best/Heart.svg",
+  Comments: "/icons/Best/Comments.svg",
+  Send: "/icons/Best/Send.svg",
+  User: "/icons/Best/User.svg",
 
   Logo: "/logo.svg",
   Logo_2: "/logo 2.svg",
   Arc: "/icons/Color/arc.svg",
+};
+
+export const FlagsIcons = {
+  Australia: "/icons/Flags/Australia.svg",
+  United_States: "/icons/Flags/United States.svg",
+  Ukraine: "/icons/Flags/Ukraine.svg",
+  Sweden: "/icons/Flags/Sweden.svg",
+  United_Kingdom: "/icons/Flags/United Kingdom.svg",
+  Canada: "/icons/Flags/Canada.svg",
+};
+
+export const PaymentsIcons = {
+  Payment1: "/icons/Payments/Payment Icons-4.svg",
+  Payment2: "/icons/Payments/Payment Icons-3.svg",
+  Payment3: "/icons/Payments/Payment Icons-2.svg",
+  Payment4: "/icons/Payments/Payment Icons-1.svg",
+  Payment5: "/icons/Payments/Payment Icons.svg",
+};
+export const CryptoIcons = {
+  Crypto1: "/icons/Payments/Cryptocurrency.png",
+  Crypto2: "/icons/Payments/Cryptocurrency-1.png",
+  Crypto3: "/icons/Payments/Cryptocurrency-2.png",
+  Crypto4: "/icons/Payments/Cryptocurrency-3.png",
+  Crypto5: "/icons/Payments/Cryptocurrency-4.png",
+  Crypto6: "/icons/Payments/Cryptocurrency-5.png",
 };
 
 export const ImagesVariants = {
@@ -132,6 +171,19 @@ export const ImagesVariants = {
   Experience: "/images/Home/Experience.png",
   Excellence: "/images/Home/Excellence.png",
   profile: "/images/Profile/Profile.svg",
+  Card: "/images/Payment/Card.png",
+  Like: "/images/BestQualityService/Like.png",
+  Chat: "/images/BestQualityService/Chat.png",
+  Star: "/images/BestQualityService/Star.png",
+  BestQualityService_Slider: "/images/BestQualityService/Slider.svg",
+  BestQualityService_Slider_2: "/images/BestQualityService/Slider_2.svg",
+  Stars: "/images/BestQualityService/stars.png",
+  Step1: "/images/BestQualityService/step1.png",
+  Step2: "/images/BestQualityService/step2.png",
+  Step3: "/images/BestQualityService/step3.png",
+
+  Line1: "/images/BestQualityService/line1.png",
+  Line2: "/images/BestQualityService/line2.png",
 
   Workspace1: "/images/About/Workspace1.png",
   Workspace2: "/images/About/Workspace2.png",
@@ -139,6 +191,13 @@ export const ImagesVariants = {
   Workspace4: "/images/About/Workspace4.png",
   Workspace5: "/images/About/Workspace5.png",
   Workspace6: "/images/About/Workspace6.png",
+
+  OrderDetail1: "/images/OrderDetail/first.png",
+  OrderDetail2: "/images/OrderDetail/second.png",
+  OrderDetail3: "/images/OrderDetail/third.png",
+  OrderDetail4: "/images/OrderDetail/fourth.png",
+  OrderDetail5: "/images/OrderDetail/fifth.png",
+  OrderDetail6: "/images/OrderDetail/sixth.png",
 };
 
 export const ColorSvgVariants = {
@@ -224,6 +283,8 @@ export const TableVariants = {
   Orders: "orders",
   Service: "service",
   Service_detail: "serviceDetail",
+  Payment: "payment",
+  Completed: "completed",
 };
 
 export const StatusVariants = {
@@ -233,4 +294,18 @@ export const StatusVariants = {
   processing: "processing",
   ["in-progress"]: "in-progress",
   completed: "completed",
+};
+
+export const StatusSizeVariants = {
+  small: "sm",
+  big: "bg",
+};
+
+export const InstructionVariants = {
+  Payeer: "payeer",
+};
+
+export const TabsVariants = {
+  Default: "default",
+  Outline: "outline",
 };

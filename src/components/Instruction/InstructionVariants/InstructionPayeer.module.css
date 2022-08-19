@@ -1,0 +1,31 @@
+.payeer .top {
+  margin-bottom: 20px;
+}
+
+.payeer .text {
+  display: inline-block;
+  width: 100%;
+}
+
+.payeer .list .text {
+  display: inline;
+  width: fit-content;
+}
+
+.payeer .list .list-number {
+  width: fit-content;
+}
+
+.payeer ol {
+  margin: 0px;
+  padding-left: 16px;
+  font-family: "Space Grotesk Regular";
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.payeer ol span,
+.payeer .text a {
+  color: var(--yellow);
+  text-decoration: none;
+}
