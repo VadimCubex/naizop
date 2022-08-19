@@ -223,7 +223,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
 }
 
 .reasons-to-use
@@ -244,6 +243,18 @@
   .info-container
   > div {
   padding-top: 10px;
+}
+
+.reasons-to-use
+  .reasons-steps
+  .steps-container
+  .step-item
+  .info-container
+  > div
+  .text_variant_h4_regular
+  > .text:first-child {
+  color: var(--yellow);
+  text-decoration: underline;
 }
 
 .reasons-to-use

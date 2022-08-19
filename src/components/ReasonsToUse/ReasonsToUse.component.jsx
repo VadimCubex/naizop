@@ -53,9 +53,18 @@ export const ReasonsToUseComponent = ({ className }) => {
               <div className="info-container">
                 <Text variant={TextVariants.h1}>{item.number}</Text>
                 <div>
-                  {/* доделай тут текст для первого слайда */}
                   <Text variant={TextVariants.h1}>{item.title}</Text>
-                  <Text variant={TextVariants.h4_regular}>{item.info}</Text>
+                  <Text variant={TextVariants.h4_regular}>
+                    {item.info}{" "}
+                    {index === 0 && (
+                      <>
+                        <Text variant={TextVariants.h4_regular}>
+                          contact us
+                        </Text>
+                        <Text variant={TextVariants.h4_regular}>!</Text>
+                      </>
+                    )}
+                  </Text>
                 </div>
               </div>
               <div className="image-container">
