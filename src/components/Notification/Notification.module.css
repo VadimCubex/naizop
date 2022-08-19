@@ -1,7 +1,7 @@
 .notification {
   display: none;
   z-index: 100;
-  position: absolute;
+  position: fixed;
   border-radius: 10px;
   min-height: fit-content;
   height: fit-content;

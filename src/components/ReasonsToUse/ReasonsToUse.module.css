@@ -183,6 +183,7 @@
 
 .reasons-to-use .reasons-steps .steps-container .step-item {
   display: flex;
+  justify-content: space-between;
 }
 .reasons-to-use .reasons-steps .steps-container .step-item:nth-child(2n) {
   flex-direction: row-reverse;
@@ -205,7 +206,7 @@
 }
 
 .reasons-to-use .reasons-steps .steps-container .step-item > div {
-  width: 50%;
+  width: 49%;
 }
 
 .reasons-to-use .reasons-steps .steps-container .step-item .info-container {
@@ -280,6 +281,8 @@
   .image-container
   div {
   width: 53%;
+  max-width: 260px;
+  margin: 0px 20px;
 }
 
 .reasons-to-use
@@ -293,12 +296,12 @@
 
 .reasons-to-use .reasons-steps .line1 {
   position: absolute;
-  top: 130px;
+  top: 190px;
   left: 51%;
 }
 .reasons-to-use .reasons-steps .line2 {
   position: absolute;
-  top: 370px;
+  top: 430px;
   left: 39%;
 }
 
@@ -343,7 +346,7 @@
     margin-bottom: 90px;
   }
   .reasons-to-use .reasons-steps .line2 {
-    top: 390px;
+    top: 450px;
     left: 33%;
   }
   .reasons-to-use
