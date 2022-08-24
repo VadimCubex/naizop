@@ -31,7 +31,7 @@ const PlaceNewOrder = () => {
   return (
     <>
       <div className="place-new-order">
-        <Text variant={TextVariants.h1}>Place New Order</Text>
+        <Text variant={TextVariants.h1_medium}>Place New Order</Text>
 
         <div className="place-new-order-contant">
           <div className="tabs-container">

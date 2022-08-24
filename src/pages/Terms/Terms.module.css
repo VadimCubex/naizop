@@ -1,0 +1,41 @@
+.terms {
+  margin-top: 30px;
+  margin-bottom: 60px;
+  color: var(--white);
+}
+
+.terms,
+.terms .block .info,
+.terms .block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.terms .block {
+  padding: 25px;
+}
+
+.terms .block > .text {
+  color: var(--yellow);
+}
+
+.terms > .text {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 834px) {
+  .terms > .text {
+    margin-bottom: 0px;
+  }
+
+  .terms .block {
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 425px) {
+}

@@ -55,7 +55,7 @@ const Api = () => {
   return (
     <>
       <div className="api">
-        <Text variant={TextVariants.h1}>API</Text>
+        <Text variant={TextVariants.h1_medium}>API</Text>
         <div className="block">
           <div className="api-inputs">
             <div className="api-input">

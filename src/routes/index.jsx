@@ -6,12 +6,14 @@ import ProfileLayout from "../layouts/ProfileLayout";
 import About from "../pages/About/About";
 import Account from "../pages/Account/Account";
 import AllServices from "../pages/AllServices/AllServices";
+import Ambassador from "../pages/Ambassador/Ambassador";
 import Api from "../pages/Api/Api";
 import BestQualityService from "../pages/BestQualityService/BestQualityService";
 import CompletedOrder from "../pages/CompletedOrder/CompletedOrder";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import FAQ from "../pages/FAQ/FAQ";
 import Home from "../pages/Home/Home";
+import Login from "../pages/Login/Login";
 import MassOrder from "../pages/MassOrder/MassOrder";
 import OrderDetail from "../pages/OrderDetail/OrderDetail";
 import Orders from "../pages/Orders/Orders";
@@ -21,7 +23,10 @@ import PaymentHistory from "../pages/PaymentHistory/PaymentHistory";
 import PlaceNewOrder from "../pages/PlaceNewOrder/PlaceNewOrder";
 import RedeemHistory from "../pages/RedeemHistory/RedeemHistory";
 import RedeemSupport from "../pages/RedeemSupport/RedeemSupport";
+import Register from "../pages/Register/Register";
+import ResetPassword from "../pages/ResetPassword/ResetPassword";
 import Subscriptions from "../pages/Subscriptions/Subscriptions";
+import Terms from "../pages/Terms/Terms";
 import TestComponents from "../pages/TestComponents";
 import TrackOrder from "../pages/TrackOrder/TrackOrder";
 
@@ -42,6 +47,9 @@ const NaizopRoutes = () => {
         <Route path="/order-detail" element={<OrderDetail />} />
         <Route path="/compleled-order" element={<CompletedOrder />} />
         <Route path="/track-order" element={<TrackOrder />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
       </Route>
       <Route path="/profile" element={<ProfileLayout />}>
         <Route index element={<Dashboard />} />
@@ -72,10 +80,10 @@ const NaizopRoutes = () => {
         <Route path="/profile/updates" element={<Dashboard />} />
         <Route path="/profile/blog" element={<Dashboard />} />
         <Route path="/profile/tools" element={<Dashboard />} />
-        <Route path="/profile/terms" element={<Dashboard />} />
+        <Route path="/profile/terms" element={<Terms />} />
         <Route path="/profile/faq" element={<FAQ container={false} />} />
         <Route path="/profile/api" element={<Api />} />
-        <Route path="/profile/ambassador-program" element={<Dashboard />} />
+        <Route path="/profile/ambassador-program" element={<Ambassador />} />
       </Route>
     </Routes>
   );

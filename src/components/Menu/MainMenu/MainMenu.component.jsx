@@ -28,7 +28,11 @@ export const MainMenuComponent = () => {
   });
 
   const handleClickLogin = () => {
-    navigate("/profile");
+    navigate("/login");
+  };
+
+  const handleClickRegister = () => {
+    navigate("/register");
   };
 
   const handleClickBurger = () => {
@@ -119,6 +123,7 @@ export const MainMenuComponent = () => {
                   text="Login"
                 />
                 <Button
+                  onClick={handleClickRegister}
                   className="register-button"
                   variant={ButtonVariants.default}
                   text="Register"
@@ -202,6 +207,7 @@ export const MainMenuComponent = () => {
                     text="Login"
                   />
                   <Button
+                    onClick={handleClickRegister}
                     className="register-button"
                     variant={ButtonVariants.default}
                     text="Register"

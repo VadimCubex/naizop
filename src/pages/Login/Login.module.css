@@ -1,0 +1,121 @@
+.login {
+  position: relative;
+  padding-top: 140px;
+  padding-bottom: 250px;
+  display: flex;
+  justify-content: center;
+  color: var(--white);
+}
+
+.login .login-background {
+  position: absolute;
+  background-image: url(/public/images/Backgrounds/orderDetail.png);
+  background-size: cover;
+  width: 100%;
+  height: calc(100% + 60px);
+  top: -60px;
+  left: 0px;
+}
+
+.login .block {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px 50px;
+}
+
+.login .block .login-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.login .block .login-input .text {
+  opacity: 0.75;
+}
+
+.login .block .login-input input {
+  font-family: "Space Grotesk Light";
+}
+
+.login .block > .text:first-child {
+  margin-bottom: 40px;
+}
+
+.login .block a {
+  color: var(--white);
+  margin-top: 10px;
+}
+
+.login .block .btn-container {
+  margin-top: 80px;
+  align-self: center;
+  width: 270px;
+}
+
+.login .block .btn-container .button {
+  width: 100%;
+}
+
+@media (max-width: 1439px) {
+  .login .block {
+    width: 60%;
+  }
+  .login .block .btn-container {
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .login .block .top .svgIcon {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .login {
+    padding-top: 100px;
+  }
+  .login .block {
+    width: 72.5%;
+  }
+  .login .block .btn-container {
+    margin-top: 60px;
+  }
+  .login .block > .text:first-child {
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 834px) {
+  .login {
+    padding-top: 70px;
+  }
+  .login .block {
+    width: 87.5%;
+    padding: 30px 20px 50px;
+  }
+  .login .block .btn-container {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .login .block > .text:first-child {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  .login {
+    padding-top: 30px;
+  }
+  .login .block {
+    width: 100%;
+  }
+  .login .block .btn-container {
+    font-size: 34px;
+    margin-top: 40px;
+  }
+  .login .block a .text {
+    font-size: 14px;
+  }
+}

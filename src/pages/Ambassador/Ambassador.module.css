@@ -1,0 +1,63 @@
+.ambassador {
+  margin-top: 30px;
+  margin-bottom: 100px;
+  color: var(--white);
+}
+
+.ambassador .top {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.ambassador .programms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.ambassador .programms .programm-card-1 {
+  background: linear-gradient(
+      0deg,
+      rgba(30, 33, 36, 0.75),
+      rgba(30, 33, 36, 0.75)
+    ),
+    radial-gradient(
+      100% 261.01% at 100% 100%,
+      rgba(255, 0, 0, 0.3) 0%,
+      rgba(255, 0, 0, 0) 100%
+    ),
+    radial-gradient(
+      99.13% 96.45% at 31.38% -58.62%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.ambassador .programms [class*="programm-card"] {
+  width: 40%;
+  flex-grow: 1;
+  padding: 25px 25px 35px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ambassador .programms [class*="programm-card"] .title {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.ambassador .block {
+  padding: 25px 25px 30px;
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 834px) {
+}
+
+@media (max-width: 425px) {
+}
