@@ -70,6 +70,7 @@
 @import "../pages/ResetPassword/ResetPassword.module.css";
 @import "../pages/Terms/Terms.module.css";
 @import "../pages/Ambassador/Ambassador.module.css";
+@import "../pages/Affiliates/Affiliates.module.css";
 
 :root {
   --transition-property: all;

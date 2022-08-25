@@ -5,6 +5,7 @@ import MainLayout from "../layouts/MainLayout";
 import ProfileLayout from "../layouts/ProfileLayout";
 import About from "../pages/About/About";
 import Account from "../pages/Account/Account";
+import Affiliates from "../pages/Affiliates/Affiliates";
 import AllServices from "../pages/AllServices/AllServices";
 import Ambassador from "../pages/Ambassador/Ambassador";
 import Api from "../pages/Api/Api";
@@ -73,7 +74,7 @@ const NaizopRoutes = () => {
         />
         <Route path="/profile/add-funds/error" element={<PaymentError />} />
         <Route path="/profile/support" element={<Dashboard />} />
-        <Route path="/profile/affiliates" element={<Dashboard />} />
+        <Route path="/profile/affiliates" element={<Affiliates />} />
         <Route path="/profile/favorites" element={<Dashboard />} />
         <Route path="/profile/childpanel" element={<Dashboard />} />
 

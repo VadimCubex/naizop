@@ -25,8 +25,62 @@
     ),
     radial-gradient(
       100% 261.01% at 100% 100%,
-      rgba(255, 0, 0, 0.3) 0%,
-      rgba(255, 0, 0, 0) 100%
+      rgba(255, 0, 0, 1) 0%,
+      rgba(255, 0, 0, 0) 80%
+    ),
+    radial-gradient(
+      99.13% 96.45% at 31.38% -58.62%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.ambassador .programms .programm-card-2 {
+  background: linear-gradient(
+      0deg,
+      rgba(30, 33, 36, 0.75),
+      rgba(30, 33, 36, 0.75)
+    ),
+    radial-gradient(
+      100% 261.01% at 100% 100%,
+      rgba(0, 240, 255, 1) 0%,
+      rgba(0, 255, 240, 0) 80%
+    ),
+    radial-gradient(
+      99.13% 96.45% at 31.38% -58.62%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.ambassador .programms .programm-card-3 {
+  background: linear-gradient(
+      0deg,
+      rgba(30, 33, 36, 0.75),
+      rgba(30, 33, 36, 0.75)
+    ),
+    radial-gradient(
+      100% 261.01% at 100% 100%,
+      rgba(0, 255, 71, 1) 0%,
+      rgba(0, 255, 10, 0) 80%
+    ),
+    radial-gradient(
+      99.13% 96.45% at 31.38% -58.62%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.ambassador .programms .programm-card-4 {
+  background: linear-gradient(
+      0deg,
+      rgba(30, 33, 36, 0.75),
+      rgba(30, 33, 36, 0.75)
+    ),
+    radial-gradient(
+      100% 261.01% at 100% 100%,
+      rgba(250, 255, 0, 1) 0%,
+      rgba(255, 214, 0, 0) 80%
     ),
     radial-gradient(
       99.13% 96.45% at 31.38% -58.62%,
@@ -38,6 +92,7 @@
 .ambassador .programms [class*="programm-card"] {
   width: 40%;
   flex-grow: 1;
+  min-height: 230px;
   padding: 25px 25px 35px;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -49,8 +104,59 @@
   margin-bottom: 20px;
 }
 
+.ambassador .separator {
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 51.04%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  width: 100%;
+  height: 1px;
+}
+
+.ambassador > .separator {
+  margin: 40px 0px;
+}
+
 .ambassador .block {
+  width: 40%;
+  flex-grow: 1;
   padding: 25px 25px 30px;
+}
+
+.ambassador .block ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 20px;
+  padding-left: 25px;
+  margin: 20px 0px 0px;
+}
+
+.ambassador .block ul li {
+  position: relative;
+}
+
+.ambassador .block ul li::before {
+  content: "·";
+  font-size: 25px;
+  position: absolute;
+  left: -17px;
+  top: -5px;
+}
+
+.ambassador .block div .text:first-child {
+  margin-bottom: 20px;
+}
+
+.ambassador .block .separator {
+  margin: 35px 0px 25px;
+}
+
+.ambassador .bottom {
+  display: flex;
+  gap: 20px;
 }
 
 @media (max-width: 1024px) {

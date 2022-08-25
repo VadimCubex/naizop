@@ -39,7 +39,7 @@ const Ambassador = () => {
             <ul>
               {GiveAwayTerms.map((text, index) => (
                 <li key={index}>
-                  <Text variant={TextVariants.h4_regular}>{text}</Text>
+                  <Text variant={TextVariants.h5_regular}>{text}</Text>
                 </li>
               ))}
             </ul>
@@ -47,7 +47,7 @@ const Ambassador = () => {
           <div className="block">
             <div>
               <Text variant={TextVariants.h2}>Disclaimer</Text>
-              <Text variant={TextVariants.h4_regular}>
+              <Text variant={TextVariants.h5_regular}>
                 Cloutsy will not be responsible for any damages you or your
                 business may suffer.
               </Text>
@@ -55,7 +55,7 @@ const Ambassador = () => {
             <div className="separator"></div>
             <div>
               <Text variant={TextVariants.h2}>Liabilities</Text>
-              <Text variant={TextVariants.h4_regular}>
+              <Text variant={TextVariants.h5_regular}>
                 Cloutsy Panel no way liable for any account suspension or
                 picture deletion done by YouTube, Soundcloud, Vine, Pinterest,
                 or Other Social Media.
