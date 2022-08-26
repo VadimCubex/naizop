@@ -44,3 +44,14 @@ export const Socials = [
   IconsVariants.Skype,
   IconsVariants.Line,
 ];
+
+export const AffiliatesColumn = ["User", "Conversation rate", "Minimum payout"];
+export const AffiliatesTableInfo = [
+  {
+    row: {
+      user: "User",
+      rate: "0.00%",
+      payout: "$5.00",
+    },
+  },
+];

@@ -104,6 +104,10 @@
   margin-bottom: 20px;
 }
 
+.ambassador .programms [class*="programm-card"] .title > .text {
+  color: var(--yellow);
+}
+
 .ambassador .separator {
   background: linear-gradient(
     270deg,
@@ -160,10 +164,62 @@
 }
 
 @media (max-width: 1024px) {
+  .ambassador .top {
+    gap: 15px;
+  }
+  .ambassador .programms {
+    flex-direction: column;
+  }
+  .ambassador .programms [class*="programm-card"] {
+    width: 100%;
+  }
 }
 
 @media (max-width: 834px) {
+  .ambassador {
+    margin-bottom: 80px;
+  }
+  .ambassador .text.text_variant_h5_regular {
+    font-size: 14px;
+  }
+  .ambassador .bottom {
+    flex-direction: column;
+  }
+  .ambassador > .separator {
+    margin: 25px 0px;
+  }
+  .ambassador .block {
+    width: 100%;
+    padding: 20px;
+  }
+  .ambassador .block .disclaimer {
+    display: flex;
+    flex-direction: column;
+  }
+  .ambassador .block .separator {
+    margin: 20px 0px;
+  }
+  .ambassador .block ul {
+    padding-left: 20px;
+  }
+  .ambassador .programms [class*="programm-card"] {
+    padding: 20px;
+    border-radius: 15px;
+    min-height: 180px;
+  }
+  .ambassador .block div .text:first-child,
+  .ambassador .programms [class*="programm-card"] .title {
+    margin-bottom: 10px;
+  }
+  .ambassador .title .svgIcon {
+    display: none;
+  }
 }
 
 @media (max-width: 425px) {
+  .ambassador .programms [class*="programm-card"] {
+    padding: 20px;
+    border-radius: 15px;
+    min-height: 230px;
+  }
 }

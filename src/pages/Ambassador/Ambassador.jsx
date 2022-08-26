@@ -35,7 +35,7 @@ const Ambassador = () => {
         <div className="separator"></div>
         <div className="bottom">
           <div className="block">
-            <Text variant={TextVariants.h2}>Giveaway Terms</Text>
+            <Text variant={TextVariants.h2}>Naizop recommended</Text>
             <ul>
               {GiveAwayTerms.map((text, index) => (
                 <li key={index}>
@@ -45,7 +45,7 @@ const Ambassador = () => {
             </ul>
           </div>
           <div className="block">
-            <div>
+            <div className="disclaimer">
               <Text variant={TextVariants.h2}>Disclaimer</Text>
               <Text variant={TextVariants.h5_regular}>
                 Cloutsy will not be responsible for any damages you or your
@@ -53,7 +53,7 @@ const Ambassador = () => {
               </Text>
             </div>
             <div className="separator"></div>
-            <div>
+            <div className="disclaimer">
               <Text variant={TextVariants.h2}>Liabilities</Text>
               <Text variant={TextVariants.h5_regular}>
                 Cloutsy Panel no way liable for any account suspension or

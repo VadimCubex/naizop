@@ -299,6 +299,7 @@ export const TableVariants = {
   Service_detail: "serviceDetail",
   Payment: "payment",
   Completed: "completed",
+  Affiliates: "affiliates",
 };
 
 export const StatusVariants = {

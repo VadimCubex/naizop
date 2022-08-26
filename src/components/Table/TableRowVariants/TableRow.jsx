@@ -1,5 +1,6 @@
 import React from "react";
 
+import RowAffiliates from "./RowAffiliates";
 import RowCompleted from "./RowCompleted";
 import RowOrders from "./RowOrders";
 import RowPayment from "./RowPayment";
@@ -20,6 +21,7 @@ const TableRow = ({ variant, item }) => {
     [TableVariants.Service_detail]: <RowServiceDetail item={item} />,
     [TableVariants.Payment]: <RowPayment item={item} />,
     [TableVariants.Completed]: <RowCompleted item={item} />,
+    [TableVariants.Affiliates]: <RowAffiliates item={item} />,
   };
 
   return <>{RowVariantMap[variant]}</>;
