@@ -100,6 +100,10 @@ export const IconsVariants = {
   Thunder: "/icons/Stroke/Thunder.svg",
   Unlock: "/icons/Stroke/Unlock.svg",
   Arrow_stroke_left: "/icons/Stroke/Arrow_stroke_left.svg",
+  Money: "/icons/Stroke/Money.svg",
+  Coins: "/icons/Stroke/Coins.svg",
+  Purchase: "/icons/Stroke/Purchase.svg",
+  Wallet: "/icons/Stroke/Wallet.svg",
   // Color
   Bitcoin: "/icons/Color/Bitcoin.svg",
   Crypto: "/icons/Color/Crypto.svg",
@@ -123,6 +127,13 @@ export const IconsVariants = {
   Youtube_color: "/icons/Color/Youtube.svg",
   Trustpilot: "/icons/Color/Trustpilot.svg",
   Step_arrow: "/icons/Color/Step.svg",
+  Line: "/icons/Color/Line.svg",
+  Skype: "/icons/Color/Skype.svg",
+  Pinterest: "/icons/Color/Pinterest.svg",
+  Whatsapp: "/icons/Color/Whatsapp.svg",
+  Gmail: "/icons/Color/Gmail.svg",
+  Odnoklassniki: "/icons/Color/Odnoklassniki.svg",
+  VK: "/icons/Color/VK.svg",
 
   Heart_2: "/icons/Best/Heart.svg",
   Comments: "/icons/Best/Comments.svg",
@@ -150,6 +161,7 @@ export const PaymentsIcons = {
   Payment4: "/icons/Payments/Payment Icons-1.svg",
   Payment5: "/icons/Payments/Payment Icons.svg",
 };
+
 export const CryptoIcons = {
   Crypto1: "/icons/Payments/Cryptocurrency.png",
   Crypto2: "/icons/Payments/Cryptocurrency-1.png",
@@ -181,6 +193,12 @@ export const ImagesVariants = {
   Step1: "/images/BestQualityService/step1.png",
   Step2: "/images/BestQualityService/step2.png",
   Step3: "/images/BestQualityService/step3.png",
+
+  Affiliates: "/images/Affiliates/affiliates.png",
+  Affiliates_house: "/images/Affiliates/house.png",
+  Affiliates_friends: "/images/Affiliates/friends.png",
+  Coinbase: "/images/Affiliates/coinbase.png",
+  MoonPay: "/images/Affiliates/moonPay.png",
 
   Line1: "/images/BestQualityService/line1.png",
   Line2: "/images/BestQualityService/line2.png",
@@ -285,6 +303,7 @@ export const TableVariants = {
   Service_detail: "serviceDetail",
   Payment: "payment",
   Completed: "completed",
+  Affiliates: "affiliates",
 };
 
 export const StatusVariants = {

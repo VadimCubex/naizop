@@ -46,7 +46,7 @@ const Payment = () => {
   return (
     <>
       <div className="payment">
-        <Text variant={TextVariants.h1}>Add funds</Text>
+        <Text variant={TextVariants.h1_medium}>Add funds</Text>
         <div className="payment-contant">
           <div className="block steps">
             <Text variant={TextVariants.h3}>3 steps</Text>

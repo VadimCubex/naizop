@@ -1,0 +1,225 @@
+.ambassador {
+  margin-top: 30px;
+  margin-bottom: 100px;
+  color: var(--white);
+}
+
+.ambassador .top {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.ambassador .programms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.ambassador .programms .programm-card-1 {
+  background: linear-gradient(
+      0deg,
+      rgba(30, 33, 36, 0.75),
+      rgba(30, 33, 36, 0.75)
+    ),
+    radial-gradient(
+      100% 261.01% at 100% 100%,
+      rgba(255, 0, 0, 1) 0%,
+      rgba(255, 0, 0, 0) 80%
+    ),
+    radial-gradient(
+      99.13% 96.45% at 31.38% -58.62%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.ambassador .programms .programm-card-2 {
+  background: linear-gradient(
+      0deg,
+      rgba(30, 33, 36, 0.75),
+      rgba(30, 33, 36, 0.75)
+    ),
+    radial-gradient(
+      100% 261.01% at 100% 100%,
+      rgba(0, 240, 255, 1) 0%,
+      rgba(0, 255, 240, 0) 80%
+    ),
+    radial-gradient(
+      99.13% 96.45% at 31.38% -58.62%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.ambassador .programms .programm-card-3 {
+  background: linear-gradient(
+      0deg,
+      rgba(30, 33, 36, 0.75),
+      rgba(30, 33, 36, 0.75)
+    ),
+    radial-gradient(
+      100% 261.01% at 100% 100%,
+      rgba(0, 255, 71, 1) 0%,
+      rgba(0, 255, 10, 0) 80%
+    ),
+    radial-gradient(
+      99.13% 96.45% at 31.38% -58.62%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.ambassador .programms .programm-card-4 {
+  background: linear-gradient(
+      0deg,
+      rgba(30, 33, 36, 0.75),
+      rgba(30, 33, 36, 0.75)
+    ),
+    radial-gradient(
+      100% 261.01% at 100% 100%,
+      rgba(250, 255, 0, 1) 0%,
+      rgba(255, 214, 0, 0) 80%
+    ),
+    radial-gradient(
+      99.13% 96.45% at 31.38% -58.62%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.ambassador .programms [class*="programm-card"] {
+  width: 40%;
+  flex-grow: 1;
+  min-height: 230px;
+  padding: 25px 25px 35px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ambassador .programms [class*="programm-card"] .title {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.ambassador .programms [class*="programm-card"] .title > .text {
+  color: var(--yellow);
+}
+
+.ambassador .separator {
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 51.04%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  width: 100%;
+  height: 1px;
+}
+
+.ambassador > .separator {
+  margin: 40px 0px;
+}
+
+.ambassador .block {
+  width: 40%;
+  flex-grow: 1;
+  padding: 25px 25px 30px;
+}
+
+.ambassador .block ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 20px;
+  padding-left: 25px;
+  margin: 20px 0px 0px;
+}
+
+.ambassador .block ul li {
+  position: relative;
+}
+
+.ambassador .block ul li::before {
+  content: "·";
+  font-size: 25px;
+  position: absolute;
+  left: -17px;
+  top: -5px;
+}
+
+.ambassador .block div .text:first-child {
+  margin-bottom: 20px;
+}
+
+.ambassador .block .separator {
+  margin: 35px 0px 25px;
+}
+
+.ambassador .bottom {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .ambassador .top {
+    gap: 15px;
+  }
+  .ambassador .programms {
+    flex-direction: column;
+  }
+  .ambassador .programms [class*="programm-card"] {
+    width: 100%;
+  }
+}
+
+@media (max-width: 834px) {
+  .ambassador {
+    margin-bottom: 80px;
+  }
+  .ambassador .text.text_variant_h5_regular {
+    font-size: 14px;
+  }
+  .ambassador .bottom {
+    flex-direction: column;
+  }
+  .ambassador > .separator {
+    margin: 25px 0px;
+  }
+  .ambassador .block {
+    width: 100%;
+    padding: 20px;
+  }
+  .ambassador .block .disclaimer {
+    display: flex;
+    flex-direction: column;
+  }
+  .ambassador .block .separator {
+    margin: 20px 0px;
+  }
+  .ambassador .block ul {
+    padding-left: 20px;
+  }
+  .ambassador .programms [class*="programm-card"] {
+    padding: 20px;
+    border-radius: 15px;
+    min-height: 180px;
+  }
+  .ambassador .block div .text:first-child,
+  .ambassador .programms [class*="programm-card"] .title {
+    margin-bottom: 10px;
+  }
+  .ambassador .title .svgIcon {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .ambassador .programms [class*="programm-card"] {
+    padding: 20px;
+    border-radius: 15px;
+    min-height: 230px;
+  }
+}

@@ -65,6 +65,13 @@
 @import "../pages/OrderDetail/OrderDetail.module.css";
 @import "../pages/CompletedOrder/CompletedOrder.module.css";
 @import "../pages/TrackOrder/TrackOrder.module.css";
+@import "../pages/Login/Login.module.css";
+@import "../pages/Register/Register.module.css";
+@import "../pages/ResetPassword/ResetPassword.module.css";
+@import "../pages/Terms/Terms.module.css";
+@import "../pages/Ambassador/Ambassador.module.css";
+@import "../pages/Affiliates/Affiliates.module.css";
+@import "../pages/Updates/Updates.module.css";
 
 :root {
   --transition-property: all;

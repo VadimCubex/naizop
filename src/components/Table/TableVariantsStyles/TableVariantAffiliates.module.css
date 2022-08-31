@@ -1,0 +1,112 @@
+.table.table-variant-affiliates {
+  width: 100%;
+  padding: 0px;
+}
+.table.table-variant-affiliates .table-separators {
+  top: 0px;
+}
+.table.table-variant-affiliates .table-row-content {
+  display: flex;
+}
+
+.table.table-variant-affiliates .table-header .table-column-cell-1,
+.table.table-variant-affiliates .table-header .table-column-cell-3,
+.table.table-variant-affiliates .table-header .table-column-cell-2,
+.table.table-variant-affiliates .table-separators .table-column-cell-1,
+.table.table-variant-affiliates .table-separators .table-column-cell-2,
+.table.table-variant-affiliates .table-separators .table-column-cell-3,
+.table.table-variant-affiliates .table-row .table-row-content .table-row-cell-1,
+.table.table-variant-affiliates .table-row .table-row-content .table-row-cell-2,
+.table.table-variant-affiliates
+  .table-row
+  .table-row-content
+  .table-row-cell-3 {
+  width: 30%;
+  flex-grow: 1;
+}
+
+@media (max-width: 834px) {
+  .table.table-variant-affiliates .table-header,
+  .table.table-variant-affiliates .table-row-content {
+    display: none;
+  }
+
+  .table.table-variant-affiliates
+    .table-content
+    .table-row
+    .table-small-row-content {
+    display: flex;
+  }
+
+  .table.table-variant-affiliates .text {
+    font-size: 16px;
+  }
+
+  .table.table-variant-affiliates
+    .table-small-header
+    [class*="table-column-cell"] {
+    padding: 15px 10px 15px 0px;
+  }
+
+  .table.table-variant-affiliates .table-row [class*="table-row-cell"] {
+    padding: 15px 10px 15px 20px;
+  }
+
+  .table.table-variant-affiliates
+    .table-content
+    .table-row
+    .table-small-row-content
+    > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .table.table-variant-affiliates .table-small-header > *,
+  .table.table-variant-affiliates .table-small-row > * {
+    height: 30%;
+    display: flex;
+    align-items: center;
+  }
+
+  .table.table-variant-affiliates .table-row-content {
+    padding: 0px 5px;
+  }
+
+  .table.table-variant-affiliates .table-small-header {
+    width: 52%;
+  }
+
+  .table.table-variant-affiliates .table-small-row {
+    width: 48%;
+  }
+
+  .table.table-variant-affiliates .table-hr {
+    position: absolute;
+    width: 1px;
+    height: 99%;
+    margin: 0px;
+    background: linear-gradient(
+      360deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    left: 52%;
+  }
+
+  .table.table-variant-affiliates .table-separators .table-column-cell-1,
+  .table.table-variant-affiliates .table-separators .table-column-cell-2,
+  .table.table-variant-affiliates .table-separators .table-column-cell-3,
+  .table.table-variant-affiliates .table-separators {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .table.table-variant-affiliates
+    .table-separators
+    [class*="table-column-cell"]
+    hr {
+    width: 100%;
+    height: 1px;
+  }
+}

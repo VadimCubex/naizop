@@ -150,8 +150,18 @@
   width: 140px;
 }
 
+.filter-variants-container .filter-variants .button .text {
+  font-family: "Space Grotesk Regular";
+  font-weight: 400;
+}
+
 .filter-variants-container .filter-variants .button.active {
   background: var(--gradient-blue);
+}
+
+.filter-variants-container .filter-variants .button.active .text {
+  font-family: "Space Grotesk Bold";
+  font-weight: 700;
 }
 
 @media (max-width: 834px) {

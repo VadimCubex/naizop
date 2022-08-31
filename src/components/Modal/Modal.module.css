@@ -10,6 +10,13 @@
   top: 0px;
   left: 0px;
   color: var(--white);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal.active {
+  pointer-events: all;
+  opacity: 1;
 }
 
 .header-modal {

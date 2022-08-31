@@ -20,7 +20,7 @@ const MassOrder = () => {
   return (
     <>
       <div className="mass-order">
-        <Text variant={TextVariants.h1}>Mass Order</Text>
+        <Text variant={TextVariants.h1_medium}>Mass Order</Text>
         <div className="mass-order-contant">
           <div className="block">
             <Text variant={TextVariants.h3}>One order per line in format</Text>

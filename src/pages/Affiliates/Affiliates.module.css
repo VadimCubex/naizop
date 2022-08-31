@@ -1,0 +1,430 @@
+.affiliates {
+  margin-top: 30px;
+  margin-bottom: 140px;
+  color: var(--white);
+}
+
+.affiliates .invite .referals .info > .text:last-child,
+.affiliates .invite > .text > .text,
+.affiliates .block.rewards .reward .info > .text:last-child,
+.affiliates .affiliates-tools-container .offer > .text:last-child,
+.affiliates .affiliates-tools-container .input-affiliates.earnings .input,
+.affiliates .affiliates-tools-container .input-affiliates.earnings input,
+.affiliates .promote .text > .text,
+.affiliates .joins .join > .text:first-child {
+  color: var(--yellow);
+}
+
+.affiliates > .text {
+  margin-bottom: 45px;
+}
+
+.affiliates .joins {
+  display: flex;
+  gap: 10px;
+}
+
+.affiliates .joins .join {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  gap: 10px;
+  flex-grow: 1;
+  text-align: center;
+  align-items: center;
+}
+
+.affiliates .joins .join > .text {
+  max-width: 255px;
+}
+
+.affiliates .promote {
+  margin-top: 50px;
+  margin-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.affiliates .promote > .text {
+  margin-top: 60px;
+  max-width: 625px;
+  text-align: center;
+}
+
+.affiliates .house {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.affiliates .house > div > img,
+.affiliates .house > div {
+  width: 100%;
+}
+
+.affiliates .affiliates-tools-container {
+  margin-top: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.affiliates .affiliates-tools-container .block {
+  padding: 30px 25px 35px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.affiliates .affiliates-tools-container .input-affiliates {
+  width: 40%;
+  flex-grow: 1;
+}
+
+.affiliates .affiliates-logo > .text,
+.affiliates .affiliates-tools-container .block > .text {
+  opacity: 0.75;
+}
+
+.affiliates
+  .affiliates-tools-container
+  .input-affiliates:nth-child(n + 3)
+  input {
+  font-size: 16px;
+}
+
+.affiliates .affiliates-tools-container .input-affiliates .input {
+  align-items: center;
+}
+
+.affiliates .affiliates-tools-container .input-affiliates input {
+  min-width: 100px;
+}
+
+.affiliates .affiliates-tools-container .input-affiliates.earnings .input {
+  gap: 0px;
+}
+
+.affiliates .affiliates-tools-container .input-affiliates.earnings input {
+  padding: 20px 20px 20px 0px;
+}
+
+.affiliates
+  .affiliates-tools-container
+  .input-affiliates:not(.earnings)
+  .input
+  .text {
+  padding-right: 30px;
+  opacity: 0.5;
+}
+
+.affiliates
+  .affiliates-tools-container
+  .input-affiliates.earnings
+  .input
+  .text {
+  padding-left: 20px;
+}
+
+.affiliates .affiliates-tools-container .input-affiliates .btn-container {
+  min-width: 120px;
+}
+
+.affiliates
+  .affiliates-tools-container
+  .input-affiliates
+  .btn-container
+  .button {
+  min-width: unset;
+}
+
+.affiliates .affiliates-tools-container .block .with-button {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.affiliates .affiliates-tools-container .offer {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  background: linear-gradient(90deg, #ffb60e -150%, rgba(255, 182, 14, 0) 115%);
+  border-radius: 10px;
+  padding: 15px 20px;
+}
+
+.affiliates .affiliates-logo {
+  margin: 100px 0px;
+  padding: 0px 50px 0 30px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.affiliates .block.rewards {
+  padding: 30px 15px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 100px;
+}
+
+.affiliates .block.rewards > div {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.affiliates .block.rewards .reward {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  gap: 30px;
+  justify-content: center;
+}
+
+.affiliates .block.rewards .reward .for-svg {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--gradient-yellow);
+}
+
+.affiliates .block.rewards .reward .info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.affiliates .block.rewards .reward .info > .text:first-child {
+  opacity: 0.75;
+  color: #9aa6b7;
+}
+
+.affiliates .invite {
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+  align-items: center;
+}
+
+.affiliates .invite .referals {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px;
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #ffb60e -150%, rgba(255, 182, 14, 0) 115%);
+}
+
+.affiliates .invite .referals .info {
+  display: flex;
+  text-transform: uppercase;
+  width: 250px;
+  flex-direction: column;
+  align-self: flex-end;
+}
+
+.affiliates .invite .referals .socials {
+  display: flex;
+  gap: 15px;
+  width: 440px;
+  flex-wrap: wrap;
+  padding: 20px 0px;
+}
+
+.affiliates .invite .referals img {
+  position: absolute;
+  left: 30px;
+  top: -43px;
+}
+
+@media (max-width: 1439px) {
+  .affiliates .joins {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .affiliates {
+    margin-bottom: 120px;
+  }
+  .affiliates > .text {
+    margin-bottom: 30px;
+  }
+  .affiliates .promote {
+    margin-bottom: 90px;
+  }
+  .affiliates .affiliates-tools-container {
+    margin-top: 90px;
+  }
+  .affiliates
+    .affiliates-tools-container
+    .block:not(.offer-container)
+    .with-button {
+    flex-direction: column;
+  }
+  .affiliates .affiliates-tools-container .input-affiliates .btn-container {
+    min-width: unset;
+    width: 100%;
+  }
+  .affiliates .block.rewards .reward {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 834px) {
+  .affiliates {
+    margin-bottom: 100px;
+  }
+
+  .affiliates > .text {
+    margin-bottom: 15px;
+  }
+
+  .affiliates .joins {
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .affiliates .joins .join,
+  .affiliates .affiliates-tools-container .offer,
+  .affiliates .affiliates-tools-container .input-affiliates {
+    width: 100%;
+  }
+
+  .affiliates .joins .join > .text {
+    max-width: 300px;
+  }
+
+  .affiliates .promote {
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .affiliates .promote > div > img {
+    width: 70%;
+  }
+
+  .affiliates .promote > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .affiliates .promote > .text {
+    margin-top: 30px;
+  }
+
+  .affiliates .promote .text {
+    font-family: "Space Grotesk Medium";
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .affiliates .house {
+    gap: 15px;
+  }
+
+  .affiliates .affiliates-tools-container {
+    margin-top: 60px;
+    flex-direction: column;
+  }
+
+  .affiliates .affiliates-tools-container .block {
+    padding: 20px 20px 40px;
+    border: 1px solid var(--light-blue-15);
+  }
+
+  .affiliates .affiliates-tools-container .block.offer-container .with-button {
+    flex-direction: column;
+  }
+
+  .affiliates
+    .affiliates-tools-container
+    .block.offer-container
+    .btn-container {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .affiliates .affiliates-logo {
+    padding: 0px;
+    flex-direction: column;
+    margin: 50px 0px;
+  }
+
+  .affiliates .block.rewards {
+    gap: 15px;
+    align-items: flex-start;
+    padding: 20px 20px 35px;
+    margin-bottom: 50px;
+  }
+
+  .affiliates .block.rewards > div {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .affiliates .block.rewards .reward {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .affiliates .block.rewards .reward .for-svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .affiliates .block.rewards .reward .for-svg .svgIcon {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .affiliates .block.rewards .reward .info {
+    gap: 0px;
+  }
+
+  .affiliates .invite > .text {
+    text-align: center;
+  }
+
+  .affiliates .invite .referals {
+    flex-direction: column;
+    padding: 0px 20px 15px;
+  }
+
+  .affiliates .invite .referals .info {
+    height: 180px;
+    align-self: flex-start;
+    justify-content: flex-end;
+  }
+
+  .affiliates .invite .referals .socials {
+    width: 100%;
+    gap: 13px;
+  }
+}
+
+@media (max-width: 425px) {
+  .affiliates {
+    margin-bottom: 80px;
+  }
+
+  .affiliates .joins .join > .text {
+    max-width: 250px;
+  }
+
+  .affiliates .promote > div > img {
+    width: 100%;
+  }
+}

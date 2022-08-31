@@ -143,6 +143,13 @@ export const ProfileMenuComponent = () => {
           </div>
 
           <div className="nav-button-container">
+            <Button
+              size={ButtonSizeVariants.large}
+              variant={ButtonVariants.yellow}
+              icon={IconsVariants.Wallet}
+              text="Wallet"
+              isLight={true}
+            />
             <Currency />
             <TooltipPortal>
               <Notification
@@ -187,6 +194,12 @@ export const ProfileMenuComponent = () => {
       </div>
 
       <DropDown className="profile-links" isOpen={isShowProfile}>
+        <div className="nav-balance">
+          <Text variant={TextVariants.subtitle_small}>BALANCE</Text>
+          <Text variant={TextVariants.h3}>{`$ ${parseFloat(
+            ProfileInfo.balance
+          ).toFixed(2)}`}</Text>
+        </div>
         <div className="links">
           {ProfileNavLinks.map((item, index) => (
             <Link
@@ -312,7 +325,15 @@ export const ProfileMenuComponent = () => {
                           onClick={() => handleClickProfileItem(item.link)}
                         >
                           <div>
-                            <SvgIcon size={20} src={item.icon} />
+                            <SvgIcon
+                              className={
+                                item.text === "API" || item.text === "Updates"
+                                  ? "stroke"
+                                  : ""
+                              }
+                              size={20}
+                              src={item.icon}
+                            />
                             <Text variant={TextVariants.h5}>{item.text}</Text>
                           </div>
                           {item.number && (
@@ -329,7 +350,7 @@ export const ProfileMenuComponent = () => {
               </div>
 
               <div className="nav-button-container">
-                <div style={{ width: "fit-content" }}>
+                <div>
                   <Button
                     size={ButtonSizeVariants.large}
                     variant={ButtonVariants.crypto}
@@ -339,15 +360,25 @@ export const ProfileMenuComponent = () => {
                     icon={IconsVariants.Arrow_crypto}
                   />
                 </div>
-                <Button
-                  onClick={handleLogoutClick}
-                  variant={ButtonVariants.default}
-                  className="button_logout"
-                  size={ButtonSizeVariants.large}
-                  text="Logout"
-                  icon={IconsVariants.Logout}
-                  iconPosition="right"
-                />
+                <div>
+                  <Button
+                    size={ButtonSizeVariants.large}
+                    variant={ButtonVariants.yellow}
+                    icon={IconsVariants.Wallet}
+                    text="Wallet"
+                    isLight={true}
+                    className="wallet"
+                  />
+                  <Button
+                    onClick={handleLogoutClick}
+                    variant={ButtonVariants.default}
+                    className="button_logout"
+                    size={ButtonSizeVariants.large}
+                    text="Logout"
+                    icon={IconsVariants.Logout}
+                    iconPosition="right"
+                  />
+                </div>
               </div>
             </nav>
           </div>

@@ -10,8 +10,6 @@
 
 .checkbox input + label .dot {
   border-radius: 3px;
-  left: 2px;
-  top: 4px;
   width: 12px;
   height: 12px;
   background: var(--gradient-green-yellow);

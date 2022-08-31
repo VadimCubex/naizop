@@ -9,22 +9,26 @@ import {
   ButtonSizeVariants,
   ButtonVariants,
   IconsVariants,
+  ImagesVariants,
   NumberVariants,
   TextVariants,
 } from "../../../constants/VariantsOfComponents";
 import { debounce } from "../../../helpers/helpers";
 import { Button } from "../../Button";
 import { DropDown } from "../../DropDown";
+import { Modal } from "../../Modal";
 import { Number } from "../../Number";
 import { SvgIcon } from "../../SvgIcon";
 import { Text } from "../../Text";
 import { SidebarLinksFirstPart, SidebarLinksSecondPart } from "../constants";
 
 export const SidebarMenuComponent = () => {
-  const [isShowMore, setIsShowMore] = useState(false);
   const SidebarMenuClass = classNames("sidebarMenu");
-  const location = useLocation();
+
+  const [isShowMore, setIsShowMore] = useState(false);
   const [active, setActive] = useState("");
+  const [isOpenModal, setIsOpenModal] = useState(false);
+  const location = useLocation();
   const container = useRef(null);
 
   useEffect(() => {
@@ -95,7 +99,15 @@ export const SidebarMenuComponent = () => {
                 >
                   <div className="item-contant">
                     <div>
-                      <SvgIcon size={16} src={item.icon} />
+                      <SvgIcon
+                        size={16}
+                        src={item.icon}
+                        className={
+                          item.text === "API" || item.text === "Updates"
+                            ? "stroke"
+                            : ""
+                        }
+                      />
                       <Text variant={TextVariants.h5}>{item.text}</Text>
                     </div>
                     {item.number && (
@@ -118,10 +130,34 @@ export const SidebarMenuComponent = () => {
               text="Purchase Crypto"
               iconPosition="right"
               icon={IconsVariants.Arrow_crypto}
+              onClick={() => setIsOpenModal(true)}
             />
           </div>
         </div>
       </div>
+      <Modal
+        className="purchase-modal"
+        title="Purchase Crypto Using Cards"
+        isOpen={isOpenModal}
+        onClick={() => setIsOpenModal(false)}
+      >
+        <div className="info">
+          <Text variant={TextVariants.h2}>Buy quickly and easily</Text>
+          <Text variant={TextVariants.h5_regular}>
+            Use your credit card to buy Bitcoin, Bitcoin Cash, Ethereum and
+            other select cryptocurrencies. After purchase you can directly
+            deposit it onto your Naizop Account.
+          </Text>
+        </div>
+        <div className="methods">
+          <div>
+            <img src={ImagesVariants.MoonPay} alt="" />
+          </div>
+          <div>
+            <img src={ImagesVariants.Coinbase} alt="" />
+          </div>
+        </div>
+      </Modal>
     </aside>
   );
 };
