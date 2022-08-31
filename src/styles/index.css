@@ -71,6 +71,7 @@
 @import "../pages/Terms/Terms.module.css";
 @import "../pages/Ambassador/Ambassador.module.css";
 @import "../pages/Affiliates/Affiliates.module.css";
+@import "../pages/Updates/Updates.module.css";
 
 :root {
   --transition-property: all;

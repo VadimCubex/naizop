@@ -4,10 +4,12 @@ import { useNavigate } from "react-router-dom";
 
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
+import { SvgIcon } from "../../components/SvgIcon";
 import { Text } from "../../components/Text";
 import {
   ButtonSizeVariants,
   ButtonVariants,
+  IconsVariants,
   TextVariants,
 } from "../../constants/VariantsOfComponents";
 
@@ -25,6 +27,11 @@ const ResetPassword = () => {
       <div className="reset-password container">
         <div className="reset-password-background"></div>
         <div className="block">
+          <div className="logo">
+            <SvgIcon size={48} src={IconsVariants.Logo} />
+            <Text variant={TextVariants.h1_medium}>Naizop</Text>
+          </div>
+          <div className="separator"></div>
           <Text variant={TextVariants.title}>Reset password</Text>
           <div className="reset-password-input">
             <Text variant={TextVariants.h3}>E-mail Address</Text>

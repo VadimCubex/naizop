@@ -102,6 +102,8 @@ export const IconsVariants = {
   Arrow_stroke_left: "/icons/Stroke/Arrow_stroke_left.svg",
   Money: "/icons/Stroke/Money.svg",
   Coins: "/icons/Stroke/Coins.svg",
+  Purchase: "/icons/Stroke/Purchase.svg",
+  Wallet: "/icons/Stroke/Wallet.svg",
   // Color
   Bitcoin: "/icons/Color/Bitcoin.svg",
   Crypto: "/icons/Color/Crypto.svg",
@@ -195,6 +197,8 @@ export const ImagesVariants = {
   Affiliates: "/images/Affiliates/affiliates.png",
   Affiliates_house: "/images/Affiliates/house.png",
   Affiliates_friends: "/images/Affiliates/friends.png",
+  Coinbase: "/images/Affiliates/coinbase.png",
+  MoonPay: "/images/Affiliates/moonPay.png",
 
   Line1: "/images/BestQualityService/line1.png",
   Line2: "/images/BestQualityService/line2.png",

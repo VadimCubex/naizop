@@ -15,33 +15,27 @@ export const ModalComponent = ({
   children,
   className,
 }) => {
-  const ModalClass = classNames("modal", className);
+  const ModalClass = classNames("modal", { active: isOpen }, className);
 
   return (
     <>
-      {isOpen && (
-        <ModalPortal>
-          <div
-            className={ModalClass}
-            onScroll={(e) => {
-              e.stopPropagation();
-            }}
-          >
-            <div className="modal-container">
-              <div className="header-modal">
-                <Text variant={TextVariants.h1}>{title}</Text>
-                <SvgIcon
-                  src={IconsVariants.Close}
-                  size={20}
-                  onClick={onClick}
-                />
-              </div>
-              <div className="modal-background" />
-              <div className="modal-content">{children}</div>
+      <ModalPortal>
+        <div
+          className={ModalClass}
+          onScroll={(e) => {
+            e.stopPropagation();
+          }}
+        >
+          <div className="modal-container">
+            <div className="header-modal">
+              <Text variant={TextVariants.h1}>{title}</Text>
+              <SvgIcon src={IconsVariants.Close} size={20} onClick={onClick} />
             </div>
+            <div className="modal-background" />
+            <div className="modal-content">{children}</div>
           </div>
-        </ModalPortal>
-      )}
+        </div>
+      </ModalPortal>
     </>
   );
 };

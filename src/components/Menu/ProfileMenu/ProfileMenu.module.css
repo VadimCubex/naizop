@@ -14,6 +14,18 @@
   border-radius: 0px 0px 10px 10px;
 }
 
+.profileMenu .profile-links .nav-balance {
+  display: none;
+  flex-direction: column;
+  margin-top: 10px;
+  color: var(--white);
+  padding: 15px 20px 10px;
+  background: var(--gradient-yellow);
+}
+.profileMenu .profile-links .nav-balance .text_variant_h3 {
+  color: var(--yellow);
+}
+
 .profileMenu .profile-links .links {
   padding: 10px 0px;
   text-decoration: none;
@@ -151,8 +163,7 @@
   line-height: 20px;
 }
 
-.burger-menu-category .burger-menu-items .burger-menu-item path {
-  fill: var(--white);
+.burger-menu-category .burger-menu-items .burger-menu-item .stroke path {
   stroke: var(--white);
 }
 
@@ -333,6 +344,28 @@
   flex-direction: column;
 }
 
+.profileMenu .nav-burger .nav-button-container > div {
+  display: flex;
+}
+
+.profileMenu .nav-burger .nav-button-container > div:last-child {
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profileMenu
+  .nav-burger
+  .nav-button-container
+  > div:last-child
+  > .btn-container {
+  width: fit-content;
+}
+
+.profileMenu .nav-burger .nav-button-container {
+  flex-direction: column;
+  gap: 20px;
+}
+
 @media (max-width: 1439px) {
   .profileMenu
     .nav-container
@@ -363,6 +396,12 @@
   .profileMenu .profile-links {
     width: 190px;
     left: 270px;
+  }
+  .profileMenu .profile-links .nav-balance {
+    display: flex;
+  }
+  .profileMenu .nav-container .nav-balance {
+    display: none;
   }
   .profileMenu .nav-container .nav-logo {
     width: 200px;

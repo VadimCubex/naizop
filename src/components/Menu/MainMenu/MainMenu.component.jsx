@@ -29,10 +29,12 @@ export const MainMenuComponent = () => {
 
   const handleClickLogin = () => {
     navigate("/login");
+    setIsShowBurger(false);
   };
 
   const handleClickRegister = () => {
     navigate("/register");
+    setIsShowBurger(false);
   };
 
   const handleClickBurger = () => {

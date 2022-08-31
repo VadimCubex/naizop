@@ -30,6 +30,7 @@ import Subscriptions from "../pages/Subscriptions/Subscriptions";
 import Terms from "../pages/Terms/Terms";
 import TestComponents from "../pages/TestComponents";
 import TrackOrder from "../pages/TrackOrder/TrackOrder";
+import Updates from "../pages/Updates/Updates";
 
 const NaizopRoutes = () => {
   return (
@@ -78,7 +79,7 @@ const NaizopRoutes = () => {
         <Route path="/profile/favorites" element={<Dashboard />} />
         <Route path="/profile/childpanel" element={<Dashboard />} />
 
-        <Route path="/profile/updates" element={<Dashboard />} />
+        <Route path="/profile/updates" element={<Updates />} />
         <Route path="/profile/blog" element={<Dashboard />} />
         <Route path="/profile/tools" element={<Dashboard />} />
         <Route path="/profile/terms" element={<Terms />} />

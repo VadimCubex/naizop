@@ -342,6 +342,7 @@
 
   .affiliates .affiliates-tools-container .block {
     padding: 20px 20px 40px;
+    border: 1px solid var(--light-blue-15);
   }
 
   .affiliates .affiliates-tools-container .block.offer-container .with-button {
