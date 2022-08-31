@@ -163,6 +163,11 @@
   gap: 20px;
 }
 
+.ambassador .block .disclaimer {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (max-width: 1024px) {
   .ambassador .top {
     gap: 15px;
@@ -192,10 +197,7 @@
     width: 100%;
     padding: 20px;
   }
-  .ambassador .block .disclaimer {
-    display: flex;
-    flex-direction: column;
-  }
+
   .ambassador .block .separator {
     margin: 20px 0px;
   }
