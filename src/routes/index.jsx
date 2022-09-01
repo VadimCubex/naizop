@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 import MainLayout from "../layouts/MainLayout";
 import ProfileLayout from "../layouts/ProfileLayout";
@@ -36,56 +36,52 @@ const NaizopRoutes = () => {
   return (
     <Routes>
       <Route path="/test" element={<TestComponents />} />
-      <Route path="" element={<MainLayout />}>
+      <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
         <Route
-          path="/services"
+          path="services"
           element={<AllServices className="background-img" />}
         />
-        <Route path="/faq" element={<FAQ className="background-img" />} />
-        <Route path="/blog" element={<Home />} />
-        <Route path="/about" element={<About className="background-img" />} />
-        <Route path="/best-quality-service" element={<BestQualityService />} />
-        <Route path="/order-detail" element={<OrderDetail />} />
-        <Route path="/compleled-order" element={<CompletedOrder />} />
-        <Route path="/track-order" element={<TrackOrder />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/reset-password" element={<ResetPassword />} />
+        <Route path="faq" element={<FAQ className="background-img" />} />
+        <Route path="blog" element={<Home />} />
+        <Route path="about" element={<About className="background-img" />} />
+        <Route path="best-quality-service" element={<BestQualityService />} />
+        <Route path="order-detail" element={<OrderDetail />} />
+        <Route path="compleled-order" element={<CompletedOrder />} />
+        <Route path="track-order" element={<TrackOrder />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
+        <Route path="reset-password" element={<ResetPassword />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
-      <Route path="/profile" element={<ProfileLayout />}>
+      <Route path="/profile/" element={<ProfileLayout />}>
         <Route index element={<Dashboard />} />
-        <Route path="/profile/account" element={<Account />} />
-        <Route path="/profile/redeem-history" element={<RedeemHistory />} />
-        <Route path="/profile/redeem-support" element={<RedeemSupport />} />
+        <Route path="account" element={<Account />} />
+        <Route path="redeem-history" element={<RedeemHistory />} />
+        <Route path="redeem-support" element={<RedeemSupport />} />
 
-        <Route path="/profile/place-new-order" element={<PlaceNewOrder />} />
-        <Route path="/profile/mass-order" element={<MassOrder />} />
-        <Route
-          path="/profile/services"
-          element={<AllServices container={false} />}
-        />
-        <Route path="/profile/popular-service" element={<Dashboard />} />
-        <Route path="/profile/orders" element={<Orders />} />
-        <Route path="/profile/subscriptions" element={<Subscriptions />} />
-        <Route path="/profile/add-funds" element={<Payment />} />
-        <Route
-          path="/profile/add-funds/payment-history"
-          element={<PaymentHistory />}
-        />
-        <Route path="/profile/add-funds/error" element={<PaymentError />} />
-        <Route path="/profile/support" element={<Dashboard />} />
-        <Route path="/profile/affiliates" element={<Affiliates />} />
-        <Route path="/profile/favorites" element={<Dashboard />} />
-        <Route path="/profile/childpanel" element={<Dashboard />} />
+        <Route path="place-new-order" element={<PlaceNewOrder />} />
+        <Route path="mass-order" element={<MassOrder />} />
+        <Route path="services" element={<AllServices container={false} />} />
+        <Route path="popular-service" element={<Dashboard />} />
+        <Route path="orders" element={<Orders />} />
+        <Route path="subscriptions" element={<Subscriptions />} />
+        <Route path="add-funds" element={<Payment />} />
+        <Route path="add-funds/payment-history" element={<PaymentHistory />} />
+        <Route path="add-funds/error" element={<PaymentError />} />
+        <Route path="support" element={<Dashboard />} />
+        <Route path="affiliates" element={<Affiliates />} />
+        <Route path="favorites" element={<Dashboard />} />
+        <Route path="childpanel" element={<Dashboard />} />
 
-        <Route path="/profile/updates" element={<Updates />} />
-        <Route path="/profile/blog" element={<Dashboard />} />
-        <Route path="/profile/tools" element={<Dashboard />} />
-        <Route path="/profile/terms" element={<Terms />} />
-        <Route path="/profile/faq" element={<FAQ container={false} />} />
-        <Route path="/profile/api" element={<Api />} />
-        <Route path="/profile/ambassador-program" element={<Ambassador />} />
+        <Route path="updates" element={<Updates />} />
+        <Route path="blog" element={<Dashboard />} />
+        <Route path="tools" element={<Dashboard />} />
+        <Route path="terms" element={<Terms />} />
+        <Route path="faq" element={<FAQ container={false} />} />
+        <Route path="api" element={<Api />} />
+        <Route path="ambassador-program" element={<Ambassador />} />
+        <Route path="*" element={<Navigate to="/profile/" replace />} />
       </Route>
     </Routes>
   );

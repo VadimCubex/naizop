@@ -24,6 +24,7 @@
   margin-top: 60px;
   margin-bottom: 80px;
   width: 45%;
+  max-width: 500px;
 }
 
 .payment-error .payment-error-content .btn-container {
