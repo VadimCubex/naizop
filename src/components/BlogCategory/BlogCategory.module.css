@@ -1,0 +1,19 @@
+.blog-category {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--light-blue-15);
+  background: var(--light-blue-15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-category > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.blog-category .arrow path {
+  stroke-width: 6px;
+}

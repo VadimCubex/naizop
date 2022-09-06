@@ -4,3 +4,4 @@ export { AdvantagesCardComponent as AdvantagesCard } from "./AdvantagesCard/Adva
 export { FooterCardComponent as FooterCard } from "./FooterCard/FooterCard.component";
 export { SalesCardComponent as SalesCard } from "./SalesCard/SalesCard.component";
 export { UpdatesCardComponent as UpdatesCard } from "./UpdatesCard/UpdatesCard.component";
+export { BlogCardComponent as BlogCard } from "./BlogCard/BlogCard.component";

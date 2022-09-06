@@ -41,6 +41,8 @@
 @import "../components/StatusSteper/StatusSteper.module.css";
 @import "../components/Trustpilot/Trustpilot.module.css";
 @import "../components/Notification/Notification.module.css";
+@import "../components/BlogCategory/BlogCategory.module.css";
+@import "../components/Pagination/Pagination.module.css";
 
 @import "./App.css";
 @import "./normalize.css";
@@ -72,6 +74,9 @@
 @import "../pages/Ambassador/Ambassador.module.css";
 @import "../pages/Affiliates/Affiliates.module.css";
 @import "../pages/Updates/Updates.module.css";
+@import "../pages/Blog/Blog.module.css";
+@import "../pages/BlogCategory/BlogCategory.module.css";
+@import "../pages/BlogArticle/BlogArticle.module.css";
 
 :root {
   --transition-property: all;
@@ -86,6 +91,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   background: var(--background);
   min-height: 590px;
   transition: var(--transition-property) 0s var(--transition-function);

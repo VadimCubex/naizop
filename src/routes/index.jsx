@@ -10,6 +10,9 @@ import AllServices from "../pages/AllServices/AllServices";
 import Ambassador from "../pages/Ambassador/Ambassador";
 import Api from "../pages/Api/Api";
 import BestQualityService from "../pages/BestQualityService/BestQualityService";
+import Blog from "../pages/Blog/Blog";
+import BlogArticle from "../pages/BlogArticle/BlogArticle";
+import BlogCategoryPage from "../pages/BlogCategory/BlogCategory";
 import CompletedOrder from "../pages/CompletedOrder/CompletedOrder";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import FAQ from "../pages/FAQ/FAQ";
@@ -43,7 +46,15 @@ const NaizopRoutes = () => {
           element={<AllServices className="background-img" />}
         />
         <Route path="faq" element={<FAQ className="background-img" />} />
-        <Route path="blog" element={<Home />} />
+        <Route path="blog" element={<Blog className="background-img" />} />
+        <Route
+          path="blog/category"
+          element={<BlogCategoryPage className="background-img" />}
+        />
+        <Route
+          path="blog/category/article"
+          element={<BlogArticle className="background-img" />}
+        />
         <Route path="about" element={<About className="background-img" />} />
         <Route path="best-quality-service" element={<BestQualityService />} />
         <Route path="order-detail" element={<OrderDetail />} />
@@ -59,7 +70,6 @@ const NaizopRoutes = () => {
         <Route path="account" element={<Account />} />
         <Route path="redeem-history" element={<RedeemHistory />} />
         <Route path="redeem-support" element={<RedeemSupport />} />
-
         <Route path="place-new-order" element={<PlaceNewOrder />} />
         <Route path="mass-order" element={<MassOrder />} />
         <Route path="services" element={<AllServices container={false} />} />
@@ -73,9 +83,16 @@ const NaizopRoutes = () => {
         <Route path="affiliates" element={<Affiliates />} />
         <Route path="favorites" element={<Dashboard />} />
         <Route path="childpanel" element={<Dashboard />} />
-
         <Route path="updates" element={<Updates />} />
-        <Route path="blog" element={<Dashboard />} />
+        <Route path="blog" element={<Blog container={false} />} />
+        <Route
+          path="blog/category"
+          element={<BlogCategoryPage container={false} />}
+        />
+        <Route
+          path="blog/category/article"
+          element={<BlogArticle container={false} />}
+        />
         <Route path="tools" element={<Dashboard />} />
         <Route path="terms" element={<Terms />} />
         <Route path="faq" element={<FAQ container={false} />} />

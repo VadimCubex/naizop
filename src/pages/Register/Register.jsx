@@ -82,7 +82,7 @@ const Register = () => {
           </div>
           <Button
             variant={ButtonVariants.crypto}
-            text="Sing Up"
+            text="Sign Up"
             size={ButtonSizeVariants.extra_large}
             onClick={() => navigate("/profile")}
           />

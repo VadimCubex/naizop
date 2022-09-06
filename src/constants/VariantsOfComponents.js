@@ -53,7 +53,7 @@ export const IconsVariants = {
   DropDown_arrow_fill: "/icons/Stroke/DropDown Arrow Fill.svg",
   DropDown_arrow_stroke: "/icons/Stroke/DropDown Arrow Stroke.svg",
   Everything: "/icons/Stroke/Everything.svg",
-  Facebook: "/icons/Facebook/Api.svg",
+  Facebook: "/icons/Stroke/Facebook.svg",
   Favorites_stroke: "/icons/Stroke/Favorites.svg",
   Favorites_fill: "/icons/Stroke/Favorites.svg",
   Google: "/icons/Stroke/Google.svg",
@@ -154,6 +154,14 @@ export const FlagsIcons = {
   Canada: "/icons/Flags/Canada.svg",
 };
 
+export const GradientIcons = {
+  News: "/icons/Gradient/News.png",
+  Other: "/icons/Gradient/Other.png",
+  Question: "/icons/Gradient/Question.png",
+  Services: "/icons/Gradient/Services.png",
+  Social: "/icons/Gradient/Social Media.png",
+};
+
 export const PaymentsIcons = {
   Payment1: "/icons/Payments/Payment Icons-4.svg",
   Payment2: "/icons/Payments/Payment Icons-3.svg",
@@ -216,6 +224,8 @@ export const ImagesVariants = {
   OrderDetail4: "/images/OrderDetail/fourth.png",
   OrderDetail5: "/images/OrderDetail/fifth.png",
   OrderDetail6: "/images/OrderDetail/sixth.png",
+
+  BlogDefault: "/images/Blog/20943885.jpg",
 };
 
 export const ColorSvgVariants = {
@@ -327,4 +337,9 @@ export const InstructionVariants = {
 export const TabsVariants = {
   Default: "default",
   Outline: "outline",
+};
+
+export const BlogCardSize = {
+  big: "bg",
+  small: "sm",
 };
