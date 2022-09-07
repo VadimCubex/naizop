@@ -1,0 +1,465 @@
+.best-quality-service {
+  padding-top: 100px;
+  padding-bottom: 70px;
+  color: var(--white);
+}
+
+.best-quality-service .best-quality-service-contant .tabs.tabs_default {
+  background: rgba(15, 18, 20, 0.9);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.best-quality-service
+  .best-quality-service-contant
+  .tabs.tabs_default
+  > li.active {
+  background: linear-gradient(
+      0deg,
+      rgba(30, 33, 36, 0.6),
+      rgba(30, 33, 36, 0.75)
+    ),
+    radial-gradient(
+      137.13% 125.45% at 32.38% -58.62%,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.best-quality-service .best-quality-service-contant .tabPanel {
+  background: rgba(30, 33, 36, 0.74);
+}
+
+.best-quality-service .best-quality-service-contant .tab {
+  display: flex;
+  align-items: center;
+}
+
+.best-quality-service .best-quality-service-contant .tab-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 10px;
+  height: 100%;
+  align-self: center;
+}
+
+.best-quality-service .best-quality-service-contant .tabs .separator {
+  background: var(--light-blue-15);
+  width: 1px;
+  height: 40px;
+}
+
+.best-quality-service .best-quality-service-contant .subtab-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+}
+
+.best-quality-service .best-quality-service-contant .subtab-title > .info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.best-quality-service .best-quality-service-contant .top {
+  position: relative;
+  padding: 60px 20px 65px;
+  background: rgba(30, 33, 36, 0.74);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.best-quality-service .best-quality-service-contant .select-tab {
+  position: relative;
+  display: none;
+  background: rgba(30, 33, 36, 0.74);
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  z-index: 2;
+}
+
+.best-quality-service .best-quality-service-contant .top .category {
+  width: 400px;
+  margin-bottom: 10px;
+}
+
+.best-quality-service
+  .best-quality-service-contant
+  .select-container
+  .dropDown {
+  border-radius: 18px;
+  background: #1d2832;
+  padding: 60px 40px 0px;
+}
+
+.best-quality-service
+  .best-quality-service-contant
+  .top
+  .category
+  .select-container
+  .dropDown {
+  border-radius: 30px;
+}
+
+.best-quality-service .best-quality-service-contant .select {
+  background: #333f45;
+  border-radius: 18px;
+}
+.best-quality-service .best-quality-service-contant .top .category .select {
+  background: #333f45;
+  border-radius: 30px;
+}
+
+.best-quality-service .best-quality-service-contant .dropDown-open-button {
+  background: unset;
+}
+
+.best-quality-service
+  .best-quality-service-contant
+  .dropDown-open-button
+  .svgIcon {
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.best-quality-service .best-quality-service-contant .select-info {
+  padding: 0px 10px;
+}
+
+.best-quality-service .best-quality-service-contant .select-info .selectOption {
+  margin-left: calc(50% - 40px);
+}
+
+.best-quality-service .best-quality-service-contant .top .motivation {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.best-quality-service .best-quality-service-contant .top .motivation > .circe {
+  font-family: "Circe Light";
+  font-weight: 350;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: center;
+  max-width: 620px;
+}
+
+.best-quality-service
+  .best-quality-service-contant
+  .top
+  .motivation:last-child
+  > div {
+  align-self: flex-start;
+}
+
+.best-quality-service .best-quality-service-contant .sales-container {
+  padding: 60px 20px 0px;
+}
+
+.best-quality-service .best-quality-service-contant .sales-container .cards {
+  display: flex;
+  gap: 20px;
+}
+
+.best-quality-service .best-quality-service-contant .sales-container > .text {
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.best-quality-service
+  .best-quality-service-contant
+  .sales-container
+  .sales-counting,
+.best-quality-service
+  .best-quality-service-contant
+  .sales-container
+  .sales-counting
+  .continue,
+.best-quality-service
+  .best-quality-service-contant
+  .sales-container
+  .sales-counting
+  .continue
+  .info {
+  align-items: center;
+  display: flex;
+}
+
+.best-quality-service
+  .best-quality-service-contant
+  .sales-container
+  .sales-counting
+  .continue,
+.best-quality-service
+  .best-quality-service-contant
+  .sales-container
+  .sales-counting {
+  justify-content: space-between;
+}
+
+.best-quality-service
+  .best-quality-service-contant
+  .sales-container
+  .sales-counting
+  .continue
+  .btn-container {
+  width: 48%;
+}
+
+.best-quality-service
+  .best-quality-service-contant
+  .sales-container
+  .sales-counting
+  .continue
+  .button {
+  width: 100%;
+  min-width: unset;
+}
+
+.best-quality-service
+  .best-quality-service-contant
+  .sales-container
+  .sales-counting
+  .sales-input {
+  width: 44%;
+}
+
+.best-quality-service
+  .best-quality-service-contant
+  .sales-container
+  .sales-counting
+  .continue {
+  gap: 15px;
+  width: 49%;
+}
+
+.best-quality-service
+  .best-quality-service-contant
+  .sales-container
+  .sales-counting
+  .continue
+  .info {
+  color: var(--yellow);
+}
+
+.best-quality-service
+  .best-quality-service-contant
+  .sales-container
+  .sales-counting
+  .continue
+  .info
+  .separator {
+  background: var(--light-blue-15);
+  height: 60px;
+  width: 1px;
+  margin: 0px 20px 0px 60px;
+}
+
+.best-quality-service
+  .best-quality-service-contant
+  .sales-container
+  .sales-counting
+  .continue
+  .info
+  > .text:last-child {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.modal.high-quality .text_variant_h5,
+.modal.premium-quality .text_variant_h5 {
+  text-transform: uppercase;
+}
+
+.modal.high-quality li,
+.modal.premium-quality li {
+  margin-bottom: 15px;
+}
+
+.modal.high-quality ul,
+.modal.premium-quality ul {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1439px) {
+  .best-quality-service .best-quality-service-contant .sales-container .cards {
+    flex-wrap: wrap;
+  }
+  .best-quality-service
+    .best-quality-service-contant
+    .top
+    .motivation
+    > .circe {
+    font-size: 22px;
+  }
+  .best-quality-service
+    .best-quality-service-contant
+    .sales-container
+    .sales-counting
+    .continue
+    .info
+    > .text:last-child {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .best-quality-service {
+    padding-top: 60px;
+  }
+  .best-quality-service
+    .best-quality-service-contant
+    .top
+    .motivation
+    > .circe {
+    font-size: 20px;
+  }
+  .best-quality-service
+    .best-quality-service-contant
+    .sales-container
+    .sales-counting
+    .continue
+    .info
+    .separator {
+    margin: 0px 20px 0px 50px;
+  }
+  .best-quality-service
+    .best-quality-service-contant
+    .sales-container
+    .sales-counting
+    .continue
+    .info
+    > .text:last-child {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 834px) {
+  .best-quality-service {
+    padding-top: 30px;
+    padding-bottom: 120px;
+  }
+  .best-quality-service
+    .best-quality-service-contant
+    .top
+    .motivation
+    > .circe {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .best-quality-service
+    .best-quality-service-contant
+    .top
+    .motivation
+    > div:first-child {
+    display: none;
+  }
+  .best-quality-service .best-quality-service-contant .top {
+    padding: 60px 20px 52px;
+  }
+  .best-quality-service .best-quality-service-contant .tabs.tabs_default {
+    display: none;
+  }
+  .best-quality-service .best-quality-service-contant .select-tab {
+    display: block;
+  }
+  .best-quality-service .best-quality-service-contant .top .category {
+    width: 300px;
+  }
+  .best-quality-service
+    .best-quality-service-contant
+    .select-container
+    .dropDown {
+    padding: 50px 40px 0px;
+  }
+  .best-quality-service
+    .best-quality-service-contant
+    .sales-container
+    .sales-counting {
+    flex-direction: column;
+    align-items: unset;
+    gap: 15px;
+  }
+  .best-quality-service
+    .best-quality-service-contant
+    .sales-container
+    .sales-counting
+    .sales-input,
+  .best-quality-service
+    .best-quality-service-contant
+    .sales-container
+    .sales-counting
+    .continue {
+    width: 100%;
+  }
+  .best-quality-service
+    .best-quality-service-contant
+    .sales-container
+    .sales-counting
+    .continue
+    .info
+    .separator {
+    margin: 0px 20px 0px 40px;
+    height: 50px;
+  }
+  .best-quality-service
+    .best-quality-service-contant
+    .sales-container
+    .sales-counting
+    .continue
+    .info
+    > .text:last-child {
+    font-size: 25px;
+  }
+  .best-quality-service .best-quality-service-contant .sales-container {
+    padding: 40px 20px 0px;
+  }
+}
+
+@media (max-width: 425px) {
+  .best-quality-service
+    .best-quality-service-contant
+    .top
+    .motivation
+    > .circe {
+    font-size: 16px;
+  }
+  .best-quality-service
+    .best-quality-service-contant
+    .sales-container
+    .sales-counting
+    .continue
+    .info {
+    flex-grow: 1;
+  }
+  .best-quality-service
+    .best-quality-service-contant
+    .sales-container
+    .sales-counting
+    .continue
+    .info
+    .separator {
+    margin: 0px 12px;
+  }
+  .best-quality-service
+    .best-quality-service-contant
+    .sales-container
+    .sales-counting
+    .continue
+    .info
+    > .text:last-child {
+    font-size: 22px;
+  }
+  .best-quality-service .best-quality-service-contant .top .category {
+    width: 100%;
+  }
+}

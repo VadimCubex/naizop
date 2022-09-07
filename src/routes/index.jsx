@@ -15,6 +15,7 @@ import BlogArticle from "../pages/BlogArticle/BlogArticle";
 import BlogCategoryPage from "../pages/BlogCategory/BlogCategory";
 import CompletedOrder from "../pages/CompletedOrder/CompletedOrder";
 import Dashboard from "../pages/Dashboard/Dashboard";
+import Download from "../pages/Download/Download";
 import FAQ from "../pages/FAQ/FAQ";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
@@ -31,14 +32,14 @@ import Register from "../pages/Register/Register";
 import ResetPassword from "../pages/ResetPassword/ResetPassword";
 import Subscriptions from "../pages/Subscriptions/Subscriptions";
 import Terms from "../pages/Terms/Terms";
-import TestComponents from "../pages/TestComponents";
+import Tools from "../pages/Tools/Tools";
 import TrackOrder from "../pages/TrackOrder/TrackOrder";
 import Updates from "../pages/Updates/Updates";
 
 const NaizopRoutes = () => {
   return (
     <Routes>
-      <Route path="/test" element={<TestComponents />} />
+      <Route path="/download" element={<Download />} />
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
         <Route
@@ -93,7 +94,7 @@ const NaizopRoutes = () => {
           path="blog/category/article"
           element={<BlogArticle container={false} />}
         />
-        <Route path="tools" element={<Dashboard />} />
+        <Route path="tools" element={<Tools />} />
         <Route path="terms" element={<Terms />} />
         <Route path="faq" element={<FAQ container={false} />} />
         <Route path="api" element={<Api />} />

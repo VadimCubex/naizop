@@ -38,6 +38,8 @@ export const IconsVariants = {
   Terms: "/icons/Bulk/Terms.svg",
   Tools: "/icons/Bulk/Tools.svg",
   Updates: "/icons/Bulk/Updates.svg",
+  LogoLeft: "/icons/Bulk/logoLeft.svg",
+  LogoRight: "/icons/Bulk/logoRight.svg",
   // Stroke
   Add_funds_stroke: "/icons/Stroke/Add funds.svg",
   Affiliates_stroke: "/icons/Stroke/Affiliates.svg",
