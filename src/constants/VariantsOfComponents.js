@@ -228,6 +228,10 @@ export const ImagesVariants = {
   OrderDetail6: "/images/OrderDetail/sixth.png",
 
   BlogDefault: "/images/Blog/20943885.jpg",
+
+  ToolsDefaultSm: "/images/Tools/Default sm.png",
+  ToolsDefaultMd: "/images/Tools/Default md.png",
+  ToolsDefaultBg: "/images/Tools/Default bg.png",
 };
 
 export const ColorSvgVariants = {

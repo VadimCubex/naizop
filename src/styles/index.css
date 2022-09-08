@@ -43,6 +43,9 @@
 @import "../components/Notification/Notification.module.css";
 @import "../components/BlogCategory/BlogCategory.module.css";
 @import "../components/Pagination/Pagination.module.css";
+@import "../components/DownloadLink/DownloadLink.module.css";
+@import "../components/ToolsPanels/ToolsPanels.module.css";
+@import "../components/DownloadPhoto/DownloadPhoto.module.css";
 
 @import "./App.css";
 @import "./normalize.css";
@@ -78,6 +81,7 @@
 @import "../pages/BlogCategory/BlogCategory.module.css";
 @import "../pages/BlogArticle/BlogArticle.module.css";
 @import "../pages/Download/Download.module.css";
+@import "../pages/Tools/Tools.module.css";
 
 :root {
   --transition-property: all;

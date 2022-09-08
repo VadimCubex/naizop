@@ -42,8 +42,24 @@
 
 .tabs.tabs_outline {
   position: relative;
-  background: rgba(30, 33, 36, 0.74);
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.tabs-container {
+  display: flex;
   padding: 0px 20px;
+  overflow-x: scroll;
+  background: rgba(30, 33, 36, 0.74);
+  border-bottom: 1px solid var(--light-blue-15);
+}
+
+.tabs-container::-webkit-scrollbar {
+  display: none;
+}
+
+.tabs-container::-webkit-scrollbar-thumb {
+  display: none;
 }
 
 .tabs.tabs_outline > li {

@@ -1,0 +1,45 @@
+.download-photo {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.download-photo > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.download-photo .image {
+  width: 430px;
+  height: 430px;
+}
+
+.download-photo .example-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.download-photo .example-container .example-image {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.download-photo .example-container .example-image > .text {
+  opacity: 0;
+}
+
+.download-photo .example-container .example-image > div {
+  width: 400px;
+  flex-grow: 1;
+  background: #d9d9d9;
+}
+
+.download-photo .example-container .buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

@@ -19,7 +19,7 @@ import { SliderReviews } from "../SliderReviews";
 import { SvgIcon } from "../SvgIcon";
 import { Text } from "../Text";
 
-export const ReasonsToUseComponent = ({ className }) => {
+export const ReasonsToUseComponent = ({ steper, className }) => {
   const ReasonsToUseClass = classNames("reasons-to-use", className);
 
   return (
@@ -45,43 +45,45 @@ export const ReasonsToUseComponent = ({ className }) => {
           ))}
         </div>
       </div>
-      <div className="reasons-steps">
-        <Text variant={TextVariants.h1}>How it works?</Text>
-        <div className="steps-container">
-          {ReasonsSteps.map((item, index) => (
-            <div key={index} className="step-item">
-              <div className="info-container">
-                <Text variant={TextVariants.h1}>{item.number}</Text>
-                <div>
-                  <Text variant={TextVariants.h1}>{item.title}</Text>
-                  <Text variant={TextVariants.h4_regular}>
-                    {item.info}{" "}
-                    {index === 0 && (
-                      <>
-                        <Text variant={TextVariants.h4_regular}>
-                          contact us
-                        </Text>
-                        <Text variant={TextVariants.h4_regular}>!</Text>
-                      </>
-                    )}
-                  </Text>
+      {steper && (
+        <div className="reasons-steps">
+          <Text variant={TextVariants.h1}>How it works?</Text>
+          <div className="steps-container">
+            {ReasonsSteps.map((item, index) => (
+              <div key={index} className="step-item">
+                <div className="info-container">
+                  <Text variant={TextVariants.h1}>{item.number}</Text>
+                  <div>
+                    <Text variant={TextVariants.h1}>{item.title}</Text>
+                    <Text variant={TextVariants.h4_regular}>
+                      {item.info}{" "}
+                      {index === 0 && (
+                        <>
+                          <Text variant={TextVariants.h4_regular}>
+                            contact us
+                          </Text>
+                          <Text variant={TextVariants.h4_regular}>!</Text>
+                        </>
+                      )}
+                    </Text>
+                  </div>
+                </div>
+                <div className="image-container">
+                  <div>
+                    <img src={item.image} alt="step" />
+                  </div>
                 </div>
               </div>
-              <div className="image-container">
-                <div>
-                  <img src={item.image} alt="step" />
-                </div>
-              </div>
+            ))}
+            <div className="line1">
+              <img src={ImagesVariants.Line1} alt="line" />
             </div>
-          ))}
-          <div className="line1">
-            <img src={ImagesVariants.Line1} alt="line" />
-          </div>
-          <div className="line2">
-            <img src={ImagesVariants.Line2} alt="line" />
+            <div className="line2">
+              <img src={ImagesVariants.Line2} alt="line" />
+            </div>
           </div>
         </div>
-      </div>
+      )}
       <div className="ready">
         <Text variant={TextVariants.h1}>Ready to buy Instagram followers?</Text>
         <Text variant={TextVariants.h4_regular}>

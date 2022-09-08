@@ -13,7 +13,7 @@ import {
 import { debounce } from "../../helpers/helpers";
 
 const Download = () => {
-  const DownloadClass = classNames("download", "background-img");
+  const DownloadClass = classNames("download-page", "background-img");
   const [sizeSvg, setSizeSvg] = useState(94);
 
   useEffect(() => {

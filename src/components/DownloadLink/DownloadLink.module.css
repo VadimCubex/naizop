@@ -1,0 +1,58 @@
+.download-link {
+  position: relative;
+  display: flex;
+  padding: 30px 20px 0px;
+  gap: 30px;
+}
+
+.download-link .trustpilot-logo {
+  position: unset;
+}
+
+.download-link .example {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-bottom: 5px;
+  justify-content: flex-end;
+}
+.download-link .example > .text {
+  color: #9aa6b7;
+}
+
+.download-link .example .download {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  margin-bottom: 3px;
+}
+
+.download-link .example .download > div:first-child {
+  flex-grow: 1;
+}
+
+.download-link .example .download .input {
+  background: unset;
+  border-bottom: 1px solid var(--white);
+  border-radius: 0px;
+  border-top: unset;
+  border-left: unset;
+  border-right: unset;
+}
+
+.download-link .example .download .input input {
+  padding: 0px 0px 20px;
+  font-family: "Space Grotesk Light";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+}
+
+.download-link .example .download .button {
+  max-width: 270px;
+}
+
+.download-link .example .download .button .text {
+  font-size: 20px;
+}
