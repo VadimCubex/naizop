@@ -1,0 +1,26 @@
+.twitter-second {
+  padding: 90px 8.8% 110px;
+}
+
+.twitter-second .statistic-tab .info .statistics .block {
+  flex: auto;
+  justify-content: center;
+}
+
+@media (max-width: 1439px) {
+  .twitter-second {
+    padding: 70px 8.8% 80px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .twitter-second {
+    padding: 50px 8.8% 60px;
+  }
+}
+
+@media (max-width: 834px) {
+  .twitter-second {
+    padding: 20px 20px 30px;
+  }
+}

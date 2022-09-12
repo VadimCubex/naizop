@@ -102,9 +102,9 @@ const Payment = () => {
             <hr />
             <div className="method">
               <Select
-                onClick={setSelectedPayment}
-                selected={selectedPayment}
-                variant={SelectOptionVariants.default}
+                value={selectedPayment}
+                setValue={setSelectedPayment}
+                variant={SelectOptionVariants.Default}
                 options={Payments}
               />
             </div>

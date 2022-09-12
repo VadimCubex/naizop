@@ -57,6 +57,10 @@ const InstagramTabThird = ({ social }) => {
           text="Download"
           size={ButtonSizeVariants.medium}
         />
+        <div className="story">
+          <div className="default"></div>
+          <img src={ImagesVariants.ToolsDefaultBg} alt="" />
+        </div>
       </div>
     </>
   );

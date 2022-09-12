@@ -46,6 +46,11 @@
 @import "../components/DownloadLink/DownloadLink.module.css";
 @import "../components/ToolsPanels/ToolsPanels.module.css";
 @import "../components/DownloadPhoto/DownloadPhoto.module.css";
+@import "../components/DownloadVideo/DownloadVideo.module.css";
+@import "../components/CardSelect/CardSelect.module.css";
+@import "../components/StatisticTab/StatisticTab.module.css";
+@import "../components/DownloadYoutubeVideo/DownloadYoutubeVideo.module.css";
+@import "../components/DownloadSocialVideo/DownloadSocialVideo.module.css";
 
 @import "./App.css";
 @import "./normalize.css";

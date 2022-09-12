@@ -91,3 +91,31 @@
 .selectOption_variant_default .svgIcon {
   margin-right: 10px;
 }
+
+/* selectOption_variant_format */
+
+.selectOption_variant_format {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.selectOption_variant_format > div {
+  display: flex;
+  align-items: center;
+}
+
+.selectOption_variant_format .svgIcon {
+  margin-right: 10px;
+}
+
+.selectOption_variant_format .pixel {
+  width: 66px;
+  padding: 5px 0px;
+  display: flex;
+  justify-content: center;
+  background: var(--blocks);
+  border-radius: 10px;
+  color: var(--gray-text);
+}

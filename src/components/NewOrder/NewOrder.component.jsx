@@ -81,8 +81,8 @@ export const NewOrderComponent = ({ className }) => {
         <Select
           maxHeight={firstSelectHeight}
           options={NewOrderCategory}
-          selected={selectedCategory}
-          onClick={setSelectedCategory}
+          value={selectedCategory}
+          setValue={setSelectedCategory}
           variant={SelectOptionVariants.newOrderWithoutDeteil}
         />
       </div>
@@ -91,8 +91,8 @@ export const NewOrderComponent = ({ className }) => {
         <Select
           maxHeight={SecondSelectHeight}
           options={NewOrderService}
-          selected={selectedService}
-          onClick={setSelectedService}
+          value={selectedService}
+          setValue={setSelectedService}
           variant={SelectOptionVariants.newOrderWithDetail}
         />
       </div>

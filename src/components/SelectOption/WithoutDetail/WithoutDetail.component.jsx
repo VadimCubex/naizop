@@ -1,9 +1,10 @@
 import React from "react";
+
+import { TextVariants } from "../../../constants/VariantsOfComponents";
 import { SvgIcon } from "../../SvgIcon";
 import { Text } from "../../Text";
-import { TextVariants } from "../../../constants/VariantsOfComponents";
 
-export const OptionWithoutDetailComponent = ({ value }) => {
+export const WithoutDetailComponent = ({ value }) => {
   return (
     <div className={"selectOption_variant_nodetail"}>
       <div className="info">
@@ -17,4 +18,4 @@ export const OptionWithoutDetailComponent = ({ value }) => {
   );
 };
 
-OptionWithoutDetailComponent.displayName = "OptionWithoutDetail";
+WithoutDetailComponent.displayName = "WithoutDetail";

@@ -11,6 +11,7 @@ export const NavLinks = [
   },
   {
     text: "Tools",
+    link: "/tools",
   },
   {
     text: "FAQ",

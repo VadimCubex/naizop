@@ -1,0 +1,21 @@
+.instagram-sixth {
+  padding: 90px 8.8% 110px;
+}
+
+@media (max-width: 1439px) {
+  .instagram-sixth {
+    padding: 70px 8.8% 80px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .instagram-sixth {
+    padding: 50px 8.8% 60px;
+  }
+}
+
+@media (max-width: 834px) {
+  .instagram-sixth {
+    padding: 20px 20px 30px;
+  }
+}

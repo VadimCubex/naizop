@@ -1,14 +1,13 @@
 import React from "react";
 
-import { DownloadLink } from "../../../DownloadLink";
+import { StatisticTab } from "../../../StatisticTab";
 
 const InstagramTabSixth = ({ social }) => {
   return (
     <>
-      <DownloadLink
-        social={social.subTitle}
-        menuItem={social.subTabs[5].menuItem}
-      />
+      <div className="instagram-sixth">
+        <StatisticTab social={social} />
+      </div>
     </>
   );
 };

@@ -106,6 +106,7 @@ export const IconsVariants = {
   Coins: "/icons/Stroke/Coins.svg",
   Purchase: "/icons/Stroke/Purchase.svg",
   Wallet: "/icons/Stroke/Wallet.svg",
+  SoundOff: "/icons/Stroke/Sound off.svg",
   // Color
   Bitcoin: "/icons/Color/Bitcoin.svg",
   Crypto: "/icons/Color/Crypto.svg",
@@ -232,6 +233,7 @@ export const ImagesVariants = {
   ToolsDefaultSm: "/images/Tools/Default sm.png",
   ToolsDefaultMd: "/images/Tools/Default md.png",
   ToolsDefaultBg: "/images/Tools/Default bg.png",
+  ToolsYoutubeVideo: "/images/Tools/YoutubeVideo.png",
 };
 
 export const ColorSvgVariants = {
@@ -300,9 +302,10 @@ export const DropDownVariants = {
 };
 
 export const SelectOptionVariants = {
-  newOrderWithDetail: "detail",
-  newOrderWithoutDeteil: "nodeteil",
-  default: "default",
+  Detail: "detail",
+  WithoutDeteil: "nodeteil",
+  Default: "default",
+  Format: "format",
 };
 
 export const SliderCardVariants = {

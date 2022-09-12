@@ -135,9 +135,9 @@ const Api = () => {
           <Text variant={TextVariants.h3}>Add Order</Text>
           <div className="api-select">
             <Select
-              selected={selected}
-              onClick={setSelected}
-              variant={SelectOptionVariants.default}
+              value={selected}
+              setValue={setSelected}
+              variant={SelectOptionVariants.Default}
               options={ApiSelect}
             />
           </div>

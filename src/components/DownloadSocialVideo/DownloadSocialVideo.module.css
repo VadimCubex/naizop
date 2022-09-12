@@ -1,0 +1,127 @@
+.download-social-video {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.download-social-video > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 42%;
+}
+
+.download-social-video > div:first-child .info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.download-social-video .image {
+  width: 100%;
+}
+
+.download-social-video .example-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 39%;
+}
+
+.download-social-video .example-container .formats {
+  position: relative;
+  z-index: 2;
+}
+
+.download-social-video
+  .example-container
+  .formats
+  .select.variant-default
+  + .dropDown,
+.download-social-video .example-container .formats .select.variant-default {
+  background: var(--menu);
+}
+
+.download-social-video .example-container .tools-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.download-social-video .example-container .tools-container .example-image {
+  min-height: 330px;
+  width: 100%;
+  flex-grow: 1;
+  background: #d9d9d9;
+}
+
+.download-social-video .example-container .tools-container .buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.download-social-video
+  .example-container
+  .tools-container
+  .buttons-container
+  > div:not(.btn-container) {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 1439px) {
+  .download-social-video {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .download-social-video {
+    flex-direction: column;
+  }
+  .download-social-video .example-container,
+  .download-social-video > div:first-child {
+    width: 100%;
+  }
+  .download-social-video .example-container .example-image > div,
+  .download-social-video .example-container .buttons-container,
+  .download-social-video .image {
+    align-self: center;
+    width: 80%;
+  }
+  .download-social-video
+    .example-container
+    .tools-container
+    .buttons-container {
+    flex-direction: column-reverse;
+  }
+  .download-social-video > div:first-child .info {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 834px) {
+  .download-social-video .example-container .tools-container {
+    gap: 30px;
+  }
+  .download-social-video .example-container {
+    gap: 10px;
+  }
+  .download-social-video .example-container .buttons-container {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .download-social-video .example-container .example-image > div,
+  .download-social-video .example-container .buttons-container,
+  .download-social-video .image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+}

@@ -1,3 +1,14 @@
 .instagram-first {
   padding: 60px 20px 100px;
 }
+
+.container .instagram-first {
+  padding: 60px 30px 100px;
+}
+
+@media (max-width: 834px) {
+  .container .instagram-first,
+  .instagram-first {
+    padding: 20px 20px 30px;
+  }
+}

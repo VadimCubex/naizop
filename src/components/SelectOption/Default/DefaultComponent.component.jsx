@@ -4,7 +4,7 @@ import { TextVariants } from "../../../constants/VariantsOfComponents";
 import { SvgIcon } from "../../SvgIcon";
 import { Text } from "../../Text";
 
-export const OptionDefaultComponent = ({ value }) => {
+export const DefaultComponent = ({ value }) => {
   return (
     <div className="selectOption_variant_default">
       <div>
@@ -22,4 +22,4 @@ export const OptionDefaultComponent = ({ value }) => {
   );
 };
 
-OptionDefaultComponent.displayName = "OptionDetail";
+DefaultComponent.displayName = "Default";

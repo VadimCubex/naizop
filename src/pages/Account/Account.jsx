@@ -168,9 +168,9 @@ const Account = () => {
                   <div className="time-api-input">
                     <Text variant={TextVariants.h3}>Time zone</Text>
                     <Select
-                      selected={selected}
-                      onClick={setSelected}
-                      variant={SelectOptionVariants.default}
+                      value={selected}
+                      setValue={setSelected}
+                      variant={SelectOptionVariants.Default}
                       options={TimeZonesForSelect}
                     />
                   </div>

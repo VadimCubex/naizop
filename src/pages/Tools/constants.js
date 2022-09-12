@@ -4,11 +4,14 @@ export const TabsName = [
   {
     title: "Instagram",
     subTitle: "instagram",
+    following: 130,
+    followers: 515229749,
+    posts: 7156,
     icon: IconsVariants.Instagram_color,
     icon_stroke: IconsVariants.Instagram,
     subTabs: [
       {
-        icon: IconsVariants.Profile,
+        icon: IconsVariants.Profile_tools,
         title: "Profile",
         menuItem: "Profile",
       },
@@ -41,6 +44,8 @@ export const TabsName = [
   {
     title: "YouTube",
     subTitle: "youtube",
+    views: 7156,
+    followers: 515229749,
     icon: IconsVariants.Youtube_color,
     icon_stroke: IconsVariants.Youtube,
     subTabs: [
@@ -62,6 +67,9 @@ export const TabsName = [
   {
     title: "TikTok",
     subTitle: "tiktok",
+    following: 130,
+    followers: 515229749,
+    posts: 7156,
     icon: IconsVariants.Tiktok_color,
     icon_stroke: IconsVariants.Tiktok,
     subTabs: [
@@ -79,6 +87,9 @@ export const TabsName = [
   {
     title: "Twitter",
     subTitle: "twitter",
+    following: 130,
+    followers: 515229749,
+    twitts: 7156,
     icon: IconsVariants.Twitter_color,
     icon_stroke: IconsVariants.Twitter,
     subTabs: [

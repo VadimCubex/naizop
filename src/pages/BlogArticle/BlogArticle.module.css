@@ -117,57 +117,6 @@
   gap: 40px;
 }
 
-.blog-article .side .shares-container .shares {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.blog-article .side .shares-container .shares .share-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 0px;
-  gap: 10px;
-  background: radial-gradient(
-      129.6% 99.18% at 107.2% -20.2%,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(255, 255, 255, 0) 100%
-    ),
-    rgba(30, 33, 36, 0.85);
-  backdrop-filter: blur(40px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-
-  border-radius: 10px;
-}
-
-.blog-article .side .shares-container .shares .share-item > * {
-  opacity: 0.5;
-}
-
-.blog-article .side .shares-container .shares .share-item.active {
-  background: radial-gradient(
-      169.8% 157.07% at 58.4% 198.93%,
-      #4ce5bf 0%,
-      rgb(145 89 251 / 13%) 100%
-    ),
-    radial-gradient(
-      104.11% 155.86% at 108% 0.14%,
-      #286b7f 0%,
-      rgba(0, 0, 0, 0) 100%
-    ),
-    linear-gradient(0deg, rgba(217, 217, 217, 0.01), rgba(217, 217, 217, 0.01)),
-    radial-gradient(
-      103.28% 84.14% at 51.8% 102.86%,
-      rgba(255, 255, 255, 0.37) 0%,
-      rgba(255, 255, 255, 0.02) 100%
-    );
-}
-
-.blog-article .side .shares-container .shares .share-item.active > * {
-  opacity: 1;
-}
-
 @media (max-width: 1439px) {
   .container.blog-article .blog-article-title.text {
     font-size: 42.5px;

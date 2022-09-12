@@ -75,6 +75,20 @@
   flex-grow: 1;
 }
 
+.select.variant-format {
+  background: var(--menu);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.select.variant-format + .dropDown {
+  background: var(--menu);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.select.variant-format .selectOption {
+  flex-grow: 1;
+}
+
 @media (max-width: 834px) {
   .select .select-info {
     min-height: 50px;

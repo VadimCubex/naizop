@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import classNames from "classnames";
 
 import { Select } from "../../components/Select";
 import { SvgIcon } from "../../components/SvgIcon";
@@ -15,7 +16,12 @@ import {
   TextVariants,
 } from "../../constants/VariantsOfComponents";
 
-const Tools = () => {
+const Tools = ({ container = true, className }) => {
+  const ToolsClass = classNames(
+    "tools-page",
+    { container: container },
+    className
+  );
   const [activeTab, setActiveTab] = useState(0);
   const [activeSubTab, setActiveSubTab] = useState(0);
   const [activeSocial, setActiveSocial] = useState(TabsName[0]);
@@ -32,9 +38,16 @@ const Tools = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  useEffect(() => {
+    setActiveSubTab(0);
+    if (window.innerWidth < 835) {
+      setActiveTab(TabsName.indexOf(activeSocial));
+    }
+  }, [activeSocial]);
+
   return (
     <>
-      <div className="tools-page">
+      <div className={ToolsClass}>
         <div className="tools-page-contant">
           <Tabs
             variant={TabsVariants.Default}
@@ -66,9 +79,10 @@ const Tools = () => {
           </Tabs>
           <div className="select-tab">
             <Select
-              onClick={setActiveSocial}
-              selected={activeSocial}
-              variant={SelectOptionVariants.default}
+              // onClick={handleClickSelectItem}
+              setValue={setActiveSocial}
+              value={activeSocial}
+              variant={SelectOptionVariants.Default}
               options={TabsName}
             />
           </div>

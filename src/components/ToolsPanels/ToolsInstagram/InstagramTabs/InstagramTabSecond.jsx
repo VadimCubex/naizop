@@ -10,7 +10,7 @@ const InstagramTabSecond = ({ social }) => {
         social={social.subTitle}
         menuItem={social.subTabs[1].menuItem}
       />
-      <div className="instagram-first">
+      <div className="instagram-second">
         <DownloadPhoto profile={false} />
       </div>
     </>

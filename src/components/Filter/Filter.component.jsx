@@ -128,9 +128,9 @@ export const FilterComponent = ({
         <div className="filter-select">
           <Select
             maxHeight={310}
-            onClick={setSelectedFilter}
-            selected={selectedFilter}
-            variant={SelectOptionVariants.default}
+            setValue={setSelectedFilter}
+            value={selectedFilter}
+            variant={SelectOptionVariants.Default}
             options={FilterSelectWithIcon}
           />
         </div>

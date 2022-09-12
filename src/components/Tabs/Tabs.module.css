@@ -92,20 +92,3 @@
 .tabs.tabs_outline > li.active path {
   stroke: var(--white);
 }
-
-@media (max-width: 834px) {
-  .tabs.tabs_outline .tabs-line {
-    display: none;
-  }
-  .tabs.tabs_outline {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .tabs.tabs_outline > li .tab-line {
-    background: #9aa6b7;
-    opacity: 1;
-  }
-  .tabs.tabs_outline > li.active .tab-line {
-    background: var(--white);
-  }
-}

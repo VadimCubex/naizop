@@ -6,14 +6,13 @@ import { Link } from "react-router-dom";
 
 import { Button } from "../../components/Button";
 import { BlogCard } from "../../components/Cards";
-import { SvgIcon } from "../../components/SvgIcon";
+import { CardSelect } from "../../components/CardSelect";
 import { Text } from "../../components/Text";
 import { Shares } from "./constants";
 import {
   BlogCardSize,
   ButtonSizeVariants,
   ButtonVariants,
-  ColorSvgVariants,
   TextVariants,
 } from "../../constants/VariantsOfComponents";
 
@@ -23,19 +22,15 @@ const BlogArticle = ({ container = true, className }) => {
     { container: container },
     className
   );
-  const [activeShares, setActiveShares] = useState([]);
+  const [activeShares, setActiveShares] = useState({});
   const [category] = useState(JSON.parse(localStorage.getItem("blogCategory")));
   const [article] = useState(JSON.parse(localStorage.getItem("blogArticle")));
   const [index] = useState(
     category.blogs.findIndex((element) => element.title === article.title)
   );
 
-  const handleClick = (item) => {
-    if (activeShares.includes(item)) {
-      setActiveShares([...activeShares.filter((value) => value !== item)]);
-      return;
-    }
-    setActiveShares([...activeShares, item]);
+  const handleClickShares = (item) => {
+    setActiveShares(item);
   };
 
   useEffect(() => {
@@ -104,21 +99,12 @@ const BlogArticle = ({ container = true, className }) => {
               )}
             </div>
             <div className="shares-container">
-              <div className="shares">
-                <Text variant={TextVariants.h3}>Share</Text>
-                {Shares.map((item) => (
-                  <div
-                    key={item.title}
-                    onClick={() => handleClick(item)}
-                    className={classNames("share-item", {
-                      active: activeShares.includes(item),
-                    })}
-                  >
-                    <SvgIcon src={item.icon} color={ColorSvgVariants.white} />
-                    <Text variant={TextVariants.h3}>{item.title}</Text>
-                  </div>
-                ))}
-              </div>
+              <CardSelect
+                title="Share"
+                value={activeShares}
+                onClick={handleClickShares}
+                options={Shares}
+              />
               <Button
                 variant={ButtonVariants.blue}
                 size={ButtonSizeVariants.medium}

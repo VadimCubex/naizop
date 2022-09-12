@@ -344,6 +344,9 @@
 }
 
 @media (max-width: 834px) {
+  .best-quality-service br {
+    display: none;
+  }
   .best-quality-service {
     padding-top: 30px;
     padding-bottom: 120px;

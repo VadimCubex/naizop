@@ -56,10 +56,11 @@ const NaizopRoutes = () => {
           path="blog/category/article"
           element={<BlogArticle className="background-img" />}
         />
+        <Route path="tools" element={<Tools className="background-img" />} />
         <Route path="about" element={<About className="background-img" />} />
         <Route path="best-quality-service" element={<BestQualityService />} />
         <Route path="order-detail" element={<OrderDetail />} />
-        <Route path="compleled-order" element={<CompletedOrder />} />
+        <Route path="completed-order" element={<CompletedOrder />} />
         <Route path="track-order" element={<TrackOrder />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
@@ -94,7 +95,7 @@ const NaizopRoutes = () => {
           path="blog/category/article"
           element={<BlogArticle container={false} />}
         />
-        <Route path="tools" element={<Tools />} />
+        <Route path="tools" element={<Tools container={false} />} />
         <Route path="terms" element={<Terms />} />
         <Route path="faq" element={<FAQ container={false} />} />
         <Route path="api" element={<Api />} />

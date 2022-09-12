@@ -89,9 +89,9 @@ const BestQualityService = () => {
           </Tabs>
           <div className="select-tab">
             <Select
-              onClick={setActiveSocial}
-              selected={activeSocial}
-              variant={SelectOptionVariants.default}
+              setValue={setActiveSocial}
+              value={activeSocial}
+              variant={SelectOptionVariants.Default}
               options={TabsName}
             />
           </div>
@@ -99,9 +99,9 @@ const BestQualityService = () => {
             <Trustpilot />
             <div className="category">
               <Select
-                onClick={setSelectedCategory}
-                selected={selectedCategory}
-                variant={SelectOptionVariants.default}
+                setValue={setSelectedCategory}
+                value={selectedCategory}
+                variant={SelectOptionVariants.Default}
                 options={CategoryToIncrease}
               />
             </div>
@@ -123,8 +123,8 @@ const BestQualityService = () => {
               </div>
               <Text className="circe">
                 At NAIZOP, you can buy {activeSocial.title}{" "}
-                {selectedCategory.value} quickly, safely and easily with just a
-                few clicks. See our deals below!
+                {selectedCategory.value} quickly, safely and
+                <br /> easily with just a few clicks. See our deals below!
               </Text>
             </div>
           </div>

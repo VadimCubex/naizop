@@ -3,11 +3,11 @@ import React from "react";
 import { ToolsInfo } from "./constants";
 import { ToolsCard } from "../Cards";
 
-export const ToolsComponent = () => {
+export const ToolsComponent = ({ onClick }) => {
   return (
     <>
       {ToolsInfo.map((item, index) => (
-        <ToolsCard key={index} item={item} />
+        <ToolsCard onClick={onClick} key={index} item={item} />
       ))}
     </>
   );

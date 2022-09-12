@@ -137,7 +137,11 @@ export const MainMenuComponent = () => {
       </div>
       <DropDown className="default-tools for-tools" isOpen={isShowTools}>
         <div className="tools container nav-container">
-          <Tools />
+          <Tools
+            onClick={() => {
+              setIsShowTools(false);
+            }}
+          />
         </div>
       </DropDown>
       <DropDown className="burger" isInnerHeight={true} isOpen={isShowBurger}>
