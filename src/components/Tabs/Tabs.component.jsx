@@ -30,7 +30,6 @@ export const TabsComponent = ({
           {variant === "outline" && <div className="tab-line"></div>}
         </li>
       ))}
-      {variant === "outline" && <div className="tabs-line"></div>}
     </ul>
   );
 };

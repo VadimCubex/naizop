@@ -1,0 +1,219 @@
+.statistic-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.statistic-tab .text-big {
+  font-size: 40px;
+  line-height: 46px;
+}
+
+.statistic-tab .info {
+  display: flex;
+  gap: 20px;
+}
+
+.statistic-tab .info > div:first-child {
+  flex-grow: 1;
+  display: flex;
+  gap: 40px;
+}
+
+.statistic-tab .info .account-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  align-self: center;
+}
+
+.statistic-tab .info.live .account-info {
+  flex-direction: row;
+}
+
+.statistic-tab .info .account-info > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.statistic-tab .info .account-info > div > .text:last-child {
+  opacity: 0.5;
+}
+
+.statistic-tab .info .followers {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 68px 20px;
+}
+
+.statistic-tab .info.live .followers {
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+}
+
+.statistic-tab .info .followers > .text:first-child {
+  color: var(--yellow);
+}
+
+.statistic-tab .info .statistics {
+  flex-grow: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.statistic-tab .info .statistics .block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.statistic-tab .logo-separation {
+  margin: 50px 0px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.statistic-tab .logo-separation .separator {
+  height: 2px;
+  background: var(--white);
+  flex-grow: 1;
+  max-width: 350px;
+}
+
+.statistic-tab .logo-separation .logo {
+  display: flex;
+  align-items: center;
+}
+
+.statistic-tab .sharing {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.statistic-tab .sharing > * {
+  width: 46%;
+}
+
+.statistic-tab .sharing .shares-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.statistic-tab .sharing .example-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.statistic-tab .sharing .example-container > .text {
+  opacity: 0;
+}
+
+.statistic-tab .sharing .example-container .default {
+  width: 100%;
+  height: 100%;
+  background: #d9d9d9;
+}
+
+@media (max-width: 1439px) {
+  .statistic-tab .text-big {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .statistic-tab .text-big {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .statistic-tab .info.live > div:first-child {
+    flex-direction: column;
+  }
+  .statistic-tab .info .account-info {
+    align-self: flex-start;
+  }
+  .statistic-tab .info {
+    flex-direction: column;
+  }
+  .statistic-tab .info .statistics {
+    flex-direction: row;
+  }
+  .statistic-tab .info .statistics .block {
+    width: 40%;
+    flex-grow: 1;
+  }
+  .statistic-tab .sharing {
+    flex-direction: column;
+  }
+  .statistic-tab .sharing .example-container,
+  .statistic-tab .sharing .shares-container {
+    width: 100%;
+  }
+  .statistic-tab .logo-separation {
+    margin: 50px 0px;
+  }
+  .statistic-tab .sharing .example-container .default {
+    height: 245px;
+  }
+}
+
+@media (max-width: 834px) {
+  .statistic-tab {
+    margin-top: 20px;
+  }
+  .statistic-tab .text-big {
+    font-size: 34px;
+  }
+  .statistic-tab .info .followers {
+    padding: 50px 0px;
+  }
+  .statistic-tab .logo-separation {
+    margin: 40px 0px;
+  }
+  .statistic-tab .sharing .example-container .default {
+    height: 210px;
+  }
+  .statistic-tab .info > div:first-child {
+    gap: 30px;
+    margin-top: 10px;
+  }
+  .statistic-tab .info .statistics,
+  .statistic-tab .info {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .statistic-tab .text-big {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  .statistic-tab .info > div:first-child {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .statistic-tab .info .account-info {
+    flex-direction: row;
+    align-self: unset;
+  }
+  .statistic-tab .info .followers {
+    padding: 30px 0px;
+  }
+}
+
+@media (max-width: 425px) {
+}

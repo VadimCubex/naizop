@@ -13,7 +13,7 @@ import { Tooltip } from "../../Tooltip";
 
 import useTooltip from "../../../hooks/useTooltip";
 
-export const OptionWithDetailComponent = ({ selected, value }) => {
+export const DetailComponent = ({ selected, value }) => {
   const [openRecommended, setOpenRecommended] = useState(false);
 
   const {
@@ -122,4 +122,4 @@ export const OptionWithDetailComponent = ({ selected, value }) => {
   );
 };
 
-OptionWithDetailComponent.displayName = "OptionDetail";
+DetailComponent.displayName = "Detail";

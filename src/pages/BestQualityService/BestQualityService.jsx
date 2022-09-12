@@ -89,9 +89,9 @@ const BestQualityService = () => {
           </Tabs>
           <div className="select-tab">
             <Select
-              onClick={setActiveSocial}
-              selected={activeSocial}
-              variant={SelectOptionVariants.default}
+              setValue={setActiveSocial}
+              value={activeSocial}
+              variant={SelectOptionVariants.Default}
               options={TabsName}
             />
           </div>
@@ -99,9 +99,9 @@ const BestQualityService = () => {
             <Trustpilot />
             <div className="category">
               <Select
-                onClick={setSelectedCategory}
-                selected={selectedCategory}
-                variant={SelectOptionVariants.default}
+                setValue={setSelectedCategory}
+                value={selectedCategory}
+                variant={SelectOptionVariants.Default}
                 options={CategoryToIncrease}
               />
             </div>
@@ -123,66 +123,68 @@ const BestQualityService = () => {
               </div>
               <Text className="circe">
                 At NAIZOP, you can buy {activeSocial.title}{" "}
-                {selectedCategory.value} quickly, safely and easily with just a
-                few clicks. See our deals below!
+                {selectedCategory.value} quickly, safely and
+                <br /> easily with just a few clicks. See our deals below!
               </Text>
             </div>
           </div>
           <div className="quality">
-            <Tabs
-              active={activeSubTab}
-              onClick={handleClickSubTab}
-              variant={TabsVariants.Outline}
-            >
-              <Tab
-                titleComponent={
-                  <div className="subtab-title">
-                    <div className="info">
+            <div className="tabs-container">
+              <Tabs
+                active={activeSubTab}
+                onClick={handleClickSubTab}
+                variant={TabsVariants.Outline}
+              >
+                <Tab
+                  titleComponent={
+                    <div className="subtab-title">
+                      <div className="info">
+                        <SvgIcon
+                          src={activeSocial.icon_stroke}
+                          color={ColorSvgVariants.white}
+                        />
+                        <Text variant={TextVariants.h3}>
+                          High Quality {selectedCategory.title}
+                        </Text>
+                      </div>
                       <SvgIcon
-                        src={activeSocial.icon_stroke}
+                        onClick={(event) => {
+                          setHighModal(true);
+                          event.stopPropagation();
+                        }}
+                        src={IconsVariants.Question}
                         color={ColorSvgVariants.white}
+                        size={20}
                       />
-                      <Text variant={TextVariants.h3}>
-                        High Quality {selectedCategory.title}
-                      </Text>
                     </div>
-                    <SvgIcon
-                      onClick={(event) => {
-                        setHighModal(true);
-                        event.stopPropagation();
-                      }}
-                      src={IconsVariants.Question}
-                      color={ColorSvgVariants.white}
-                      size={20}
-                    />
-                  </div>
-                }
-              />
-              <Tab
-                titleComponent={
-                  <div className="subtab-title">
-                    <div className="info">
+                  }
+                />
+                <Tab
+                  titleComponent={
+                    <div className="subtab-title">
+                      <div className="info">
+                        <SvgIcon
+                          src={activeSocial.icon_stroke}
+                          color={ColorSvgVariants.white}
+                        />
+                        <Text variant={TextVariants.h3}>
+                          Premium Quality {selectedCategory.title}
+                        </Text>
+                      </div>
                       <SvgIcon
-                        src={activeSocial.icon_stroke}
+                        onClick={(event) => {
+                          setPremiumModal(true);
+                          event.stopPropagation();
+                        }}
+                        src={IconsVariants.Question}
                         color={ColorSvgVariants.white}
+                        size={20}
                       />
-                      <Text variant={TextVariants.h3}>
-                        Premium Quality {selectedCategory.title}
-                      </Text>
                     </div>
-                    <SvgIcon
-                      onClick={(event) => {
-                        setPremiumModal(true);
-                        event.stopPropagation();
-                      }}
-                      src={IconsVariants.Question}
-                      color={ColorSvgVariants.white}
-                      size={20}
-                    />
-                  </div>
-                }
-              />
-            </Tabs>
+                  }
+                />
+              </Tabs>
+            </div>
             <TabPanel active={activeSubTab} index={0}>
               <div className="sales-container">
                 <div className="cards">
@@ -225,7 +227,7 @@ const BestQualityService = () => {
             </TabPanel>
             <TabPanel active={activeSubTab} index={1}></TabPanel>
           </div>
-          <ReasonsToUse />
+          <ReasonsToUse steper={true} />
         </div>
         <Modal
           className="high-quality"

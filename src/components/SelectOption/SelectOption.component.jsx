@@ -1,5 +1,5 @@
 import React from "react";
-import { OptionDefault, OptionDetail, OptionWithoutDetail } from ".";
+import { Default, Detail, OptionsFormat, WithoutDetail } from ".";
 import classNames from "classnames";
 
 import { SelectOptionVariants } from "../../constants/VariantsOfComponents";
@@ -18,23 +18,30 @@ export const SelectOptionComponent = ({
   );
 
   const OptionVariantMap = {
-    [SelectOptionVariants.newOrderWithDetail]: (
-      <OptionDetail
+    [SelectOptionVariants.Detail]: (
+      <Detail
         className={!selected && "selectOption-padding-y-10"}
         value={value}
         selected={selected}
       />
     ),
-    [SelectOptionVariants.newOrderWithoutDeteil]: (
-      <OptionWithoutDetail
+    [SelectOptionVariants.WithoutDeteil]: (
+      <WithoutDetail
         className={!selected && "selectOption-padding-y-10"}
         value={value}
       />
     ),
-    [SelectOptionVariants.default]: (
-      <OptionDefault
+    [SelectOptionVariants.Default]: (
+      <Default
         className={!selected && "selectOption-padding-y-10"}
         value={value}
+      />
+    ),
+    [SelectOptionVariants.Format]: (
+      <OptionsFormat
+        className={!selected && "selectOption-padding-y-10"}
+        value={value}
+        selected={selected}
       />
     ),
   };

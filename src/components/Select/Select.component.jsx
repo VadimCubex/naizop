@@ -6,12 +6,13 @@ import { DropDown, DropDownOpenButton } from "../DropDown";
 import { SelectOption } from "../SelectOption";
 
 export const SelectComponent = ({
-  selected,
-  onClick,
-  additionalOnClick,
+  value,
+  setValue,
+  additionalSetValue,
   options,
   variant,
   maxHeight,
+  onClick,
   className,
 }) => {
   const [isShowDropDown, setIsShowDropDown] = useState(false);
@@ -24,8 +25,9 @@ export const SelectComponent = ({
   );
 
   const handleClick = (value) => {
-    onClick(value);
-    additionalOnClick && additionalOnClick(value.states[0]);
+    setValue(value);
+    onClick && onClick();
+    additionalSetValue && additionalSetValue(value.states[0]);
     setIsShowDropDown(!isShowDropDown);
   };
 
@@ -33,7 +35,7 @@ export const SelectComponent = ({
     <div className="select-container">
       <div className={SelectClass}>
         <div className="select-info">
-          <SelectOption value={selected} variant={variant} selected={true} />
+          <SelectOption value={value} variant={variant} selected={true} />
           <div>
             <DropDownOpenButton
               isOpen={isShowDropDown}
@@ -50,14 +52,14 @@ export const SelectComponent = ({
         isOpen={isShowDropDown}
       >
         {options.map(
-          (value, index) =>
-            selected !== value && (
+          (item, index) =>
+            value !== item && (
               <SelectOption
                 key={index}
                 variant={variant}
-                value={value}
+                value={item}
                 onClick={() => {
-                  handleClick(value);
+                  handleClick(item);
                 }}
               />
             )

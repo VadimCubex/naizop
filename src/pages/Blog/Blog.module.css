@@ -1,0 +1,113 @@
+.blog {
+  color: var(--white);
+}
+
+.container.blog {
+  padding-top: 100px;
+  padding-bottom: 130px;
+}
+
+.profile-container .blog {
+  margin-bottom: 150px;
+}
+
+.blog > .text {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.container.blog .blog-title.text {
+  font-family: "Circe Bold";
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  margin-bottom: 40px;
+  margin-top: 0px;
+}
+
+.blog .categories-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 40px 0px;
+}
+
+.blog .blog-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 1439px) {
+  .container.blog .blog-title.text {
+    font-size: 42.5px;
+    line-height: 52.5px;
+  }
+  .profile-container .blog {
+    margin-bottom: 125px;
+  }
+  .profile-container .blog .categories-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .profile-container .blog .blog-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container.blog {
+    padding-top: 60px;
+  }
+  .container.blog .blog-title.text {
+    font-size: 35px;
+    line-height: 45px;
+    margin-bottom: 30px;
+  }
+  .blog .categories-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .blog .blog-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .profile-container .blog {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 834px) {
+  .container.blog {
+    padding-top: 30px;
+    padding-bottom: 80px;
+  }
+  .container.blog .blog-title.text {
+    font-size: 27.5px;
+    line-height: 37.5px;
+  }
+  .profile-container .blog {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  .blog .categories-container {
+    grid-template-columns: 1fr;
+  }
+  .blog .blog-cards {
+    grid-template-columns: 1fr;
+  }
+  .profile-container .blog .categories-container {
+    grid-template-columns: 1fr;
+  }
+  .profile-container .blog .blog-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 425px) {
+  .profile-container .blog .blog-title.text {
+    margin-top: 50px;
+  }
+}

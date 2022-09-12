@@ -38,6 +38,8 @@ export const IconsVariants = {
   Terms: "/icons/Bulk/Terms.svg",
   Tools: "/icons/Bulk/Tools.svg",
   Updates: "/icons/Bulk/Updates.svg",
+  LogoLeft: "/icons/Bulk/logoLeft.svg",
+  LogoRight: "/icons/Bulk/logoRight.svg",
   // Stroke
   Add_funds_stroke: "/icons/Stroke/Add funds.svg",
   Affiliates_stroke: "/icons/Stroke/Affiliates.svg",
@@ -53,7 +55,7 @@ export const IconsVariants = {
   DropDown_arrow_fill: "/icons/Stroke/DropDown Arrow Fill.svg",
   DropDown_arrow_stroke: "/icons/Stroke/DropDown Arrow Stroke.svg",
   Everything: "/icons/Stroke/Everything.svg",
-  Facebook: "/icons/Facebook/Api.svg",
+  Facebook: "/icons/Stroke/Facebook.svg",
   Favorites_stroke: "/icons/Stroke/Favorites.svg",
   Favorites_fill: "/icons/Stroke/Favorites.svg",
   Google: "/icons/Stroke/Google.svg",
@@ -104,6 +106,7 @@ export const IconsVariants = {
   Coins: "/icons/Stroke/Coins.svg",
   Purchase: "/icons/Stroke/Purchase.svg",
   Wallet: "/icons/Stroke/Wallet.svg",
+  SoundOff: "/icons/Stroke/Sound off.svg",
   // Color
   Bitcoin: "/icons/Color/Bitcoin.svg",
   Crypto: "/icons/Color/Crypto.svg",
@@ -152,6 +155,14 @@ export const FlagsIcons = {
   Sweden: "/icons/Flags/Sweden.svg",
   United_Kingdom: "/icons/Flags/United Kingdom.svg",
   Canada: "/icons/Flags/Canada.svg",
+};
+
+export const GradientIcons = {
+  News: "/icons/Gradient/News.png",
+  Other: "/icons/Gradient/Other.png",
+  Question: "/icons/Gradient/Question.png",
+  Services: "/icons/Gradient/Services.png",
+  Social: "/icons/Gradient/Social Media.png",
 };
 
 export const PaymentsIcons = {
@@ -216,6 +227,13 @@ export const ImagesVariants = {
   OrderDetail4: "/images/OrderDetail/fourth.png",
   OrderDetail5: "/images/OrderDetail/fifth.png",
   OrderDetail6: "/images/OrderDetail/sixth.png",
+
+  BlogDefault: "/images/Blog/20943885.jpg",
+
+  ToolsDefaultSm: "/images/Tools/Default sm.png",
+  ToolsDefaultMd: "/images/Tools/Default md.png",
+  ToolsDefaultBg: "/images/Tools/Default bg.png",
+  ToolsYoutubeVideo: "/images/Tools/YoutubeVideo.png",
 };
 
 export const ColorSvgVariants = {
@@ -284,9 +302,10 @@ export const DropDownVariants = {
 };
 
 export const SelectOptionVariants = {
-  newOrderWithDetail: "detail",
-  newOrderWithoutDeteil: "nodeteil",
-  default: "default",
+  Detail: "detail",
+  WithoutDeteil: "nodeteil",
+  Default: "default",
+  Format: "format",
 };
 
 export const SliderCardVariants = {
@@ -327,4 +346,9 @@ export const InstructionVariants = {
 export const TabsVariants = {
   Default: "default",
   Outline: "outline",
+};
+
+export const BlogCardSize = {
+  big: "bg",
+  small: "sm",
 };

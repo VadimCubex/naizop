@@ -34,7 +34,7 @@ const PlaceNewOrder = () => {
         <Text variant={TextVariants.h1_medium}>Place New Order</Text>
 
         <div className="place-new-order-contant">
-          <div className="tabs-container">
+          <div className="tabs-panels-container">
             <Tabs
               variant={TabsVariants.Default}
               active={activeTab}
@@ -72,7 +72,7 @@ const PlaceNewOrder = () => {
                       </Text>
                     </div>
                     <div className="info">
-                      <Text variant={TextVariants.h3}>Service Cost</Text>
+                      <Text variant={TextVariants.h3}>Average Time</Text>
                       <Text variant={TextVariants.h4}>8 Minutes</Text>
                     </div>
                   </div>

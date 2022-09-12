@@ -136,9 +136,9 @@ const OrderDetail = () => {
               <div className="info select-plan">
                 <Text variant={TextVariants.h3}>Selected plan</Text>
                 <Select
-                  onClick={setSelectedPlan}
-                  selected={selectedPlan}
-                  variant={SelectOptionVariants.default}
+                  setValue={setSelectedPlan}
+                  value={selectedPlan}
+                  variant={SelectOptionVariants.Default}
                   options={plans}
                 />
               </div>
@@ -252,19 +252,19 @@ const OrderDetail = () => {
                 <div className="info select-country">
                   <Text variant={TextVariants.h3}>Country</Text>
                   <Select
-                    variant={SelectOptionVariants.default}
-                    selected={selectedCountry}
-                    additionalOnClick={setSelectedStates}
-                    onClick={setSelectedCountry}
+                    variant={SelectOptionVariants.Default}
+                    value={selectedCountry}
+                    setValue={setSelectedCountry}
+                    additionalSetValue={setSelectedStates}
                     options={Countries}
                   />
                 </div>
                 <div className="info select-state">
                   <Text variant={TextVariants.h3}>State</Text>
                   <Select
-                    variant={SelectOptionVariants.default}
-                    selected={selectedState}
-                    onClick={setSelectedStates}
+                    variant={SelectOptionVariants.Default}
+                    value={selectedState}
+                    setValue={setSelectedStates}
                     options={selectedCountry.states}
                   />
                 </div>
@@ -319,7 +319,7 @@ const OrderDetail = () => {
                   size={ButtonSizeVariants.extra_large}
                   text="Pay with Credit Card"
                   onClick={() => {
-                    navigate("/compleled-order");
+                    navigate("/completed-order");
                   }}
                 />
                 <Button
@@ -327,7 +327,7 @@ const OrderDetail = () => {
                   size={ButtonSizeVariants.extra_large}
                   text="Pay with Crypto"
                   onClick={() => {
-                    navigate("/compleled-order");
+                    navigate("/completed-order");
                   }}
                 />
               </div>

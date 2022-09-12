@@ -1,0 +1,26 @@
+.pagination {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  justify-content: center;
+  gap: 15px;
+}
+
+.pagination .pagination-item {
+  cursor: pointer;
+}
+
+.pagination path {
+  stroke-width: 4px !important;
+}
+
+.pagination .selected {
+  color: var(--yellow);
+}
+
+.pagination .disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

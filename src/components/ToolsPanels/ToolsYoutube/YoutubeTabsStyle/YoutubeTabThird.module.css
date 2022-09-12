@@ -1,0 +1,26 @@
+.youtube-third {
+  padding: 90px 8.8% 110px;
+}
+
+.youtube-third .statistic-tab .info .statistics .block {
+  flex: auto;
+  justify-content: center;
+}
+
+@media (max-width: 1439px) {
+  .youtube-third {
+    padding: 70px 8.8% 80px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .youtube-third {
+    padding: 50px 8.8% 60px;
+  }
+}
+
+@media (max-width: 834px) {
+  .youtube-third {
+    padding: 20px 20px 30px;
+  }
+}

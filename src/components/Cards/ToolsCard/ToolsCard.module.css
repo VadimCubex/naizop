@@ -1,6 +1,7 @@
 .tools-card {
   border-radius: 10px;
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   padding: 20px 15px;
 }
@@ -30,7 +31,7 @@
 }
 
 .tools-card:hover {
-  background: #191C21;
+  background: #191c21;
 }
 
 .tools-card .dropDown {
@@ -81,4 +82,5 @@
   }
 }
 
-@media (max-width: 425px) {}
+@media (max-width: 425px) {
+}

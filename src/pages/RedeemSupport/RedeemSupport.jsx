@@ -57,18 +57,18 @@ const RedeemSupport = () => {
               <div className="support-input">
                 <Text variant={TextVariants.h3}>Subject</Text>
                 <Select
-                  onClick={setSelectedSubject}
-                  selected={selectedSubject}
-                  variant={SelectOptionVariants.default}
+                  setValue={setSelectedSubject}
+                  value={selectedSubject}
+                  variant={SelectOptionVariants.Default}
                   options={RedeemSubjectSelect}
                 />
               </div>
               <div className="support-input">
                 <Text variant={TextVariants.h3}>Selected plan</Text>
                 <Select
-                  onClick={setSelectedPlan}
-                  selected={selectedPlan}
-                  variant={SelectOptionVariants.default}
+                  setValue={setSelectedPlan}
+                  value={selectedPlan}
+                  variant={SelectOptionVariants.Default}
                   options={RedeemPlanSelect}
                 />
               </div>

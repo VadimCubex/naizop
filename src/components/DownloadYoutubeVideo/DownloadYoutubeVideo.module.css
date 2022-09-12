@@ -1,0 +1,100 @@
+.download-youtube-video {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.download-youtube-video > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 42%;
+}
+
+.download-youtube-video .image {
+  width: 100%;
+}
+
+.download-youtube-video .example-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 39%;
+}
+
+.download-youtube-video .example-container .formats {
+  position: relative;
+  z-index: 2;
+}
+
+.download-youtube-video .example-container > .text {
+  opacity: 0;
+}
+
+.download-youtube-video .example-container .tools-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.download-youtube-video .example-container .tools-container .example-image {
+  min-height: 330px;
+  width: 100%;
+  flex-grow: 1;
+  background: #d9d9d9;
+}
+
+.download-youtube-video .example-container .tools-container .buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+@media (max-width: 1439px) {
+  .download-youtube-video {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .download-youtube-video {
+    flex-direction: column;
+  }
+  .download-youtube-video .example-container,
+  .download-youtube-video > div:first-child {
+    width: 100%;
+  }
+  .download-youtube-video > div:first-child > .text:last-child,
+  .download-youtube-video .example-container .formats,
+  .download-youtube-video .example-container .example-image > div,
+  .download-youtube-video .example-container .buttons-container,
+  .download-youtube-video .image {
+    align-self: center;
+    width: 80%;
+  }
+  .download-youtube-video
+    .example-container
+    .tools-container
+    .buttons-container {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 834px) {
+  .download-youtube-video .example-container .tools-container {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .download-youtube-video > div:first-child > .text:last-child,
+  .download-youtube-video .example-container .formats,
+  .download-youtube-video .example-container .example-image > div,
+  .download-youtube-video .example-container .buttons-container,
+  .download-youtube-video .image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+}

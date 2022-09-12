@@ -1,0 +1,24 @@
+.twitter-first {
+  padding: 60px 20px 100px;
+}
+
+.twitter-first > .default {
+  width: 100%;
+  height: 180px;
+  background: #d9d9d9;
+}
+
+.twitter-first .reasons-to-use {
+  padding: 0px;
+}
+
+.container .twitter-first {
+  padding: 60px 30px 100px;
+}
+
+@media (max-width: 834px) {
+  .container .twitter-first,
+  .twitter-first {
+    padding: 20px 20px 30px;
+  }
+}

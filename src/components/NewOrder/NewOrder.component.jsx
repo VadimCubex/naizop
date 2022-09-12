@@ -81,9 +81,9 @@ export const NewOrderComponent = ({ className }) => {
         <Select
           maxHeight={firstSelectHeight}
           options={NewOrderCategory}
-          selected={selectedCategory}
-          onClick={setSelectedCategory}
-          variant={SelectOptionVariants.newOrderWithoutDeteil}
+          value={selectedCategory}
+          setValue={setSelectedCategory}
+          variant={SelectOptionVariants.WithoutDeteil}
         />
       </div>
       <div className="chunk service">
@@ -91,9 +91,9 @@ export const NewOrderComponent = ({ className }) => {
         <Select
           maxHeight={SecondSelectHeight}
           options={NewOrderService}
-          selected={selectedService}
-          onClick={setSelectedService}
-          variant={SelectOptionVariants.newOrderWithDetail}
+          value={selectedService}
+          setValue={setSelectedService}
+          variant={SelectOptionVariants.Detail}
         />
       </div>
       <div className="chunk">

@@ -67,7 +67,8 @@
 .background-img {
   background: url("/public/images/Backgrounds/1440.png");
   background-size: cover !important;
-  background-position: center !important;
+  background-position-x: center !important;
+  background-position-y: top !important;
 }
 
 .profile-container.background-img {
