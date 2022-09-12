@@ -83,7 +83,7 @@ export const NewOrderComponent = ({ className }) => {
           options={NewOrderCategory}
           value={selectedCategory}
           setValue={setSelectedCategory}
-          variant={SelectOptionVariants.newOrderWithoutDeteil}
+          variant={SelectOptionVariants.WithoutDeteil}
         />
       </div>
       <div className="chunk service">
@@ -93,7 +93,7 @@ export const NewOrderComponent = ({ className }) => {
           options={NewOrderService}
           value={selectedService}
           setValue={setSelectedService}
-          variant={SelectOptionVariants.newOrderWithDetail}
+          variant={SelectOptionVariants.Detail}
         />
       </div>
       <div className="chunk">
