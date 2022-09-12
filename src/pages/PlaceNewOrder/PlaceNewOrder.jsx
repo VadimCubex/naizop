@@ -34,7 +34,7 @@ const PlaceNewOrder = () => {
         <Text variant={TextVariants.h1_medium}>Place New Order</Text>
 
         <div className="place-new-order-contant">
-          <div className="tabs-container">
+          <div className="tabs-panels-container">
             <Tabs
               variant={TabsVariants.Default}
               active={activeTab}
