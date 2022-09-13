@@ -139,23 +139,27 @@ const BestQualityService = () => {
                   titleComponent={
                     <div className="subtab-title">
                       <div className="info">
-                        <SvgIcon
-                          src={activeSocial.icon_stroke}
-                          color={ColorSvgVariants.white}
-                        />
+                        <div>
+                          <SvgIcon
+                            src={activeSocial.icon_stroke}
+                            color={ColorSvgVariants.white}
+                          />
+                        </div>
                         <Text variant={TextVariants.h3}>
                           High Quality {selectedCategory.title}
                         </Text>
                       </div>
-                      <SvgIcon
-                        onClick={(event) => {
-                          setHighModal(true);
-                          event.stopPropagation();
-                        }}
-                        src={IconsVariants.Question}
-                        color={ColorSvgVariants.white}
-                        size={20}
-                      />
+                      <div>
+                        <SvgIcon
+                          onClick={(event) => {
+                            setHighModal(true);
+                            event.stopPropagation();
+                          }}
+                          src={IconsVariants.Question}
+                          color={ColorSvgVariants.white}
+                          size={20}
+                        />
+                      </div>
                     </div>
                   }
                 />

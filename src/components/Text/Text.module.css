@@ -162,6 +162,7 @@
 
   .text_variant_title {
     font-size: 28px;
+    line-height: 35px;
   }
 }
 
@@ -218,5 +219,6 @@
 
   .text_variant_title {
     font-size: 20px;
+    line-height: 30px;
   }
 }

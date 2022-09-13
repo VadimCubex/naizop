@@ -13,9 +13,20 @@
 .tools-card .title {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.tools-card .title > div:not(.arrow) {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
   margin-right: 35px;
   gap: 15px;
+}
+
+.tools-card .title .arrow {
+  display: none;
+  margin-right: 35px;
 }
 
 .tools-card .dropDown .links {
@@ -40,11 +51,11 @@
 }
 
 @media (max-width: 1439px) {
-  .tools-card .title {
+  .tools-card .title > div:not(.arrow) {
     margin-right: 10px;
   }
 
-  .tools-card .svgIcon {
+  .tools-card .svgIcon:not(.arrow) {
     width: 32px !important;
     height: 32px !important;
   }
@@ -58,17 +69,25 @@
 }
 
 @media (max-width: 834px) {
-  .tools-card .svgIcon {
+  .tools-card hr.tools-hr {
+    margin: 0px;
+  }
+
+  .tools-card .svgIcon:not(.arrow) {
     width: 24px !important;
     height: 24px !important;
   }
 
-  .tools-card {
-    width: unset;
-    padding: 20px 15px;
+  .tools-card .title .arrow {
+    display: flex;
   }
 
-  .tools-card .title {
+  .tools-card {
+    width: unset;
+    padding: 15px 15px;
+  }
+
+  .tools-card .title > div:not(.arrow) {
     margin-bottom: 0px;
     margin-right: 0px;
   }

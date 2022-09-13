@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import { useEffect } from "react";
 import classNames from "classnames";
 
@@ -16,34 +15,29 @@ import {
   TextVariants,
 } from "../../constants/VariantsOfComponents";
 
+import { useToolsTabsSelector } from "../../store/Tools/ToolsTabs/useToolsTabs";
+import { useToolsActions } from "../../store/Tools/useToolsActions";
+
 const Tools = ({ container = true, className }) => {
   const ToolsClass = classNames(
     "tools-page",
     { container: container },
     className
   );
-  const [activeTab, setActiveTab] = useState(0);
-  const [activeSubTab, setActiveSubTab] = useState(0);
-  const [activeSocial, setActiveSocial] = useState(TabsName[0]);
+  const { activeSocial, activeTab, activeSubTab } = useToolsTabsSelector();
+  const { ChangeSocial, ChangeTab, ChangeSubTab } = useToolsActions();
 
   const handleClickTab = (event, active) => {
-    setActiveTab(active);
+    ChangeTab(active);
   };
 
   const handleClickSubTab = (event, active) => {
-    setActiveSubTab(active);
+    ChangeSubTab(active);
   };
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  useEffect(() => {
-    setActiveSubTab(0);
-    if (window.innerWidth < 835) {
-      setActiveTab(TabsName.indexOf(activeSocial));
-    }
-  }, [activeSocial]);
 
   return (
     <>
@@ -61,7 +55,7 @@ const Tools = ({ container = true, className }) => {
                   <>
                     <div
                       onClick={() => {
-                        setActiveSocial(item);
+                        ChangeSocial(item);
                       }}
                       className="tab-title"
                     >
@@ -79,8 +73,7 @@ const Tools = ({ container = true, className }) => {
           </Tabs>
           <div className="select-tab">
             <Select
-              // onClick={handleClickSelectItem}
-              setValue={setActiveSocial}
+              setValue={ChangeSocial}
               value={activeSocial}
               variant={SelectOptionVariants.Default}
               options={TabsName}

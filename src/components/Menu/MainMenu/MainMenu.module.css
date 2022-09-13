@@ -293,6 +293,19 @@
     display: flex;
   }
 
+  .mainMenu .burger .container.nav-burger-container {
+    display: flex;
+  }
+
+  .mainMenu .burger .nav-burger-container nav {
+    padding-top: 0px;
+    width: 80%;
+  }
+
+  .nav-burger .nav-tools-item .svgIcon {
+    margin-right: 50px;
+  }
+
   .nav-container .nav-logo .text_variant_h1_medium {
     display: block;
   }

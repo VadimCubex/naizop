@@ -99,16 +99,6 @@ export const TabsName = [
     icon: IconsVariants.Twitter_color,
     icon_stroke: IconsVariants.Twitter,
   },
-  {
-    title: "LinkedIn",
-    icon: IconsVariants.Linkedin,
-    icon_stroke: IconsVariants.Linkedin_stroke,
-  },
-  {
-    title: "Twitch",
-    icon: IconsVariants.Twitch_color,
-    icon_stroke: IconsVariants.Twitch,
-  },
 ];
 
 export const CategoryToIncrease = [

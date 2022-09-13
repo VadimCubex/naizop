@@ -82,11 +82,10 @@ export const MainMenuComponent = () => {
             <ul className="nav-list">
               {NavLinks.map((item, index) => (
                 <li
-                  className={`nav-list-item cursor-pointer ${
-                    active === item.link || active === item.text
-                      ? "nav-item-active"
-                      : ""
-                  }`}
+                  className={classNames("nav-list-item", "cursor-pointer", {
+                    ["nav-item-active"]:
+                      active === item.link || active === item.text,
+                  })}
                   onClick={() => {
                     handleClickItem(item);
                   }}
@@ -156,10 +155,10 @@ export const MainMenuComponent = () => {
               <ul className="nav-list">
                 {NavLinks.map((item, index) => (
                   <li
-                    className={`nav-list-item cursor-pointer ${
-                      (active === item.link || active === item.text) &&
-                      "nav-item-active"
-                    }`}
+                    className={classNames("nav-list-item", "cursor-pointer", {
+                      ["nav-item-active"]:
+                        active === item.link || active === item.text,
+                    })}
                     onClick={() => {
                       handleClickItem(item);
                     }}
@@ -189,7 +188,12 @@ export const MainMenuComponent = () => {
                         </div>
                         <DropDown className="for-tools" isOpen={isShowTools}>
                           <div className="tools">
-                            <Tools />
+                            <Tools
+                              onClick={() => {
+                                setIsShowTools(false);
+                                setIsShowBurger(false);
+                              }}
+                            />
                           </div>
                         </DropDown>
                       </div>

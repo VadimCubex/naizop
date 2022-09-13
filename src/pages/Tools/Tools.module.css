@@ -136,6 +136,10 @@
 }
 
 @media (max-width: 834px) {
+  .tools {
+    gap: unset;
+    padding-bottom: 0px;
+  }
   .tools-page .tools-page-contant .select-tab .select-container .dropDown {
     padding: 50px 40px 0px;
   }

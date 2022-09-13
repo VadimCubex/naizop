@@ -35,6 +35,14 @@
   align-items: center;
 }
 
+.best-quality-service .best-quality-service-contant .tabs.tabs_outline {
+  gap: 30px;
+}
+
+.best-quality-service .best-quality-service-contant .tabs.tabs_outline > li {
+  min-width: fit-content;
+}
+
 .best-quality-service .best-quality-service-contant .tab-title {
   display: flex;
   align-items: center;
@@ -359,15 +367,13 @@
     font-size: 18px;
     line-height: 20px;
   }
-  .best-quality-service
-    .best-quality-service-contant
-    .top
-    .motivation
-    > div:first-child {
-    display: none;
+  .best-quality-service .best-quality-service-contant .top .motivation {
+    align-self: flex-start;
+    align-items: unset;
+    text-align: start;
   }
   .best-quality-service .best-quality-service-contant .top {
-    padding: 60px 20px 52px;
+    padding: 40px 20px;
   }
   .best-quality-service .best-quality-service-contant .tabs.tabs_default {
     display: none;
@@ -433,8 +439,17 @@
     .best-quality-service-contant
     .top
     .motivation
+    .svgIcon {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .best-quality-service
+    .best-quality-service-contant
+    .top
+    .motivation
     > .circe {
     font-size: 16px;
+    text-align: start;
   }
   .best-quality-service
     .best-quality-service-contant
