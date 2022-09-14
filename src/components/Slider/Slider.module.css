@@ -13,7 +13,7 @@
 }
 
 .slider-description {
-  font-family: "Circe Medium";
+  font-family: "Circe";
   font-size: 24px;
   font-weight: 400;
   line-height: 30px;
@@ -120,7 +120,7 @@
 }
 
 .slider-card [class*="slider-img"] .img-number {
-  font-family: "Space Grotesk Light";
+  font-family: "Space Grotesk";
   font-weight: 300;
   font-size: 36px;
   line-height: 50px;
@@ -144,6 +144,11 @@
     linear-gradient(46.15deg, #03d1a0 14.31%, rgba(121, 57, 216, 0) 89.33%),
     #1f4fd7;
   filter: blur(40px);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-filter: blur(40px);
+  -moz-filter: blur(40px);
+  -ms-filter: blur(40px);
 }
 
 .slider-card .slider-img-lg .img-background {
@@ -231,7 +236,7 @@
 }
 
 .slider-card .info > .text:first-child {
-  font-family: "Circe ExtraBold";
+  font-family: "Circe";
   font-weight: 800;
   font-size: 66px;
   line-height: 60px;
@@ -240,7 +245,7 @@
 }
 
 .slider.sm .slider-card .info > .text:first-child {
-  font-family: "Circe ExtraBold";
+  font-family: "Circe";
   font-weight: 800;
   font-size: 50px;
   line-height: 60px;

@@ -140,51 +140,123 @@ code {
 }
 
 @font-face {
-  font-family: "Space Grotesk Bold";
-  src: url(../fonts/SpaceGrotesk-Bold.ttf);
+  font-family: "Space Grotesk";
+  src: url("../fonts/SpaceGrotesk-Regular.eot");
+  src: url("../fonts/SpaceGrotesk-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/SpaceGrotesk-Regular.woff2") format("woff2"),
+    url("../fonts/SpaceGrotesk-Regular.woff") format("woff"),
+    url("../fonts/SpaceGrotesk-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Space Grotesk Medium";
-  src: url(../fonts/SpaceGrotesk-Medium.ttf);
+  font-family: "Space Grotesk";
+  src: url("../fonts/SpaceGrotesk-Medium.eot");
+  src: url("../fonts/SpaceGrotesk-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/SpaceGrotesk-Medium.woff2") format("woff2"),
+    url("../fonts/SpaceGrotesk-Medium.woff") format("woff"),
+    url("../fonts/SpaceGrotesk-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Space Grotesk Regular";
-  src: url(../fonts/SpaceGrotesk-Regular.ttf);
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Light.eot");
+  src: url("../fonts/Roboto-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Roboto-Light.woff2") format("woff2"),
+    url("../fonts/Roboto-Light.woff") format("woff"),
+    url("../fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Space Grotesk Light";
-  src: url(../fonts/SpaceGrotesk-Light.ttf);
+  font-family: "Space Grotesk";
+  src: url("../fonts/SpaceGrotesk-Light.eot");
+  src: url("../fonts/SpaceGrotesk-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/SpaceGrotesk-Light.woff2") format("woff2"),
+    url("../fonts/SpaceGrotesk-Light.woff") format("woff"),
+    url("../fonts/SpaceGrotesk-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Circe ExtraBold";
-  src: url(../fonts/Circe-ExtraBold.otf);
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.eot");
+  src: url("../fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Roboto-Bold.woff2") format("woff2"),
+    url("../fonts/Roboto-Bold.woff") format("woff"),
+    url("../fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Circe Bold";
-  src: url(../fonts/Circe-Bold.otf);
+  font-family: "Space Grotesk";
+  src: url("../fonts/SpaceGrotesk-Bold.eot");
+  src: url("../fonts/SpaceGrotesk-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/SpaceGrotesk-Bold.woff2") format("woff2"),
+    url("../fonts/SpaceGrotesk-Bold.woff") format("woff"),
+    url("../fonts/SpaceGrotesk-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Circe Medium";
-  src: url(../fonts/Circe-Regular.ttf);
+  font-family: "Circe";
+  src: url("../fonts/Circe-Light.eot");
+  src: url("../fonts/Circe-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Circe-Light.woff2") format("woff2"),
+    url("../fonts/Circe-Light.woff") format("woff"),
+    url("../fonts/Circe-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Circe Light";
-  src: url(../fonts/Circe-Light.ttf);
+  font-family: "Circe";
+  src: url("../fonts/Circe-ExtraBold.eot");
+  src: url("../fonts/Circe-ExtraBold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Circe-ExtraBold.woff2") format("woff2"),
+    url("../fonts/Circe-ExtraBold.woff") format("woff"),
+    url("../fonts/Circe-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Roboto Bold";
-  src: url(../fonts/Roboto-Bold.ttf);
+  font-family: "Circe";
+  src: url("../fonts/Circe-Regular.eot");
+  src: url("../fonts/Circe-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Circe-Regular.woff2") format("woff2"),
+    url("../fonts/Circe-Regular.woff") format("woff"),
+    url("../fonts/Circe-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Roboto Light";
-  src: url(../fonts/Roboto-Light.ttf);
+  font-family: "Circe";
+  src: url("../fonts/Circe-Bold.eot");
+  src: url("../fonts/Circe-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Circe-Bold.woff2") format("woff2"),
+    url("../fonts/Circe-Bold.woff") format("woff"),
+    url("../fonts/Circe-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }

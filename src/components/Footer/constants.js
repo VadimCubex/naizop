@@ -1,3 +1,5 @@
+import { IconsVariants } from "../../constants/VariantsOfComponents";
+
 export const FooterInfo = [
   {
     title: "Explore",
@@ -45,11 +47,11 @@ export const FooterInfo = [
     title: "Follow us",
     links: [
       {
-        text: "Instagram ↗",
+        icon: IconsVariants.Instagram,
         link: "",
       },
       {
-        text: "Telegram ↗",
+        icon: IconsVariants.Telegram,
         link: "",
       },
     ],

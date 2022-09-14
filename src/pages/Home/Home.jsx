@@ -37,8 +37,8 @@ const Home = () => {
             <Text className="likes">Buy likes followers views</Text>
             <Text className="naizop">NAIZOP</Text>
             <Text className="description" variant={TextVariants.h1}>
-              is the <Text>most reliable</Text> panel on the market with{" "}
-              <Text>529.122</Text> orders until now
+              is the <Text>most reliable</Text> panel on the market
+              <br /> with <Text>529.122</Text> orders until now
             </Text>
             <Button
               size={ButtonSizeVariants.extra_large}

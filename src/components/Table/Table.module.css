@@ -162,7 +162,8 @@
 }
 
 .table-modal .modal-trustpilot .trustpilot-reviews > div .text {
-  font-family: "Roboto Bold";
+  font-family: "Roboto";
+  font-weight: 700;
   font-size: 16px;
   line-height: 26px;
 }

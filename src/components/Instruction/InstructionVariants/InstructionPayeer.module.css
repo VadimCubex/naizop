@@ -19,7 +19,8 @@
 .payeer ol {
   margin: 0px;
   padding-left: 16px;
-  font-family: "Space Grotesk Regular";
+  font-family: "Space Grotesk";
+  font-weight: 400;
   font-size: 14px;
   line-height: 20px;
 }

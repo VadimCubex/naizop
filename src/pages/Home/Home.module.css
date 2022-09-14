@@ -25,7 +25,7 @@
 }
 
 .topic .info .likes {
-  font-family: "Circe ExtraBold";
+  font-family: "Circe";
   font-weight: 800;
   font-size: 106px;
   line-height: 100px;
@@ -37,7 +37,7 @@
 }
 
 .topic .info .naizop {
-  font-family: "Circe Bold";
+  font-family: "Circe";
   font-weight: 700;
   font-size: 40px;
   line-height: 50px;
@@ -46,19 +46,19 @@
 }
 
 .topic .info .description {
-  font-family: "Space Grotesk Light";
+  font-family: "Space Grotesk";
   font-weight: 300;
   line-height: 35px;
   margin-bottom: 37px;
 }
 
 .topic .info .description span:first-child {
-  font-family: "Space Grotesk Bold";
+  font-family: "Space Grotesk";
   font-weight: 400;
 }
 
 .topic .info .description span:last-child {
-  font-family: "Space Grotesk Bold";
+  font-family: "Space Grotesk";
   font-weight: 700;
   color: var(--yellow);
 }
@@ -80,7 +80,6 @@
 
 .topic .info .button .text {
   color: #070b20;
-  font-family: "Space Grotesk Medium";
 }
 
 .light-img {
@@ -164,7 +163,7 @@
 }
 
 .experience .info .naizop {
-  font-family: "Circe Bold";
+  font-family: "Circe";
   font-size: 40px;
   font-weight: 700;
   line-height: 50px;
@@ -172,7 +171,7 @@
 }
 
 .experience .info .description {
-  font-family: "Space Grotesk Light";
+  font-family: "Space Grotesk";
   font-weight: 300;
   font-size: 36px;
   line-height: 45px;
@@ -180,18 +179,18 @@
 }
 
 .experience .info .description span:first-child {
-  font-family: "Space Grotesk Bold";
+  font-family: "Space Grotesk";
   font-weight: 400;
 }
 
 .experience .info .description span:last-child {
-  font-family: "Space Grotesk Bold";
+  font-family: "Space Grotesk";
   font-weight: 700;
   color: var(--yellow);
 }
 
 .experience .info .button .text {
-  font-family: "Space Grotesk Medium";
+  color: #070b20;
 }
 
 .experience-images {
@@ -200,7 +199,8 @@
 }
 
 .experience-images.active img {
-  animation: experience-animation 8s ease-in-out 0s 1 normal forwards;
+  animation: experience-animation 8s cubic-bezier(1, 0.9, 0.8, 0.7) 0s 1 normal
+    forwards;
 }
 
 .experience-images img {
@@ -239,7 +239,12 @@
 }
 
 @media (max-width: 1439px) {
+  .topic br {
+    display: none;
+  }
+
   .topic .info {
+    width: 72%;
     padding-top: 80px;
     padding-bottom: 130px;
   }

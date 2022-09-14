@@ -26,7 +26,7 @@ export const CompletedOrderTable = [
   {
     row: {
       name: "Track your package",
-      value: "https://naizop.com/?redirect=%2Forders%2Fpending",
+      link: "https://naizop.com/?redirect=%2Forders%2Fpending",
     },
   },
 ];

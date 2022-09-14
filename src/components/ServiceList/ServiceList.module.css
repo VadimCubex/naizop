@@ -45,6 +45,10 @@
   margin-right: 5px;
 }
 
+.service-list-modal .modal-container {
+  width: 440px;
+}
+
 .service-list-modal .service-item,
 .service-list .service-item {
   display: flex;
@@ -72,6 +76,7 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+  padding: 10px 0px 10px 10px;
 }
 
 .service-list-modal .service-item .service-info > .text:first-child,

@@ -64,6 +64,10 @@
   color: var(--black);
 }
 
+.nav-button-container .auth-buttons .register-button .text {
+  letter-spacing: -0.04em;
+}
+
 .nav-button-container .auth-buttons .register-button:hover {
   background: #bdbdbd;
   color: var(--black);
@@ -108,6 +112,14 @@
   cursor: pointer;
   margin-top: 28px;
   color: #707476;
+}
+
+.nav-list-item.nav-item-active {
+  display: flex !important;
+}
+
+.nav-list-item.nav-track-order {
+  display: none;
 }
 
 .nav-list-item.nav-item-active .text {

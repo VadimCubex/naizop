@@ -145,6 +145,7 @@
   font-size: 20px;
   line-height: 30px;
   color: var(--yellow);
+  min-width: 10px;
 }
 
 .payment .payment-contant .block.select-payment .proceed {

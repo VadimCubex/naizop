@@ -232,7 +232,8 @@
   .step-item
   .info-container
   > .text {
-  font-family: "Space Grotesk Light";
+  font-family: "Space Grotesk";
+  font-weight: 300;
   font-size: 150px;
   line-height: 150px;
 }

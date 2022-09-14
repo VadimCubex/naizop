@@ -70,7 +70,8 @@
 }
 
 .footer-card-trustpilot .trustpilot-reviews > div .text {
-  font-family: "Roboto Bold";
+  font-family: "Roboto";
+  font-weight: 700;
   font-size: 16px;
   line-height: 26px;
 }
@@ -107,7 +108,12 @@
     #1f4fd7;
   filter: blur(30px);
   height: 90%;
-  opacity: 0.2;
+  opacity: 0.16;
+}
+
+.footer-card.icons > div:not(.dropDown, .title) {
+  flex-direction: row;
+  gap: 10px;
 }
 
 .footer-card > div:not(.dropDown, .title) {
@@ -117,7 +123,7 @@
 }
 
 .footer a .text {
-  color: #686e73;
+  color: var(--footer-text);
 }
 
 .footer hr {

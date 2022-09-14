@@ -108,12 +108,13 @@
 }
 
 .socialeNetworks .quality .services {
-  font-family: "Circe Light";
+  font-family: "Circe";
+  font-weight: 300;
   letter-spacing: 00.04em;
 }
 
 .socialeNetworks .quality .description {
-  font-family: "Circe Medium";
+  font-family: "Circe";
   font-style: normal;
   font-weight: 400;
   font-size: 58px;

@@ -27,7 +27,8 @@
 }
 
 .status_size_bg.active .text {
-  font-family: "Space Grotesk Bold";
+  font-family: "Space Grotesk";
+  font-weight: 700;
   font-size: 30px;
 }
 

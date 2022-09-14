@@ -54,7 +54,8 @@
 }
 
 .register .block .register-input input {
-  font-family: "Space Grotesk Light";
+  font-family: "Space Grotesk";
+  font-weight: 300;
 }
 
 .register .block .register-checkbox {

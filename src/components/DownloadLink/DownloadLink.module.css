@@ -51,9 +51,9 @@
 
 .download-link .example .download .input input {
   padding: 0px 0px 20px;
-  font-family: "Space Grotesk Light";
+  font-family: "Space Grotesk";
+  font-weight: 300;
   font-size: 18px;
-  font-weight: 700;
   line-height: 30px;
   letter-spacing: 0em;
 }
@@ -120,7 +120,8 @@
 }
 
 .download-link .trustpilot .trustpilot-reviews > div .text {
-  font-family: "Roboto Bold";
+  font-family: "Roboto";
+  font-weight: bold;
   font-size: 16px;
   line-height: 26px;
 }

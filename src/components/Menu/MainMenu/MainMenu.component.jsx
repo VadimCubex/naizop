@@ -85,6 +85,7 @@ export const MainMenuComponent = () => {
                   className={classNames("nav-list-item", "cursor-pointer", {
                     ["nav-item-active"]:
                       active === item.link || active === item.text,
+                    ["nav-track-order"]: item.text === "Track order",
                   })}
                   onClick={() => {
                     handleClickItem(item);
@@ -158,6 +159,7 @@ export const MainMenuComponent = () => {
                     className={classNames("nav-list-item", "cursor-pointer", {
                       ["nav-item-active"]:
                         active === item.link || active === item.text,
+                      ["nav-track-order"]: item.text === "Track order",
                     })}
                     onClick={() => {
                       handleClickItem(item);

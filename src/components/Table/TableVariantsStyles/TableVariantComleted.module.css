@@ -29,6 +29,10 @@
   display: block;
 }
 
+.table.table-variant-completed .table-row .table-row-cell-2 a {
+  text-decoration-color: var(--yellow);
+}
+
 @media (max-width: 1439px) {
   .table.table-variant-completed
     .table-header

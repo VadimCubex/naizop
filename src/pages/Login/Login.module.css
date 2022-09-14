@@ -54,7 +54,8 @@
 }
 
 .login .block .login-input input {
-  font-family: "Space Grotesk Light";
+  font-family: "Space Grotesk";
+  font-weight: 300;
 }
 
 .login .block a {

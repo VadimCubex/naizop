@@ -151,7 +151,7 @@
 }
 
 .filter-variants-container .filter-variants .button .text {
-  font-family: "Space Grotesk Regular";
+  font-family: "Space Grotesk";
   font-weight: 400;
 }
 
@@ -160,7 +160,7 @@
 }
 
 .filter-variants-container .filter-variants .button.active .text {
-  font-family: "Space Grotesk Bold";
+  font-family: "Space Grotesk";
   font-weight: 700;
 }
 
