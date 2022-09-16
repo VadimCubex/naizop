@@ -51,6 +51,7 @@
 @import "../components/StatisticTab/StatisticTab.module.css";
 @import "../components/DownloadYoutubeVideo/DownloadYoutubeVideo.module.css";
 @import "../components/DownloadSocialVideo/DownloadSocialVideo.module.css";
+@import "../components/ProgressBar/ProgressBar.module.css";
 
 @import "./App.css";
 @import "./normalize.css";

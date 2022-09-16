@@ -68,7 +68,8 @@ const NaizopRoutes = () => {
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
       <Route path="/profile/" element={<ProfileLayout />}>
-        <Route index element={<Dashboard />} />
+        <Route index element={<Navigate to="/profile/vip-rewards" replace />} />
+        <Route path="vip-rewards" element={<Dashboard />} />
         <Route path="account" element={<Account />} />
         <Route path="redeem-history" element={<RedeemHistory />} />
         <Route path="redeem-support" element={<RedeemSupport />} />

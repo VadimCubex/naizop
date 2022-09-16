@@ -31,44 +31,6 @@ export const NavLinks = [
   },
 ];
 
-export const ProfileNavLinks = [
-  {
-    icon: IconsVariants.Dashboard,
-    text: "Dashboard",
-    link: "/profile",
-  },
-  {
-    icon: IconsVariants.Profile,
-    text: "Account",
-    link: "/profile/account",
-  },
-  {
-    icon: IconsVariants.Affiliates_stroke,
-    text: "Affiliates",
-    link: "/profile/affiliates",
-  },
-  {
-    icon: IconsVariants.Updates_stroke,
-    text: "Updates",
-    link: "/profile/updates",
-  },
-  {
-    icon: IconsVariants.Add_funds_stroke,
-    text: "Add Funds",
-    link: "/profile/add-funds",
-  },
-  {
-    icon: IconsVariants.Child_panel,
-    text: "Child Panel",
-    link: "/profile/childpanel",
-  },
-  {
-    icon: IconsVariants.Api_stroke,
-    text: "API",
-    link: "/profile/api",
-  },
-];
-
 export const SidebarLinksFirstPart = [
   {
     icon: IconsVariants.New_order,
@@ -112,6 +74,11 @@ export const SidebarLinksFirstPart = [
     text: "Affiliates",
     link: "/profile/affiliates",
   },
+  {
+    icon: IconsVariants.TrackOrder,
+    text: "Track Your Order",
+    link: "/profile/track-your-order",
+  },
 ];
 
 export const SidebarLinksSecondPart = [
@@ -149,6 +116,11 @@ export const SidebarLinksSecondPart = [
     icon: IconsVariants.Favorites,
     text: "Ambassador program",
     link: "/profile/ambassador-program",
+  },
+  {
+    icon: IconsVariants.VipReward,
+    text: "VIP Rewards",
+    link: "/profile/vip-rewards",
   },
 ];
 
@@ -220,5 +192,16 @@ export const Notifications = [
   {
     icon: IconsVariants.Done,
     text: "Your payment has been added to your balance",
+  },
+];
+
+export const Promotions = [
+  {
+    icon: IconsVariants.Money,
+    text: "Refer and Earn",
+  },
+  {
+    icon: IconsVariants.Coins,
+    text: "Weekly Raffle",
   },
 ];

@@ -12,7 +12,6 @@ import { SvgIcon } from "../../components/SvgIcon";
 import { Text } from "../../components/Text";
 import { Tooltip } from "../../components/Tooltip";
 import { AvatarsForSelect, TimeZonesForSelect } from "./constants";
-import { ProfileInfo } from "../../constants/constants";
 import {
   AvatarVariants,
   ButtonVariants,
@@ -22,11 +21,13 @@ import {
   TextVariants,
 } from "../../constants/VariantsOfComponents";
 
+import { useProfileInfoSelector } from "../../store/Profile/ProfileInfo/useProfileInfo";
 import useTooltip from "../../hooks/useTooltip";
 
 const Account = () => {
+  const { img } = useProfileInfoSelector();
   const [gender, setGender] = useState("male");
-  const [avatar, setAvatar] = useState(ProfileInfo.img);
+  const [avatar, setAvatar] = useState(img);
   const [selected, setSelected] = useState(TimeZonesForSelect[0]);
   const {
     coords,
@@ -66,18 +67,15 @@ const Account = () => {
                     </div>
                   </div>
                   <div
-                    onClick={() => setAvatar(ProfileInfo.img)}
+                    onClick={() => setAvatar(img)}
                     className="avatar-account"
                   >
                     <div
                       className={`avatar-border ${
-                        avatar === ProfileInfo.img ? "active" : ""
+                        avatar === img ? "active" : ""
                       }`}
                     >
-                      <Avatar
-                        src={ProfileInfo.img}
-                        variant={AvatarVariants.md}
-                      />
+                      <Avatar src={img} variant={AvatarVariants.md} />
                     </div>
                   </div>
                 </div>

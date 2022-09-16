@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import classNames from "classnames";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-import { ProfileInfo } from "../../../constants/constants";
 import {
   AvatarVariants,
   ButtonSizeVariants,
@@ -11,6 +10,7 @@ import {
   ColorSvgVariants,
   IconsVariants,
   NumberVariants,
+  RanksIcons,
   TextVariants,
 } from "../../../constants/VariantsOfComponents";
 import { Avatar } from "../../Avatar";
@@ -20,15 +20,17 @@ import { DropDown } from "../../DropDown";
 import { Notification } from "../../Notification";
 import { Number } from "../../Number";
 import { TooltipPortal } from "../../Portal";
+import { ProgressBar } from "../../ProgressBar";
 import { SvgIcon } from "../../SvgIcon";
 import { Text } from "../../Text";
 import {
   Notifications,
-  ProfileNavLinks,
+  Promotions,
   SidebarLinksFirstPart,
   SidebarLinksSecondPart,
 } from "../constants";
 
+import { useProfileInfoSelector } from "../../../store/Profile/ProfileInfo/useProfileInfo";
 import useTooltip from "../../../hooks/useTooltip";
 
 export const ProfileMenuComponent = () => {
@@ -40,34 +42,22 @@ export const ProfileMenuComponent = () => {
     TooltipWidth,
     handleClick,
   } = useTooltip();
+  const { img, name, surname, balance, percent, rank } =
+    useProfileInfoSelector();
   const [isShowBurger, setIsShowBurger] = useState(false);
-  const [isShowProfile, setIsShowProfile] = useState(false);
-  const [isShowBurgerProfile, setIsShowBurgerProfile] = useState(false);
   const [isShow, setIsShow] = useState(true);
+  const [isShowPromotions, setIsShowPromotions] = useState(true);
 
   const [active, setActive] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
 
   const ProfileMenuClass = classNames("profileMenu");
-  const NavProfileClass = classNames("nav-profile", {
-    active: isShowProfile,
-  });
-  const NavProfileBurgerClass = classNames("nav-profile", {
-    active: isShowBurgerProfile,
-  });
   const NavBurgerClass = classNames("nav-burger", {
     active: isShowBurger,
   });
 
   const handleClickProfileItem = (pathname) => {
-    setIsShowProfile(false);
-    setIsShowBurger(false);
-    setActive(pathname);
-  };
-
-  const handleClickProfileBurgerItem = (pathname) => {
-    setIsShowBurgerProfile(false);
     setIsShowBurger(false);
     setActive(pathname);
   };
@@ -88,188 +78,159 @@ export const ProfileMenuComponent = () => {
     <header className={ProfileMenuClass}>
       <div className="profile-container">
         <nav className="nav-container">
-          <div className="nav-profile-container">
-            <div className="nav-svg">
-              <div className="nav-logo">
-                <SvgIcon size={54} src={IconsVariants.Logo} />
-                <Text variant={TextVariants.h1_medium}>Naizop</Text>
+          <div className="nav-svg">
+            <div className="nav-logo">
+              <SvgIcon size={54} src={IconsVariants.Logo} />
+              <Text variant={TextVariants.h1_medium}>Naizop</Text>
+            </div>
+            <div className="burger-controls">
+              <SvgIcon
+                className="nav-burger-button"
+                size={isShowBurger ? 28 : 44}
+                src={isShowBurger ? IconsVariants.Close : IconsVariants.Burger}
+                onClick={handleClickBurger}
+              />
+            </div>
+          </div>
+
+          <div className="menu-items-container">
+            <div className="menu-items">
+              <div className="profile">
+                <div className="nav-profile">
+                  <div className="nav-avatar">
+                    <Avatar variant={AvatarVariants.sm} src={img} />
+                  </div>
+                  <div className="nav-profile-info">
+                    <Text variant={TextVariants.h5}>Welcome,</Text>{" "}
+                    <Link to="/profile/account">
+                      <Text
+                        variant={TextVariants.h5}
+                      >{`${name} ${surname}`}</Text>
+                    </Link>
+                  </div>
+                </div>
+                <div className="nav-balance">
+                  <Text variant={TextVariants.subtitle_small}>BALANCE</Text>
+                  <Text variant={TextVariants.h3}>{`$ ${parseFloat(
+                    balance
+                  ).toFixed(2)}`}</Text>
+                </div>
               </div>
-              <div className="burger-controls">
-                {isShowBurger && (
+              <div className="menu-second-part">
+                <div className="progress">
+                  <div className="info">
+                    <Text variant={TextVariants.h4}>{percent + "/100"}</Text>
+                    <img src={RanksIcons[rank]} alt="info rank" />
+                  </div>
+                  <ProgressBar percent={percent} />
+                </div>
+                <div className="nav-button-container">
                   <Button
+                    size={ButtonSizeVariants.large}
+                    variant={ButtonVariants.yellow}
+                    icon={IconsVariants.Wallet}
+                    text="Wallet"
+                    isLight={true}
+                  />
+                  <Currency />
+                  <TooltipPortal>
+                    <Notification
+                      width={TooltipWidth}
+                      coords={coords}
+                      arrowPosition={tooltipPosition}
+                      isShow={isShowTooltip}
+                    >
+                      {Notifications.map((item, index) => (
+                        <div className="type" key={index}>
+                          <SvgIcon
+                            src={item.icon}
+                            size={24}
+                            color={ColorSvgVariants.white}
+                          />
+                          <Text variant={TextVariants.h5_regular}>
+                            {item.text}
+                          </Text>
+                        </div>
+                      ))}
+                    </Notification>
+                  </TooltipPortal>
+                  <div ref={tooltipSvg} onClick={handleClick}>
+                    <Button
+                      variant={ButtonVariants.default}
+                      className={
+                        isShowTooltip ? "button_logout active" : "button_logout"
+                      }
+                      size={ButtonSizeVariants.large}
+                      icon={IconsVariants.Notification}
+                    />
+                  </div>
+                  <Button
+                    onClick={handleLogoutClick}
                     variant={ButtonVariants.default}
                     className="button_logout"
                     size={ButtonSizeVariants.large}
-                    icon={IconsVariants.Notification}
-                  />
-                )}
-                <SvgIcon
-                  className="nav-burger-button"
-                  size={isShowBurger ? 28 : 44}
-                  src={
-                    isShowBurger ? IconsVariants.Close : IconsVariants.Burger
-                  }
-                  onClick={handleClickBurger}
-                />
-              </div>
-            </div>
-            <div className={NavProfileClass}>
-              <div className="nav-avatar">
-                <Avatar variant={AvatarVariants.sm} src={ProfileInfo.img} />
-              </div>
-              <div className="nav-profile-info">
-                <Text variant={TextVariants.h5}>Welcome,</Text>
-                <div>
-                  <Text
-                    variant={TextVariants.h5}
-                  >{`${ProfileInfo.name} ${ProfileInfo.surname}`}</Text>
-                  <SvgIcon
-                    onClick={() => {
-                      setIsShowProfile(!isShowProfile);
-                    }}
-                    src={IconsVariants.DropDown_arrow_stroke}
-                    size={12}
-                    rotate={isShowProfile ? 180 : 0}
+                    text="Logout"
+                    icon={IconsVariants.Logout}
+                    iconPosition="right"
                   />
                 </div>
               </div>
             </div>
-            <div className="nav-balance">
-              <Text variant={TextVariants.subtitle_small}>BALANCE</Text>
-              <Text variant={TextVariants.h3}>{`$ ${parseFloat(
-                ProfileInfo.balance
-              ).toFixed(2)}`}</Text>
-            </div>
-          </div>
-
-          <div className="nav-button-container">
-            <Button
-              size={ButtonSizeVariants.large}
-              variant={ButtonVariants.yellow}
-              icon={IconsVariants.Wallet}
-              text="Wallet"
-              isLight={true}
-            />
-            <Currency />
-            <TooltipPortal>
-              <Notification
-                width={TooltipWidth}
-                coords={coords}
-                arrowPosition={tooltipPosition}
-                isShow={isShowTooltip}
-              >
-                {Notifications.map((item, index) => (
-                  <div className="type" key={index}>
-                    <SvgIcon
-                      src={item.icon}
-                      size={24}
-                      color={ColorSvgVariants.white}
-                    />
-                    <Text variant={TextVariants.h5_regular}>{item.text}</Text>
-                  </div>
-                ))}
-              </Notification>
-            </TooltipPortal>
-            <div ref={tooltipSvg} onClick={handleClick}>
-              <Button
-                variant={ButtonVariants.default}
-                className={
-                  isShowTooltip ? "button_logout active" : "button_logout"
-                }
-                size={ButtonSizeVariants.large}
-                icon={IconsVariants.Notification}
-              />
-            </div>
-            <Button
-              onClick={handleLogoutClick}
-              variant={ButtonVariants.default}
-              className="button_logout"
-              size={ButtonSizeVariants.large}
-              text="Logout"
-              icon={IconsVariants.Logout}
-              iconPosition="right"
-            />
           </div>
         </nav>
       </div>
-
-      <DropDown className="profile-links" isOpen={isShowProfile}>
-        <div className="nav-balance">
-          <Text variant={TextVariants.subtitle_small}>BALANCE</Text>
-          <Text variant={TextVariants.h3}>{`$ ${parseFloat(
-            ProfileInfo.balance
-          ).toFixed(2)}`}</Text>
-        </div>
-        <div className="links">
-          {ProfileNavLinks.map((item, index) => (
-            <Link
-              onClick={() => handleClickProfileItem(item.link)}
-              className={`links-item${active === item.link ? " active" : ""}`}
-              key={index}
-              to={item.link}
-            >
-              <div>
-                <SvgIcon size={20} src={item.icon} />
-                <Text variant={TextVariants.h5}>{item.text}</Text>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </DropDown>
       <DropDown className="burger" isInnerHeight={true} isOpen={isShowBurger}>
         <div className={NavBurgerClass}>
           <div className="nav-profile-container">
-            <div className={NavProfileBurgerClass}>
-              <div className="nav-avatar">
-                <Avatar variant={AvatarVariants.sm} src={ProfileInfo.img} />
-              </div>
-              <div className="nav-profile-info">
-                <Text variant={TextVariants.h5}>Welcome,</Text>
-                <div>
-                  <Text
-                    variant={TextVariants.h5}
-                  >{`${ProfileInfo.name} ${ProfileInfo.surname}`}</Text>
-                  <SvgIcon
-                    onClick={() => {
-                      setIsShowBurgerProfile(!isShowBurgerProfile);
-                    }}
-                    src={IconsVariants.DropDown_arrow_stroke}
-                    size={12}
-                    rotate={isShowBurgerProfile ? 180 : 0}
-                  />
+            <div>
+              <div className="nav-profile">
+                <div className="nav-avatar">
+                  <Avatar variant={AvatarVariants.sm} src={img} />
+                </div>
+                <div className="nav-profile-info">
+                  <Text variant={TextVariants.h5}>Welcome,</Text>
+                  <Link to="/profile/account">
+                    <Text
+                      variant={TextVariants.h5}
+                    >{`${name} ${surname}`}</Text>
+                  </Link>
                 </div>
               </div>
+              <div className="buttons">
+                <Button
+                  className="wallet"
+                  size={ButtonSizeVariants.large}
+                  variant={ButtonVariants.yellow}
+                  icon={IconsVariants.Wallet}
+                  isLight={true}
+                />
+                <Currency />
+                <Button
+                  variant={ButtonVariants.default}
+                  className="button_logout"
+                  size={ButtonSizeVariants.large}
+                  icon={IconsVariants.Notification}
+                />
+              </div>
             </div>
-            <div className="nav-balance">
-              <Text variant={TextVariants.subtitle_small}>BALANCE</Text>
-              <Text variant={TextVariants.h3}>{`$ ${parseFloat(
-                ProfileInfo.balance
-              ).toFixed(2)}`}</Text>
+            <div>
+              <div className="progress">
+                <Text variant={TextVariants.h4}>{percent + "/100"}</Text>
+                <ProgressBar percent={percent} />
+                <img src={RanksIcons[rank]} alt="info rank" />
+              </div>
+              <div className="nav-balance">
+                <Text variant={TextVariants.subtitle_small}>BALANCE</Text>
+                <Text variant={TextVariants.h3}>{`$ ${parseFloat(
+                  balance
+                ).toFixed(2)}`}</Text>
+              </div>
             </div>
           </div>
-          <DropDown className="profile-links" isOpen={isShowBurgerProfile}>
-            <div className="links">
-              {ProfileNavLinks.map((item, index) => (
-                <Link
-                  onClick={() => handleClickProfileBurgerItem(item.link)}
-                  className={`links-item${
-                    active === item.link ? " active" : ""
-                  }`}
-                  key={index}
-                  to={item.link}
-                >
-                  <div>
-                    <SvgIcon size={20} src={item.icon} />
-                    <Text variant={TextVariants.h5}>{item.text}</Text>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </DropDown>
           <div className="container nav-burger-container">
             <nav>
               <div className="burger-menu-category">
-                <div className="burger-menu-items">
+                <div className="burger-menu-items first">
                   {SidebarLinksFirstPart.map((item, index) => (
                     <Link
                       className={`burger-menu-item${
@@ -349,6 +310,33 @@ export const ProfileMenuComponent = () => {
                 </DropDown>
               </div>
 
+              <div className="burger-menu-category">
+                <div className="category-name">
+                  <Text variant={TextVariants.h4}>Promotions</Text>
+                  <SvgIcon
+                    onClick={() => {
+                      setIsShowPromotions(!isShowPromotions);
+                    }}
+                    src={IconsVariants.DropDown_arrow_stroke}
+                    size={12}
+                    rotate={isShowPromotions ? 180 : 0}
+                  />
+                </div>
+                <DropDown isOpen={isShowPromotions}>
+                  <div className="burger-menu-items buttons">
+                    {Promotions.map((item, index) => (
+                      <Button
+                        key={index}
+                        icon={item.icon}
+                        text={item.text}
+                        size={ButtonSizeVariants.large}
+                        variant={ButtonVariants.side}
+                      />
+                    ))}
+                  </div>
+                </DropDown>
+              </div>
+
               <div className="nav-button-container">
                 <div>
                   <Button
@@ -361,14 +349,6 @@ export const ProfileMenuComponent = () => {
                   />
                 </div>
                 <div>
-                  <Button
-                    size={ButtonSizeVariants.large}
-                    variant={ButtonVariants.yellow}
-                    icon={IconsVariants.Wallet}
-                    text="Wallet"
-                    isLight={true}
-                    className="wallet"
-                  />
                   <Button
                     onClick={handleLogoutClick}
                     variant={ButtonVariants.default}

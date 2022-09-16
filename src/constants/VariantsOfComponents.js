@@ -16,6 +16,8 @@ export const TextVariants = {
 
 export const IconsVariants = {
   // Bulk
+  TrackOrder: "/icons/Bulk/Track.svg",
+  VipReward: "/icons/Bulk/Vip reward.svg",
   Add_funds: "/icons/Bulk/Add funds.svg",
   Affiliates: "/icons/Bulk/Affiliates.svg",
   All_services: "/icons/Bulk/All services.svg",
@@ -148,6 +150,17 @@ export const IconsVariants = {
   Arc: "/icons/Color/arc.svg",
 };
 
+export const RanksIcons = {
+  Bronze: "/icons/Ranks/Bronze.png",
+  Diamond: "/icons/Ranks/Diamond.png",
+  Gold: "/icons/Ranks/Gold.png",
+  New: "/icons/Ranks/New.png",
+  Platinum: "/icons/Ranks/Platinum.png",
+  Silver: "/icons/Ranks/Silver.png",
+  VIP3: "/icons/Ranks/VIP III.png",
+  VIP: "/icons/Ranks/VIP.png",
+};
+
 export const FlagsIcons = {
   Australia: "/icons/Flags/Australia.svg",
   United_States: "/icons/Flags/United States.svg",
@@ -269,6 +282,7 @@ export const ButtonVariants = {
   blue: "blue",
   yellow: "yellow",
   purchase: "purchase",
+  side: "side",
 };
 
 export const ButtonSizeVariants = {

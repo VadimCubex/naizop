@@ -6,11 +6,14 @@ import { Button } from "../../components/Button";
 import { HowItWorks } from "../../components/HowItWorks";
 import { NewOrder } from "../../components/NewOrder";
 import { ServiceList } from "../../components/ServiceList";
+import { SvgIcon } from "../../components/SvgIcon";
 import { Tab, TabPanel, Tabs } from "../../components/Tabs";
 import { Text } from "../../components/Text";
 import {
   ButtonSizeVariants,
   ButtonVariants,
+  ColorSvgVariants,
+  IconsVariants,
   TabsVariants,
   TextVariants,
 } from "../../constants/VariantsOfComponents";
@@ -18,6 +21,7 @@ import { RecommendedService } from "../MassOrder/constants";
 
 const PlaceNewOrder = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const [isShowRefer, setIsShowRefer] = useState(true);
   const [newOrders, setNewOrders] = useState([...Array(1)]);
 
   const handleClick = (event, active) => {
@@ -31,6 +35,32 @@ const PlaceNewOrder = () => {
   return (
     <>
       <div className="place-new-order">
+        {isShowRefer && (
+          <div className="refer">
+            <div className="info">
+              <div>
+                <Text variant={TextVariants.h2}>
+                  Refer a Friend: Earn % for
+                  <br /> every friend you invite to Naizop!
+                </Text>
+                <Button
+                  variant={ButtonVariants.crypto}
+                  text="Refer"
+                  isLight={true}
+                  size={ButtonSizeVariants.medium}
+                />
+              </div>
+            </div>
+            <div>
+              <SvgIcon
+                onClick={() => setIsShowRefer(false)}
+                src={IconsVariants.Close}
+                size={24}
+                color={ColorSvgVariants.white}
+              />
+            </div>
+          </div>
+        )}
         <Text variant={TextVariants.h1_medium}>Place New Order</Text>
 
         <div className="place-new-order-contant">

@@ -140,6 +140,33 @@
   background: var(--gray);
 }
 
+/* Variant side */
+
+.button_variant_side {
+  min-width: 150px;
+  width: 100%;
+  background: var(--blocks);
+  stroke: var(--yellow);
+  color: var(--yellow);
+}
+
+.button_variant_side:hover {
+  stroke: var(--yellow-light);
+  color: var(--yellow-light);
+}
+
+.button_variant_side:active {
+  color: var(--black);
+  stroke: var(--black);
+  background: var(--yellow-dark);
+}
+
+.button_variant_side.disabled {
+  color: var(--black);
+  stroke: var(--black);
+  background: var(--gray);
+}
+
 /* Width button */
 
 .button_width_full {

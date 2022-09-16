@@ -32,6 +32,13 @@
   margin-bottom: 79px;
 }
 
+.sidebarMenu .links {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 30px;
+}
+
 .sidebarMenu .dropDown {
   border-radius: 0px;
   padding: 0;
@@ -42,7 +49,7 @@
 .sidebarMenu .more {
   color: var(--white);
   stroke: var(--white);
-  padding: 0px 32px 20px;
+  padding: 0px 32px 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -50,7 +57,7 @@
 }
 
 .sidebarMenu .crypto {
-  padding: 0px 20px 30px;
+  padding: 0px 20px;
 }
 
 .sidebarMenu .crypto .button_variant_crypto {
@@ -69,11 +76,11 @@
 .sidebarMenu .sidebar-items {
   display: flex;
   flex-direction: column;
-  padding: 30px 20px;
+  padding: 30px 20px 0px;
 }
 
 .sidebarMenu .dropDown .sidebar-items {
-  padding: 0px 20px 30px;
+  padding: 0px 20px;
 }
 
 .sidebarMenu .sidebar-items .sidebar-item {
@@ -108,6 +115,11 @@
   display: flex;
   gap: 10px;
   align-items: center;
+}
+
+.sidebarMenu .sidebar-items.buttons {
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .sidebarMenu .sidebar-items .sidebar-item .stroke path {
@@ -156,9 +168,6 @@
   }
   .sidebarMenu .more {
     padding: 0px 32px 15px;
-  }
-  .sidebarMenu .crypto {
-    padding: 0px 15px 15px;
   }
 
   .sidebarMenu .crypto .button_variant_crypto .text {

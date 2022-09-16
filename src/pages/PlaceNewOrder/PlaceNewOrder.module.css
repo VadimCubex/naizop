@@ -7,6 +7,53 @@
   margin: 30px 0px;
 }
 
+.place-new-order .refer {
+  display: flex;
+  background: var(--blocks);
+  gap: 20px;
+  align-items: center;
+  margin-top: 30px;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.place-new-order .refer .info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.place-new-order .refer .info > div {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+  width: fit-content;
+}
+
+.place-new-order .refer .info > div > .text:first-child {
+  background: radial-gradient(
+    167.52% 820.83% at -36.22% 213.33%,
+    #ffffff 0%,
+    #85f7e2 47.4%,
+    #ffb60e 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.place-new-order br {
+  display: none;
+}
+
+.place-new-order .refer .info .button {
+  min-width: 130px;
+}
+
 .place-new-order .place-new-order-contant {
   display: flex;
   justify-content: space-between;
@@ -131,6 +178,27 @@
 }
 
 @media (max-width: 834px) {
+  .place-new-order .refer {
+    position: relative;
+    align-items: flex-start;
+    padding: 20px 15px 25px;
+    gap: 3px;
+  }
+
+  .place-new-order .refer .svgIcon {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+  }
+
+  .place-new-order .refer .info > div > .text:first-child {
+    padding-right: 17px;
+  }
+
+  .place-new-order .refer .info > div {
+    flex-direction: column;
+  }
+
   .place-new-order .place-new-order-contant .block > .purchase {
     margin-top: 40px;
     flex-direction: column;
@@ -141,6 +209,10 @@
   .place-new-order .place-new-order-contant .block > .purchase .info-container {
     justify-content: space-around;
     gap: 5px;
+  }
+
+  .place-new-order .tabs-panels-container {
+    width: 100%;
   }
 
   .place-new-order .place-new-order-contant .block > .purchase .button {
@@ -171,8 +243,20 @@
 }
 
 @media (max-width: 425px) {
+  .place-new-order .refer {
+    gap: 0px;
+  }
+
   .place-new-order {
     margin-bottom: 120px;
+  }
+
+  .place-new-order .refer .info > div {
+    flex-grow: 1;
+  }
+
+  .place-new-order br {
+    display: block;
   }
 
   .place-new-order .place-new-order-contant .block > .purchase .info-container {

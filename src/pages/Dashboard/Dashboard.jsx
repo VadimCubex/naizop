@@ -6,6 +6,7 @@ import { AvatarDashboard } from "../../components/AvatarDashboard";
 import { Button } from "../../components/Button";
 import { AccountCard } from "../../components/Cards";
 import { Modal } from "../../components/Modal";
+import { ProgressBar } from "../../components/ProgressBar";
 import { SvgIcon } from "../../components/SvgIcon";
 import { Table } from "../../components/Table";
 import { Text } from "../../components/Text";
@@ -15,7 +16,6 @@ import {
   RanksColumnInfo,
   RanksTable,
 } from "./constants";
-import { ProfileInfo } from "../../constants/constants";
 import {
   TextVariants,
   ImagesVariants,
@@ -25,7 +25,10 @@ import {
   TableVariants,
 } from "../../constants/VariantsOfComponents";
 
+import { useProfileInfoSelector } from "../../store/Profile/ProfileInfo/useProfileInfo";
+
 const Dashboard = () => {
+  const { balance, points, rank, rate, percent } = useProfileInfoSelector();
   const [openModal, setOpenModal] = useState(false);
   const navigate = useNavigate();
 
@@ -43,10 +46,7 @@ const Dashboard = () => {
         <Text variant={TextVariants.h1_medium}>Dashboard</Text>
         <div className="info-container">
           <div className="avatar-dashboard">
-            <AvatarDashboard
-              progress={ProfileInfo.balance}
-              src={ImagesVariants.profile}
-            />
+            <AvatarDashboard progress={percent} src={ImagesVariants.profile} />
           </div>
           <div className="block profile">
             <div className="info">
@@ -58,17 +58,13 @@ const Dashboard = () => {
               </div>
               <hr />
               <div className="category-info">
+                <Text variant={TextVariants.h2_medium}>{`$${balance}`}</Text>
                 <Text
                   variant={TextVariants.h2_medium}
-                >{`$${ProfileInfo.balance}`}</Text>
-                <Text
-                  variant={TextVariants.h2_medium}
-                >{`${ProfileInfo.points} ($0.00)`}</Text>
-                <Text
-                  variant={TextVariants.h2_medium}
-                >{`${ProfileInfo.rate}`}</Text>
+                >{`${points} ($0.00)`}</Text>
+                <Text variant={TextVariants.h2_medium}>{`${rate}`}</Text>
                 <Text variant={TextVariants.h2_medium}>
-                  {`${ProfileInfo.rank} `}
+                  {`${rank} `}
                   <Text className="rank" variant={TextVariants.h2_medium}>
                     ($100)
                   </Text>
@@ -98,6 +94,9 @@ const Dashboard = () => {
               />
             </div>
           </div>
+        </div>
+        <div className="block cards-container">
+          <ProgressBar percent={percent} />
         </div>
         <div className="block cards-container">
           <Text className="title" variant={TextVariants.h3}>
