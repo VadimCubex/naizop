@@ -1,6 +1,9 @@
 .profile-container .services-title.text {
   color: var(--white);
-  margin-top: 30px;
+}
+
+.profile-container .services {
+  margin-bottom: 100px;
 }
 
 .container .services-title.text {
@@ -10,8 +13,6 @@
   line-height: 60px;
   letter-spacing: 0.04em;
   color: #ffffff;
-  margin-top: 100px;
-  margin-bottom: 40px;
 }
 
 .profile-container .services-top {
@@ -23,6 +24,25 @@
 .container .services-top {
   display: flex;
   flex-direction: column-reverse;
+}
+
+.container .services-top .text-with-button {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+.profile-container .services-top .text-with-button {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.container .services-top .text-with-button .btn-container,
+.profile-container .services-top .text-with-button .btn-container {
+  width: 185px;
 }
 
 .profile-container .services-info-container {
@@ -53,19 +73,21 @@
   .services-info-container
   .accordion-container
   .dropDown.dropDown-active {
-  padding: 80px 0px 0px 0px !important;
+  padding: 70px 0px 0px 0px !important;
 }
 
 @media (max-width: 1439px) {
   .container .services-title.text {
     font-size: 42.5px;
+  }
+  .container .services-top .text-with-button {
     line-height: 52.5px;
     margin-top: 80px;
   }
 }
 
 @media (max-width: 1024px) {
-  .profile-container .services-title.text {
+  .profile-container .services-top .text-with-button {
     margin-top: 40px;
   }
 
@@ -80,6 +102,9 @@
   .container .services-title.text {
     font-size: 35px;
     line-height: 45px;
+  }
+
+  .container .services-top .text-with-button {
     margin-top: 65px;
     margin-bottom: 30px;
   }
@@ -96,15 +121,26 @@
 }
 
 @media (max-width: 834px) {
+  .profile-container .services {
+    margin-bottom: 70px;
+  }
   .container .services-title.text {
     font-size: 27.5px;
     line-height: 37.5px;
+  }
+
+  .container .services-top .text-with-button {
     margin-top: 50px;
   }
 
   .services-info-container {
     flex-direction: column;
     row-gap: 10px;
+  }
+
+  .container .services-top .text-with-button,
+  .profile-container .services-top .text-with-button {
+    justify-content: space-between;
   }
 }
 
@@ -119,14 +155,15 @@
 }
 
 @media (max-width: 425px) {
-  .profile-container .services-title.text {
+  .profile-container .services-top .text-with-button {
     margin-top: 50px;
   }
 
-  .container .services-title.text {
+  .container .services-top .text-with-button {
     margin-top: 30px;
     margin-bottom: 20px;
   }
+
   .services-info-container {
     margin-top: 50px;
     padding-bottom: 120px;

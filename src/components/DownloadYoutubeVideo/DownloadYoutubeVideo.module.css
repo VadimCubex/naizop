@@ -56,7 +56,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 834px) {
   .download-youtube-video {
     flex-direction: column;
   }
@@ -78,9 +78,6 @@
     .buttons-container {
     flex-direction: column-reverse;
   }
-}
-
-@media (max-width: 834px) {
   .download-youtube-video .example-container .tools-container {
     gap: 30px;
   }

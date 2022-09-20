@@ -3,10 +3,6 @@
   position: relative;
 }
 
-.currency.active {
-  overflow: visible;
-}
-
 .currency .show-currency {
   width: 50px;
   height: 50px;
@@ -22,26 +18,34 @@
   background: var(--gradient-blue);
 }
 
-.currency .select-currency-container {
-  position: absolute;
-  top: 70px;
+.select-currency-container {
+  opacity: 0;
+  z-index: 20;
+  position: fixed;
+  top: 90px;
   right: 0px;
+  pointer-events: none;
 }
 
-.currency .select-currency-container .dropDown,
-.currency .select-currency-container .selected-currency-for-dropdown {
+.select-currency-container.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.select-currency-container .dropDown,
+.select-currency-container .selected-currency-for-dropdown {
   color: var(--white);
   width: 150px;
 }
 
-.currency .select-currency-container .selected-currency-for-dropdown {
+.select-currency-container .selected-currency-for-dropdown {
   z-index: 1;
   padding: 15px 20px;
   border-radius: 10px;
   background: var(--elements);
 }
 
-.currency .select-currency-container .dropDown {
+.select-currency-container .dropDown {
   position: absolute;
   z-index: -1;
   border-radius: 10px;
@@ -51,7 +55,7 @@
   overflow-y: hidden;
 }
 
-.currency .select-currency-container .separator {
+.select-currency-container .separator {
   width: 100%;
   height: 1px;
   background: linear-gradient(
@@ -62,6 +66,6 @@
   );
 }
 
-.currency .select-currency-container .select-currency-item {
+.select-currency-container .select-currency-item {
   padding: 15px 20px;
 }

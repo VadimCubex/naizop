@@ -4,9 +4,19 @@
   margin-bottom: 210px;
 }
 
-.orders .text.text_variant_h1_medium {
+.orders .text-with-button {
+  display: flex;
+  gap: 30px;
+  align-items: center;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.orders .text-with-button .btn-container {
+  width: 185px;
+}
+
+.orders .text.text_variant_h1_medium {
   color: var(--white);
 }
 
@@ -17,20 +27,23 @@
   .orders {
     margin-bottom: 165px;
   }
-  .orders .text.text_variant_h1_medium {
+  .orders .text-with-button {
     margin-top: 35px;
     margin-bottom: 25px;
   }
 }
 
 @media (max-width: 834px) {
+  .orders .text-with-button {
+    justify-content: space-between;
+  }
 }
 
 @media (max-width: 425px) {
   .orders {
     margin-bottom: 120px;
   }
-  .orders .text.text_variant_h1_medium {
+  .orders .text-with-button {
     margin-top: 40px;
     margin-bottom: 15px;
   }

@@ -4,7 +4,7 @@
   border-radius: 10px;
   display: flex;
   align-items: center;
-  padding: 0px 20px;
+  padding: 15px 20px;
   justify-content: space-between;
 }
 
@@ -13,22 +13,27 @@
 }
 
 .howItWorks .btn-container {
-  margin: 15px 0px;
+  min-width: fit-content;
+}
+
+@media (max-width: 1024px) {
 }
 
 @media (max-width: 834px) {
-  .howItWorks {
-    display: none;
-  }
 }
 
 @media (max-width: 425px) {
-  /* .howItWorks {
+  .howItWorks {
+    padding: 20px 20px 25px;
     flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
   }
 
-  .howItWorks > .text {
-    padding-right: 0px;
-    padding-top: 20px;
-  } */
+  .howItWorks .btn-container {
+    width: 100%;
+  }
+  .howItWorks .btn-container .button {
+    width: 100%;
+  }
 }

@@ -74,10 +74,6 @@
   opacity: 0.75;
 }
 
-.newOrder .chunk textarea {
-  height: 430px;
-}
-
 @media (max-width: 1439px) {
   .newOrder .chunk.service .selectOption_variant_detail .info {
     margin-right: 35px;
@@ -117,7 +113,7 @@
   }
 
   .newOrder:first-child {
-    margin-top: 0px;
+    margin-top: 30px;
   }
 }
 

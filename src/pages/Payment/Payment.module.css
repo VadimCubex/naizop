@@ -170,7 +170,6 @@
 
 .payment .payment-contant .block.select-payment .proceed > a {
   margin-top: 35px;
-  opacity: 0.5;
   color: var(--white);
 }
 
@@ -224,22 +223,12 @@
   .payment .payment-contant .block.steps .step-3 {
     padding: 30px 40px 20px;
   }
-
-  .payment .payment-contant .block.steps .howItWorks {
-    flex-direction: column;
-    padding-top: 10px;
-  }
 }
 
 @media (max-width: 1024px) {
   .payment .payment-contant {
     flex-direction: column-reverse;
     gap: 30px;
-  }
-
-  .payment .payment-contant .block.steps .howItWorks {
-    flex-direction: row;
-    padding-top: 0px;
   }
 
   .payment .payment-contant .block {

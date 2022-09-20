@@ -15,7 +15,8 @@ export const HowItWorksComponent = () => {
   return (
     <div className={HowItWorksClass}>
       <Text variant={TextVariants.h4}>
-        {"How it works? Let's watch the video!"}
+        How it works?
+        <br /> {"Let's"} watch the video!
       </Text>
       <Button
         variant={ButtonVariants.yellow}

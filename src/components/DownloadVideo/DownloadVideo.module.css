@@ -47,7 +47,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 834px) {
   .download-video {
     flex-direction: column;
   }
@@ -65,9 +65,6 @@
   .download-video .example-container .tools-container .buttons-container {
     flex-direction: column-reverse;
   }
-}
-
-@media (max-width: 834px) {
   .download-video .example-container .tools-container {
     gap: 30px;
   }

@@ -157,6 +157,18 @@
   line-height: 30px;
 }
 
+.place-new-order .place-new-order-contant .block > .purchase .btn-container {
+  min-width: 160px;
+}
+.place-new-order
+  .place-new-order-contant
+  .block
+  > .purchase
+  .btn-container
+  .button {
+  width: 100%;
+}
+
 @media (max-width: 1439px) {
   .place-new-order {
     margin-bottom: 345px;

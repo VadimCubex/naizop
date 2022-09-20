@@ -5,9 +5,19 @@
 }
 
 .subscriptions .text.text_variant_h1_medium {
+  color: var(--white);
+}
+
+.subscriptions .text-with-button {
+  display: flex;
+  gap: 30px;
+  align-items: center;
   margin-top: 30px;
   margin-bottom: 30px;
-  color: var(--white);
+}
+
+.subscriptions .text-with-button .btn-container {
+  width: 185px;
 }
 
 @media (max-width: 1439px) {
@@ -17,20 +27,23 @@
   .subscriptions {
     margin-bottom: 165px;
   }
-  .subscriptions .text.text_variant_h1_medium {
+  .subscriptions .text-with-button {
     margin-top: 35px;
     margin-bottom: 25px;
   }
 }
 
 @media (max-width: 834px) {
+  .subscriptions .text-with-button {
+    justify-content: space-between;
+  }
 }
 
 @media (max-width: 425px) {
   .subscriptions {
     margin-bottom: 120px;
   }
-  .subscriptions .text.text_variant_h1_medium {
+  .subscriptions .text-with-button {
     margin-top: 40px;
     margin-bottom: 15px;
   }

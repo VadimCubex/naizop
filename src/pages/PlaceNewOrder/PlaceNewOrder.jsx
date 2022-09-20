@@ -149,6 +149,7 @@ const PlaceNewOrder = () => {
                     </div>
                   </div>
                   <Button
+                    width="full"
                     text="Purchase now"
                     variant={ButtonVariants.yellow}
                     isLight={true}

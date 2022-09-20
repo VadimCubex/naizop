@@ -175,28 +175,7 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .sidebarMenu {
-    width: 200px;
-  }
-  .sidebarMenu .sidebar-items {
-    padding: 25px 15px;
-  }
-  .sidebarMenu .dropDown .sidebar-items {
-    padding: 0px 15px 25px;
-  }
-  .sidebarMenu .more {
-    padding: 0px 27px 10px;
-  }
-  .sidebarMenu .crypto .button_variant_crypto .text {
-    font-size: 13px;
-  }
-  .sidebarMenu .crypto .button_variant_crypto {
-    min-width: 100px;
-  }
-}
-
-@media (max-width: 834px) {
+@media (max-width: 1200px) {
   .sidebar-container {
     display: none;
   }

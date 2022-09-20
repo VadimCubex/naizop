@@ -71,19 +71,13 @@
   padding: 60px 30px 100px;
 }
 
-@media (max-width: 1439px) {
-}
-
-@media (max-width: 1024px) {
+@media (max-width: 834px) {
   .instagram-third .stories {
     grid-template-columns: 1fr 1fr;
   }
   .instagram-third .btn-container {
     margin-top: 30px;
   }
-}
-
-@media (max-width: 834px) {
   .instagram-third .btn-container {
     margin-top: 20px;
   }
@@ -107,7 +101,4 @@
     display: grid;
     grid-template-columns: 1fr;
   }
-}
-
-@media (max-width: 425px) {
 }

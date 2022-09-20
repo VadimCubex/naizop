@@ -1,6 +1,6 @@
 .mass-order {
   color: var(--white);
-  margin-bottom: 420px;
+  margin-bottom: 170px;
 }
 
 .mass-order > .text {
@@ -45,16 +45,16 @@
 
 @media (max-width: 1439px) {
   .mass-order {
-    margin-bottom: 345px;
+    margin-bottom: 150px;
   }
   .mass-order .mass-order-contant .block > .btn-container {
     width: 360px;
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .mass-order {
-    margin-bottom: 270px;
+    margin-bottom: 130px;
   }
   .mass-order .mass-order-contant .block > .btn-container {
     width: 100%;
@@ -63,7 +63,7 @@
 
 @media (max-width: 834px) {
   .mass-order {
-    margin-bottom: 195px;
+    margin-bottom: 110px;
   }
   .mass-order .mass-order-contant {
     flex-direction: column;
@@ -72,9 +72,7 @@
     width: 100%;
     padding: 20px 20px 40px;
   }
-  .mass-order .mass-order-contant .block > .input {
-    margin: 0px 0px 40px;
-  }
+
   .mass-order .mass-order-contant .services-lists {
     width: 100%;
   }
@@ -82,6 +80,6 @@
 
 @media (max-width: 425px) {
   .mass-order {
-    margin-bottom: 120px;
+    margin-bottom: 80px;
   }
 }

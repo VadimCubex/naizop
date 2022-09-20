@@ -82,10 +82,11 @@ const NaizopRoutes = () => {
         <Route path="add-funds" element={<Payment />} />
         <Route path="add-funds/payment-history" element={<PaymentHistory />} />
         <Route path="add-funds/error" element={<PaymentError />} />
-        <Route path="support" element={<Dashboard />} />
+        <Route
+          path="support"
+          element={<div style={{ color: "white" }}>In progress</div>}
+        />
         <Route path="affiliates" element={<Affiliates />} />
-        <Route path="favorites" element={<Dashboard />} />
-        <Route path="childpanel" element={<Dashboard />} />
         <Route path="updates" element={<Updates />} />
         <Route path="blog" element={<Blog container={false} />} />
         <Route
@@ -101,6 +102,10 @@ const NaizopRoutes = () => {
         <Route path="faq" element={<FAQ container={false} />} />
         <Route path="api" element={<Api />} />
         <Route path="ambassador-program" element={<Ambassador />} />
+        <Route
+          path="track-your-order"
+          element={<div style={{ color: "white" }}>In progress</div>}
+        />
         <Route path="*" element={<Navigate to="/profile/" replace />} />
       </Route>
     </Routes>

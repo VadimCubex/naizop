@@ -32,36 +32,20 @@
 }
 
 .api .api-inputs .api-input .input input {
-  padding: 20px 20px 10px;
   font-size: 18px;
   line-height: 30px;
 }
+
+.api .api-textarea {
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
 .api .api-textarea .input textarea {
   padding: 20px 20px 30px;
   font-size: 18px;
   line-height: 30px;
-}
-
-.api .api-textarea.balance .input {
-  height: 170px;
-}
-
-.api .api-textarea.add-order .input,
-.api .api-textarea.refill .input,
-.api .api-textarea.get-refill .input {
-  height: 140px;
-}
-
-.api .api-textarea.multiple-orders .input {
-  height: 620px;
-}
-
-.api .api-textarea.order-status .input {
-  height: 260px;
-}
-
-.api .api-textarea.service .input {
-  height: 770px;
 }
 
 .api .api-input .text,

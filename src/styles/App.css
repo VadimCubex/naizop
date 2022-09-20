@@ -122,16 +122,17 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .profile-main-content {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1024px) {
   .container {
     padding-left: 6.5%;
     padding-right: 6.5%;
   }
-
-  .profile-main-content {
-    width: calc(100% - 40px - 200px);
-  }
-
   .left-container {
     padding-left: 6.5%;
   }
@@ -145,11 +146,6 @@
   .container {
     padding-left: 5.25%;
     padding-right: 5.25%;
-  }
-
-  .profile-main-content {
-    margin-left: 0px;
-    width: 100%;
   }
 
   .left-container {

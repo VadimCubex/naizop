@@ -9,6 +9,7 @@ import {
   ButtonVariants,
   ColorSvgVariants,
   IconsVariants,
+  ImagesVariants,
   NumberVariants,
   RanksIcons,
   TextVariants,
@@ -17,6 +18,7 @@ import { Avatar } from "../../Avatar";
 import { Button } from "../../Button";
 import { Currency } from "../../Currency";
 import { DropDown } from "../../DropDown";
+import { Modal } from "../../Modal";
 import { Notification } from "../../Notification";
 import { Number } from "../../Number";
 import { TooltipPortal } from "../../Portal";
@@ -47,6 +49,7 @@ export const ProfileMenuComponent = () => {
   const [isShowBurger, setIsShowBurger] = useState(false);
   const [isShow, setIsShow] = useState(true);
   const [isShowPromotions, setIsShowPromotions] = useState(true);
+  const [isOpenModal, setIsOpenModal] = useState(false);
 
   const [active, setActive] = useState("");
   const navigate = useNavigate();
@@ -88,6 +91,7 @@ export const ProfileMenuComponent = () => {
                 className="nav-burger-button"
                 size={isShowBurger ? 28 : 44}
                 src={isShowBurger ? IconsVariants.Close : IconsVariants.Burger}
+                color={ColorSvgVariants.white}
                 onClick={handleClickBurger}
               />
             </div>
@@ -203,6 +207,7 @@ export const ProfileMenuComponent = () => {
                   variant={ButtonVariants.yellow}
                   icon={IconsVariants.Wallet}
                   isLight={true}
+                  text="Wallet"
                 />
                 <Currency />
                 <Button
@@ -227,7 +232,7 @@ export const ProfileMenuComponent = () => {
               </div>
             </div>
           </div>
-          <div className="container nav-burger-container">
+          <div className="nav-burger-container">
             <nav>
               <div className="burger-menu-category">
                 <div className="burger-menu-items first">
@@ -338,16 +343,19 @@ export const ProfileMenuComponent = () => {
               </div>
 
               <div className="nav-button-container">
-                <div>
-                  <Button
-                    size={ButtonSizeVariants.large}
-                    variant={ButtonVariants.crypto}
-                    isLight={true}
-                    text="Purchase Crypto"
-                    iconPosition="right"
-                    icon={IconsVariants.Arrow_crypto}
-                  />
-                </div>
+                {location.pathname === "/profile/add-funds" && (
+                  <div className="crypto">
+                    <Button
+                      size={ButtonSizeVariants.large}
+                      variant={ButtonVariants.crypto}
+                      isLight={true}
+                      text="Purchase Crypto"
+                      iconPosition="right"
+                      icon={IconsVariants.Arrow_crypto}
+                      onClick={() => setIsOpenModal(true)}
+                    />
+                  </div>
+                )}
                 <div>
                   <Button
                     onClick={handleLogoutClick}
@@ -364,6 +372,29 @@ export const ProfileMenuComponent = () => {
           </div>
         </div>
       </DropDown>
+      <Modal
+        className="purchase-modal"
+        title="Purchase Crypto Using Cards"
+        isOpen={isOpenModal}
+        onClick={() => setIsOpenModal(false)}
+      >
+        <div className="info">
+          <Text variant={TextVariants.h2}>Buy quickly and easily</Text>
+          <Text variant={TextVariants.h5_regular}>
+            Use your credit card to buy Bitcoin, Bitcoin Cash, Ethereum and
+            other select cryptocurrencies. After purchase you can directly
+            deposit it onto your Naizop Account.
+          </Text>
+        </div>
+        <div className="methods">
+          <div>
+            <img src={ImagesVariants.MoonPay} alt="" />
+          </div>
+          <div>
+            <img src={ImagesVariants.Coinbase} alt="" />
+          </div>
+        </div>
+      </Modal>
     </header>
   );
 };
