@@ -369,23 +369,6 @@
   min-width: fit-content;
 }
 
-.profileMenu .nav-container .menu-items-container {
-  width: 100%;
-  margin-right: -40px;
-  padding-right: 40px;
-  margin-left: -30px;
-  padding-left: 30px;
-  overflow-x: scroll;
-}
-
-.profileMenu .nav-container .menu-items-container::-webkit-scrollbar {
-  display: none;
-}
-
-.profileMenu .nav-container .menu-items-container::-webkit-scrollbar-thumb {
-  display: none;
-}
-
 .profileMenu .nav-container .menu-items .progress {
   padding: 0px 20px;
   height: 100%;
@@ -441,7 +424,6 @@
   .profileMenu .burger {
     display: block;
   }
-  .profileMenu .nav-container .menu-items-container,
   .profileMenu .nav-container .nav-button-container,
   .profileMenu .nav-container .nav-balance,
   .profileMenu .nav-container .nav-profile {

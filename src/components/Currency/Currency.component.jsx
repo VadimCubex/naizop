@@ -1,7 +1,6 @@
 import React, { useLayoutEffect } from "react";
 import { useState } from "react";
 import { useRef } from "react";
-import { useEffect } from "react";
 import classNames from "classnames";
 
 import { CurrencyInfo } from "./constants";
@@ -13,11 +12,10 @@ import { Text } from "../Text";
 export const CurrencyComponent = ({ className }) => {
   const [isShow, setIsShow] = useState(false);
   const [selected, setSelected] = useState(CurrencyInfo[0]);
-  const [coords, setCoords] = useState(0);
   const currency = useRef(null);
   const dropDown = useRef(null);
 
-  const NumberClass = classNames(
+  const CurrencyClass = classNames(
     "currency",
     "cursor-pointer",
     {
@@ -36,15 +34,10 @@ export const CurrencyComponent = ({ className }) => {
       window.innerWidth -
       (currency.current.offsetLeft + currency.current.offsetWidth)
     }px`;
-    console.log(coords);
   }, [window.innerWidth]);
 
-  useEffect(() => {
-    setCoords(currency.current.getBoundingClientRect());
-  }, []);
-
   return (
-    <div ref={currency} className={NumberClass}>
+    <div ref={currency} className={CurrencyClass}>
       <div
         className="show-currency"
         onClick={() => {

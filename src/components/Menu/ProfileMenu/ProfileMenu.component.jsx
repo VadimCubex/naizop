@@ -97,87 +97,85 @@ export const ProfileMenuComponent = () => {
             </div>
           </div>
 
-          <div className="menu-items-container">
-            <div className="menu-items">
-              <div className="profile">
-                <div className="nav-profile">
-                  <div className="nav-avatar">
-                    <Avatar variant={AvatarVariants.sm} src={img} />
-                  </div>
-                  <div className="nav-profile-info">
-                    <Text variant={TextVariants.h5}>Welcome,</Text>{" "}
-                    <Link to="/profile/account">
-                      <Text
-                        variant={TextVariants.h5}
-                      >{`${name} ${surname}`}</Text>
-                    </Link>
-                  </div>
+          <div className="menu-items">
+            <div className="profile">
+              <div className="nav-profile">
+                <div className="nav-avatar">
+                  <Avatar variant={AvatarVariants.sm} src={img} />
                 </div>
-                <div className="nav-balance">
-                  <Text variant={TextVariants.subtitle_small}>BALANCE</Text>
-                  <Text variant={TextVariants.h3}>{`$ ${parseFloat(
-                    balance
-                  ).toFixed(2)}`}</Text>
+                <div className="nav-profile-info">
+                  <Text variant={TextVariants.h5}>Welcome,</Text>{" "}
+                  <Link to="/profile/account">
+                    <Text
+                      variant={TextVariants.h5}
+                    >{`${name} ${surname}`}</Text>
+                  </Link>
                 </div>
               </div>
-              <div className="menu-second-part">
-                <div className="progress">
-                  <div className="info">
-                    <Text variant={TextVariants.h4}>{percent + "/100"}</Text>
-                    <img src={RanksIcons[rank]} alt="info rank" />
-                  </div>
-                  <ProgressBar percent={percent} />
+              <div className="nav-balance">
+                <Text variant={TextVariants.subtitle_small}>BALANCE</Text>
+                <Text variant={TextVariants.h3}>{`$ ${parseFloat(
+                  balance
+                ).toFixed(2)}`}</Text>
+              </div>
+            </div>
+            <div className="menu-second-part">
+              <div className="progress">
+                <div className="info">
+                  <Text variant={TextVariants.h4}>{percent + "/100"}</Text>
+                  <img src={RanksIcons[rank]} alt="info rank" />
                 </div>
-                <div className="nav-button-container">
+                <ProgressBar percent={percent} />
+              </div>
+              <div className="nav-button-container">
+                <Button
+                  size={ButtonSizeVariants.large}
+                  variant={ButtonVariants.yellow}
+                  icon={IconsVariants.Wallet}
+                  text="Wallet"
+                  isLight={true}
+                />
+                <Currency />
+                <TooltipPortal>
+                  <Notification
+                    width={TooltipWidth}
+                    coords={coords}
+                    arrowPosition={tooltipPosition}
+                    isShow={isShowTooltip}
+                  >
+                    {Notifications.map((item, index) => (
+                      <div className="type" key={index}>
+                        <SvgIcon
+                          src={item.icon}
+                          size={24}
+                          color={ColorSvgVariants.white}
+                        />
+                        <Text variant={TextVariants.h5_regular}>
+                          {item.text}
+                        </Text>
+                      </div>
+                    ))}
+                  </Notification>
+                </TooltipPortal>
+                <div ref={tooltipSvg} onClick={handleClick}>
                   <Button
-                    size={ButtonSizeVariants.large}
-                    variant={ButtonVariants.yellow}
-                    icon={IconsVariants.Wallet}
-                    text="Wallet"
-                    isLight={true}
-                  />
-                  <Currency />
-                  <TooltipPortal>
-                    <Notification
-                      width={TooltipWidth}
-                      coords={coords}
-                      arrowPosition={tooltipPosition}
-                      isShow={isShowTooltip}
-                    >
-                      {Notifications.map((item, index) => (
-                        <div className="type" key={index}>
-                          <SvgIcon
-                            src={item.icon}
-                            size={24}
-                            color={ColorSvgVariants.white}
-                          />
-                          <Text variant={TextVariants.h5_regular}>
-                            {item.text}
-                          </Text>
-                        </div>
-                      ))}
-                    </Notification>
-                  </TooltipPortal>
-                  <div ref={tooltipSvg} onClick={handleClick}>
-                    <Button
-                      variant={ButtonVariants.default}
-                      className={
-                        isShowTooltip ? "button_logout active" : "button_logout"
-                      }
-                      size={ButtonSizeVariants.large}
-                      icon={IconsVariants.Notification}
-                    />
-                  </div>
-                  <Button
-                    onClick={handleLogoutClick}
                     variant={ButtonVariants.default}
-                    className="button_logout"
+                    className={
+                      isShowTooltip ? "button_logout active" : "button_logout"
+                    }
                     size={ButtonSizeVariants.large}
-                    text="Logout"
-                    icon={IconsVariants.Logout}
-                    iconPosition="right"
+                    icon={IconsVariants.Notification}
                   />
                 </div>
+                <Button
+                  onClick={handleLogoutClick}
+                  variant={ButtonVariants.default}
+                  className="button_logout"
+                  size={ButtonSizeVariants.large}
+                  text="Logout"
+                  icon={IconsVariants.Logout}
+                  iconPosition="right"
+                />
               </div>
             </div>
           </div>
