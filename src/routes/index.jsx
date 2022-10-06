@@ -14,7 +14,6 @@ import Blog from "../pages/Blog/Blog";
 import BlogArticle from "../pages/BlogArticle/BlogArticle";
 import BlogCategoryPage from "../pages/BlogCategory/BlogCategory";
 import CompletedOrder from "../pages/CompletedOrder/CompletedOrder";
-import Dashboard from "../pages/Dashboard/Dashboard";
 import Download from "../pages/Download/Download";
 import FAQ from "../pages/FAQ/FAQ";
 import Home from "../pages/Home/Home";
@@ -35,6 +34,7 @@ import Terms from "../pages/Terms/Terms";
 import Tools from "../pages/Tools/Tools";
 import TrackOrder from "../pages/TrackOrder/TrackOrder";
 import Updates from "../pages/Updates/Updates";
+import VIPRewards from "../pages/VIPRewards/VIPRewards";
 
 const NaizopRoutes = () => {
   return (
@@ -69,14 +69,13 @@ const NaizopRoutes = () => {
       </Route>
       <Route path="/profile/" element={<ProfileLayout />}>
         <Route index element={<Navigate to="/profile/vip-rewards" replace />} />
-        <Route path="vip-rewards" element={<Dashboard />} />
+        <Route path="vip-rewards" element={<VIPRewards />} />
         <Route path="account" element={<Account />} />
         <Route path="redeem-history" element={<RedeemHistory />} />
         <Route path="redeem-support" element={<RedeemSupport />} />
         <Route path="place-new-order" element={<PlaceNewOrder />} />
         <Route path="mass-order" element={<MassOrder />} />
         <Route path="services" element={<AllServices container={false} />} />
-        <Route path="popular-service" element={<Dashboard />} />
         <Route path="orders" element={<Orders />} />
         <Route path="subscriptions" element={<Subscriptions />} />
         <Route path="add-funds" element={<Payment />} />

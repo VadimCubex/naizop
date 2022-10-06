@@ -9,8 +9,9 @@ const initialState = {
   balance: 75,
   percent: 75,
   rate: "$1.00/100 points",
-  rank: "Bronze",
+  rank: "New",
   points: 0,
+  nextRank: "Bronze",
 };
 
 const ProfileInfoSlice = createSlice({

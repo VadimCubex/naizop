@@ -44,7 +44,7 @@ export const ProfileMenuComponent = () => {
     TooltipWidth,
     handleClick,
   } = useTooltip();
-  const { img, name, surname, balance, percent, rank } =
+  const { img, name, surname, balance, percent, nextRank } =
     useProfileInfoSelector();
   const [isShowBurger, setIsShowBurger] = useState(false);
   const [isShow, setIsShow] = useState(true);
@@ -121,11 +121,11 @@ export const ProfileMenuComponent = () => {
             </div>
             <div className="menu-second-part">
               <div className="progress">
+                <Text variant={TextVariants.h4}>{percent}%</Text>
                 <div className="info">
-                  <Text variant={TextVariants.h4}>{percent + "/100"}</Text>
-                  <img src={RanksIcons[rank]} alt="info rank" />
+                  <ProgressBar percent={percent} />
+                  <img src={RanksIcons[nextRank]} alt="info rank" />
                 </div>
-                <ProgressBar percent={percent} />
               </div>
               <div className="nav-button-container">
                 <Button
@@ -220,7 +220,7 @@ export const ProfileMenuComponent = () => {
               <div className="progress">
                 <Text variant={TextVariants.h4}>{percent + "/100"}</Text>
                 <ProgressBar percent={percent} />
-                <img src={RanksIcons[rank]} alt="info rank" />
+                <img src={RanksIcons[nextRank]} alt="info rank" />
               </div>
               <div className="nav-balance">
                 <Text variant={TextVariants.subtitle_small}>BALANCE</Text>

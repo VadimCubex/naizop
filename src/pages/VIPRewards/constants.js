@@ -41,14 +41,6 @@ export const AccountStatusInfo = [
   },
 ];
 
-export const AccountPointsInfo = [
-  "Available",
-  "Can redeem = 500 points",
-  "Can redeem = 250 points",
-  "Can redeem = 100 points",
-  "Less than 4 days conversion",
-];
-
 export const RanksTable = [
   {
     row: {
@@ -76,6 +68,12 @@ export const RanksTable = [
   },
   {
     row: {
+      rank: "Gold",
+      count: "$1.500",
+    },
+  },
+  {
+    row: {
       rank: "Silver",
       count: "$1.000",
     },
@@ -94,3 +92,14 @@ export const RanksTable = [
   },
 ];
 export const RanksColumnInfo = ["Rank", "Amount spent"];
+
+export const Ranks = [
+  { rank: "New", count: 0 },
+  { rank: "Bronze", count: 100 },
+  { rank: "Silver", count: 1000 },
+  { rank: "Gold", count: 1500 },
+  { rank: "Platinum", count: 2500 },
+  { rank: "Diamond", count: 5000 },
+  { rank: "VIP", count: 15000 },
+  { rank: "VIP III", count: 50000 },
+];

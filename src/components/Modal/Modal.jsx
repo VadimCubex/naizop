@@ -29,7 +29,12 @@ export const ModalComponent = ({
           <div className="modal-container">
             <div className="header-modal">
               <Text variant={TextVariants.h1}>{title}</Text>
-              <SvgIcon src={IconsVariants.Close} size={20} onClick={onClick} />
+              <SvgIcon
+                className="cursor-pointer"
+                src={IconsVariants.Close}
+                size={20}
+                onClick={onClick}
+              />
             </div>
             <div className="modal-background" />
             <div className="modal-content">{children}</div>

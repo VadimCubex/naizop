@@ -2,7 +2,6 @@
 @import "../components/SvgIcon/SvgIcon.module.css";
 @import "../components/Button/Button.module.css";
 @import "../components/Avatar/Avatar.module.css";
-@import "../components/AvatarDashboard/AvatarDashboard.module.css";
 @import "../components/Radio/Radio.module.css";
 @import "../components/Number/Number.module.css";
 @import "../components/Cards/Cards.module.css";
@@ -59,7 +58,7 @@
 @import "../pages/Home/Home.module.css";
 @import "../pages/FAQ/FAQ.module.css";
 @import "../pages/About/About.module.css";
-@import "../pages/Dashboard/Dashboard.module.css";
+@import "../pages/VIPRewards/VIPRewards.module.css";
 @import "../pages/RedeemHistory/RedeemHistory.module.css";
 @import "../pages/RedeemSupport/RedeemSupport.module.css";
 @import "../pages/Account/Account.module.css";
