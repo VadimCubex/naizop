@@ -25,7 +25,22 @@
 
 .accountCard.active,
 .accountCard:hover {
-  background: var(--gradient-account-card-hover);
+  background: radial-gradient(
+      169.8% 157.07% at 58.4% 198.93%,
+      #4ce5bf 0%,
+      rgb(145 89 251 / 13%) 100%
+    ),
+    radial-gradient(
+      104.11% 155.86% at 108% 0.14%,
+      #286b7f 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(0deg, rgba(217, 217, 217, 0.01), rgba(217, 217, 217, 0.01)),
+    radial-gradient(
+      103.28% 84.14% at 51.8% 102.86%,
+      rgba(255, 255, 255, 0.37) 0%,
+      rgba(255, 255, 255, 0.02) 100%
+    );
 }
 .accountCard.active .text,
 .accountCard:hover .text {

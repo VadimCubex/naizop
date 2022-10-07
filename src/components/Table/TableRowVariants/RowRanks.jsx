@@ -1,6 +1,7 @@
 import React from "react";
 
 import { TextVariants } from "../../../constants/VariantsOfComponents";
+import { numberWithCommas } from "../../../helpers/helpers";
 import { Text } from "../../Text";
 
 const RowRanks = ({ item }) => {
@@ -13,7 +14,7 @@ const RowRanks = ({ item }) => {
       </div>
       <div className="table-row-cell">
         <Text variant={TextVariants.h5}>
-          {item.row.value || item.row.count}
+          {item.row.value || `$${numberWithCommas(item.row.count)}`}
         </Text>
       </div>
     </>

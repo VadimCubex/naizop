@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import classNames from "classnames";
 
 import {
@@ -21,10 +22,13 @@ export const AccountCardComponent = ({
   tooltip,
   className,
 }) => {
+  const [active, setActive] = useState(false);
   const AccountCardClass = classNames(
     "accountCard",
+    "cursor-pointer",
     {
       [`accountCard_variant_${variant}`]: variant,
+      active: active,
     },
     className
   );
@@ -39,8 +43,13 @@ export const AccountCardComponent = ({
     handleClick,
   } = useTooltip();
 
+  const handleCardClick = () => {
+    onClick && onClick();
+    setActive(!active);
+  };
+
   return (
-    <div onClick={onClick} className={AccountCardClass}>
+    <div onClick={handleCardClick} className={AccountCardClass}>
       {tooltip && (
         <>
           <TooltipPortal>

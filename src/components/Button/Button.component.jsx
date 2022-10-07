@@ -45,7 +45,7 @@ export const ButtonComponent = ({
 
   return (
     <div className="btn-container">
-      {isLight && <div className={buttonClass + " light"}></div>}
+      {isLight && !disabled && <div className={buttonClass + " light"}></div>}
       <button
         className={buttonClass}
         disabled={disabled}

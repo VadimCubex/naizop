@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import classNames from "classnames";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
+import { Ranks } from "../../../constants/constants";
 import {
   AvatarVariants,
   ButtonSizeVariants,
@@ -11,7 +12,6 @@ import {
   IconsVariants,
   ImagesVariants,
   NumberVariants,
-  RanksIcons,
   TextVariants,
 } from "../../../constants/VariantsOfComponents";
 import { Avatar } from "../../Avatar";
@@ -124,7 +124,7 @@ export const ProfileMenuComponent = () => {
                 <Text variant={TextVariants.h4}>{percent}%</Text>
                 <div className="info">
                   <ProgressBar percent={percent} />
-                  <img src={RanksIcons[nextRank]} alt="info rank" />
+                  <img src={Ranks[nextRank].icon} alt="info rank" />
                 </div>
               </div>
               <div className="nav-button-container">
@@ -220,7 +220,7 @@ export const ProfileMenuComponent = () => {
               <div className="progress">
                 <Text variant={TextVariants.h4}>{percent + "/100"}</Text>
                 <ProgressBar percent={percent} />
-                <img src={RanksIcons[nextRank]} alt="info rank" />
+                <img src={Ranks[nextRank].icon} alt="info rank" />
               </div>
               <div className="nav-balance">
                 <Text variant={TextVariants.subtitle_small}>BALANCE</Text>

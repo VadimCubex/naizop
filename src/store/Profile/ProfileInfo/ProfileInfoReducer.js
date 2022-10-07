@@ -12,6 +12,7 @@ const initialState = {
   rank: "New",
   points: 0,
   nextRank: "Bronze",
+  totalCount: 101,
 };
 
 const ProfileInfoSlice = createSlice({
