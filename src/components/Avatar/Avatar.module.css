@@ -50,6 +50,11 @@
     width: 68px;
     height: 68px;
   }
+
+  .avatar_variant_small {
+    width: 42px;
+    height: 42px;
+  }
 }
 
 @media (max-width: 834px) {
@@ -73,5 +78,10 @@
   .avatar_variant_medium {
     width: 46px;
     height: 46px;
+  }
+
+  .avatar_variant_small {
+    width: 40px;
+    height: 40px;
   }
 }

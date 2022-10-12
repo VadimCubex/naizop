@@ -7,6 +7,8 @@
 @import "./TableVariantsStyles/TableVariantPayment.module.css";
 @import "./TableVariantsStyles/TableVariantComleted.module.css";
 @import "./TableVariantsStyles/TableVariantAffiliates.module.css";
+@import "./TableVariantsStyles/TableVariantTicket.module.css";
+@import "./TableVariantsStyles/TableVariantTicketDetail.module.css";
 
 .table {
   display: flex;

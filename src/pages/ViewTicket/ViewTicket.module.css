@@ -1,0 +1,124 @@
+.view-ticket {
+  color: var(--white);
+  margin-bottom: 120px;
+}
+
+.view-ticket a {
+  color: var(--white);
+  opacity: 0.5;
+}
+
+.view-ticket .title {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.view-ticket .view-chat {
+  display: flex;
+  gap: 20px;
+}
+
+.view-ticket .view-chat > div {
+  border-radius: 10px;
+  padding: 25px 25px 40px;
+  background: radial-gradient(
+      123.55% 61.1% at 20.23% 113.59%,
+      rgba(135, 144, 153, 0.1) 0%,
+      rgba(135, 144, 153, 0) 100%
+    ),
+    radial-gradient(
+      123.65% 50.71% at 67.85% -15%,
+      rgba(135, 147, 153, 0.1) 0%,
+      rgba(135, 144, 153, 0) 100%
+    ),
+    #161819;
+}
+
+.view-ticket .view-chat .chat {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 62%;
+}
+
+.view-ticket .view-chat .detail {
+  height: fit-content;
+  width: 38%;
+}
+
+.view-ticket .view-chat .chat .messages {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.view-ticket .view-chat .chat .messages > div > .text,
+.view-ticket .view-chat .chat .messages > .text {
+  text-align: center;
+}
+
+.view-ticket .view-chat .chat .messages > div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.view-ticket .view-chat .chat .new-message {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+}
+
+.view-ticket .view-chat .chat .new-message > .text {
+  align-self: flex-start;
+  opacity: 0.75;
+}
+
+.view-ticket .view-chat .chat .new-message .input {
+  height: 140px;
+}
+
+.view-ticket .view-chat .chat .new-message .btn-container {
+  margin-top: 20px;
+}
+
+@media (max-width: 1200px) {
+  .view-ticket {
+    margin-bottom: 100px;
+  }
+  .view-ticket .view-chat .detail,
+  .view-ticket .view-chat .chat {
+    flex-grow: 1;
+    max-width: unset;
+  }
+}
+
+@media (max-width: 834px) {
+  .view-ticket {
+    margin-bottom: 80px;
+  }
+  .view-ticket .view-chat {
+    flex-direction: column-reverse;
+  }
+  .view-ticket .view-chat .chat .new-message .btn-container {
+    width: 100%;
+  }
+  .view-ticket .view-chat > div {
+    padding: 20px;
+  }
+  .view-ticket .view-chat .chat .messages > div {
+    gap: 20px;
+  }
+  .view-ticket .view-chat .detail,
+  .view-ticket .view-chat .chat {
+    flex-grow: 1;
+    width: 100%;
+    max-width: unset;
+  }
+}

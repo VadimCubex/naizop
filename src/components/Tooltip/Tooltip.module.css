@@ -7,7 +7,7 @@
   height: fit-content;
   padding: 30px;
   border: 1px solid var(--light-blue-15);
-  background: var(--menu);
+  background: #2b3337;
   text-align: left;
   color: var(--white);
 }

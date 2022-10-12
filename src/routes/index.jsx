@@ -21,19 +21,20 @@ import Login from "../pages/Login/Login";
 import MassOrder from "../pages/MassOrder/MassOrder";
 import OrderDetail from "../pages/OrderDetail/OrderDetail";
 import Orders from "../pages/Orders/Orders";
+import Page404 from "../pages/Page404/Page404";
 import Payment from "../pages/Payment/Payment";
-import PaymentError from "../pages/PaymentError/PaymentError";
 import PaymentHistory from "../pages/PaymentHistory/PaymentHistory";
 import PlaceNewOrder from "../pages/PlaceNewOrder/PlaceNewOrder";
 import RedeemHistory from "../pages/RedeemHistory/RedeemHistory";
-import RedeemSupport from "../pages/RedeemSupport/RedeemSupport";
 import Register from "../pages/Register/Register";
 import ResetPassword from "../pages/ResetPassword/ResetPassword";
 import Subscriptions from "../pages/Subscriptions/Subscriptions";
+import Support from "../pages/Support/Support";
 import Terms from "../pages/Terms/Terms";
 import Tools from "../pages/Tools/Tools";
 import TrackOrder from "../pages/TrackOrder/TrackOrder";
 import Updates from "../pages/Updates/Updates";
+import ViewTicket from "../pages/ViewTicket/ViewTicket";
 import VIPRewards from "../pages/VIPRewards/VIPRewards";
 
 const NaizopRoutes = () => {
@@ -65,14 +66,18 @@ const NaizopRoutes = () => {
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="reset-password" element={<ResetPassword />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route
+          path="*"
+          element={<Page404 container={true} className="background-img" />}
+        />
       </Route>
       <Route path="/profile/" element={<ProfileLayout />}>
         <Route index element={<Navigate to="/profile/vip-rewards" replace />} />
         <Route path="vip-rewards" element={<VIPRewards />} />
         <Route path="account" element={<Account />} />
         <Route path="redeem-history" element={<RedeemHistory />} />
-        <Route path="redeem-support" element={<RedeemSupport />} />
+        <Route path="support" element={<Support />} />
+        <Route path="support/ticket" element={<ViewTicket />} />
         <Route path="place-new-order" element={<PlaceNewOrder />} />
         <Route path="mass-order" element={<MassOrder />} />
         <Route path="services" element={<AllServices container={false} />} />
@@ -80,11 +85,6 @@ const NaizopRoutes = () => {
         <Route path="subscriptions" element={<Subscriptions />} />
         <Route path="add-funds" element={<Payment />} />
         <Route path="add-funds/payment-history" element={<PaymentHistory />} />
-        <Route path="add-funds/error" element={<PaymentError />} />
-        <Route
-          path="support"
-          element={<div style={{ color: "white" }}>In progress</div>}
-        />
         <Route path="affiliates" element={<Affiliates />} />
         <Route path="updates" element={<Updates />} />
         <Route path="blog" element={<Blog container={false} />} />
@@ -105,7 +105,7 @@ const NaizopRoutes = () => {
           path="track-your-order"
           element={<div style={{ color: "white" }}>In progress</div>}
         />
-        <Route path="*" element={<Navigate to="/profile/" replace />} />
+        <Route path="*" element={<Page404 />} />
       </Route>
     </Routes>
   );

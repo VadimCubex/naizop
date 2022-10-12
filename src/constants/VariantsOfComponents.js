@@ -196,7 +196,7 @@ export const ImagesVariants = {
   Experience: "/images/Home/Experience.png",
   Excellence: "/images/Home/Excellence.png",
   profile: "/images/Profile/Profile.svg",
-  Card: "/images/Payment/Card.png",
+  404: "/images/Page 404/404.png",
   Like: "/images/BestQualityService/Like.png",
   Chat: "/images/BestQualityService/Chat.png",
   Star: "/images/BestQualityService/Star.png",
@@ -326,6 +326,8 @@ export const TableVariants = {
   Payment: "payment",
   Completed: "completed",
   Affiliates: "affiliates",
+  Tickets: "tickets",
+  TicketsDetail: "ticketsDetail",
 };
 
 export const StatusVariants = {

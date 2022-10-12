@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { Button } from "../../components/Button";
 import { HowItWorks } from "../../components/HowItWorks";
@@ -29,14 +29,8 @@ const Payment = () => {
   const [selectedPayment, setSelectedPayment] = useState(Payments[0]);
   const [amount, setAmount] = useState(0);
 
-  const navigate = useNavigate();
-
   const handleSendTip = () => {
-    if (Math.floor(Math.random() * 2)) {
-      navigate("/profile/add-funds/error");
-    } else {
-      setIsSend(true);
-    }
+    setIsSend(true);
   };
 
   useEffect(() => {

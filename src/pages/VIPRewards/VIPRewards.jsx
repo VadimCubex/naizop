@@ -38,7 +38,7 @@ const VIPRewards = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/profile/redeem-support");
+    navigate("/profile/support");
   };
 
   //! Transfer to the profile reducer afterwards
