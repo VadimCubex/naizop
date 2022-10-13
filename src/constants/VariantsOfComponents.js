@@ -109,6 +109,8 @@ export const IconsVariants = {
   Purchase: "/icons/Stroke/Purchase.svg",
   Wallet: "/icons/Stroke/Wallet.svg",
   SoundOff: "/icons/Stroke/Sound off.svg",
+  Calendar: "/icons/Stroke/Calendar.svg",
+  Download: "/icons/Stroke/Download.svg",
   // Color
   Bitcoin: "/icons/Color/Bitcoin.svg",
   Crypto: "/icons/Color/Crypto.svg",

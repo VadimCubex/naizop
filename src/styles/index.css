@@ -52,6 +52,7 @@
 @import "../components/DownloadSocialVideo/DownloadSocialVideo.module.css";
 @import "../components/ProgressBar/ProgressBar.module.css";
 @import "../components/Message/Message.module.css";
+@import "../components/Raffle/Raffle.module.css";
 
 @import "./App.css";
 @import "./normalize.css";

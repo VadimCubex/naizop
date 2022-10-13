@@ -63,7 +63,9 @@ const ViewTicket = () => {
           <div className="chat">
             <Text variant={TextVariants.h3}>Chat with Support</Text>
             <div className="messages">
-              <Text variant={TextVariants.h4_regular}>{printDate(today)}</Text>
+              <Text variant={TextVariants.h4_regular}>
+                {printDate(today, 1)}
+              </Text>
               <div>
                 {chat.length === 0 && (
                   <Text variant={TextVariants.h4}>There are no messages</Text>

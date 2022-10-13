@@ -27,12 +27,12 @@ import { SvgIcon } from "../../SvgIcon";
 import { Text } from "../../Text";
 import {
   Notifications,
-  Promotions,
   SidebarLinksFirstPart,
   SidebarLinksSecondPart,
 } from "../constants";
 
 import { useProfileInfoSelector } from "../../../store/Profile/ProfileInfo/useProfileInfo";
+import { useRaffleActions } from "../../../store/Raffle/useRaffleActions";
 import useTooltip from "../../../hooks/useTooltip";
 
 export const ProfileMenuComponent = () => {
@@ -50,6 +50,8 @@ export const ProfileMenuComponent = () => {
   const [isShow, setIsShow] = useState(true);
   const [isShowPromotions, setIsShowPromotions] = useState(true);
   const [isOpenModal, setIsOpenModal] = useState(false);
+
+  const { setIsOpenRaffle } = useRaffleActions();
 
   const [active, setActive] = useState("");
   const navigate = useNavigate();
@@ -327,15 +329,19 @@ export const ProfileMenuComponent = () => {
                 </div>
                 <DropDown isOpen={isShowPromotions}>
                   <div className="burger-menu-items buttons">
-                    {Promotions.map((item, index) => (
-                      <Button
-                        key={index}
-                        icon={item.icon}
-                        text={item.text}
-                        size={ButtonSizeVariants.large}
-                        variant={ButtonVariants.side}
-                      />
-                    ))}
+                    <Button
+                      icon={IconsVariants.Money}
+                      text="Refer and Earn"
+                      size={ButtonSizeVariants.large}
+                      variant={ButtonVariants.side}
+                    />
+                    <Button
+                      onClick={() => setIsOpenRaffle()}
+                      icon={IconsVariants.Coins}
+                      text="Weekly Raffle"
+                      size={ButtonSizeVariants.large}
+                      variant={ButtonVariants.side}
+                    />
                   </div>
                 </DropDown>
               </div>

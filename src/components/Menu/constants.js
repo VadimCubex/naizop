@@ -134,14 +134,3 @@ export const Notifications = [
     text: "Your payment has been added to your balance",
   },
 ];
-
-export const Promotions = [
-  {
-    icon: IconsVariants.Money,
-    text: "Refer and Earn",
-  },
-  {
-    icon: IconsVariants.Coins,
-    text: "Weekly Raffle",
-  },
-];

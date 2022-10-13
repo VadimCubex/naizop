@@ -18,16 +18,18 @@ import { Button } from "../../Button";
 import { DropDown } from "../../DropDown";
 import { Modal } from "../../Modal";
 import { Number } from "../../Number";
+import { Raffle } from "../../Raffle";
 import { SvgIcon } from "../../SvgIcon";
 import { Text } from "../../Text";
-import {
-  Promotions,
-  SidebarLinksFirstPart,
-  SidebarLinksSecondPart,
-} from "../constants";
+import { SidebarLinksFirstPart, SidebarLinksSecondPart } from "../constants";
+
+import { useRaffleActions } from "../../../store/Raffle/useRaffleActions";
+import { useRaffleSelector } from "../../../store/Raffle/useRaffleSelector";
 
 export const SidebarMenuComponent = () => {
   const SidebarMenuClass = classNames("sidebarMenu");
+  const { setIsOpenRaffle } = useRaffleActions();
+  const { isOpenRaffle } = useRaffleSelector();
 
   const [isShowMore, setIsShowMore] = useState(false);
   const [isShowPromotions, setIsShowPromotions] = useState(false);
@@ -146,15 +148,19 @@ export const SidebarMenuComponent = () => {
               </div>
               <DropDown isOpen={isShowPromotions}>
                 <div className="sidebar-items buttons">
-                  {Promotions.map((item, index) => (
-                    <Button
-                      key={index}
-                      icon={item.icon}
-                      text={item.text}
-                      size={ButtonSizeVariants.large}
-                      variant={ButtonVariants.side}
-                    />
-                  ))}
+                  <Button
+                    icon={IconsVariants.Money}
+                    text="Refer and Earn"
+                    size={ButtonSizeVariants.large}
+                    variant={ButtonVariants.side}
+                  />
+                  <Button
+                    onClick={() => setIsOpenRaffle()}
+                    icon={IconsVariants.Coins}
+                    text="Weekly Raffle"
+                    size={ButtonSizeVariants.large}
+                    variant={ButtonVariants.side}
+                  />
                 </div>
               </DropDown>
             </div>
@@ -198,6 +204,7 @@ export const SidebarMenuComponent = () => {
           </div>
         </div>
       </Modal>
+      <Raffle isOpen={isOpenRaffle} prize={200} />
     </aside>
   );
 };
