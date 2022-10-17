@@ -2,13 +2,7 @@ import React from "react";
 import classNames from "classnames";
 
 import InstructionPayeer from "./InstructionVariants/InstructionPayeer";
-import {
-  IconsVariants,
-  InstructionVariants,
-  TextVariants,
-} from "../../constants/VariantsOfComponents";
-import { SvgIcon } from "../SvgIcon";
-import { Text } from "../Text";
+import { InstructionVariants } from "../../constants/VariantsOfComponents";
 
 export const InstructionComponent = ({ variant }) => {
   const InstructionClass = classNames("instruction");
@@ -18,15 +12,7 @@ export const InstructionComponent = ({ variant }) => {
   };
 
   return (
-    <div className={InstructionClass}>
-      <div>
-        <SvgIcon src={IconsVariants.Info_Circle} size={24} />
-      </div>
-      <div>
-        <Text variant={TextVariants.h3}>Instruction:</Text>
-        {InstructionVariantMap[variant]}
-      </div>
-    </div>
+    <div className={InstructionClass}>{InstructionVariantMap[variant]}</div>
   );
 };
 

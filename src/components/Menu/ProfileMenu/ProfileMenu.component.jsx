@@ -21,7 +21,6 @@ import { DropDown } from "../../DropDown";
 import { Modal } from "../../Modal";
 import { Notification } from "../../Notification";
 import { Number } from "../../Number";
-import { TooltipPortal } from "../../Portal";
 import { ProgressBar } from "../../ProgressBar";
 import { SvgIcon } from "../../SvgIcon";
 import { Text } from "../../Text";
@@ -33,17 +32,8 @@ import {
 
 import { useProfileInfoSelector } from "../../../store/Profile/ProfileInfo/useProfileInfo";
 import { useRaffleActions } from "../../../store/Raffle/useRaffleActions";
-import useTooltip from "../../../hooks/useTooltip";
 
 export const ProfileMenuComponent = () => {
-  const {
-    coords,
-    isShowTooltip,
-    tooltipPosition,
-    tooltipSvg,
-    TooltipWidth,
-    handleClick,
-  } = useTooltip();
   const { img, name, surname, balance, percent, nextRank } =
     useProfileInfoSelector();
   const [isShowBurger, setIsShowBurger] = useState(false);
@@ -78,6 +68,8 @@ export const ProfileMenuComponent = () => {
   useEffect(() => {
     setActive(location.pathname);
   }, [location.pathname]);
+
+  useEffect(() => {}, []);
 
   return (
     <header className={ProfileMenuClass}>
@@ -138,37 +130,18 @@ export const ProfileMenuComponent = () => {
                   isLight={true}
                 />
                 <Currency />
-                <TooltipPortal>
-                  <Notification
-                    width={TooltipWidth}
-                    coords={coords}
-                    arrowPosition={tooltipPosition}
-                    isShow={isShowTooltip}
-                  >
-                    {Notifications.map((item, index) => (
-                      <div className="type" key={index}>
-                        <SvgIcon
-                          src={item.icon}
-                          size={24}
-                          color={ColorSvgVariants.white}
-                        />
-                        <Text variant={TextVariants.h5_regular}>
-                          {item.text}
-                        </Text>
-                      </div>
-                    ))}
-                  </Notification>
-                </TooltipPortal>
-                <div ref={tooltipSvg} onClick={handleClick}>
-                  <Button
-                    variant={ButtonVariants.default}
-                    className={
-                      isShowTooltip ? "button_logout active" : "button_logout"
-                    }
-                    size={ButtonSizeVariants.large}
-                    icon={IconsVariants.Notification}
-                  />
-                </div>
+                <Notification>
+                  {Notifications.map((item, index) => (
+                    <div className="type" key={index}>
+                      <SvgIcon
+                        src={item.icon}
+                        size={24}
+                        color={ColorSvgVariants.white}
+                      />
+                      <Text variant={TextVariants.h5_regular}>{item.text}</Text>
+                    </div>
+                  ))}
+                </Notification>
                 <Button
                   onClick={handleLogoutClick}
                   variant={ButtonVariants.default}
@@ -210,12 +183,19 @@ export const ProfileMenuComponent = () => {
                   text="Wallet"
                 />
                 <Currency />
-                <Button
-                  variant={ButtonVariants.default}
-                  className="button_logout"
-                  size={ButtonSizeVariants.large}
-                  icon={IconsVariants.Notification}
-                />
+
+                <Notification>
+                  {Notifications.map((item, index) => (
+                    <div className="type" key={index}>
+                      <SvgIcon
+                        src={item.icon}
+                        size={24}
+                        color={ColorSvgVariants.white}
+                      />
+                      <Text variant={TextVariants.h5_regular}>{item.text}</Text>
+                    </div>
+                  ))}
+                </Notification>
               </div>
             </div>
             <div>

@@ -13,6 +13,7 @@ export const CardSelectComponent = ({
   onClick,
   value,
   options,
+  isPayment = false,
   className,
 }) => {
   const CardSelectClass = classNames("card-select", className);
@@ -29,9 +30,17 @@ export const CardSelectComponent = ({
           })}
         >
           {item.icon && (
-            <SvgIcon src={item.icon} color={ColorSvgVariants.white} />
+            <div>
+              <SvgIcon
+                src={item.icon}
+                color={!isPayment && ColorSvgVariants.white}
+                size={isPayment ? 32 : 24}
+              />
+            </div>
           )}
-          <Text variant={TextVariants.h3}>{item.title}</Text>
+          <Text variant={isPayment ? TextVariants.h4_regular : TextVariants.h3}>
+            {item.title}
+          </Text>
         </div>
       ))}
     </div>

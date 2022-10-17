@@ -85,6 +85,7 @@ const useTooltip = () => {
     handleMouseEnter,
     handleMouseLeave,
     handleClick,
+    setIsShowTooltip,
   };
 };
 

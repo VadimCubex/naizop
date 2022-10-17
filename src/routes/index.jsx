@@ -23,6 +23,7 @@ import OrderDetail from "../pages/OrderDetail/OrderDetail";
 import Orders from "../pages/Orders/Orders";
 import Page404 from "../pages/Page404/Page404";
 import Payment from "../pages/Payment/Payment";
+import PaymentError from "../pages/PaymentError/PaymentError";
 import PaymentHistory from "../pages/PaymentHistory/PaymentHistory";
 import PlaceNewOrder from "../pages/PlaceNewOrder/PlaceNewOrder";
 import RedeemHistory from "../pages/RedeemHistory/RedeemHistory";
@@ -33,6 +34,7 @@ import Support from "../pages/Support/Support";
 import Terms from "../pages/Terms/Terms";
 import Tools from "../pages/Tools/Tools";
 import TrackOrder from "../pages/TrackOrder/TrackOrder";
+import TrackYourOrder from "../pages/TrackYourOrder/TrackYourOrder";
 import Updates from "../pages/Updates/Updates";
 import ViewTicket from "../pages/ViewTicket/ViewTicket";
 import VIPRewards from "../pages/VIPRewards/VIPRewards";
@@ -85,6 +87,7 @@ const NaizopRoutes = () => {
         <Route path="subscriptions" element={<Subscriptions />} />
         <Route path="add-funds" element={<Payment />} />
         <Route path="add-funds/payment-history" element={<PaymentHistory />} />
+        <Route path="add-funds/error" element={<PaymentError />} />
         <Route path="affiliates" element={<Affiliates />} />
         <Route path="updates" element={<Updates />} />
         <Route path="blog" element={<Blog container={false} />} />
@@ -101,10 +104,7 @@ const NaizopRoutes = () => {
         <Route path="faq" element={<FAQ container={false} />} />
         <Route path="api" element={<Api />} />
         <Route path="ambassador-program" element={<Ambassador />} />
-        <Route
-          path="track-your-order"
-          element={<div style={{ color: "white" }}>In progress</div>}
-        />
+        <Route path="track-your-order" element={<TrackYourOrder />} />
         <Route path="*" element={<Page404 />} />
       </Route>
     </Routes>

@@ -18,23 +18,23 @@ const InstructionPayeer = () => {
             After payment, take a ticket with transaction number and amount.
           </li>
         </ol>
-        <Text variant={TextVariants.h5_regular}>
+        <Text variant={TextVariants.h4_regular}>
           We will add manually within 0-12 hours.
         </Text>
-        <Text variant={TextVariants.h5}>
+        <Text variant={TextVariants.h4}>
           **Don’t write any reference there**
         </Text>
       </div>
 
       <div className="bottom">
-        <Text variant={TextVariants.h5_regular}>
+        <Text variant={TextVariants.h4_regular}>
           If you want send payment regulary, add our email in your recipient
           list.
         </Text>
-        <Text variant={TextVariants.h5_regular}>How to add a recipient?</Text>
+        <Text variant={TextVariants.h4_regular}>How to add a recipient?</Text>
         <div className="list">
           <div className="list-item">
-            <Text variant={TextVariants.h5_regular}>
+            <Text variant={TextVariants.h4_regular}>
               1. Check this:{" "}
               <a
                 target="_blank"
@@ -46,7 +46,7 @@ const InstructionPayeer = () => {
             </Text>
           </div>
           <div className="list-item">
-            <Text variant={TextVariants.h5_regular}>
+            <Text variant={TextVariants.h4_regular}>
               2. Click ON add a recipient button. See here:{" "}
               <a
                 target="_blank"
@@ -58,14 +58,14 @@ const InstructionPayeer = () => {
             </Text>
           </div>
           <div className="list-item">
-            <Text variant={TextVariants.h5_regular}>
+            <Text variant={TextVariants.h4_regular}>
               3. Select currency {">>"} Select recipient type Personal {">>"}
               Their email (digitincbd@gmail.com) {">>"} Bank details
               (Optional/No need)
             </Text>
           </div>
           <div className="list-item">
-            <Text variant={TextVariants.h5_regular}>
+            <Text variant={TextVariants.h4_regular}>
               4. Finally click on confirm button. Check this:{" "}
               <a target="_blank" href="http://prnt.sc/25846u6" rel="noreferrer">
                 http://prnt.sc/25846u6

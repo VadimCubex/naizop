@@ -301,7 +301,7 @@
 }
 
 @media (max-width: 834px) {
-  .nav-burger.active {
+  .mainMenu .nav-burger.active {
     display: flex;
   }
 

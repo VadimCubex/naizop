@@ -42,6 +42,7 @@ export const IconsVariants = {
   Updates: "/icons/Bulk/Updates.svg",
   LogoLeft: "/icons/Bulk/logoLeft.svg",
   LogoRight: "/icons/Bulk/logoRight.svg",
+  Play: "/icons/Bulk/Play.svg",
   // Stroke
   Add_funds_stroke: "/icons/Stroke/Add funds.svg",
   Affiliates_stroke: "/icons/Stroke/Affiliates.svg",
@@ -209,8 +210,12 @@ export const ImagesVariants = {
   Step2: "/images/BestQualityService/step2.png",
   Step3: "/images/BestQualityService/step3.png",
 
-  Affiliates: "/images/Affiliates/affiliates.png",
-  Affiliates_house: "/images/Affiliates/house.png",
+  Card: "/images/Payment/Card.png",
+  PaymentVideo: "/images/Payment/house.png",
+
+  Affiliates1: "/images/Affiliates/aff1.png",
+  Affiliates2: "/images/Affiliates/aff2.png",
+  Affiliates3: "/images/Affiliates/aff3.png",
   Affiliates_friends: "/images/Affiliates/friends.png",
   Coinbase: "/images/Affiliates/coinbase.png",
   MoonPay: "/images/Affiliates/moonPay.png",
@@ -326,6 +331,7 @@ export const TableVariants = {
   Service: "service",
   Service_detail: "serviceDetail",
   Payment: "payment",
+  PaymentDownload: "paymentDownload",
   Completed: "completed",
   Affiliates: "affiliates",
   Tickets: "tickets",

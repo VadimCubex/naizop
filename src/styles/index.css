@@ -90,6 +90,8 @@
 @import "../pages/Tools/Tools.module.css";
 @import "../pages/ViewTicket/ViewTicket.module.css";
 @import "../pages/Page404/Page404.module.css";
+@import "../pages/PaymentError/PaymentError.module.css";
+@import "../pages/TrackYourOrder/TrackYourOrder.module.css";
 
 :root {
   --transition-property: all;
