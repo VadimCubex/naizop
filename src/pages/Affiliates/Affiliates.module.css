@@ -11,61 +11,88 @@
 .affiliates .affiliates-tools-container .input-affiliates.earnings .input,
 .affiliates .affiliates-tools-container .input-affiliates.earnings input,
 .affiliates .promote .text > .text,
-.affiliates .joins .join > .text:first-child {
+.affiliates .joins .join > div > .text:first-child {
   color: var(--yellow);
 }
 
 .affiliates > .text {
-  margin-bottom: 45px;
+  margin-bottom: 30px;
+}
+
+.affiliates .affiliates-main {
+  display: flex;
+  gap: 40px;
+}
+
+.affiliates .howItWorks {
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .affiliates .joins {
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  gap: 80px;
 }
 
 .affiliates .joins .join {
   display: flex;
-  flex-direction: column;
-  width: 30%;
   gap: 10px;
-  flex-grow: 1;
-  text-align: center;
-  align-items: center;
 }
 
 .affiliates .joins .join > .text {
-  max-width: 255px;
+  font-size: 80px;
+  line-height: 80px;
+  background: radial-gradient(
+      138.8% 1270% at -24.32% 240%,
+      #ffffff 0%,
+      #85f7e2 47.4%,
+      #ffb60e 100%
+    ),
+    #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.affiliates .joins .join > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.affiliates .reasons {
+  position: relative;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.affiliates .reasons .reasons-images {
+  pointer-events: none;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 180px;
+  top: 0px;
+  right: 0px;
+}
+
+.affiliates .reasons .reasons-images > div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.affiliates .reasons .reasons-images > div:last-child {
+  justify-content: center;
 }
 
 .affiliates .promote {
-  margin-top: 50px;
-  margin-bottom: 120px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.affiliates .promote > .text {
-  margin-top: 60px;
-  max-width: 625px;
-  text-align: center;
-}
-
-.affiliates .house {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-}
-
-.affiliates .house > div > img,
-.affiliates .house > div {
-  width: 100%;
 }
 
 .affiliates .affiliates-tools-container {
-  margin-top: 120px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -82,6 +109,10 @@
 .affiliates .affiliates-tools-container .input-affiliates {
   width: 40%;
   flex-grow: 1;
+}
+
+.affiliates .affiliates-tools-container .input-affiliates .with-button {
+  flex-direction: column;
 }
 
 .affiliates .affiliates-logo > .text,
@@ -130,7 +161,7 @@
 }
 
 .affiliates .affiliates-tools-container .input-affiliates .btn-container {
-  min-width: 120px;
+  width: 100%;
 }
 
 .affiliates
@@ -249,23 +280,11 @@
 }
 
 @media (max-width: 1439px) {
-  .affiliates .joins {
-    gap: 15px;
-  }
 }
 
 @media (max-width: 1024px) {
   .affiliates {
     margin-bottom: 120px;
-  }
-  .affiliates > .text {
-    margin-bottom: 30px;
-  }
-  .affiliates .promote {
-    margin-bottom: 90px;
-  }
-  .affiliates .affiliates-tools-container {
-    margin-top: 90px;
   }
   .affiliates
     .affiliates-tools-container
@@ -280,6 +299,12 @@
   .affiliates .block.rewards .reward {
     gap: 15px;
   }
+  .affiliates .reasons .reasons-images {
+    gap: 200px;
+  }
+  .affiliates .reasons {
+    min-width: 230px;
+  }
 }
 
 @media (max-width: 834px) {
@@ -291,9 +316,25 @@
     margin-bottom: 15px;
   }
 
+  .affiliates .howItWorks {
+    margin-bottom: 0px;
+  }
+
+  .affiliates .affiliates-main {
+    flex-direction: column-reverse;
+    gap: 60px;
+  }
+
   .affiliates .joins {
     gap: 20px;
-    flex-direction: column;
+  }
+
+  .affiliates .reasons {
+    gap: 40px;
+  }
+
+  .affiliates .reasons .reasons-images {
+    display: none;
   }
 
   .affiliates .joins .join,
@@ -303,40 +344,10 @@
   }
 
   .affiliates .joins .join > .text {
-    max-width: 300px;
-  }
-
-  .affiliates .promote {
-    margin-top: 30px;
-    margin-bottom: 50px;
-  }
-
-  .affiliates .promote > div > img {
-    width: 70%;
-  }
-
-  .affiliates .promote > div {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .affiliates .promote > .text {
-    margin-top: 30px;
-  }
-
-  .affiliates .promote .text {
-    font-family: "Space Grotesk";
-    font-weight: 500;
-    font-size: 18px;
-  }
-
-  .affiliates .house {
-    gap: 15px;
+    max-width: 310px;
   }
 
   .affiliates .affiliates-tools-container {
-    margin-top: 60px;
     flex-direction: column;
   }
 
@@ -422,9 +433,5 @@
 
   .affiliates .joins .join > .text {
     max-width: 250px;
-  }
-
-  .affiliates .promote > div > img {
-    width: 100%;
   }
 }

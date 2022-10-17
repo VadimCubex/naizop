@@ -1,3 +1,5 @@
+import { Ranks } from "../../constants/constants";
+
 export const AccountStatusInfo = [
   {
     title: "24/7 Ticket Support",
@@ -41,55 +43,53 @@ export const AccountStatusInfo = [
   },
 ];
 
-export const AccountPointsInfo = [
-  "Available",
-  "Can redeem = 500 points",
-  "Can redeem = 250 points",
-  "Can redeem = 100 points",
-  "Less than 4 days conversion",
-];
-
 export const RanksTable = [
   {
     row: {
-      rank: "VIP III",
-      count: "$50.000",
+      rank: Ranks.VIP3.rank,
+      count: Ranks.VIP3.count,
     },
   },
   {
     row: {
-      rank: "VIP",
-      count: "$15.000",
+      rank: Ranks.VIP.rank,
+      count: Ranks.VIP.count,
     },
   },
   {
     row: {
-      rank: "Diamond",
-      count: "$5.000",
+      rank: Ranks.Diamond.rank,
+      count: Ranks.Diamond.count,
     },
   },
   {
     row: {
-      rank: "Platinum",
-      count: "$2.500",
+      rank: Ranks.Platinum.rank,
+      count: Ranks.Platinum.count,
     },
   },
   {
     row: {
-      rank: "Silver",
-      count: "$1.000",
+      rank: Ranks.Gold.rank,
+      count: Ranks.Gold.count,
     },
   },
   {
     row: {
-      rank: "Bronze",
-      count: "$100",
+      rank: Ranks.Silver.rank,
+      count: Ranks.Silver.count,
     },
   },
   {
     row: {
-      rank: "New",
-      count: "$0",
+      rank: Ranks.Bronze.rank,
+      count: Ranks.Bronze.count,
+    },
+  },
+  {
+    row: {
+      rank: Ranks.New.rank,
+      count: Ranks.New.count,
     },
   },
 ];

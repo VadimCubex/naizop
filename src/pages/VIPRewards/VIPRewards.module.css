@@ -1,0 +1,424 @@
+.vip-rewards {
+  display: flex;
+  flex-direction: column;
+}
+
+.vip-rewards .text.text_variant_h1_medium {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.vip-rewards .avatar-vip-rewards {
+  position: relative;
+  display: flex;
+  margin: 10px 20px 30px 50px;
+}
+
+.vip-rewards .avatar-vip-rewards img {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 50px;
+  height: 50px;
+}
+
+.vip-rewards .info-container {
+  display: flex;
+}
+
+.vip-rewards .block.profile {
+  color: var(--white);
+  width: 100%;
+  display: flex;
+
+  background: linear-gradient(
+      0deg,
+      rgba(217, 217, 217, 0.01),
+      rgba(217, 217, 217, 0.01)
+    ),
+    radial-gradient(
+      46.28% 87.14% at 15.8% -10.14%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.02) 100%
+    ),
+    radial-gradient(
+      129.6% 115.71% at 107.2% -23.57%,
+      rgba(255, 255, 255, 0.13) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  backdrop-filter: blur(20px);
+  justify-content: space-between;
+  margin-bottom: 30px;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.vip-rewards .block.profile > div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.vip-rewards .block.profile .info {
+  display: flex;
+  flex-grow: 1;
+  margin: 10px 20px 30px;
+  gap: 10px;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.vip-rewards .block.profile .info .separator {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 53.13%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.vip-rewards .block.profile .redeem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px 50px 30px 20px;
+  gap: 15px;
+}
+
+.vip-rewards .block.profile .redeem a {
+  color: var(--white);
+}
+
+.vip-rewards .block.profile .redeem .button {
+  padding: 10px 30px;
+}
+
+.vip-rewards .block.profile .info .categories {
+  display: flex;
+}
+
+.vip-rewards .block.profile .info .categories > *,
+.vip-rewards .block.profile .info .category-info > * {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.vip-rewards .block.profile .info .category-separators {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  display: flex;
+  z-index: -1;
+}
+
+.vip-rewards .block.profile .info .category-separators > * {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.vip-rewards .block.profile .info .category-separators .line {
+  height: 80%;
+  width: 1px;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+}
+
+.vip-rewards .block.profile .info .category-info {
+  display: flex;
+  color: var(--yellow);
+}
+
+.vip-rewards .block.profile .info .category-info .rank {
+  color: var(--white);
+  opacity: 0.5;
+}
+
+.vip-rewards .block.profile .info hr {
+  margin: 0px;
+  border: none;
+  width: 1px;
+  height: 100%;
+  background: var(--light-blue-15);
+}
+
+.vip-rewards .block.progress {
+  padding: 25px 50px;
+  display: flex;
+  align-items: flex-end;
+  color: var(--white);
+  gap: 30px;
+}
+
+.vip-rewards .block.progress .button {
+  min-width: 160px;
+}
+
+.vip-rewards .block.progress .percent {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 15px;
+}
+
+.vip-rewards .block.progress .percent > .text {
+  display: none;
+}
+
+.vip-rewards .block.progress .percent .rank-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vip-rewards .block.progress .percent .rank-info > .text {
+  opacity: 0.5;
+}
+
+.vip-rewards .block.progress .percent .rank-info img {
+  width: 30px;
+  height: 30px;
+}
+
+.vip-rewards .block.progress .percent .rank-info .rank {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.vip-rewards .tabs-container {
+  background: unset;
+}
+
+.vip-rewards .tabs-container .tabs {
+  gap: 30px;
+}
+
+.vip-rewards .tabs-container .tabs li {
+  min-width: fit-content;
+}
+
+.vip-rewards .tabs-container .tab {
+  padding-bottom: 10px;
+}
+
+.vip-rewards .tabs-container .tab-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: fit-content;
+}
+
+.vip-rewards .tabs-container .tab-title img {
+  width: 24px;
+  height: 24px;
+}
+
+.vip-rewards .cards-container {
+  padding: 25px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.vip-rewards .cards-container:last-child {
+  margin-top: 30px;
+  margin-bottom: 120px;
+}
+
+.vip-rewards .cards-container .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  row-gap: 20px;
+  padding: 0px 25px;
+}
+
+.vip-rewards .cards-container .must-spend {
+  color: var(--white);
+  padding: 0px 25px;
+}
+
+.vip-rewards .cards-container .must-spend > div {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0px;
+  padding: 30px 50px 30px 30px;
+  align-items: center;
+  border-radius: 10px;
+  backdrop-filter: blur(40px);
+  background: var(--gradient-account-card);
+  border: 1px solid;
+  border-image-source: radial-gradient(
+    161.28% 137.14% at -23.2% -37.14%,
+    rgba(255, 255, 255, 0.37) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  height: 140px;
+}
+
+.vip-rewards .cards-container .must-spend > div .info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  max-width: 300px;
+}
+
+.vip-rewards .cards-container .must-spend > div .info img {
+  width: 70px;
+  height: 70px;
+}
+
+.vip-rewards .cards-container .must-spend > div .unlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 170px;
+  text-align: center;
+}
+
+.vip-rewards .cards-container .must-spend > div .unlocked {
+  color: var(--yellow);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vip-rewards .cards-container .must-spend > div .unlock > .text {
+  opacity: 0.5;
+}
+
+@media (max-width: 1439px) {
+  .vip-rewards .avatar-vip-rewards {
+    margin: 10px 15px 30px 30px;
+  }
+  .vip-rewards .block.profile .redeem {
+    margin: 10px 30px 30px 15px;
+  }
+  .vip-rewards .block.progress {
+    padding: 25px 30px;
+  }
+  .vip-rewards .block.profile .info .text.text_variant_h2_medium {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .vip-rewards .cards-container .cards {
+    gap: 15px;
+    row-gap: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .vip-rewards .info-container {
+    flex-direction: column;
+  }
+  .vip-rewards .cards-container .cards {
+    gap: 15px;
+    row-gap: 15px;
+  }
+  .vip-rewards .block.profile .info {
+    margin: 10px 10px 30px;
+  }
+  .vip-rewards .avatar-vip-rewards {
+    margin: 10px 10px 30px 15px;
+  }
+  .vip-rewards .block.profile .redeem {
+    margin: 10px 15px 30px 10px;
+  }
+  .vip-rewards .block.progress {
+    padding: 25px 15px;
+  }
+}
+
+@media (max-width: 834px) {
+  .vip-rewards .avatar-vip-rewards img {
+    width: 30px;
+    height: 30px;
+  }
+  .vip-rewards .block.profile > div {
+    flex-direction: column;
+    align-items: center;
+  }
+  .vip-rewards .block.profile .info {
+    width: 100%;
+    margin: unset;
+  }
+  .vip-rewards .block.profile .redeem {
+    margin: 35px 0px 30px;
+  }
+  .vip-rewards .avatar-vip-rewards {
+    margin: 15px 0px 25px;
+  }
+  .vip-rewards .block.profile .info .category-separators .line {
+    height: 120%;
+  }
+  .vip-rewards .block.progress {
+    padding: 25px 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .vip-rewards .block.progress .percent {
+    width: 100%;
+  }
+  .vip-rewards .block.progress .percent .rank-info > .text {
+    display: none;
+  }
+  .vip-rewards .block.progress .percent > .text {
+    display: block;
+    opacity: 0.5;
+    text-align: center;
+  }
+  .vip-rewards .cards-container .must-spend > div {
+    flex-direction: column;
+    gap: 20px;
+    height: unset;
+    padding: 20px 15px;
+    margin: 20px 0px 15px;
+  }
+  .vip-rewards .cards-container .must-spend > div .info img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 425px) {
+  .vip-rewards .info-container {
+    align-items: center;
+  }
+  .vip-rewards .block.profile .info .category-info .rank {
+    display: none;
+  }
+  .vip-rewards .cards-container .cards {
+    gap: 15px;
+  }
+  .vip-rewards .block.profile .info {
+    justify-content: space-between;
+  }
+  .vip-rewards .block.profile .redeem > div,
+  .vip-rewards .block.profile .redeem .button {
+    width: 100%;
+  }
+  .vip-rewards .block.profile .info .text.text_variant_h5 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .vip-rewards .block.profile .info .text.text.text_variant_h2_medium {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}

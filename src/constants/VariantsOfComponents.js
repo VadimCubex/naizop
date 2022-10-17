@@ -42,6 +42,7 @@ export const IconsVariants = {
   Updates: "/icons/Bulk/Updates.svg",
   LogoLeft: "/icons/Bulk/logoLeft.svg",
   LogoRight: "/icons/Bulk/logoRight.svg",
+  Play: "/icons/Bulk/Play.svg",
   // Stroke
   Add_funds_stroke: "/icons/Stroke/Add funds.svg",
   Affiliates_stroke: "/icons/Stroke/Affiliates.svg",
@@ -109,6 +110,8 @@ export const IconsVariants = {
   Purchase: "/icons/Stroke/Purchase.svg",
   Wallet: "/icons/Stroke/Wallet.svg",
   SoundOff: "/icons/Stroke/Sound off.svg",
+  Calendar: "/icons/Stroke/Calendar.svg",
+  Download: "/icons/Stroke/Download.svg",
   // Color
   Bitcoin: "/icons/Color/Bitcoin.svg",
   Crypto: "/icons/Color/Crypto.svg",
@@ -148,17 +151,6 @@ export const IconsVariants = {
   Logo: "/logo.svg",
   Logo_2: "/logo 2.svg",
   Arc: "/icons/Color/arc.svg",
-};
-
-export const RanksIcons = {
-  Bronze: "/icons/Ranks/Bronze.png",
-  Diamond: "/icons/Ranks/Diamond.png",
-  Gold: "/icons/Ranks/Gold.png",
-  New: "/icons/Ranks/New.png",
-  Platinum: "/icons/Ranks/Platinum.png",
-  Silver: "/icons/Ranks/Silver.png",
-  VIP3: "/icons/Ranks/VIP III.png",
-  VIP: "/icons/Ranks/VIP.png",
 };
 
 export const FlagsIcons = {
@@ -207,7 +199,7 @@ export const ImagesVariants = {
   Experience: "/images/Home/Experience.png",
   Excellence: "/images/Home/Excellence.png",
   profile: "/images/Profile/Profile.svg",
-  Card: "/images/Payment/Card.png",
+  404: "/images/Page 404/404.png",
   Like: "/images/BestQualityService/Like.png",
   Chat: "/images/BestQualityService/Chat.png",
   Star: "/images/BestQualityService/Star.png",
@@ -218,8 +210,12 @@ export const ImagesVariants = {
   Step2: "/images/BestQualityService/step2.png",
   Step3: "/images/BestQualityService/step3.png",
 
-  Affiliates: "/images/Affiliates/affiliates.png",
-  Affiliates_house: "/images/Affiliates/house.png",
+  Card: "/images/Payment/Card.png",
+  PaymentVideo: "/images/Payment/house.png",
+
+  Affiliates1: "/images/Affiliates/aff1.png",
+  Affiliates2: "/images/Affiliates/aff2.png",
+  Affiliates3: "/images/Affiliates/aff3.png",
   Affiliates_friends: "/images/Affiliates/friends.png",
   Coinbase: "/images/Affiliates/coinbase.png",
   MoonPay: "/images/Affiliates/moonPay.png",
@@ -335,8 +331,11 @@ export const TableVariants = {
   Service: "service",
   Service_detail: "serviceDetail",
   Payment: "payment",
+  PaymentDownload: "paymentDownload",
   Completed: "completed",
   Affiliates: "affiliates",
+  Tickets: "tickets",
+  TicketsDetail: "ticketsDetail",
 };
 
 export const StatusVariants = {

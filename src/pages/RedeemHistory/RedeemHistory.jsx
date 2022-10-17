@@ -20,7 +20,7 @@ const RedeemHistory = () => {
       <div className="redeem-history">
         <Text variant={TextVariants.h4}>
           <Link to="/profile">
-            <Text>Dashboard -</Text>
+            <Text>VIP Rewards -</Text>
           </Link>{" "}
           Redeem history
         </Text>

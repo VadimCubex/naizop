@@ -4,26 +4,12 @@
   background: rgba(30, 33, 36, 0.74);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-}
-
-.reasons-to-use .advantages-container {
-  overflow: scroll;
-  display: flex;
-  margin: 0px -20px;
-  padding: 0px 20px;
-}
-
-.reasons-to-use .advantages-container::-webkit-scrollbar {
-  display: none;
-}
-
-.reasons-to-use .advantages-container::-webkit-scrollbar-thumb {
-  display: none;
+  padding-top: 100px;
 }
 
 .reasons-to-use .advantages {
+  position: relative;
   width: 100%;
-  margin-top: 100px;
   margin-bottom: 70px;
   display: flex;
   justify-content: space-between;
@@ -32,20 +18,65 @@
   padding: 25px 0px;
 }
 
-.reasons-to-use .advantages .advanteg-container {
-  width: 20%;
-  display: flex;
-  justify-content: space-around;
+.reasons-to-use .advantages > .line {
+  top: 0px;
+  left: 50%;
+  position: absolute;
+  display: none;
+  width: 1px;
+  height: 300px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
-.reasons-to-use .advantages .advanteg-container .separator {
-  width: 1px;
+.reasons-to-use .advantages .separators {
+  display: flex;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
   height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.reasons-to-use .advantages .separators-mobile {
+  display: none;
+  pointer-events: none;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.reasons-to-use .advantages .separators-mobile > div,
+.reasons-to-use .advantages .separators > div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+}
+
+.reasons-to-use .advantages .separators-mobile .line,
+.reasons-to-use .advantages .separators .line {
+  width: 1px;
+  height: 75%;
   background: radial-gradient(
     100% 100% at 0% 0%,
     rgba(255, 255, 255, 0.1) 0%,
     rgba(255, 255, 255, 0) 100%
   );
+}
+
+.reasons-to-use .advantages .advanteg-container {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .reasons-to-use .advantages .advanteg-container .advanteg {
@@ -310,11 +341,11 @@
   .reasons-to-use .advantages {
     width: fit-content;
   }
-  .reasons-to-use .advantages .advanteg-container {
-    width: 235px;
-  }
   .reasons-to-use .reasons-steps {
     padding: 0px 40px;
+  }
+  .reasons-to-use .advantages .advanteg-container .advanteg {
+    padding: 0px 27px;
   }
   .reasons-to-use .reasons-steps .line2 {
     left: 36%;
@@ -323,13 +354,10 @@
 
 @media (max-width: 1024px) {
   .reasons-to-use {
-    padding: 0px 20px 60px;
-  }
-  .reasons-to-use .advantages .advanteg-container {
-    width: 211px;
+    padding: 75px 20px 60px;
   }
   .reasons-to-use .advantages .advanteg-container .advanteg {
-    padding: 0px 30px;
+    padding: 0px 15px;
   }
   .reasons-to-use .advantages .advanteg-container .advanteg .for-svg {
     margin-bottom: 15px;
@@ -362,10 +390,42 @@
 
 @media (max-width: 834px) {
   .reasons-to-use {
-    padding: 0px 20px 0px;
+    padding: 50px 20px 0px;
+  }
+  .reasons-to-use .advantages {
+    flex-wrap: wrap;
+    padding: 0px;
+  }
+  .reasons-to-use .advantages > .line {
+    display: block;
+  }
+  .reasons-to-use .advantages .separators {
+    display: none;
+  }
+  .reasons-to-use .advantages .separators-mobile {
+    display: flex;
+  }
+  .reasons-to-use .advantages .separators-mobile > div {
+    align-items: flex-end;
+    height: 150px;
+    width: 100%;
+  }
+  .reasons-to-use .advantages .separators-mobile .line {
+    width: 100%;
+    height: 1px;
+    background: radial-gradient(
+      50% 100% at 50% 0%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
   }
   .reasons-to-use .advantages .advanteg-container {
-    width: 187px;
+    width: 40%;
+    height: 150px;
+    flex-grow: 1;
+  }
+  .reasons-to-use .advantages .advanteg-container .advanteg {
+    padding-top: 30px;
   }
   .reasons-to-use .ready .ready-cards-container {
     flex-direction: column;
@@ -377,10 +437,6 @@
   }
   .reasons-to-use .reasons,
   .reasons-to-use .ready {
-    margin-bottom: 50px;
-  }
-  .reasons-to-use .advantages {
-    margin-top: 50px;
     margin-bottom: 50px;
   }
   .reasons-to-use .reasons-steps {
@@ -447,14 +503,8 @@
 }
 
 @media (max-width: 425px) {
-  .reasons-to-use .advantages {
-    padding: 20px 0px;
-  }
-  .reasons-to-use .advantages .advanteg-container {
-    width: 153px;
-  }
   .reasons-to-use .advantages .advanteg-container .advanteg {
-    padding: 0px 20px;
+    padding: 30px 5px 0px;
   }
   .reasons-to-use .advantages .advanteg-container .advanteg .for-svg {
     margin-bottom: 10px;

@@ -370,13 +370,11 @@
 }
 
 .profileMenu .nav-container .menu-items .progress {
-  padding: 0px 20px;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 5px;
-  background: linear-gradient(180deg, #2f2f2f 0%, rgba(47, 47, 47, 0) 100%);
+  text-align: center;
 }
 
 .profileMenu .nav-container .menu-items .progress .info {
@@ -385,14 +383,24 @@
   align-items: center;
 }
 
-.burger .nav-profile-container .progress img,
 .profileMenu .nav-container .menu-items .progress .info img {
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+}
+
+.burger .nav-profile-container .progress img {
   width: 24px;
   height: 24px;
 }
 
 .profileMenu .nav-container .menu-items .progress-bar-container {
   width: 100px;
+  height: 15px;
+}
+
+.profileMenu .nav-container .menu-items .progress-bar-container .progress-bar {
+  height: 15px;
 }
 
 .profileMenu .nav-container .menu-items .profile {
@@ -448,6 +456,9 @@
   .profileMenu .burger .nav-burger .nav-button-container {
     margin: 15px 0px 50px;
     gap: 50px;
+  }
+  .profileMenu .nav-container .menu-items {
+    display: none;
   }
 
   .burger .nav-profile-container .progress,

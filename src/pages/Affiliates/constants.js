@@ -1,4 +1,7 @@
-import { IconsVariants } from "../../constants/VariantsOfComponents";
+import {
+  IconsVariants,
+  ImagesVariants,
+} from "../../constants/VariantsOfComponents";
 
 export const Joins = [
   {
@@ -13,6 +16,12 @@ export const Joins = [
     title: "EARN",
     info: "Start earning money based on your referrals activity.",
   },
+];
+
+export const ReasonsImg = [
+  ImagesVariants.Affiliates1,
+  ImagesVariants.Affiliates2,
+  ImagesVariants.Affiliates3,
 ];
 
 export const Rewards = [

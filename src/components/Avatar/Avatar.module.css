@@ -14,8 +14,8 @@
 }
 
 .avatar_variant_large {
-  width: 160px;
-  height: 160px;
+  width: 150px;
+  height: 150px;
 }
 
 .avatar_variant_medium {
@@ -30,8 +30,8 @@
 
 @media (max-width: 1439px) {
   .avatar_variant_large {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
   }
 
   .avatar_variant_medium {
@@ -42,20 +42,25 @@
 
 @media (max-width: 1024px) {
   .avatar_variant_large {
-    width: 135px;
-    height: 135px;
+    width: 125px;
+    height: 125px;
   }
 
   .avatar_variant_medium {
     width: 68px;
     height: 68px;
   }
+
+  .avatar_variant_small {
+    width: 42px;
+    height: 42px;
+  }
 }
 
 @media (max-width: 834px) {
   .avatar_variant_large {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
   }
 
   .avatar_variant_medium {
@@ -66,12 +71,17 @@
 
 @media (max-width: 425px) {
   .avatar_variant_large {
-    width: 110px;
-    height: 110px;
+    width: 100px;
+    height: 100px;
   }
 
   .avatar_variant_medium {
     width: 46px;
     height: 46px;
+  }
+
+  .avatar_variant_small {
+    width: 40px;
+    height: 40px;
   }
 }

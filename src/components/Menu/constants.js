@@ -124,66 +124,6 @@ export const SidebarLinksSecondPart = [
   },
 ];
 
-export const ServicesLinks = [
-  {
-    icon: IconsVariants.All_services,
-    text: "All Services",
-    link: "/profile/services",
-  },
-  {
-    icon: IconsVariants.New_order,
-    text: "Place New Order",
-    link: "/profile/place-new-order",
-  },
-  {
-    icon: IconsVariants.Popular,
-    text: "Popular Service",
-    link: "/profile/popular-service",
-  },
-];
-
-export const ActivityLinks = [
-  {
-    icon: IconsVariants.Favorites,
-    text: "Favorites",
-    link: "/profile/favorites",
-  },
-  {
-    icon: IconsVariants.Subscriptions,
-    text: "Subscriptions",
-    link: "/profile/subscriptions",
-  },
-  {
-    icon: IconsVariants.Complited_Orders,
-    text: "Complited Orders",
-    link: "/profile/orders",
-    number: 8,
-  },
-];
-
-export const FeaturesLinks = [
-  {
-    icon: IconsVariants.Affiliates,
-    text: "Affiliates",
-    link: "/profile/affiliates",
-  },
-  {
-    icon: IconsVariants.FAQ,
-    text: "FAQ",
-    link: "/profile/faq",
-  },
-  {
-    icon: IconsVariants.Terms,
-    text: "Terms",
-    link: "/profile/terms",
-  },
-  {
-    icon: IconsVariants.Blog,
-    text: "Blog",
-    link: "/profile/blog",
-  },
-];
-
 export const Notifications = [
   {
     icon: IconsVariants.Done,
@@ -192,16 +132,5 @@ export const Notifications = [
   {
     icon: IconsVariants.Done,
     text: "Your payment has been added to your balance",
-  },
-];
-
-export const Promotions = [
-  {
-    icon: IconsVariants.Money,
-    text: "Refer and Earn",
-  },
-  {
-    icon: IconsVariants.Coins,
-    text: "Weekly Raffle",
   },
 ];

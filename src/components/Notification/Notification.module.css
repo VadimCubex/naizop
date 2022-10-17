@@ -22,16 +22,6 @@
   stroke: #49595f;
 }
 
-.arrow_left {
-  position: absolute;
-  top: -21px;
-}
-
-.arrow_right {
-  position: absolute;
-  top: -20px;
-}
-
 .notification .text {
   opacity: 1;
 }

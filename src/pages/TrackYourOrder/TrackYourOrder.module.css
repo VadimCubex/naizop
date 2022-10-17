@@ -1,0 +1,52 @@
+.track-your-order {
+  margin-top: 30px;
+  margin-bottom: 200px;
+  color: var(--white);
+}
+
+.track-your-order .track-your-order-contant {
+  margin-top: 30px;
+  padding: 25px 25px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.track-your-order .track-your-order-contant .btn-container {
+  align-self: center;
+}
+
+.track-your-order .inputs {
+  display: flex;
+  gap: 20px;
+}
+
+.track-your-order .input-track {
+  width: 40px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.track-your-order .input-track .title {
+  display: flex;
+  gap: 5px;
+  opacity: 0.75;
+}
+
+@media (max-width: 834px) {
+  .track-your-order .inputs {
+    flex-direction: column;
+  }
+  .track-your-order .input-track {
+    width: 100%;
+  }
+  .track-your-order .track-your-order-contant {
+    gap: 40px;
+  }
+  .track-your-order .track-your-order-contant .button,
+  .track-your-order .track-your-order-contant .btn-container {
+    width: 100%;
+  }
+}

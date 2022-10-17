@@ -1,0 +1,48 @@
+.page-404 {
+  padding-top: 100px;
+  padding-bottom: 220px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.page-404 .error {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  color: var(--yellow);
+}
+
+.page-404 .error img {
+  max-width: 520px;
+}
+
+.page-404 .button {
+  width: 160px;
+  margin-top: 20px;
+}
+
+@media (max-width: 1439px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 834px) {
+  .page-404 .error img {
+    max-width: unset;
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .page-404 .btn-container {
+    width: 100%;
+  }
+  .page-404 .button {
+    width: 100%;
+  }
+}

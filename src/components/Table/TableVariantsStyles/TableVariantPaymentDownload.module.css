@@ -1,0 +1,125 @@
+.table.table-variant-paymentDownload {
+  padding-top: 0px;
+}
+
+.table.table-variant-paymentDownload .table-separators {
+  top: 0px;
+}
+
+.table.table-variant-paymentDownload .table-row-content {
+  display: flex;
+}
+
+.table.table-variant-paymentDownload .table-header .table-column-cell-1 {
+  padding: 0px 10px 10px 0px;
+}
+.table.table-variant-paymentDownload .table-row-content .table-row-cell-1 {
+  padding: 15px 10px 15px 0px;
+}
+
+.table.table-variant-paymentDownload .table-header .table-column-cell-1,
+.table.table-variant-paymentDownload .table-separators .table-column-cell-1,
+.table.table-variant-paymentDownload .table-row-content .table-row-cell-1 {
+  width: 11.5%;
+}
+
+.table.table-variant-paymentDownload .table-header .table-column-cell-2,
+.table.table-variant-paymentDownload .table-separators .table-column-cell-2,
+.table.table-variant-paymentDownload .table-row-content .table-row-cell-2 {
+  width: 36%;
+}
+
+.table.table-variant-paymentDownload .table-header .table-column-cell-3,
+.table.table-variant-paymentDownload .table-separators .table-column-cell-3,
+.table.table-variant-paymentDownload .table-row-content .table-row-cell-3 {
+  width: 18.9%;
+}
+
+.table.table-variant-paymentDownload .table-header .table-column-cell-4,
+.table.table-variant-paymentDownload .table-separators .table-column-cell-4,
+.table.table-variant-paymentDownload .table-row-content .table-row-cell-4 {
+  width: 16.8%;
+}
+
+.table.table-variant-paymentDownload .table-header .table-column-cell-5,
+.table.table-variant-paymentDownload .table-separators .table-column-cell-5,
+.table.table-variant-paymentDownload .table-row-content .table-row-cell-5 {
+  width: 16.8%;
+}
+
+.table.table-variant-paymentDownload .table-row-content .table-row-cell-5 {
+  padding: 8px 20px;
+}
+.table.table-variant-paymentDownload .table-small-row .table-row-cell-5 .button,
+.table.table-variant-paymentDownload
+  .table-row-content
+  .table-row-cell-5
+  .button {
+  min-width: unset;
+  padding: 10px 10px;
+  width: 34px;
+}
+
+@media (max-width: 834px) {
+  .table.table-variant-paymentDownload {
+    margin: 0px;
+  }
+  .table.table-variant-paymentDownload
+    .table-content
+    .table-row
+    .table-row-content,
+  .table.table-variant-paymentDownload .table-header,
+  .table.table-variant-paymentDownload .table-separators {
+    display: none;
+  }
+
+  .table.table-variant-paymentDownload
+    .table-content
+    .table-row
+    .table-small-row-content {
+    display: flex;
+    height: 215px;
+  }
+
+  .table.table-variant-paymentDownload
+    .table-content
+    .table-row
+    .table-small-row-content
+    > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .table.table-variant-paymentDownload .table-small-header {
+    width: 44%;
+  }
+
+  .table.table-variant-paymentDownload .table-small-row {
+    width: 56%;
+  }
+
+  .table.table-variant-paymentDownload .table-small-row-content .text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .table.table-variant-paymentDownload .table-hr {
+    position: absolute;
+    width: 1px;
+    height: 99%;
+    margin: 0px;
+    background: linear-gradient(
+      360deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    left: 44%;
+  }
+
+  .table.table-variant-paymentDownload .table-small-header > *,
+  .table.table-variant-paymentDownload .table-small-row > * {
+    height: 20%;
+    display: flex;
+    align-items: center;
+  }
+}

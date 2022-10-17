@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import classNames from "classnames";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
+import { Ranks } from "../../../constants/constants";
 import {
   AvatarVariants,
   ButtonSizeVariants,
@@ -11,7 +12,6 @@ import {
   IconsVariants,
   ImagesVariants,
   NumberVariants,
-  RanksIcons,
   TextVariants,
 } from "../../../constants/VariantsOfComponents";
 import { Avatar } from "../../Avatar";
@@ -21,35 +21,27 @@ import { DropDown } from "../../DropDown";
 import { Modal } from "../../Modal";
 import { Notification } from "../../Notification";
 import { Number } from "../../Number";
-import { TooltipPortal } from "../../Portal";
 import { ProgressBar } from "../../ProgressBar";
 import { SvgIcon } from "../../SvgIcon";
 import { Text } from "../../Text";
 import {
   Notifications,
-  Promotions,
   SidebarLinksFirstPart,
   SidebarLinksSecondPart,
 } from "../constants";
 
 import { useProfileInfoSelector } from "../../../store/Profile/ProfileInfo/useProfileInfo";
-import useTooltip from "../../../hooks/useTooltip";
+import { useRaffleActions } from "../../../store/Raffle/useRaffleActions";
 
 export const ProfileMenuComponent = () => {
-  const {
-    coords,
-    isShowTooltip,
-    tooltipPosition,
-    tooltipSvg,
-    TooltipWidth,
-    handleClick,
-  } = useTooltip();
-  const { img, name, surname, balance, percent, rank } =
+  const { img, name, surname, balance, percent, nextRank } =
     useProfileInfoSelector();
   const [isShowBurger, setIsShowBurger] = useState(false);
   const [isShow, setIsShow] = useState(true);
   const [isShowPromotions, setIsShowPromotions] = useState(true);
   const [isOpenModal, setIsOpenModal] = useState(false);
+
+  const { setIsOpenRaffle } = useRaffleActions();
 
   const [active, setActive] = useState("");
   const navigate = useNavigate();
@@ -76,6 +68,8 @@ export const ProfileMenuComponent = () => {
   useEffect(() => {
     setActive(location.pathname);
   }, [location.pathname]);
+
+  useEffect(() => {}, []);
 
   return (
     <header className={ProfileMenuClass}>
@@ -121,11 +115,11 @@ export const ProfileMenuComponent = () => {
             </div>
             <div className="menu-second-part">
               <div className="progress">
+                <Text variant={TextVariants.h4}>{percent}%</Text>
                 <div className="info">
-                  <Text variant={TextVariants.h4}>{percent + "/100"}</Text>
-                  <img src={RanksIcons[rank]} alt="info rank" />
+                  <ProgressBar percent={percent} />
+                  <img src={Ranks[nextRank].icon} alt="info rank" />
                 </div>
-                <ProgressBar percent={percent} />
               </div>
               <div className="nav-button-container">
                 <Button
@@ -136,37 +130,18 @@ export const ProfileMenuComponent = () => {
                   isLight={true}
                 />
                 <Currency />
-                <TooltipPortal>
-                  <Notification
-                    width={TooltipWidth}
-                    coords={coords}
-                    arrowPosition={tooltipPosition}
-                    isShow={isShowTooltip}
-                  >
-                    {Notifications.map((item, index) => (
-                      <div className="type" key={index}>
-                        <SvgIcon
-                          src={item.icon}
-                          size={24}
-                          color={ColorSvgVariants.white}
-                        />
-                        <Text variant={TextVariants.h5_regular}>
-                          {item.text}
-                        </Text>
-                      </div>
-                    ))}
-                  </Notification>
-                </TooltipPortal>
-                <div ref={tooltipSvg} onClick={handleClick}>
-                  <Button
-                    variant={ButtonVariants.default}
-                    className={
-                      isShowTooltip ? "button_logout active" : "button_logout"
-                    }
-                    size={ButtonSizeVariants.large}
-                    icon={IconsVariants.Notification}
-                  />
-                </div>
+                <Notification>
+                  {Notifications.map((item, index) => (
+                    <div className="type" key={index}>
+                      <SvgIcon
+                        src={item.icon}
+                        size={24}
+                        color={ColorSvgVariants.white}
+                      />
+                      <Text variant={TextVariants.h5_regular}>{item.text}</Text>
+                    </div>
+                  ))}
+                </Notification>
                 <Button
                   onClick={handleLogoutClick}
                   variant={ButtonVariants.default}
@@ -208,19 +183,26 @@ export const ProfileMenuComponent = () => {
                   text="Wallet"
                 />
                 <Currency />
-                <Button
-                  variant={ButtonVariants.default}
-                  className="button_logout"
-                  size={ButtonSizeVariants.large}
-                  icon={IconsVariants.Notification}
-                />
+
+                <Notification>
+                  {Notifications.map((item, index) => (
+                    <div className="type" key={index}>
+                      <SvgIcon
+                        src={item.icon}
+                        size={24}
+                        color={ColorSvgVariants.white}
+                      />
+                      <Text variant={TextVariants.h5_regular}>{item.text}</Text>
+                    </div>
+                  ))}
+                </Notification>
               </div>
             </div>
             <div>
               <div className="progress">
                 <Text variant={TextVariants.h4}>{percent + "/100"}</Text>
                 <ProgressBar percent={percent} />
-                <img src={RanksIcons[rank]} alt="info rank" />
+                <img src={Ranks[nextRank].icon} alt="info rank" />
               </div>
               <div className="nav-balance">
                 <Text variant={TextVariants.subtitle_small}>BALANCE</Text>
@@ -327,15 +309,19 @@ export const ProfileMenuComponent = () => {
                 </div>
                 <DropDown isOpen={isShowPromotions}>
                   <div className="burger-menu-items buttons">
-                    {Promotions.map((item, index) => (
-                      <Button
-                        key={index}
-                        icon={item.icon}
-                        text={item.text}
-                        size={ButtonSizeVariants.large}
-                        variant={ButtonVariants.side}
-                      />
-                    ))}
+                    <Button
+                      icon={IconsVariants.Money}
+                      text="Refer and Earn"
+                      size={ButtonSizeVariants.large}
+                      variant={ButtonVariants.side}
+                    />
+                    <Button
+                      onClick={() => setIsOpenRaffle()}
+                      icon={IconsVariants.Coins}
+                      text="Weekly Raffle"
+                      size={ButtonSizeVariants.large}
+                      variant={ButtonVariants.side}
+                    />
                   </div>
                 </DropDown>
               </div>

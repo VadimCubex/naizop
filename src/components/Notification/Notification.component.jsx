@@ -1,56 +1,70 @@
 import React from "react";
 import classNames from "classnames";
 
-import { IconsVariants } from "../../constants/VariantsOfComponents";
+import {
+  ButtonSizeVariants,
+  ButtonVariants,
+  IconsVariants,
+} from "../../constants/VariantsOfComponents";
+import { Button } from "../Button";
+import { TooltipPortal } from "../Portal";
 import { SvgIcon } from "../SvgIcon";
 
-export const NotificationComponent = ({
-  children,
-  isShow,
-  arrowPosition = "left",
-  coords,
-  width,
-  className,
-}) => {
+import useTooltip from "../../hooks/useTooltip";
+
+export const NotificationComponent = ({ children, className }) => {
+  const {
+    coords,
+    isShowTooltip,
+
+    tooltipSvg,
+    TooltipWidth,
+    handleClick,
+  } = useTooltip();
   const NotificationClass = classNames(
     "notification",
     {
-      ["notification_show"]: isShow,
+      ["notification_show"]: isShowTooltip,
     },
     className
   );
 
-  const ArrowClass = classNames({
-    [`arrow_${arrowPosition}`]: arrowPosition,
-  });
-
   const EditCoors = () => {
     if (coords.top) {
-      return arrowPosition === "left"
-        ? { left: coords.left, top: coords.top + 50 }
-        : { left: coords.left - width, top: coords.top + 50 };
+      return { left: coords.left - TooltipWidth, top: coords.top + 50 };
     }
   };
 
   return (
-    <div style={{ ...EditCoors(), width: width }} className={NotificationClass}>
-      <SvgIcon
-        className={ArrowClass}
-        size={40}
-        src={
-          arrowPosition === "left"
-            ? IconsVariants.Arrow_tooltip_left
-            : IconsVariants.Arrow_tooltip_right
-        }
-        style={arrowPosition === "right" ? { left: width - 39 } : { left: -3 }}
-      />
-      {children.map((item, index) => (
-        <div className="notification-item" key={index}>
-          {index !== 0 && <div className="separator"></div>}
-          {item}
+    <>
+      <div ref={tooltipSvg} onClick={handleClick}>
+        <Button
+          variant={ButtonVariants.default}
+          className={isShowTooltip ? "button_logout active" : "button_logout"}
+          size={ButtonSizeVariants.large}
+          icon={IconsVariants.Notification}
+        />
+      </div>
+      <TooltipPortal>
+        <div
+          style={{ ...EditCoors(), width: TooltipWidth }}
+          className={NotificationClass}
+        >
+          <SvgIcon
+            className="arrow_right"
+            size={40}
+            src={IconsVariants.Arrow_tooltip_right}
+            style={{ left: TooltipWidth - 39 }}
+          />
+          {children.map((item, index) => (
+            <div className="notification-item" key={index}>
+              {index !== 0 && <div className="separator"></div>}
+              {item}
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </TooltipPortal>
+    </>
   );
 };
 

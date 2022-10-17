@@ -24,26 +24,40 @@ export const ReasonsToUseComponent = ({ steper, className }) => {
 
   return (
     <div className={ReasonsToUseClass}>
-      <div className="advantages-container">
-        <div className="advantages">
+      <div className="advantages">
+        <div className="line"></div>
+        <div className="separators">
           {Advantages.map((item, index) => (
-            <div key={index} className="advanteg-container">
-              {index !== 0 && <div className="separator"></div>}
-              <div className="advanteg">
-                <div className="for-svg">
-                  <div>
-                    <SvgIcon
-                      src={item.icon}
-                      size={30}
-                      color={ColorSvgVariants.white}
-                    />
-                  </div>
-                </div>
-                <Text variant={TextVariants.h4_regular}>{item.text}</Text>
-              </div>
+            <div key={index}>
+              {index !== Advantages.length - 1 && <div className="line"></div>}
             </div>
           ))}
         </div>
+        <div className="separators-mobile">
+          <div>
+            <div className="line"></div>
+          </div>
+          <div>
+            <div className="line"></div>
+          </div>
+          <div></div>
+        </div>
+        {Advantages.map((item, index) => (
+          <div key={index} className="advanteg-container">
+            <div className="advanteg">
+              <div className="for-svg">
+                <div>
+                  <SvgIcon
+                    src={item.icon}
+                    size={30}
+                    color={ColorSvgVariants.white}
+                  />
+                </div>
+              </div>
+              <Text variant={TextVariants.h4_regular}>{item.text}</Text>
+            </div>
+          </div>
+        ))}
       </div>
       {steper && (
         <div className="reasons-steps">

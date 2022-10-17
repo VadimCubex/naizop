@@ -1,52 +1,44 @@
 .support {
   display: flex;
   flex-direction: column;
-  padding-bottom: 200px;
+  padding-bottom: 70px;
+  color: var(--white);
 }
 
-.support > .text.text_variant_h4 {
+.support > .text {
+  margin-bottom: 30px;
   margin-top: 30px;
-  margin-bottom: 30px;
-  color: var(--white);
-}
-
-.support > .text.text_variant_h4 .text {
-  opacity: 0.5;
-  color: var(--white);
-}
-
-.support .text.text_variant_h1_medium {
-  color: var(--white);
-  margin-bottom: 30px;
-}
-
-.support .support-tickets {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-}
-
-.support .support-tickets .accountCard:hover:not(.active) {
-  background: var(--gradient-account-card);
-}
-
-.support .support-tickets > * {
-  width: 49%;
-  height: 50px;
 }
 
 .support .support-content {
-  padding: 20px 25px 40px;
-  color: var(--white);
-  display: flex;
-  justify-content: space-between;
-}
-
-.support .support-content .chunk {
-  width: 49%;
+  padding: 25px 25px 40px;
+  gap: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.support .support-table {
+  padding: 20px 20px 0px;
+  gap: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.support .support-content > div:not(.table) {
+  display: flex;
+  gap: 20px;
+}
+
+.support .support-content .chunk {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  width: 40%;
   gap: 20px;
 }
 
@@ -78,7 +70,7 @@
   height: 100%;
 }
 
-.support .support-content .text.text_variant_h3 {
+.support .support-content .chunk .text.text_variant_h3 {
   opacity: 0.75;
   margin-bottom: 10px;
 }
@@ -92,13 +84,8 @@
   .support .block {
     border-radius: 18px;
   }
-  .support .support-tickets {
+  .support .support-content > div:not(.table) {
     flex-direction: column;
-    gap: 15px;
-    margin-bottom: 15px;
-  }
-  .support .support-tickets > * {
-    width: 100%;
   }
   .support .support-content {
     flex-direction: column;

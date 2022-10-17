@@ -2,7 +2,6 @@
 @import "../components/SvgIcon/SvgIcon.module.css";
 @import "../components/Button/Button.module.css";
 @import "../components/Avatar/Avatar.module.css";
-@import "../components/AvatarDashboard/AvatarDashboard.module.css";
 @import "../components/Radio/Radio.module.css";
 @import "../components/Number/Number.module.css";
 @import "../components/Cards/Cards.module.css";
@@ -52,6 +51,8 @@
 @import "../components/DownloadYoutubeVideo/DownloadYoutubeVideo.module.css";
 @import "../components/DownloadSocialVideo/DownloadSocialVideo.module.css";
 @import "../components/ProgressBar/ProgressBar.module.css";
+@import "../components/Message/Message.module.css";
+@import "../components/Raffle/Raffle.module.css";
 
 @import "./App.css";
 @import "./normalize.css";
@@ -59,9 +60,9 @@
 @import "../pages/Home/Home.module.css";
 @import "../pages/FAQ/FAQ.module.css";
 @import "../pages/About/About.module.css";
-@import "../pages/Dashboard/Dashboard.module.css";
+@import "../pages/VIPRewards/VIPRewards.module.css";
 @import "../pages/RedeemHistory/RedeemHistory.module.css";
-@import "../pages/RedeemSupport/RedeemSupport.module.css";
+@import "../pages/Support/Support.module.css";
 @import "../pages/Account/Account.module.css";
 @import "../pages/Api/Api.module.css";
 @import "../pages/Subscriptions/Subscriptions.module.css";
@@ -70,7 +71,6 @@
 @import "../pages/MassOrder/MassOrder.module.css";
 @import "../pages/PlaceNewOrder/PlaceNewOrder.module.css";
 @import "../pages/Payment/Payment.module.css";
-@import "../pages/PaymentError/PaymentError.module.css";
 @import "../pages/PaymentHistory/PaymentHistory.module.css";
 @import "../pages/BestQualityService/BestQualityService.module.css";
 @import "../pages/OrderDetail/OrderDetail.module.css";
@@ -88,6 +88,10 @@
 @import "../pages/BlogArticle/BlogArticle.module.css";
 @import "../pages/Download/Download.module.css";
 @import "../pages/Tools/Tools.module.css";
+@import "../pages/ViewTicket/ViewTicket.module.css";
+@import "../pages/Page404/Page404.module.css";
+@import "../pages/PaymentError/PaymentError.module.css";
+@import "../pages/TrackYourOrder/TrackYourOrder.module.css";
 
 :root {
   --transition-property: all;

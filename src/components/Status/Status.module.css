@@ -109,6 +109,9 @@
   .status_size_bg.active .text {
     font-size: 25px;
   }
+  .status_size_sm {
+    width: 90px;
+  }
 }
 
 @media (max-width: 425px) {
